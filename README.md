@@ -1,2 +1,3 @@
-# atata-samples
-Automation test samples based on Atata Framework
+# Atata Samples
+
+Automation test samples based on Atata Framework.
