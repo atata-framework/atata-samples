@@ -64,6 +64,7 @@
     <Compile Include="Components\PlansPage.cs" />
     <Compile Include="Components\PlansWithDynamicTriggersPage.cs" />
     <Compile Include="Components\PlansWithStaticTriggersPage.cs" />
+    <Compile Include="NUnitSettings.cs" />
     <Compile Include="PlanTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
