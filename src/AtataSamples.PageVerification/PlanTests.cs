@@ -43,6 +43,12 @@ namespace AtataSamples.PageVerification
         }
 
         [Test]
+        public void PrimaryPageDataVerification_OnVerify()
+        {
+            Go.To<PlansWithOnVerifyPage>();
+        }
+
+        [Test]
         public void PrimaryPageDataVerification_StaticTriggers()
         {
             Go.To<PlansWithStaticTriggersPage>();
