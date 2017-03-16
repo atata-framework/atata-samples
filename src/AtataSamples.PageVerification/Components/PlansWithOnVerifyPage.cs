@@ -10,6 +10,8 @@ namespace AtataSamples.PageVerification
 
         protected override void OnVerify()
         {
+            base.OnVerify();
+
             PageTitle.Should.Equal("Plans - Atata Sample App");
             Header.Should.Equal("Plans");
             Content.Should.Contain("Please choose your payment plan");
