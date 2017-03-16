@@ -22,7 +22,6 @@ namespace AtataSamples.PageVerification
                 UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().
-                    WithMinLevel(LogLevel.Info).
                     WithoutSectionFinish().
                 LogNUnitError().
                 SetUp();
