@@ -1,7 +1,7 @@
 ﻿using Atata;
-using _ = AtataSamples.PageVerification.Components.PlansWithStaticTriggersPage;
+using _ = AtataSamples.PageVerification.PlansWithStaticTriggersPage;
 
-namespace AtataSamples.PageVerification.Components
+namespace AtataSamples.PageVerification
 {
     [Url("plans")]
     [VerifyTitle("Plans - Atata Sample App")]

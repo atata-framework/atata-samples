@@ -1,7 +1,7 @@
 ﻿using Atata;
-using _ = AtataSamples.PageVerification.Components.PlansPage;
+using _ = AtataSamples.PageVerification.PlansPage;
 
-namespace AtataSamples.PageVerification.Components
+namespace AtataSamples.PageVerification
 {
     [Url("plans")]
     public class PlansPage : Page<_>

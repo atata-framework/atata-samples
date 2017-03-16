@@ -1,5 +1,4 @@
 ﻿using Atata;
-using AtataSamples.PageVerification.Components;
 using NUnit.Framework;
 
 namespace AtataSamples.PageVerification

@@ -1,7 +1,7 @@
 ﻿using Atata;
-using _ = AtataSamples.PageVerification.Components.PlansWithDynamicTriggersPage;
+using _ = AtataSamples.PageVerification.PlansWithDynamicTriggersPage;
 
-namespace AtataSamples.PageVerification.Components
+namespace AtataSamples.PageVerification
 {
     [Url("plans")]
     public class PlansWithDynamicTriggersPage : Page<_>
