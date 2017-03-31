@@ -77,5 +77,29 @@ namespace AtataSamples.ValidationMessagesVerification
                 ValidationMessages[x => x.LastName].Should.HaveMinLength(2).
                 ValidationMessages[x => x.Password].Should.HaveMinLength(6);
         }
+
+        [Test]
+        public void SignUp_Validation_IncorrectEmail()
+        {
+            Go.To<SignUpPage>().
+                Email.Set("some@email").
+                SignUp.Click().
+                ValidationMessages[x => x.Email].Should.Equal("has incorrect format").
+                Email.Append(".com").
+                SignUp.Click().
+                ValidationMessages[x => x.Email].Should.Not.Exist();
+        }
+
+        [Test]
+        public void SignUp_Validation_IncorrectEmail_UsingExtensions()
+        {
+            Go.To<SignUpPage>().
+                Email.Set("some@email").
+                SignUp.Click().
+                ValidationMessages[x => x.Email].Should.HaveIncorrectFormat().
+                Email.Append(".com").
+                SignUp.Click().
+                ValidationMessages[x => x.Email].Should.Not.Exist();
+        }
     }
 }

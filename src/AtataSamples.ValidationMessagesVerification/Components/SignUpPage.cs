@@ -10,7 +10,6 @@ namespace AtataSamples.ValidationMessagesVerification
 
         public TextInput<_> LastName { get; private set; }
 
-        [RandomizeStringSettings("{0}@mail.com")]
         public TextInput<_> Email { get; private set; }
 
         public PasswordInput<_> Password { get; private set; }
