@@ -35,10 +35,8 @@ namespace AtataSamples.ValidationMessagesVerification
                 ValidationMessages[x => x.LastName].Should.Equal("is required").
                 ValidationMessages[x => x.Email].Should.Equal("is required").
                 ValidationMessages[x => x.Password].Should.Equal("is required").
-                ValidationMessages[x => x.Office].Should.Equal("is required").
-                ValidationMessages[x => x.Gender].Should.Equal("is required").
                 ValidationMessages[x => x.Agreement].Should.Equal("is required").
-                ValidationMessages.Should.HaveCount(7);
+                ValidationMessages.Should.HaveCount(5);
         }
 
         [Test]
@@ -50,10 +48,8 @@ namespace AtataSamples.ValidationMessagesVerification
                 ValidationMessages[x => x.LastName].Should.BeRequired().
                 ValidationMessages[x => x.Email].Should.BeRequired().
                 ValidationMessages[x => x.Password].Should.BeRequired().
-                ValidationMessages[x => x.Office].Should.BeRequired().
-                ValidationMessages[x => x.Gender].Should.BeRequired().
                 ValidationMessages[x => x.Agreement].Should.BeRequired().
-                ValidationMessages.Should.HaveCount(7);
+                ValidationMessages.Should.HaveCount(5);
         }
 
         [Test]
