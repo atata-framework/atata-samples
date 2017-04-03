@@ -2,7 +2,7 @@
 
 namespace AtataSamples.ValidationMessagesVerification
 {
-    [ControlDefinition("div[contains(concat(' ', normalize-space(@class), ' '), ' has-error ')]//span[contains(concat(' ', normalize-space(@class), ' '), ' help-block ')]", ComponentTypeName = "validation message")]
+    [ControlDefinition("div[contains(concat(' ', normalize-space(@class), ' '), ' has-error ')]//span[contains(concat(' ', normalize-space(@class), ' '), ' help-block ')]")]
     public class ValidationMessage<TOwner> : Text<TOwner>
         where TOwner : PageObject<TOwner>
     {

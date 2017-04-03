@@ -10,12 +10,6 @@ namespace AtataSamples.ValidationMessagesVerification
             return should.Equal("is required");
         }
 
-        public static TOwner BeInvalid<TOwner>(this IFieldVerificationProvider<string, ValidationMessage<TOwner>, TOwner> should)
-            where TOwner : PageObject<TOwner>
-        {
-            return should.Contain("invalid");
-        }
-
         public static TOwner HaveIncorrectFormat<TOwner>(this IFieldVerificationProvider<string, ValidationMessage<TOwner>, TOwner> should)
             where TOwner : PageObject<TOwner>
         {
