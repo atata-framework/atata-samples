@@ -21,12 +21,8 @@ namespace AtataSamples.PageVerification
             [FindByClass("projects-num")]
             public Number<_> NumberOfProjects { get; private set; }
 
-            public ControlList<FeatureItem, _> Features { get; private set; }
-
             [ControlDefinition("li", ComponentTypeName = "feature")]
-            public class FeatureItem : Text<_>
-            {
-            }
+            public ControlList<Text<_>, _> Features { get; private set; }
         }
     }
 }
