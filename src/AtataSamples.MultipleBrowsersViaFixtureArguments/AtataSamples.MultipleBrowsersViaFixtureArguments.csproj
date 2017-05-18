@@ -84,7 +84,7 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\packages\WebDriver.IEDriverServer.win32.3.0\content\IEDriverServer.exe">
+    <Content Include="..\packages\WebDriver.IEDriverServer.win32.3.4.0\content\IEDriverServer.exe">
       <Link>IEDriverServer.exe</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
