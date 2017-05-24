@@ -11,3 +11,4 @@ Contains samples for the following articles:
 
 ## Other Samples
 - Work with multiple browsers via fixture arguments - `src\AtataSamples.MultipleBrowsersViaFixtureArguments.sln`
+- Using Xunit - `src\AtataSamples.Xunit.sln`
