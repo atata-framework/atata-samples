@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace SampleApp.AutoTests
 {
-    public class UserTest : AutoTest
+    public class UserTests : UITestFixture
     {
         [Test]
         public void User_Create()

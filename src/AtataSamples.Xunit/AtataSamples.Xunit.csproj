@@ -76,7 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoTestFixture.cs" />
+    <Compile Include="UITestFixture.cs" />
     <Compile Include="Components\HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleTests.cs" />

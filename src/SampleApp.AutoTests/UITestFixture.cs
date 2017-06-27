@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace SampleApp.AutoTests
 {
     [TestFixture]
-    public class AutoTest
+    public class UITestFixture
     {
         [SetUp]
         public void SetUp()
@@ -18,12 +18,6 @@ namespace SampleApp.AutoTests
                     WithoutSectionFinish().
                 LogNUnitError().
                 SetUp();
-
-            OnSetUp();
-        }
-
-        protected virtual void OnSetUp()
-        {
         }
 
         [TearDown]

@@ -69,7 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AtataSettings.cs" />
-    <Compile Include="AutoTest.cs" />
+    <Compile Include="UITestFixture.cs" />
     <Compile Include="Gender.cs" />
     <Compile Include="Office.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,7 +77,7 @@
     <Compile Include="UserDetailsPage.cs" />
     <Compile Include="UserEditWindow.cs" />
     <Compile Include="UsersPage.cs" />
-    <Compile Include="UserTest.cs" />
+    <Compile Include="UserTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

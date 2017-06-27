@@ -10,7 +10,7 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
 {
     [TestFixture(typeof(ChromeDriver))]
     [TestFixture(typeof(InternetExplorerDriver))]
-    public class AutoTestFixture<TDriver>
+    public class UITestFixture<TDriver>
         where TDriver : RemoteWebDriver
     {
         [SetUp]

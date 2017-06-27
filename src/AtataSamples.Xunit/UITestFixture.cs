@@ -8,9 +8,9 @@ using Xunit.Abstractions;
 
 namespace AtataSamples.Xunit
 {
-    public class AutoTestFixture : IDisposable
+    public class UITestFixture : IDisposable
     {
-        public AutoTestFixture(ITestOutputHelper output)
+        public UITestFixture(ITestOutputHelper output)
         {
             SetCulture("en-US");
 

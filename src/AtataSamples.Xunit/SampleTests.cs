@@ -4,7 +4,7 @@ using Xunit.Abstractions;
 
 namespace AtataSamples.Xunit
 {
-    public class SampleTests : AutoTestFixture
+    public class SampleTests : UITestFixture
     {
         /// <summary>
         /// It is required to define constructor with argument of ITestOutputHelper type for Xunit log output.

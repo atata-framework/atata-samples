@@ -4,7 +4,7 @@ using OpenQA.Selenium.Remote;
 
 namespace AtataSamples.MultipleBrowsersViaFixtureArguments
 {
-    public class SignInTests<TDriver> : AutoTestFixture<TDriver>
+    public class SignInTests<TDriver> : UITestFixture<TDriver>
         where TDriver : RemoteWebDriver
     {
         [Test]
