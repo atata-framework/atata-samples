@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Atata, Version=0.12.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atata.0.12.0\lib\net40\Atata.dll</HintPath>
+    <Reference Include="Atata, Version=0.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atata.0.13.0\lib\net40\Atata.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Atata.Bootstrap, Version=0.4.1.0, Culture=neutral, processorArchitecture=MSIL">
