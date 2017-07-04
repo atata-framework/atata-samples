@@ -65,12 +65,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\BSDeleteConfirmationModal`1.cs" />
+    <Compile Include="Components\DeletionConfirmationBSModal`1.cs" />
+    <Compile Include="Components\DeletionJQueryConfirmBox`1.cs" />
     <Compile Include="Components\JQueryConfirmBox`1.cs" />
     <Compile Include="Components\ProductsPage.cs" />
     <Compile Include="ProductTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Triggers\ConfirmBSDeletionAttribute.cs" />
+    <Compile Include="Triggers\ConfirmDeletionViaBSModalAttribute.cs" />
+    <Compile Include="Triggers\ConfirmDeletionViaJQueryConfirmBoxAttribute.cs" />
     <Compile Include="UITestFixture.cs" />
   </ItemGroup>
   <ItemGroup>

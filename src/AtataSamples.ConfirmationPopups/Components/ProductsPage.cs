@@ -20,12 +20,19 @@ namespace AtataSamples.ConfirmationPopups
             [CloseConfirmBox]
             public ButtonDelegate<_> DeleteUsingJSConfirm { get; private set; }
 
-            [Term("Delete Using BS Modal")]
-            public ButtonDelegate<BSDeleteConfirmationModal<_>, _> DeleteUsingBSModal { get; private set; }
+            [FindByContent("Delete Using BS Modal")]
+            public ButtonDelegate<DeletionConfirmationBSModal<_>, _> DeleteUsingBSModal { get; private set; }
 
-            [Term("Delete Using BS Modal")]
-            [ConfirmBSDeletion]
+            [FindByContent("Delete Using BS Modal")]
+            [ConfirmDeletionViaBSModal]
             public ButtonDelegate<_> DeleteUsingBSModalViaTrigger { get; private set; }
+
+            [FindByContent("Delete Using jquery-confirm")]
+            public ButtonDelegate<DeletionJQueryConfirmBox<_>, _> DeleteUsingJQueryConfirm { get; private set; }
+
+            [FindByContent("Delete Using jquery-confirm")]
+            [ConfirmDeletionViaJQueryConfirmBox]
+            public ButtonDelegate<_> DeleteUsingJQueryConfirmViaTrigger { get; private set; }
         }
     }
 }
