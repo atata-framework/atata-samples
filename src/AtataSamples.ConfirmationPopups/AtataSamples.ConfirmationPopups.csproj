@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\CommonConfirmationBSModal.cs" />
     <Compile Include="Components\DeletionConfirmationBSModal`1.cs" />
     <Compile Include="Components\DeletionJQueryConfirmBox`1.cs" />
     <Compile Include="Components\JQueryConfirmBox`1.cs" />
@@ -76,7 +77,9 @@
     <Compile Include="UITestFixture.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\WebDriver.ChromeDriver.win32.2.30.0.0\content\chromedriver.exe">
