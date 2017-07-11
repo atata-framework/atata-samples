@@ -65,7 +65,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\CommonConfirmationBSModal.cs" />
     <Compile Include="Components\DeletionConfirmationBSModal`1.cs" />
     <Compile Include="Components\DeletionJQueryConfirmBox`1.cs" />
     <Compile Include="Components\JQueryConfirmBox`1.cs" />
