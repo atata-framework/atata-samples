@@ -16,12 +16,12 @@ namespace AtataSamples.Xunit
 
             string testName = ResolveTestName(output);
 
-            AtataContext.Build().
+            AtataContext.Configure().
                 UseChrome().
                 UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
                 UseTestName(testName).
                 AddLogConsumer(new TestOutputLogConsumer(output)).
-                SetUp();
+                Build();
         }
 
         public void Dispose()

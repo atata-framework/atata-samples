@@ -9,7 +9,7 @@ namespace AtataSamples.ValidationMessagesVerification
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Build().
+            AtataContext.Configure().
                 UseChrome().
                     WithArguments("disable-extensions", "no-sandbox", "start-maximized").
                 UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
@@ -17,7 +17,7 @@ namespace AtataSamples.ValidationMessagesVerification
                 AddNUnitTestContextLogging().
                     WithoutSectionFinish().
                 LogNUnitError().
-                SetUp();
+                Build();
         }
 
         [TearDown]

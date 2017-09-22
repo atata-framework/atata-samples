@@ -9,7 +9,7 @@ namespace SampleApp.AutoTests
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Build().
+            AtataContext.Configure().
                 UseChrome().
                     WithArguments("disable-extensions", "no-sandbox", "start-maximized").
                 UseBaseUrl("http://atata-framework.github.io/atata-sample-app/#!/").
@@ -17,7 +17,7 @@ namespace SampleApp.AutoTests
                 AddNUnitTestContextLogging().
                     WithoutSectionFinish().
                 LogNUnitError().
-                SetUp();
+                Build();
         }
 
         [TearDown]

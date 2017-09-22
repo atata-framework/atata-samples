@@ -16,7 +16,7 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Build().
+            AtataContext.Configure().
                 UseDriver(() =>
                     (RemoteWebDriver)Activator.CreateInstance(typeof(TDriver), CreateDriverParameters())).
                 UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
@@ -24,7 +24,7 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
                 AddNUnitTestContextLogging().
                     WithoutSectionFinish().
                 LogNUnitError().
-                SetUp();
+                Build();
         }
 
         private object[] CreateDriverParameters()
