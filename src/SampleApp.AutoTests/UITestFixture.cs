@@ -12,7 +12,7 @@ namespace SampleApp.AutoTests
             AtataContext.Configure().
                 UseChrome().
                     WithArguments("disable-extensions", "no-sandbox", "start-maximized").
-                UseBaseUrl("http://atata-framework.github.io/atata-sample-app/#!/").
+                UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().
                     WithoutSectionFinish().

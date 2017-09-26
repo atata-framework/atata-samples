@@ -1,9 +1,10 @@
 ﻿using Atata;
 using Atata.Bootstrap;
-using _ = SampleApp.AutoTests.UserEditWindow;
 
 namespace SampleApp.AutoTests
 {
+    using _ = UserEditWindow;
+
     public class UserEditWindow : BSModal<_>
     {
         [FindById]

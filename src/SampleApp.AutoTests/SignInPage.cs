@@ -1,8 +1,9 @@
 ﻿using Atata;
-using _ = SampleApp.AutoTests.SignInPage;
 
 namespace SampleApp.AutoTests
 {
+    using _ = SignInPage;
+
     [Url("signin")]
     [VerifyTitle]
     [VerifyH1]
