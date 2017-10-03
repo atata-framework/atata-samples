@@ -16,7 +16,7 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
                 // TODO: Specify Internet Explorer settings, like:
                 // WithOptions(x => x.EnableNativeEvents = true).
                 UseFirefox().
-                // TODO: You can also specify remote driver configuration:
+                // TODO: You can also specify remote driver configuration(s):
                 // UseRemoteDriver().
                 // WithAlias("chrome_remote").
                 // WithRemoteAddress("http://127.0.0.1:4444/wd/hub").
