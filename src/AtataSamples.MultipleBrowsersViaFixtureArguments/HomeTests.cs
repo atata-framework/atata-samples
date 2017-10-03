@@ -1,12 +1,15 @@
 ﻿using Atata;
 using NUnit.Framework;
-using OpenQA.Selenium.Remote;
 
 namespace AtataSamples.MultipleBrowsersViaFixtureArguments
 {
-    public class SignInTests<TDriver> : UITestFixture<TDriver>
-        where TDriver : RemoteWebDriver
+    public class HomeTests : UITestFixture
     {
+        public HomeTests(string driverAlias)
+            : base(driverAlias)
+        {
+        }
+
         [Test]
         public void Home()
         {
