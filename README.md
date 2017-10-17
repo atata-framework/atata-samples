@@ -1,6 +1,6 @@
 # Atata Samples
 
-Automation test samples based on Atata Framework.
+Automation test samples based on [Atata Framework](https://atata-framework.github.io/).
 
 ## Projects
 
