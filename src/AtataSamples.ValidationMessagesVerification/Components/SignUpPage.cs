@@ -1,8 +1,9 @@
 ﻿using Atata;
-using _ = AtataSamples.ValidationMessagesVerification.SignUpPage;
 
 namespace AtataSamples.ValidationMessagesVerification
 {
+    using _ = SignUpPage;
+
     [Url("signup")]
     public class SignUpPage : Page<_>
     {
