@@ -20,6 +20,7 @@ namespace AtataSamples.PageVerification
                 UseChrome().
                     WithArguments("disable-extensions", "no-sandbox", "start-maximized").
                 UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
+                UseCulture("en-us").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().
                     WithoutSectionFinish().
@@ -69,17 +70,17 @@ namespace AtataSamples.PageVerification
                 PlanItems[0].Title.Should.Equal("Basic").
                 PlanItems[0].Price.Should.Equal(0).
                 PlanItems[0].NumberOfProjects.Should.Equal(1).
-                PlanItems[0].Features.Should.EqualSequence(Feature1, Feature2).
+                PlanItems[0].Features.Items.Should.EqualSequence(Feature1, Feature2).
 
                 PlanItems[1].Title.Should.Equal("Plus").
                 PlanItems[1].Price.Should.Equal(19.99m).
                 PlanItems[1].NumberOfProjects.Should.Equal(3).
-                PlanItems[1].Features.Should.EqualSequence(Feature1, Feature2, Feature3, Feature4).
+                PlanItems[1].Features.Items.Should.EqualSequence(Feature1, Feature2, Feature3, Feature4).
 
                 PlanItems[2].Title.Should.Equal("Premium").
                 PlanItems[2].Price.Should.Equal(49.99m).
                 PlanItems[2].NumberOfProjects.Should.Equal(10).
-                PlanItems[2].Features.Should.EqualSequence(Feature1, Feature2, Feature3, Feature4, Feature5, Feature6);
+                PlanItems[2].Features.Items.Should.EqualSequence(Feature1, Feature2, Feature3, Feature4, Feature5, Feature6);
         }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using Atata;
-using _ = AtataSamples.PageVerification.PlansWithOnVerifyPage;
 
 namespace AtataSamples.PageVerification
 {
+    using _ = PlansWithOnVerifyPage;
+
     [Url("plans")]
     public class PlansWithOnVerifyPage : Page<_>
     {

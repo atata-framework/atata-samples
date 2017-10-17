@@ -1,8 +1,9 @@
 ﻿using Atata;
-using _ = AtataSamples.PageVerification.PlansPage;
 
 namespace AtataSamples.PageVerification
 {
+    using _ = PlansPage;
+
     [Url("plans")]
     public class PlansPage : Page<_>
     {
@@ -21,8 +22,7 @@ namespace AtataSamples.PageVerification
             [FindByClass("projects-num")]
             public Number<_> NumberOfProjects { get; private set; }
 
-            [ControlDefinition("li", ComponentTypeName = "feature")]
-            public ControlList<Text<_>, _> Features { get; private set; }
+            public UnorderedList<Text<_>, _> Features { get; private set; }
         }
     }
 }
