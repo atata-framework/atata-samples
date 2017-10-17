@@ -33,11 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Atata, Version=0.14.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atata.0.14.0\lib\net40\Atata.dll</HintPath>
+    <Reference Include="Atata, Version=0.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atata.0.15.0\lib\net45\Atata.dll</HintPath>
     </Reference>
-    <Reference Include="Atata.WebDriverExtras, Version=0.12.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atata.WebDriverExtras.0.12.0\lib\net40\Atata.WebDriverExtras.dll</HintPath>
+    <Reference Include="Atata.WebDriverExtras, Version=0.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atata.WebDriverExtras.0.13.0\lib\net45\Atata.WebDriverExtras.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

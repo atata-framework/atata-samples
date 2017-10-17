@@ -33,15 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Atata, Version=0.14.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atata.0.14.0\lib\net40\Atata.dll</HintPath>
+    <Reference Include="Atata, Version=0.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atata.0.15.0\lib\net45\Atata.dll</HintPath>
     </Reference>
-    <Reference Include="Atata.Bootstrap, Version=0.4.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atata.Bootstrap.0.4.1\lib\net40\Atata.Bootstrap.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Atata.Bootstrap, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atata.Bootstrap.0.5.0\lib\net45\Atata.Bootstrap.dll</HintPath>
     </Reference>
-    <Reference Include="Atata.WebDriverExtras, Version=0.12.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atata.WebDriverExtras.0.12.0\lib\net40\Atata.WebDriverExtras.dll</HintPath>
+    <Reference Include="Atata.WebDriverExtras, Version=0.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atata.WebDriverExtras.0.13.0\lib\net45\Atata.WebDriverExtras.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
