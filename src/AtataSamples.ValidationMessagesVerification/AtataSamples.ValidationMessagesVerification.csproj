@@ -65,7 +65,7 @@
     <Compile Include="Components\SignUpPage.cs" />
     <Compile Include="Components\ValidationMessageList`1.cs" />
     <Compile Include="Components\ValidationMessage`1.cs" />
-    <Compile Include="Extensions\IValidationMessageVerificationProviderExtensions.cs" />
+    <Compile Include="Extensions\ValidationMessageExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUpTests.cs" />
   </ItemGroup>
