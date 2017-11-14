@@ -7,7 +7,7 @@ using NUnit.Framework;
 
 namespace AtataSamples.CsvDataSource
 {
-    public static class NUnitCsvSource
+    public static class CsvSource
     {
         public static TestCaseData[] Get<T>(string filePath, Type expectedResultType = null, string expectedResultName = "ExpectedResult")
         {

@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace AtataSamples.CsvDataSource
+﻿namespace AtataSamples.CsvDataSource
 {
     public class UserModel
     {
@@ -16,9 +14,7 @@ namespace AtataSamples.CsvDataSource
 
         public override string ToString()
         {
-            var propertyValues = GetType().GetProperties().Select(x => x.GetValue(this));
-            var propertyValueStrings = propertyValues.Select(x => x is string ? $"\"{x}\"" : x);
-            return string.Join(",", propertyValueStrings);
+            return TestParametersFormatter.Format(this);
         }
     }
 }

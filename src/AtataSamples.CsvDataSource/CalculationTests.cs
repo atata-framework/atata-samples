@@ -6,7 +6,7 @@ namespace AtataSamples.CsvDataSource
     public class CalculationTests : UITestFixture
     {
         public static TestCaseData[] AdditionModels =>
-            NUnitCsvSource.Get<AdditionModel>("addition-models.csv", expectedResultType: typeof(int));
+            CsvSource.Get<AdditionModel>("addition-models.csv", expectedResultType: typeof(int));
 
         [TestCaseSource(nameof(AdditionModels))]
         public int Calculation_Addition(AdditionModel model)

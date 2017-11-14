@@ -69,10 +69,11 @@
     <Compile Include="Components\CalculationsPage.cs" />
     <Compile Include="Models\AdditionModel.cs" />
     <Compile Include="Models\Gender.cs" />
-    <Compile Include="NUnitCsvSource.cs" />
+    <Compile Include="CsvSource.cs" />
     <Compile Include="Models\Office.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\SignInPage.cs" />
+    <Compile Include="TestParametersFormatter.cs" />
     <Compile Include="UITestFixture.cs" />
     <Compile Include="Components\NewUserWindow.cs" />
     <Compile Include="Models\UserModel.cs" />

@@ -6,7 +6,7 @@ namespace AtataSamples.CsvDataSource
     public class UserTests : UITestFixture
     {
         public static TestCaseData[] UserModels =>
-            NUnitCsvSource.Get<UserModel>("user-models.csv");
+            CsvSource.Get<UserModel>("user-models.csv");
 
         [TestCaseSource(nameof(UserModels))]
         public void User_Create_New(UserModel model)
