@@ -17,6 +17,7 @@ Automation test samples based on [Atata Framework](https://atata-framework.githu
   Used in [Handle Confirmation Popups](https://atata-framework.github.io/tutorials/handle-confirmation-popups/) tutorial.
 - **Multi-Browser Configuration via Fixture Arguments** - `src\AtataSamples.MultipleBrowsersViaFixtureArguments.sln`.
   Used in [Multi-Browser Configuration via Fixture Arguments](https://atata-framework.github.io/tutorials/multi-browser-configuration-via-fixture-arguments/) tutorial.
+- **Using CSV Data Source** - `src\AtataSamples.CsvDataSource.sln`.
 - **Using Xunit** - `src\AtataSamples.Xunit.sln`.
 
 Or just open `src\AtataSamples.sln` which contains all sample projects.
