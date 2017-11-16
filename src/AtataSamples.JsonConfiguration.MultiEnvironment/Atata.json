@@ -1,0 +1,18 @@
+﻿{
+  "driver": {
+    "type": "chrome",
+    "options": {
+      "arguments": [ "start-maximized" ]
+    }
+  },
+  "useNUnitTestName": true,
+  "logNUnitError": true,
+  "takeScreenshotOnNUnitError": true,
+  "logConsumers": [
+    {
+      "type": "nunit",
+      "minLevel": "Info",
+      "sectionFinish": false
+    }
+  ]
+}
