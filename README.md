@@ -20,6 +20,7 @@ Automation test samples based on [Atata Framework](https://atata-framework.githu
 - **Using CSV Data Source** - `src\AtataSamples.CsvDataSource.sln`.
 - **JSON Configuration: Multi-Environment** - `src\AtataSamples.JsonConfiguration.MultiEnvironment.sln`.
 - **Using Xunit** - `src\AtataSamples.Xunit.sln`.
+- **Using MSTest** - `src\AtataSamples.MSTest.sln`.
 
 Or just open `src\AtataSamples.sln` which contains all sample projects.
 
