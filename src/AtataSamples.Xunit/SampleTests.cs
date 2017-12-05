@@ -16,7 +16,8 @@ namespace AtataSamples.Xunit
         }
 
         /// <summary>
-        /// Simple test approach when you don't need to add exception/error information to the log. For example, when you use Visual Studio or CI system to view the log, as exception is displayed there any way.
+        /// Simple test approach when you don't need to add exception/error information to the log.
+        /// For example, when you use Visual Studio or CI system to view the log, as exception is displayed there any way.
         /// </summary>
         [Fact]
         public void XUnitTest()
@@ -26,7 +27,9 @@ namespace AtataSamples.Xunit
         }
 
         /// <summary>
-        /// Use such approach with Run method when you need to add exception/error information to the log. It is needed if you log to file or other external source. It is not required when you just use ITestOutputHelper as a single log target.
+        /// Use such approach with Run method when you need to add exception/error information to the log.
+        /// It is needed if you log to file or other external source.
+        /// It is not required when you just use ITestOutputHelper as a single log target.
         /// </summary>
         [Fact]
         public void XUnitTestWithExceptionLogging()
