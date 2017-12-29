@@ -37,8 +37,8 @@
     <Reference Include="Atata, Version=0.16.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Atata.0.16.0\lib\net40\Atata.dll</HintPath>
     </Reference>
-    <Reference Include="Atata.Bootstrap, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atata.Bootstrap.0.5.0\lib\net40\Atata.Bootstrap.dll</HintPath>
+    <Reference Include="Atata.Bootstrap, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atata.Bootstrap.0.6.0\lib\net40\Atata.Bootstrap.dll</HintPath>
     </Reference>
     <Reference Include="Atata.WebDriverExtras, Version=0.14.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Atata.WebDriverExtras.0.14.0\lib\net40\Atata.WebDriverExtras.dll</HintPath>
