@@ -44,8 +44,8 @@
     <Reference Include="Atata, Version=0.16.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Atata.0.16.0\lib\net45\Atata.dll</HintPath>
     </Reference>
-    <Reference Include="Atata.Configuration.Json, Version=0.15.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atata.Configuration.Json.0.15.0\lib\net45\Atata.Configuration.Json.dll</HintPath>
+    <Reference Include="Atata.Configuration.Json, Version=0.16.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atata.Configuration.Json.0.16.0\lib\net45\Atata.Configuration.Json.dll</HintPath>
     </Reference>
     <Reference Include="Atata.WebDriverExtras, Version=0.14.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Atata.WebDriverExtras.0.14.0\lib\net45\Atata.WebDriverExtras.dll</HintPath>
@@ -93,7 +93,9 @@
     <None Include="Atata.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
