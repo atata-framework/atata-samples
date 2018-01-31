@@ -21,6 +21,7 @@ Automation test samples based on [Atata Framework](https://atata-framework.githu
 - **JSON Configuration: Multi-Environment** - `src\AtataSamples.JsonConfiguration.MultiEnvironment.sln`.
 - **Using Xunit** - `src\AtataSamples.Xunit.sln`.
 - **Using MSTest** - `src\AtataSamples.MSTest.sln`.
+- **.NET Core + NUnit** - `src\AtataSamples.NetCore.NUnit.sln`.
 
 Or just open `src\AtataSamples.sln` which contains all sample projects.
 
