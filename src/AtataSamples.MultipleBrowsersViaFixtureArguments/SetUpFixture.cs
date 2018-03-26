@@ -11,7 +11,7 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
         {
             AtataContext.GlobalConfiguration.
                 UseChrome().
-                    WithArguments("start-maximized", "disable-extensions").
+                    WithArguments("start-maximized").
                 UseInternetExplorer().
                 // TODO: Specify Internet Explorer settings, like:
                 // WithOptions(x => x.EnableNativeEvents = true).

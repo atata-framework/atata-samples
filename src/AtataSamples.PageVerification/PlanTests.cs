@@ -18,7 +18,7 @@ namespace AtataSamples.PageVerification
         {
             AtataContext.Configure().
                 UseChrome().
-                    WithArguments("disable-extensions", "no-sandbox", "start-maximized").
+                    WithArguments("start-maximized").
                 UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
                 UseCulture("en-us").
                 UseNUnitTestName().
