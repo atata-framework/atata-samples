@@ -8,13 +8,13 @@ Automated UI test samples based on [Atata Framework](https://atata-framework.git
 ## Projects
 
 - **Basic Sample App** - [`/SampleApp.UITests`](../../tree/master/SampleApp.UITests)
-  ([Download](https://github.com/atata-framework/atata-samples/tree/master/SampleApp.UITests)).
+  ([download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/SampleApp.UITests)).
   Used in [Atata - New Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework) article.
 - **Verification of Page** - [`/PageVerification`](../../tree/master/PageVerification)
-  ([Download](https://github.com/atata-framework/atata-samples/tree/master/PageVerification){:target="_blank"}).
+  ([download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/PageVerification).
   Used in [Verification of Page](https://atata-framework.github.io/tutorials/verification-of-page/) tutorial.
 - **Verification of Validation Messages** - [`/ValidationMessagesVerification`](../../tree/master/ValidationMessagesVerification)
-  (<a href="https://github.com/atata-framework/atata-samples/tree/master/ValidationMessagesVerification" target="_blank">Download</a>).
+  ([download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/ValidationMessagesVerification).
   Used in [Verification of Validation Messages](https://atata-framework.github.io/tutorials/verification-of-validation-messages/) tutorial.
 - **Handle Confirmation Popups** - [`/ConfirmationPopups`](../../tree/master/ConfirmationPopups).
   Used in [Handle Confirmation Popups](https://atata-framework.github.io/tutorials/handle-confirmation-popups/) tutorial.
