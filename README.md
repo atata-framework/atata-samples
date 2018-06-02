@@ -9,7 +9,7 @@ Automation test samples based on [Atata Framework](https://atata-framework.githu
 
 - **Basic Sample App** - [`/SampleApp.UITests`](./tree/master/SampleApp.UITests).
   Used in [Atata - New Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework) article.
-- **Verification of Page** - [`/PageVerification`](/tree/master/PageVerification).
+- **Verification of Page** - [`/PageVerification`](../../tree/master/PageVerification).
   Used in [Verification of Page](https://atata-framework.github.io/tutorials/verification-of-page/) tutorial.
 - **Verification of Validation Messages** - [`/ValidationMessagesVerification`](tree/master/ValidationMessagesVerification).
   Used in [Verification of Validation Messages](https://atata-framework.github.io/tutorials/verification-of-validation-messages/) tutorial.
