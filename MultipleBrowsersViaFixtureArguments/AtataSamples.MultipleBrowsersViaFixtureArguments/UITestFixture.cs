@@ -28,7 +28,7 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
         [TearDown]
         public void TearDown()
         {
-            AtataContext.Current.CleanUp();
+            AtataContext.Current?.CleanUp();
         }
     }
 }

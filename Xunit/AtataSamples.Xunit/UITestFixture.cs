@@ -23,7 +23,7 @@ namespace AtataSamples.Xunit
 
         public void Dispose()
         {
-            AtataContext.Current.CleanUp();
+            AtataContext.Current?.CleanUp();
         }
 
         private string ResolveTestName(ITestOutputHelper output)

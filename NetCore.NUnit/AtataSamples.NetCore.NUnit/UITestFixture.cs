@@ -25,7 +25,7 @@ namespace AtataSamples.NetCore.NUnit
         [TearDown]
         public void TearDown()
         {
-            AtataContext.Current.CleanUp();
+            AtataContext.Current?.CleanUp();
         }
     }
 }

@@ -21,7 +21,7 @@ namespace AtataSamples.MSTest
         [TestCleanup]
         public void TearDown()
         {
-            AtataContext.Current.CleanUp();
+            AtataContext.Current?.CleanUp();
         }
     }
 }
