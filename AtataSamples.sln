@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{192E13F2-560C-4C9A-9E3E-D9DE4D97BA43}"
 	ProjectSection(SolutionItems) = preProject
 		..\README.md = ..\README.md
+		update-nuget-reference-path.ps1 = update-nuget-reference-path.ps1
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.ConfirmationPopups", "ConfirmationPopups\AtataSamples.ConfirmationPopups\AtataSamples.ConfirmationPopups.csproj", "{A659A370-ADF1-4BF7-B545-630EEDED8AA3}"
@@ -26,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.JsonConfigurat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.MSTest", "MSTest\AtataSamples.MSTest\AtataSamples.MSTest.csproj", "{D35613E8-170A-4C6E-9369-87A3996B53B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.NetCore.NUnit", "NetCore.NUnit\AtataSamples.NetCore.NUnit\AtataSamples.NetCore.NUnit.csproj", "{B9065310-CC7A-4EE0-A838-63111402180C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NetCore.NUnit", "NetCore.NUnit\AtataSamples.NetCore.NUnit\AtataSamples.NetCore.NUnit.csproj", "{B9065310-CC7A-4EE0-A838-63111402180C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
