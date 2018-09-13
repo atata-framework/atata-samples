@@ -1,0 +1,19 @@
+queue:
+  name: Hosted VS2017
+  demands: vstest
+  
+variables:
+  buildConfiguration: 'Debug'
+  
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    projects: '**\*.sln'
+    arguments: '-c $(buildConfiguration) /warnaserror'
+
+- task: VSTest@2
+  inputs:
+    testAssemblyVer2: |
+      **\AtataSamples.*.dll
+      **\SampleApp.UITests.dll
+      !**\obj\**
