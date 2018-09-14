@@ -6,14 +6,34 @@ variables:
   buildConfiguration: 'Debug'
   
 steps:
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**\packages.config'
+    restoreDirectory: '$(Build.SourcesDirectory)\packages'
+    verbosityRestore: Normal
+
+
 - task: DotNetCoreCLI@2
   inputs:
-    projects: '**\*.sln'
-    arguments: '-c $(buildConfiguration) /warnaserror'
+    command: restore
+    projects: '**\*.NetCore*.csproj'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    projects: AtataSamples.sln
+    arguments: '-c $(buildConfiguration)
 
 - task: VSTest@2
   inputs:
     testAssemblyVer2: |
-      **\AtataSamples.*.dll
-      **\SampleApp.UITests.dll
-      !**\obj\**
+     **\AtataSamples.*.dll
+     **\SampleApp.UITests.dll
+     !**\obj\**
+     !**\AtataSamples.MultipleBrowsersViaFixtureArguments.dll
+
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '**\*.NetCore*.csproj'
+    arguments: '-c $(buildConfiguration)
