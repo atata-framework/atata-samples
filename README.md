@@ -1,9 +1,10 @@
 # Atata Samples
 
+[![Build Status](https://dev.azure.com/atata-framework/atata-samples/_apis/build/status/atata-samples-ci)](https://dev.azure.com/atata-framework/atata-samples/_build/latest?definitionId=15)
 [![Docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata-framework.github.io/)
 [![Twitter](https://img.shields.io/badge/follow-@AtataFramework-blue.svg)](https://twitter.com/AtataFramework)
 
-Automated UI test samples based on [Atata Framework](https://atata-framework.github.io/).
+Automated UI test samples based on **[Atata Framework](https://atata-framework.github.io/)**.
 
 ## Projects
 
