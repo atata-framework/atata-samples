@@ -45,8 +45,8 @@
     <Reference Include="Atata, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)\packages\Atata.1.0.0\lib\net45\Atata.dll</HintPath>
     </Reference>
-    <Reference Include="Atata.Configuration.Json, Version=0.17.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\Atata.Configuration.Json.0.17.0\lib\net45\Atata.Configuration.Json.dll</HintPath>
+    <Reference Include="Atata.Configuration.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Atata.Configuration.Json.1.0.0\lib\net45\Atata.Configuration.Json.dll</HintPath>
     </Reference>
     <Reference Include="Atata.WebDriverExtras, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)\packages\Atata.WebDriverExtras.1.1.0\lib\net45\Atata.WebDriverExtras.dll</HintPath>
