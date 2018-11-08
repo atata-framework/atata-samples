@@ -14,7 +14,7 @@ namespace AtataSamples.MSTest
         public void MSTest()
         {
             Go.To<HomePage>().
-               Header.Should.Equal("Atata Sample A1pp");
+               Header.Should.Equal("Atata Sample App");
         }
 
         /// <summary>
