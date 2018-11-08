@@ -36,7 +36,7 @@ namespace AtataSamples.Xunit
             return test?.DisplayName;
         }
 
-        protected void Run(Action action)
+        protected void Execute(Action action)
         {
             try
             {

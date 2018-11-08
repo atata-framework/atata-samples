@@ -1,4 +1,5 @@
-﻿using Atata;
+﻿using System;
+using Atata;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AtataSamples.MSTest
@@ -22,6 +23,19 @@ namespace AtataSamples.MSTest
         public void TearDown()
         {
             AtataContext.Current?.CleanUp();
+        }
+
+        protected void Execute(Action action)
+        {
+            try
+            {
+                action?.Invoke();
+            }
+            catch (Exception exception)
+            {
+                AtataContext.Current.Log.Error(null, exception);
+                throw;
+            }
         }
     }
 }
