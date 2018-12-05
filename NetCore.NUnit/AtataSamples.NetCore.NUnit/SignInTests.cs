@@ -22,7 +22,7 @@ namespace AtataSamples.NetCore.NUnit
                 Email.Set("admin@mail.com").
                 Password.Set("WRONGPASSWORD").
                 SignIn.Click().
-                Heading.Should.Equal("Sign In"). // Verify that we are still on "Sing In" page.
+                Heading.Should.Equal("Sign In"). // Verify that we are still on "Sign In" page.
                 Content.Should.Contain("Password or Email is invalid"); // Verify validation message.
         }
     }
