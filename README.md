@@ -1,10 +1,10 @@
 # Atata Samples
 
 [![Build Status](https://dev.azure.com/atata-framework/atata-samples/_apis/build/status/atata-samples-ci)](https://dev.azure.com/atata-framework/atata-samples/_build/latest?definitionId=15)
-[![Docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata-framework.github.io/)
+[![Docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata-framework.github.io)
 [![Twitter](https://img.shields.io/badge/follow-@AtataFramework-blue.svg)](https://twitter.com/AtataFramework)
 
-Automated UI test samples based on **[Atata Framework](https://atata-framework.github.io/)**.
+Automated UI test sample projects based on **[Atata Framework](https://atata-framework.github.io)**.
 
 ## Projects
 
@@ -27,6 +27,8 @@ Automated UI test samples based on **[Atata Framework](https://atata-framework.g
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/CsvDataSource).
 - **JSON Configuration: Multi-Environment** - [`/JsonConfiguration.MultiEnvironment`](../../tree/master/JsonConfiguration.MultiEnvironment)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/JsonConfiguration.MultiEnvironment).
+- **App.Config Configuration** - [`/AppConfig`](../../tree/master/AppConfig)
+  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/AppConfig).
 - **Using Xunit** - [`/Xunit`](../../tree/master/Xunit)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Xunit).
 - **Using MSTest** - [`/MSTest`](../../tree/master/MSTest)
