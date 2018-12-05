@@ -2,6 +2,8 @@
 
 [![Build Status](https://dev.azure.com/atata-framework/atata-samples/_apis/build/status/atata-samples-ci)](https://dev.azure.com/atata-framework/atata-samples/_build/latest?definitionId=15)
 [![Docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata-framework.github.io)
+[![Gitter](https://badges.gitter.im/atata-framework/atata.svg)](https://gitter.im/atata-framework/atata)
+[![Slack](https://img.shields.io/badge/join-Slack-green.svg?colorB=4EB898)](https://join.slack.com/t/atata-framework/shared_invite/enQtNDMzMzk3OTY5NjgzLTJlNzAyN2E3MzY3MDE4ZGE1ZDQzOGY2NThiYWExZTNkNDc5YjdlNzFjYmUwYjZmNDI2MDJlMGQ3ODNlMDljMzU)
 [![Twitter](https://img.shields.io/badge/follow-@AtataFramework-blue.svg)](https://twitter.com/AtataFramework)
 
 Automated UI test sample projects based on **[Atata Framework](https://atata-framework.github.io)**.
