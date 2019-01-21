@@ -9,7 +9,7 @@ namespace AtataSamples.Performance.ControlList
         where TItem : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {
-        protected const string GetTextContentsScript = @"
+        protected const string GetElementsDataScript = @"
 var elements = arguments[0];
 var textValues = [];
 
@@ -43,7 +43,7 @@ return textValues;";
             // TODO: Add filtering by visibility.
             var elements = GetItemElements(By.XPath(fullElementXPath).OfAnyVisibility());
 
-            return ExtractTextContents(elements, elementDataJSPath).
+            return GetElementsData(elements, elementDataJSPath).
                 Select(x => TermResolver.FromString<TData>(x, dataTermOptions));
         }
 
@@ -62,9 +62,9 @@ return textValues;";
                 return itemXPath + "//" + subElementXPath;
         }
 
-        private IEnumerable<string> ExtractTextContents(IEnumerable<IWebElement> elements, string elementDataJSPath)
+        private IEnumerable<string> GetElementsData(IEnumerable<IWebElement> elements, string elementDataJSPath)
         {
-            string formattedScript = GetTextContentsScript.Replace("{0}", elementDataJSPath);
+            string formattedScript = GetElementsDataScript.Replace("{0}", elementDataJSPath);
 
             return ((IEnumerable<object>)AtataContext.Current.Driver.ExecuteScript(formattedScript, elements)).
                 Cast<string>().
