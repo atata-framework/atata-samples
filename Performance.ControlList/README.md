@@ -2,7 +2,9 @@
 
 [![Docs](https://img.shields.io/badge/Download-Sources-brightgreen.svg)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList)
 
-Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
+Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements). 
+
+[Page under test](https://atata-framework.github.io/atata-sample-app/#!/table-list)
 
 ## Examples
 
