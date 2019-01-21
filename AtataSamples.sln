@@ -32,6 +32,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NetCore.NUnit"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.AppConfig", "AppConfig\AtataSamples.AppConfig\AtataSamples.AppConfig.csproj", "{F504BB5B-BFE4-4CD8-93CF-505C770B11C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.Performance.ControlList", "Performance.ControlList\AtataSamples.Performance.ControlList\AtataSamples.Performance.ControlList.csproj", "{F296B150-C376-44BF-8E82-212031B37736}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +84,10 @@ Global
 		{F504BB5B-BFE4-4CD8-93CF-505C770B11C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F504BB5B-BFE4-4CD8-93CF-505C770B11C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F504BB5B-BFE4-4CD8-93CF-505C770B11C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F296B150-C376-44BF-8E82-212031B37736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F296B150-C376-44BF-8E82-212031B37736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F296B150-C376-44BF-8E82-212031B37736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F296B150-C376-44BF-8E82-212031B37736}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
