@@ -31,6 +31,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata-fra
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/JsonConfiguration.MultiEnvironment).
 - **App.Config Configuration** - [`/AppConfig`](../../tree/master/AppConfig)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/AppConfig).
+- **Table with Row-Spanned Cells** - [`/TableWithRowSpannedCells`](../../tree/master/TableWithRowSpannedCells)
+  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/TableWithRowSpannedCells).
+  Demonstrates 3 different approaches to work with table that has cells with `rowspan`.
 - **Performance of ControlList** - [`/Performance.ControlList`](../../tree/master/Performance.ControlList)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList).
   Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
