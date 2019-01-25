@@ -1,10 +1,10 @@
-# [Atata Samples](../) / Table with Row-Spanned Cells
+# [Atata Samples](https://github.com/atata-framework/atata-samples) / Table with Row-Spanned Cells
 
 [![Download sources](https://img.shields.io/badge/Download-Sources-brightgreen.svg)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/TableWithRowSpannedCells)
 
 Demonstrates 3 different Atata approaches to work with table that has cells with `rowspan`.
 
-*Download sources, run the tests, check exection, results and experiment with Atata.*
+*Download sources, run the tests, check exection results and experiment with Atata.*
 
 ## Page Under Test
 
