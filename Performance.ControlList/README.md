@@ -1,8 +1,10 @@
-# Performance of ControlList
+# [Atata Samples](https://github.com/atata-framework/atata-samples) / Performance Practices for ControlList
 
-[![Docs](https://img.shields.io/badge/Download-Sources-brightgreen.svg)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList)
+[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList)
 
-Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements). 
+Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
+
+*[Download sources](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList), run tests, check results and experiment with Atata.*
 
 [Page under test](https://atata-framework.github.io/atata-sample-app/#!/table-list)
 

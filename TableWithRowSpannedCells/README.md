@@ -1,10 +1,10 @@
 # [Atata Samples](https://github.com/atata-framework/atata-samples) / Table with Row-Spanned Cells
 
-[![Download sources](https://img.shields.io/badge/Download-Sources-brightgreen.svg)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/TableWithRowSpannedCells)
+[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/TableWithRowSpannedCells)
 
 Demonstrates 3 different Atata approaches to work with table that has cells with `rowspan`.
 
-*Download sources, run the tests, check exection results and experiment with Atata.*
+*[Download sources](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/TableWithRowSpannedCells), run tests, check results and experiment with Atata.*
 
 ## Page Under Test
 
@@ -14,7 +14,8 @@ Demonstrates 3 different Atata approaches to work with table that has cells with
 
 ## Approach #1: Using FindByXPathAttribute
 
-Uses power of XPath to find cell indices. But able to find only by indices, check Approach #3 to find cells by column header text.
+Uses power of XPath to find cell indices.
+But able to find only by indices, check Approach #3 to find cells by column header text.
 
 ### Page Object
 
@@ -294,7 +295,7 @@ namespace AtataSamples.TableWithRowSpannedCells
 }
 ```
 
-## Test
+## Tests
 
 Testing code for all approaches is the same as follows.
 
