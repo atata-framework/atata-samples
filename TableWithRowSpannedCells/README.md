@@ -4,7 +4,7 @@
 
 Demonstrates 3 different Atata approaches to work with table that has cells with `rowspan`.
 
-*[Download sources](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/TableWithRowSpannedCells), run tests, check results and experiment with Atata.*
+*[Download sources](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/TableWithRowSpannedCells), run tests, check results and experiment with [Atata Framework](https://atata-framework.github.io).*
 
 ## Page Under Test
 
