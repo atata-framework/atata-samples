@@ -50,15 +50,17 @@ namespace AtataSamples.TableWithRowSpannedCells
 
         protected virtual string BuildXPathForCell(ColumnInfo column, List<ColumnInfo> columns)
         {
+            string rowSpannedCellXPathCondition = $"count(td) = {columns.Count}";
+            int columnIndex = columns.IndexOf(column);
+
             if (column.HasRowSpan)
             {
-                int columnIndex = columns.IndexOf(column);
-                return $"(self::*[td[1][@rowspan]] | preceding-sibling::tr[td[1][@rowspan]])[last()]/td[{columnIndex + 1}]";
+                return $"(self::tr | preceding-sibling::tr)[{rowSpannedCellXPathCondition}][last()]/td[{columnIndex + 1}]";
             }
             else
             {
-                int countOfPrecedingColumnsWithoutRowSpan = columns.TakeWhile(x => x != column).Count(x => !x.HasRowSpan);
-                return $"td[not(@rowspan)][{countOfPrecedingColumnsWithoutRowSpan + 1}]";
+                int countOfPrecedingColumnsWithoutRowSpan = columns.Take(columnIndex).Count(x => !x.HasRowSpan);
+                return $"(self::tr[{rowSpannedCellXPathCondition}]/td[{columnIndex + 1}] | self::tr[not({rowSpannedCellXPathCondition})]/td[{countOfPrecedingColumnsWithoutRowSpan + 1}])";
             }
         }
 
@@ -69,11 +71,15 @@ namespace AtataSamples.TableWithRowSpannedCells
             var cells = scope.GetAll(By.XPath(BodyFirstRowCellsXPath).With(searchOptions).OfAnyVisibility());
 
             return headers.Select((header, index) =>
-                new ColumnInfo
+            {
+                string cellRowSpanValue = cells.ElementAtOrDefault(index)?.GetAttribute("rowspan")?.Trim();
+
+                return new ColumnInfo
                 {
                     HeaderName = header.Text,
-                    HasRowSpan = cells.ElementAtOrDefault(index)?.GetAttribute("rowspan") != null
-                }).ToList();
+                    HasRowSpan = !string.IsNullOrEmpty(cellRowSpanValue) && cellRowSpanValue != "1"
+                };
+            }).ToList();
         }
 
         protected class ColumnInfo
