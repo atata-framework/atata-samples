@@ -70,7 +70,6 @@ namespace AtataSamples.TableWithRowSpannedCells
                 Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.Exist().
                 Users.Rows[x => x.Name == "John Smith" && x.Client == "SomeSoft"].Project.Should.Equal("BioFruit").
                 Users.Rows[x => x.Name == "Total"].GrossMarginPercent.Should.Equal(0.36m);
-            ;
         }
 
         [Test]
@@ -104,7 +103,6 @@ namespace AtataSamples.TableWithRowSpannedCells
                 Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.Exist().
                 Users.Rows[x => x.Name == "John Smith" && x.Client == "SomeSoft"].Project.Should.Equal("BioFruit").
                 Users.Rows[x => x.Name == "Total"].GrossMarginPercent.Should.Equal(0.36m);
-            ;
         }
     }
 }
