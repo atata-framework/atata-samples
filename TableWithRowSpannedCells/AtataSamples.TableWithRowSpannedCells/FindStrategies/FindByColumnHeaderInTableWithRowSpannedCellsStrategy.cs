@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Atata;
 using OpenQA.Selenium;
@@ -11,10 +12,10 @@ namespace AtataSamples.TableWithRowSpannedCells
     {
         private const string HeaderXPath = "(ancestor::table)[position() = last()]//th";
 
-        private const string BodyFirstRowCellsXPath = "(ancestor::table)[position() = last()]/tbody/tr[1]/td";
-
         private static readonly ConcurrentDictionary<Type, List<ColumnInfo>> TableColumnsInfoCache =
             new ConcurrentDictionary<Type, List<ColumnInfo>>();
+
+        public string RowWithSpannedCellsXPathCondition { get; set; } = "td[@rowspan and normalize-space(@rowspan) != '1']";
 
         public ComponentScopeLocateResult Find(IWebElement scope, ComponentScopeLocateOptions options, SearchOptions searchOptions)
         {
@@ -39,7 +40,7 @@ namespace AtataSamples.TableWithRowSpannedCells
         {
             List<ColumnInfo> columns = TableColumnsInfoCache.GetOrAdd(
                 options.Metadata.ParentComponentType,
-                _ => GetColumnInfoItems(scope, searchOptions));
+                _ => GetColumnInfoItems(scope));
 
             ColumnInfo column = columns.
                 Where(x => options.Match.IsMatch(x.HeaderName, options.Terms)).
@@ -64,11 +65,11 @@ namespace AtataSamples.TableWithRowSpannedCells
             }
         }
 
-        protected virtual List<ColumnInfo> GetColumnInfoItems(IWebElement scope, SearchOptions searchOptions)
+        protected virtual List<ColumnInfo> GetColumnInfoItems(IWebElement rowScope)
         {
-            var headers = scope.GetAll(By.XPath(HeaderXPath).With(searchOptions).OfAnyVisibility());
+            var headers = rowScope.GetAll(By.XPath(HeaderXPath).AtOnce().OfAnyVisibility());
 
-            var cells = scope.GetAll(By.XPath(BodyFirstRowCellsXPath).With(searchOptions).OfAnyVisibility());
+            var cells = GetCellsOfRowWithSpannedCells(rowScope);
 
             return headers.Select((header, index) =>
             {
@@ -80,6 +81,16 @@ namespace AtataSamples.TableWithRowSpannedCells
                     HasRowSpan = !string.IsNullOrEmpty(cellRowSpanValue) && cellRowSpanValue != "1"
                 };
             }).ToList();
+        }
+
+        private ReadOnlyCollection<IWebElement> GetCellsOfRowWithSpannedCells(IWebElement rowScope)
+        {
+            ReadOnlyCollection<IWebElement> cells = rowScope.GetAll(
+                By.XPath($"../tr[{RowWithSpannedCellsXPathCondition}][1]/td").AtOnce().OfAnyVisibility());
+
+            return cells.Any()
+                ? cells
+                : rowScope.GetAll(By.XPath("/td").AtOnce().OfAnyVisibility());
         }
 
         protected class ColumnInfo
