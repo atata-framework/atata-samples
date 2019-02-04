@@ -10,16 +10,18 @@ namespace AtataSamples.TableWithRowSpannedCells
 {
     public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeLocateStrategy
     {
-        private const string HeaderXPath = "(ancestor::table)[position() = last()]//th";
-
-        private static readonly ConcurrentDictionary<Type, List<ColumnInfo>> TableColumnsInfoCache =
+        protected static ConcurrentDictionary<Type, List<ColumnInfo>> TableColumnsInfoCache { get; } =
             new ConcurrentDictionary<Type, List<ColumnInfo>>();
+
+        public string RowXPath { get; set; } = "tr";
+
+        public string HeaderCellsXPath { get; set; } = "(ancestor::table)[position() = last()]/thead//th";
 
         public string RowWithSpannedCellsXPathCondition { get; set; } = "td[@rowspan and normalize-space(@rowspan) != '1']";
 
         public ComponentScopeLocateResult Find(IWebElement scope, ComponentScopeLocateOptions options, SearchOptions searchOptions)
         {
-            string xPath = BuildXPath(scope, options, searchOptions);
+            string xPath = BuildXPath(scope, options);
 
             if (xPath == null)
             {
@@ -36,7 +38,7 @@ namespace AtataSamples.TableWithRowSpannedCells
             return new FindByXPathStrategy().Find(scope, xPathOptions, searchOptions);
         }
 
-        private string BuildXPath(IWebElement scope, ComponentScopeLocateOptions options, SearchOptions searchOptions)
+        protected virtual string BuildXPath(IWebElement scope, ComponentScopeLocateOptions options)
         {
             List<ColumnInfo> columns = TableColumnsInfoCache.GetOrAdd(
                 options.Metadata.ParentComponentType,
@@ -56,20 +58,19 @@ namespace AtataSamples.TableWithRowSpannedCells
 
             if (column.HasRowSpan)
             {
-                return $"(self::tr | preceding-sibling::tr)[{rowSpannedCellXPathCondition}][last()]/td[{columnIndex + 1}]";
+                return $"(self::{RowXPath} | preceding-sibling::{RowXPath})[{rowSpannedCellXPathCondition}][last()]/td[{columnIndex + 1}]";
             }
             else
             {
                 int countOfPrecedingColumnsWithoutRowSpan = columns.Take(columnIndex).Count(x => !x.HasRowSpan);
-                return $"(self::tr[{rowSpannedCellXPathCondition}]/td[{columnIndex + 1}] | self::tr[not({rowSpannedCellXPathCondition})]/td[{countOfPrecedingColumnsWithoutRowSpan + 1}])";
+                return $"(self::{RowXPath}[{rowSpannedCellXPathCondition}]/td[{columnIndex + 1}] | self::{RowXPath}[not({rowSpannedCellXPathCondition})]/td[{countOfPrecedingColumnsWithoutRowSpan + 1}])";
             }
         }
 
-        protected virtual List<ColumnInfo> GetColumnInfoItems(IWebElement rowScope)
+        protected virtual List<ColumnInfo> GetColumnInfoItems(IWebElement row)
         {
-            var headers = rowScope.GetAll(By.XPath(HeaderXPath).AtOnce().OfAnyVisibility());
-
-            var cells = GetCellsOfRowWithSpannedCells(rowScope);
+            var headers = GetHeaderCells(row);
+            var cells = GetCellsOfRowWithSpannedCells(row);
 
             return headers.Select((header, index) =>
             {
@@ -83,14 +84,19 @@ namespace AtataSamples.TableWithRowSpannedCells
             }).ToList();
         }
 
-        private ReadOnlyCollection<IWebElement> GetCellsOfRowWithSpannedCells(IWebElement rowScope)
+        private ReadOnlyCollection<IWebElement> GetHeaderCells(IWebElement row)
         {
-            ReadOnlyCollection<IWebElement> cells = rowScope.GetAll(
-                By.XPath($"../tr[{RowWithSpannedCellsXPathCondition}][1]/td").AtOnce().OfAnyVisibility());
+            return row.GetAll(By.XPath(HeaderCellsXPath).AtOnce().OfAnyVisibility());
+        }
+
+        private ReadOnlyCollection<IWebElement> GetCellsOfRowWithSpannedCells(IWebElement row)
+        {
+            ReadOnlyCollection<IWebElement> cells = row.GetAll(
+                By.XPath($"../{RowXPath}[{RowWithSpannedCellsXPathCondition}][1]/td").AtOnce().OfAnyVisibility());
 
             return cells.Any()
                 ? cells
-                : rowScope.GetAll(By.XPath("/td").AtOnce().OfAnyVisibility());
+                : row.GetAll(By.XPath("./td").AtOnce().OfAnyVisibility());
         }
 
         protected class ColumnInfo
