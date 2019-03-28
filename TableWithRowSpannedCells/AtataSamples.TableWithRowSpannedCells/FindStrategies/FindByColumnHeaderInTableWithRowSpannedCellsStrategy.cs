@@ -35,7 +35,7 @@ namespace AtataSamples.TableWithRowSpannedCells
             xPathOptions.Index = 0;
             xPathOptions.Terms = new string[] { xPath };
 
-            return new FindByXPathStrategy().Find(scope, xPathOptions, searchOptions);
+            return new SequalComponentScopeLocateResult(scope, new FindByXPathStrategy(), xPathOptions);
         }
 
         protected virtual string BuildXPath(IWebElement scope, ComponentScopeLocateOptions options)
