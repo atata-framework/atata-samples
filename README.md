@@ -1,12 +1,12 @@
 # Atata Samples
 
-[![Build Status](https://dev.azure.com/atata-framework/atata-samples/_apis/build/status/atata-samples-ci)](https://dev.azure.com/atata-framework/atata-samples/_build/latest?definitionId=15)
-[![Docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata-framework.github.io)
+[![Build status](https://dev.azure.com/atata-framework/atata-samples/_apis/build/status/atata-samples-ci)](https://dev.azure.com/atata-framework/atata-samples/_build/latest?definitionId=15)
+[![Atata docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata.io)
 [![Gitter](https://badges.gitter.im/atata-framework/atata.svg)](https://gitter.im/atata-framework/atata)
 [![Slack](https://img.shields.io/badge/join-Slack-green.svg?colorB=4EB898)](https://join.slack.com/t/atata-framework/shared_invite/enQtNDMzMzk3OTY5NjgzLTJlNzAyN2E3MzY3MDE4ZGE1ZDQzOGY2NThiYWExZTNkNDc5YjdlNzFjYmUwYjZmNDI2MDJlMGQ3ODNlMDljMzU)
 [![Twitter](https://img.shields.io/badge/follow-@AtataFramework-blue.svg)](https://twitter.com/AtataFramework)
 
-Automated UI test sample projects based on **[Atata Framework](https://atata-framework.github.io)**.
+Automated UI test sample projects based on **[Atata Framework](https://atata.io)**.
 
 ## Projects
 
@@ -15,16 +15,16 @@ Automated UI test sample projects based on **[Atata Framework](https://atata-fra
   Used in [Atata - New Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework) article.
 - **Verification of Page** - [`/PageVerification`](../../tree/master/PageVerification)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/PageVerification).
-  Used in [Verification of Page](https://atata-framework.github.io/tutorials/verification-of-page/) tutorial.
+  Used in [Verification of Page](https://atata.io/tutorials/verification-of-page/) tutorial.
 - **Verification of Validation Messages** - [`/ValidationMessagesVerification`](../../tree/master/ValidationMessagesVerification)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/ValidationMessagesVerification).
-  Used in [Verification of Validation Messages](https://atata-framework.github.io/tutorials/verification-of-validation-messages/) tutorial.
+  Used in [Verification of Validation Messages](https://atata.io/tutorials/verification-of-validation-messages/) tutorial.
 - **Handle Confirmation Popups** - [`/ConfirmationPopups`](../../tree/master/ConfirmationPopups)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/ConfirmationPopups).
-  Used in [Handle Confirmation Popups](https://atata-framework.github.io/tutorials/handle-confirmation-popups/) tutorial.
+  Used in [Handle Confirmation Popups](https://atata.io/tutorials/handle-confirmation-popups/) tutorial.
 - **Multi-Browser Configuration via Fixture Arguments** - [`/MultipleBrowsersViaFixtureArguments`](../../tree/master/MultipleBrowsersViaFixtureArguments)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/MultipleBrowsersViaFixtureArguments).
-  Used in [Multi-Browser Configuration via Fixture Arguments](https://atata-framework.github.io/tutorials/multi-browser-configuration-via-fixture-arguments/) tutorial.
+  Used in [Multi-Browser Configuration via Fixture Arguments](https://atata.io/tutorials/multi-browser-configuration-via-fixture-arguments/) tutorial.
 - **Using CSV Data Source** - [`/CsvDataSource`](../../tree/master/CsvDataSource)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/CsvDataSource).
 - **JSON Configuration: Multi-Environment** - [`/JsonConfiguration.MultiEnvironment`](../../tree/master/JsonConfiguration.MultiEnvironment)
