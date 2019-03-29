@@ -24,7 +24,7 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
                 // WithAlias("chrome_remote").
                 // WithRemoteAddress("http://127.0.0.1:4444/wd/hub").
                 // WithOptions(new ChromeOptions()).
-                UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
+                UseBaseUrl("https://demo.atata.io/").
                 AddNUnitTestContextLogging().
                 LogNUnitError();
         }

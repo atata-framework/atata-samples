@@ -13,7 +13,7 @@ namespace AtataSamples.MSTest
         {
             AtataContext.Configure().
                 UseChrome().
-                UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
+                UseBaseUrl("https://demo.atata.io/").
                 UseTestName(TestContext.TestName).
                 AddTraceLogging().
                 Build();

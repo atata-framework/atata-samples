@@ -12,7 +12,7 @@ namespace AtataSamples.TableWithRowSpannedCells
             AtataContext.Configure().
                 UseChrome().
                     WithArguments("start-maximized", "disable-infobars").
-                UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
+                UseBaseUrl("https://demo.atata.io/").
                 UseCulture("en-us").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().

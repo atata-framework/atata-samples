@@ -19,7 +19,7 @@ namespace AtataSamples.PageVerification
             AtataContext.Configure().
                 UseChrome().
                     WithArguments("start-maximized").
-                UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
+                UseBaseUrl("https://demo.atata.io/").
                 UseCulture("en-us").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().

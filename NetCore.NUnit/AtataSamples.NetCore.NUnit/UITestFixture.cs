@@ -14,7 +14,7 @@ namespace AtataSamples.NetCore.NUnit
                     WithArguments("start-maximized").
                     WithFixOfCommandExecutionDelay().
                     WithLocalDriverPath().
-                UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
+                UseBaseUrl("https://demo.atata.io/").
                 UseCulture("en-us").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().

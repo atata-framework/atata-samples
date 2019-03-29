@@ -14,7 +14,7 @@ namespace AtataSamples.Xunit
 
             AtataContext.Configure().
                 UseChrome().
-                UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
+                UseBaseUrl("https://demo.atata.io/").
                 UseCulture("en-us").
                 UseTestName(testName).
                 AddLogConsumer(new TestOutputLogConsumer(output)).

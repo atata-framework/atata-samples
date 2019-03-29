@@ -1,5 +1,5 @@
 ﻿{
-  "baseUrl": "https://atata-framework.github.io/atata-sample-app/#!/?env=QA",
+  "baseUrl": "https://demo.atata.io/?env=QA",
   "accountEmail": "qa.user@mail.com",
   "accountPassword": "qapass"
 }

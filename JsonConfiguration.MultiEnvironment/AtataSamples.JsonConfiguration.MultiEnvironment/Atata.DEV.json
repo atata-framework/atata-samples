@@ -1,5 +1,5 @@
 ﻿{
-  "baseUrl": "https://atata-framework.github.io/atata-sample-app/#!/?env=DEV",
+  "baseUrl": "https://demo.atata.io/?env=DEV",
   "accountEmail": "dev.user@mail.com",
   "accountPassword": "devpass"
 }
