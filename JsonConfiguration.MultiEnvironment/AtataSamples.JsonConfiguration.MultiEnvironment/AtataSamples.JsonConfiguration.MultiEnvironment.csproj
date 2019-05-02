@@ -42,8 +42,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Atata, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\Atata.1.0.0\lib\net45\Atata.dll</HintPath>
+    <Reference Include="Atata, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Atata.1.1.0\lib\net45\Atata.dll</HintPath>
     </Reference>
     <Reference Include="Atata.Configuration.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)\packages\Atata.Configuration.Json.1.0.0\lib\net45\Atata.Configuration.Json.dll</HintPath>
