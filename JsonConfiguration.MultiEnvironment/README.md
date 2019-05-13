@@ -4,4 +4,4 @@
 
 Demonstrates the way to support multiple environments using JSON configuration files.
 
-*[Download sources](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/JsonConfiguration.MultiEnvironment), run tests, check results and experiment with [Atata Framework](https://atata-framework.github.io).*
+*[Download sources](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/JsonConfiguration.MultiEnvironment), run tests, check results and experiment with [Atata Framework](https://atata.io).*

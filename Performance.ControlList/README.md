@@ -5,11 +5,11 @@
 Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
 Query execution time was decreased from 60 seconds to just 0.3 seconds for a single operation in scope of entire list.
 
-*[Download sources](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList), run tests, check results and experiment with [Atata Framework](https://atata-framework.github.io).*
+*[Download sources](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList), run tests, check results and experiment with [Atata Framework](https://atata.io).*
 
 ## Page Under Test
 
-<https://atata-framework.github.io/atata-sample-app/#!/table-list>
+<https://demo.atata.io/table-list>
 
 Due to testing complexity the page contains 500 `<table>` elements with single `<tr>` in each, and each `<tr>` contains 3 `<td>` cell elements.
 
