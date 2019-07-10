@@ -44,7 +44,7 @@ namespace AtataSamples.Xunit
             }
             catch (Exception exception)
             {
-                AtataContext.Current.Log.Error(null, exception);
+                AtataContext.Current.Log.Error(exception);
                 throw;
             }
         }
