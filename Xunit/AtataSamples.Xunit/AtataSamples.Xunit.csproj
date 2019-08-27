@@ -91,15 +91,8 @@
     <Error Condition="!Exists('$(SolutionDir)\packages\xunit.core.2.4.0\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\xunit.core.2.4.0\build\xunit.core.props'))" />
     <Error Condition="!Exists('$(SolutionDir)\packages\xunit.core.2.4.0\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\xunit.core.2.4.0\build\xunit.core.targets'))" />
     <Error Condition="!Exists('$(SolutionDir)\packages\xunit.runner.visualstudio.2.4.0\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\xunit.runner.visualstudio.2.4.0\build\net20\xunit.runner.visualstudio.props'))" />
-    <Error Condition="!Exists('$(SolutionDir)\packages\Selenium.WebDriver.ChromeDriver.2.46.0\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Selenium.WebDriver.ChromeDriver.2.46.0\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)\packages\Selenium.WebDriver.ChromeDriver.75.0.3770.140\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\packages\Selenium.WebDriver.ChromeDriver.75.0.3770.140\build\Selenium.WebDriver.ChromeDriver.targets'))" />
   </Target>
   <Import Project="$(SolutionDir)\packages\xunit.core.2.4.0\build\xunit.core.targets" Condition="Exists('$(SolutionDir)\packages\xunit.core.2.4.0\build\xunit.core.targets')" />
-  <Import Project="$(SolutionDir)\packages\Selenium.WebDriver.ChromeDriver.2.46.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('$(SolutionDir)\packages\Selenium.WebDriver.ChromeDriver.2.46.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <Import Project="$(SolutionDir)\packages\Selenium.WebDriver.ChromeDriver.75.0.3770.140\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('$(SolutionDir)\packages\Selenium.WebDriver.ChromeDriver.75.0.3770.140\build\Selenium.WebDriver.ChromeDriver.targets')" />
 </Project>
