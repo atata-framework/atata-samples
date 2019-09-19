@@ -8,6 +8,8 @@
   "useNUnitTestName": true,
   "logNUnitError": true,
   "takeScreenshotOnNUnitError": true,
+  "assertionExceptionType": "NUnit.Framework.AssertionException, nunit.framework",
+  "useNUnitAggregateAssertionStrategy": true,
   "logConsumers": [
     {
       "type": "nunit",
