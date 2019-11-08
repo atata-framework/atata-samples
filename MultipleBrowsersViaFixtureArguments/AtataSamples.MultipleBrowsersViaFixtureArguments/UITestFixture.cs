@@ -7,6 +7,7 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
     [TestFixture(DriverAliases.InternetExplorer)]
     [TestFixture(DriverAliases.Firefox)]
     //[TestFixture("chrome_remote")]
+    [Parallelizable]
     public abstract class UITestFixture
     {
         private readonly string driverAlias;

@@ -60,7 +60,6 @@
     <Compile Include="SetUpFixture.cs" />
     <Compile Include="UITestFixture.cs" />
     <Compile Include="Components\HomePage.cs" />
-    <Compile Include="NUnitSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HomeTests.cs" />
   </ItemGroup>
