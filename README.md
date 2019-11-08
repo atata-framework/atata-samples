@@ -41,10 +41,12 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Xunit).
 - **Using MSTest** - [`/MSTest`](../../tree/master/MSTest)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/MSTest).
-- **.NET Core + NUnit** - [`/NetCore.NUnit`](../../tree/master/NetCore.NUnit)
+- **.NET Core 2.0 + NUnit** - [`/NetCore.NUnit`](../../tree/master/NetCore.NUnit)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/NetCore.NUnit).
+- **.NET Core 3.0 + NUnit** - [`/NetCore3.NUnit`](../../tree/master/NetCore3.NUnit)
+  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/NetCore3.NUnit).
 
-Or just open `AtataSamples.sln` which contains all sample projects.
+Or just open either `AtataSamples.VS2017.sln` or `AtataSamples.VS2019.sln` (depending on your Visual Studio) that contain all sample projects.
 
 ## License
 
