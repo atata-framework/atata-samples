@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.TableWithRowSp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NetCore3.NUnit", "NetCore3.NUnit\AtataSamples.NetCore3.NUnit\AtataSamples.NetCore3.NUnit.csproj", "{A4022973-1419-4980-8B03-DA2ED5FFE925}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments", "JsonConfiguration.MultiBrowserViaFixtureArguments\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments.csproj", "{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +102,10 @@ Global
 		{A4022973-1419-4980-8B03-DA2ED5FFE925}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4022973-1419-4980-8B03-DA2ED5FFE925}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4022973-1419-4980-8B03-DA2ED5FFE925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

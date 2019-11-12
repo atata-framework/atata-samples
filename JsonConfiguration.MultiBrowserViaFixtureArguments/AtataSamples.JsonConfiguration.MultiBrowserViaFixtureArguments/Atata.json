@@ -1,0 +1,36 @@
+﻿{
+  "drivers": [
+    {
+      "type": "chrome",
+      "options": {
+        "arguments": [ "start-maximized" ]
+      }
+    },
+    {
+      "type": "internetexplorer"
+    },
+    {
+      "type": "firefox"
+    },
+    // For remote browser:
+    {
+      "type": "remote",
+      "alias": "chrome_remote",
+      "remoteAddress": "http://127.0.0.1:8888/wd/hub",
+      "options": {
+        "type": "chrome"
+        // TODO: Set specific options.
+      }
+    }
+  ],
+  "baseUrl": "https://demo.atata.io/",
+  "logNUnitError": true,
+  "takeScreenshotOnNUnitError": true,
+  "assertionExceptionType": "NUnit.Framework.AssertionException, nunit.framework",
+  "useNUnitAggregateAssertionStrategy": true,
+  "logConsumers": [
+    {
+      "type": "nunit"
+    }
+  ]
+}

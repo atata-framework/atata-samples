@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.Performance.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.TableWithRowSpannedCells", "TableWithRowSpannedCells\AtataSamples.TableWithRowSpannedCells\AtataSamples.TableWithRowSpannedCells.csproj", "{0BBFDE9A-5075-4EA4-941B-8A8663621FFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments", "JsonConfiguration.MultiBrowserViaFixtureArguments\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments.csproj", "{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,10 @@ Global
 		{0BBFDE9A-5075-4EA4-941B-8A8663621FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BBFDE9A-5075-4EA4-941B-8A8663621FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BBFDE9A-5075-4EA4-941B-8A8663621FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

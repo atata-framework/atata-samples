@@ -27,6 +27,8 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   Used in [Multi-Browser Configuration via Fixture Arguments](https://atata.io/tutorials/multi-browser-configuration-via-fixture-arguments/) tutorial.
 - **Using CSV Data Source** - [`/CsvDataSource`](../../tree/master/CsvDataSource)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/CsvDataSource).
+- **JSON Configuration: Multi-Browser via Fixture Arguments** - [`/JsonConfiguration.MultiBrowserViaFixtureArguments`](../../tree/master/JsonConfiguration.MultiBrowserViaFixtureArguments)
+  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/JsonConfiguration.MultiBrowserViaFixtureArguments).
 - **JSON Configuration: Multi-Environment** - [`/JsonConfiguration.MultiEnvironment`](../../tree/master/JsonConfiguration.MultiEnvironment)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/JsonConfiguration.MultiEnvironment).
 - **App.Config Configuration** - [`/AppConfig`](../../tree/master/AppConfig)
