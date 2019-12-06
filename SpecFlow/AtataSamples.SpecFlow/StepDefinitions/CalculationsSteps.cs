@@ -9,14 +9,14 @@ namespace AtataSamples.SpecFlow.StepDefinitions
     {
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
-        [Given(@"I am on the Caluclations page")]
-        public void GivenIAmOnTheCaluclationsPage()
+        [Given(@"I am on the Calculations page")]
+        public void GivenIAmOnTheCalculationsPage()
         {
             Go.To<CalculationsPage>();
         }
 
         [When(@"I type (.*) and (.*) to the form")]
-        public void WhenITypeAndToTheForm(int argument1, int argument2)
+        public void WhenITypeArgumentsToTheForm(int argument1, int argument2)
         {
             On<CalculationsPage>().
                 AdditionValue1.Set(argument1).

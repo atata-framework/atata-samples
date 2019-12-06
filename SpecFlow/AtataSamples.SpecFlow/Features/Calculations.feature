@@ -1,10 +1,10 @@
 ﻿Feature: Calculations
-	This feature file contains scenarion for Calculations functionality
+	This feature file contains scenarios for Calculations functionality
 
 Scenario Outline: Check calculation logic
 	This scenario should check calculation logic
 
-	Given I am on the Caluclations page
+	Given I am on the Calculations page
 	When I type <argument1> and <argument2> to the form
 	Then I should see <result> in result field
 
