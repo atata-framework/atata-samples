@@ -40,7 +40,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NetCore3.NUnit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments", "JsonConfiguration.MultiBrowserViaFixtureArguments\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments.csproj", "{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.Specflow", "Specflow\AtataSamples.Specflow\AtataSamples.Specflow.csproj", "{1C4E1D11-ADE1-44F5-B163-6377C5CF80C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.SpecFlow", "SpecFlow\AtataSamples.SpecFlow\AtataSamples.SpecFlow.csproj", "{1C4E1D11-ADE1-44F5-B163-6377C5CF80C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
