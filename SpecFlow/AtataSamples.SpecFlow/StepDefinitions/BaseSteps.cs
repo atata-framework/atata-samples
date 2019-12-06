@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
 
-namespace AtataSamples.Specflow.StepDefinitions
+namespace AtataSamples.SpecFlow.StepDefinitions
 {
     [Binding]
     public abstract class BaseSteps : Steps

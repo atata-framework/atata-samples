@@ -1,6 +1,6 @@
 ﻿using Atata;
 
-namespace AtataSamples.Specflow.Components
+namespace AtataSamples.SpecFlow.Components
 {
     public abstract class BasePage<TOwner> : Page<TOwner>
         where TOwner : BasePage<TOwner>

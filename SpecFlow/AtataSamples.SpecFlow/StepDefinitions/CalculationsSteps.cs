@@ -1,8 +1,8 @@
 ﻿using Atata;
-using AtataSamples.Specflow.Components;
+using AtataSamples.SpecFlow.Components;
 using TechTalk.SpecFlow;
 
-namespace AtataSamples.Specflow.StepDefinitions
+namespace AtataSamples.SpecFlow.StepDefinitions
 {
     [Binding]
     public sealed class CalculationsSteps : BaseSteps

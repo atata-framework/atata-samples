@@ -1,12 +1,7 @@
 ﻿using Atata;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 
-namespace AtataSamples.Specflow
+namespace AtataSamples.SpecFlow
 {
     [Binding]
     public sealed class SpecFlowHooks
@@ -19,7 +14,7 @@ namespace AtataSamples.Specflow
             AtataContext.Configure().
                 UseChrome().
                 WithArguments("start-maximized").
-                
+
                 UseBaseUrl("https://demo.atata.io/").
                 UseCulture("en-us").
                 UseNUnitTestName().
@@ -33,6 +28,6 @@ namespace AtataSamples.Specflow
         public static void TestRunTeardown()
         {
             AtataContext.Current?.CleanUp();
-        }      
+        }
     }
 }

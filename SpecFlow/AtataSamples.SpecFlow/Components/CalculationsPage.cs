@@ -1,6 +1,6 @@
 ﻿using Atata;
 
-namespace AtataSamples.Specflow.Components
+namespace AtataSamples.SpecFlow.Components
 {
     using _ = CalculationsPage;
 
