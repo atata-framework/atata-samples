@@ -9,7 +9,7 @@ namespace AtataSamples.SpecFlow
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
 
         [BeforeTestRun]
-        public static void TestRunSetup()
+        public static void TestRunSetUp()
         {
             AtataContext.Configure().
                 UseChrome().
@@ -25,7 +25,7 @@ namespace AtataSamples.SpecFlow
         }
 
         [AfterTestRun]
-        public static void TestRunTeardown()
+        public static void TestRunTearDown()
         {
             AtataContext.Current?.CleanUp();
         }

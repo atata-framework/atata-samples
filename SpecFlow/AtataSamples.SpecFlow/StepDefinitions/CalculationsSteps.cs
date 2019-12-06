@@ -9,13 +9,6 @@ namespace AtataSamples.SpecFlow.StepDefinitions
     {
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
-        private readonly ScenarioContext context;
-
-        public CalculationsSteps(ScenarioContext injectedContext)
-        {
-            context = injectedContext;
-        }
-
         [Given(@"I am on the Caluclations page")]
         public void GivenIAmOnTheCaluclationsPage()
         {
@@ -29,7 +22,6 @@ namespace AtataSamples.SpecFlow.StepDefinitions
                 AdditionValue1.Set(argument1).
                 AdditionValue2.Set(argument2);
         }
-
 
         [Then(@"I should see (.*) in result field")]
         public void ThenIShouldSeeInResultField(int result)
