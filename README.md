@@ -43,6 +43,8 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Xunit).
 - **Using MSTest** - [`/MSTest`](../../tree/master/MSTest)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/MSTest).
+- **Using SpecFlow** - [`/SpecFlow`](../../tree/master/SpecFlow)
+  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/SpecFlow).
 - **.NET Core 2.0 + NUnit** - [`/NetCore.NUnit`](../../tree/master/NetCore.NUnit)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/NetCore.NUnit).
 - **.NET Core 3.0 + NUnit** - [`/NetCore3.NUnit`](../../tree/master/NetCore3.NUnit)
