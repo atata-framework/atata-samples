@@ -9,23 +9,28 @@ namespace AtataSamples.SpecFlow
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
 
         [BeforeTestRun]
-        public static void TestRunSetUp()
+        public static void SetUpTestRun()
         {
-            AtataContext.Configure().
+            AtataContext.GlobalConfiguration.
                 UseChrome().
-                WithArguments("start-maximized").
-
+                    WithArguments("start-maximized").
+                    WithLocalDriverPath().
                 UseBaseUrl("https://demo.atata.io/").
                 UseCulture("en-us").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().
-                    WithoutSectionFinish().
-                LogNUnitError().
+                LogNUnitError();
+        }
+
+        [BeforeScenario]
+        public static void SetUpScenario()
+        {
+            AtataContext.Configure().
                 Build();
         }
 
-        [AfterTestRun]
-        public static void TestRunTearDown()
+        [AfterScenario]
+        public static void TearDownScenario()
         {
             AtataContext.Current?.CleanUp();
         }
