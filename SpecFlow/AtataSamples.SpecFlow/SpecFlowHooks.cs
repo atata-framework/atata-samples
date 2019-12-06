@@ -17,9 +17,7 @@ namespace AtataSamples.SpecFlow
                     WithLocalDriverPath().
                 UseBaseUrl("https://demo.atata.io/").
                 UseCulture("en-us").
-                UseNUnitTestName().
-                AddNUnitTestContextLogging().
-                LogNUnitError();
+                UseAllNUnitFeatures();
         }
 
         [BeforeScenario]
