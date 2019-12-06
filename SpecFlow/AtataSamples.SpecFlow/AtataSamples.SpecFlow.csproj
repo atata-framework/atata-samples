@@ -33,11 +33,9 @@
   <ItemGroup>
     <SpecFlowFeatureFiles Update="Features\Calculations.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Calculations.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\Common.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Common.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
   </ItemGroup>
 
