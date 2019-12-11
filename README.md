@@ -39,6 +39,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Performance Practices for ControlList** - [`/Performance.ControlList`](../../tree/master/Performance.ControlList)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList).
   Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
+- **Parallel Tests Reusing Drivers** - [`/ParallelTestsReusingDrivers`](../../tree/master/ParallelTestsReusingDrivers)
+  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/ParallelTestsReusingDrivers).
+  Configures Atata to use a pool of drivers for tests execution. After the test finishes, the driver is not closed and can be reused by one of the next tests.
 - **Using Xunit** - [`/Xunit`](../../tree/master/Xunit)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Xunit).
 - **Using MSTest** - [`/MSTest`](../../tree/master/MSTest)
