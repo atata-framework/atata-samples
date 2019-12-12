@@ -11,7 +11,13 @@ namespace AtataSamples.ParallelTestsReusingDrivers
 
             RemoteWebDriver driver = DriverPool.Acquire(driverFactory);
 
-            return builder.UseDriver(driver);
+            return builder.UseDriver(driver).
+                OnCleanUp(ReleaseCurrentDriver);
+        }
+
+        private static void ReleaseCurrentDriver()
+        {
+            DriverPool.Release(AtataContext.Current?.Driver);
         }
     }
 }

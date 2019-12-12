@@ -7,7 +7,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
     [Parallelizable(ParallelScope.All)]
     public class UITestFixture
     {
-        /// <summary>Sets up test.</summary>
+        /// <summary>Sets up test a test.</summary>
         /// <seealso cref="SetUpFixture.GlobalSetUp"/>
         [SetUp]
         public void SetUp()
@@ -17,10 +17,13 @@ namespace AtataSamples.ParallelTestsReusingDrivers
                 Build();
         }
 
+        /// <summary>
+        /// Tears down a test.
+        /// </summary>
+        /// <seealso cref="SetUpFixture.GlobalTearDown"/>
         [TearDown]
         public void TearDown()
         {
-            DriverPool.Release(AtataContext.Current?.Driver);
             AtataContext.Current?.CleanUp(quitDriver: false);
         }
     }

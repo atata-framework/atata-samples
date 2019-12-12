@@ -20,6 +20,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
             if (entry == null)
             {
                 entry = CreateDriverEntry(driverFactory);
+                Entries.Add(entry);
             }
 
             entry.IsAcquired = true;
@@ -30,11 +31,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         {
             RemoteWebDriver driver = driverFactory.Create();
 
-            DriverEntry accountEntry = new DriverEntry(driverFactory.Alias, driver);
-
-            Entries.Add(accountEntry);
-
-            return accountEntry;
+            return new DriverEntry(driverFactory.Alias, driver);
         }
 
         public static void Release(RemoteWebDriver driver)
