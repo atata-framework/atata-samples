@@ -5,6 +5,8 @@ namespace AtataSamples.ParallelTestsReusingDrivers
 {
     public class PlanTests : UITestFixture
     {
+        protected override DriverPoolUsage DriverPoolUsage => DriverPoolUsage.Global;
+
         [TestCase("Basic")]
         [TestCase("Plus")]
         [TestCase("Premium")]
