@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("Yevgeniy Shunevych")]
 [assembly: AssemblyProduct("Atata Framework Samples")]
-[assembly: AssemblyCopyright("© Yevgeniy Shunevych 2019")]
+[assembly: AssemblyCopyright("© Yevgeniy Shunevych 2020")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 
