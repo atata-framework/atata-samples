@@ -41,7 +41,8 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
 - **Parallel Tests Reusing Drivers** - [`/ParallelTestsReusingDrivers`](../../tree/master/ParallelTestsReusingDrivers)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/ParallelTestsReusingDrivers).
-  Configures Atata to use a pool of drivers for tests execution. After the test finishes, the driver is not closed and can be reused by one of the next tests.
+  Configures Atata to use a pool of drivers for tests execution.
+  After the test finishes, the driver is not closed and can be reused by one of the next tests.
 - **Using Xunit** - [`/Xunit`](../../tree/master/Xunit)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Xunit).
 - **Using MSTest** - [`/MSTest`](../../tree/master/MSTest)
@@ -52,6 +53,10 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/NetCore.NUnit).
 - **.NET Core 3.0 + NUnit** - [`/NetCore3.NUnit`](../../tree/master/NetCore3.NUnit)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/NetCore3.NUnit).
+- **NUnit Generic Page Tests** - [`/NUnit.GenericPageTests`](../../tree/master/NUnit.GenericPageTests)
+  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/NUnit.GenericPageTests).
+  Demonstrates the implementation of generic NUnit tests to execute against similar pages or to perform generic checks,
+  like page title, as well as more complex workflows.
 
 Or just open either `AtataSamples.VS2017.sln` or `AtataSamples.VS2019.sln` (depending on your Visual Studio) that contain all sample projects.
 

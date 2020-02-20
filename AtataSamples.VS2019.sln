@@ -42,7 +42,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.JsonConfigurat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.SpecFlow", "SpecFlow\AtataSamples.SpecFlow\AtataSamples.SpecFlow.csproj", "{1C4E1D11-ADE1-44F5-B163-6377C5CF80C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.ParallelTestsReusingDrivers", "ParallelTestsReusingDrivers\AtataSamples.ParallelTestsReusingDrivers\AtataSamples.ParallelTestsReusingDrivers.csproj", "{108B7094-646A-4149-B278-5177CEFE7F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.ParallelTestsReusingDrivers", "ParallelTestsReusingDrivers\AtataSamples.ParallelTestsReusingDrivers\AtataSamples.ParallelTestsReusingDrivers.csproj", "{108B7094-646A-4149-B278-5177CEFE7F0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NUnit.GenericPageTests", "NUnit.GenericPageTests\AtataSamples.NUnit.GenericPageTests\AtataSamples.NUnit.GenericPageTests.csproj", "{04992A1E-E64E-4A01-B633-EF17ADAEC62B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -118,6 +120,10 @@ Global
 		{108B7094-646A-4149-B278-5177CEFE7F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{108B7094-646A-4149-B278-5177CEFE7F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{108B7094-646A-4149-B278-5177CEFE7F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04992A1E-E64E-4A01-B633-EF17ADAEC62B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04992A1E-E64E-4A01-B633-EF17ADAEC62B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04992A1E-E64E-4A01-B633-EF17ADAEC62B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04992A1E-E64E-4A01-B633-EF17ADAEC62B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NUnit.GenericPageTests", "AtataSamples.NUnit.GenericPageTests\AtataSamples.NUnit.GenericPageTests.csproj", "{DE382F06-C093-4AFD-AC17-EE1087DD3ADC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE382F06-C093-4AFD-AC17-EE1087DD3ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE382F06-C093-4AFD-AC17-EE1087DD3ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE382F06-C093-4AFD-AC17-EE1087DD3ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE382F06-C093-4AFD-AC17-EE1087DD3ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29A07BAB-CE5C-41F1-A0E6-21DC2A9A1036}
+	EndGlobalSection
+EndGlobal
