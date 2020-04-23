@@ -37,8 +37,8 @@
     <Reference Include="Atata, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)\packages\Atata.1.4.0\lib\net45\Atata.dll</HintPath>
     </Reference>
-    <Reference Include="Atata.WebDriverExtras, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\Atata.WebDriverExtras.1.2.0\lib\net45\Atata.WebDriverExtras.dll</HintPath>
+    <Reference Include="Atata.WebDriverExtras, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Atata.WebDriverExtras.1.3.0\lib\net46\Atata.WebDriverExtras.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
