@@ -8,7 +8,7 @@ using OpenQA.Selenium;
 
 namespace AtataSamples.TableWithRowSpannedCells
 {
-    public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeLocateStrategy
+    public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeFindStrategy
     {
         protected static ConcurrentDictionary<Type, List<ColumnInfo>> TableColumnsInfoCache { get; } =
             new ConcurrentDictionary<Type, List<ColumnInfo>>();
@@ -19,14 +19,14 @@ namespace AtataSamples.TableWithRowSpannedCells
 
         public string RowWithSpannedCellsXPathCondition { get; set; } = "td[@rowspan and normalize-space(@rowspan) != '1']";
 
-        public ComponentScopeLocateResult Find(IWebElement scope, ComponentScopeLocateOptions options, SearchOptions searchOptions)
+        public ComponentScopeLocateResult Find(ISearchContext scope, ComponentScopeLocateOptions options, SearchOptions searchOptions)
         {
             string xPath = BuildXPath(scope, options);
 
             if (xPath == null)
             {
                 if (searchOptions.IsSafely)
-                    return new MissingComponentScopeLocateResult();
+                    return new MissingComponentScopeFindResult();
                 else
                     throw ExceptionFactory.CreateForNoSuchElement(options.GetTermsAsString(), searchContext: scope);
             }
@@ -35,14 +35,14 @@ namespace AtataSamples.TableWithRowSpannedCells
             xPathOptions.Index = 0;
             xPathOptions.Terms = new string[] { xPath };
 
-            return new SequalComponentScopeLocateResult(scope, new FindByXPathStrategy(), xPathOptions);
+            return new SubsequentComponentScopeFindResult(scope, new FindByXPathStrategy(), xPathOptions);
         }
 
-        protected virtual string BuildXPath(IWebElement scope, ComponentScopeLocateOptions options)
+        protected virtual string BuildXPath(ISearchContext scope, ComponentScopeLocateOptions options)
         {
             List<ColumnInfo> columns = TableColumnsInfoCache.GetOrAdd(
                 options.Metadata.ParentComponentType,
-                _ => GetColumnInfoItems(scope));
+                _ => GetColumnInfoItems((IWebElement)scope));
 
             ColumnInfo column = columns.
                 Where(x => options.Match.IsMatch(x.HeaderName, options.Terms)).
