@@ -13,6 +13,7 @@ namespace AtataSamples.MSTest
         {
             AtataContext.Configure().
                 UseChrome().
+                    WithLocalDriverPath().
                 UseBaseUrl("https://demo.atata.io/").
                 UseTestName(TestContext.TestName).
                 AddTraceLogging().
