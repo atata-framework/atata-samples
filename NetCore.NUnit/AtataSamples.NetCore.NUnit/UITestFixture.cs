@@ -12,13 +12,10 @@ namespace AtataSamples.NetCore.NUnit
             AtataContext.Configure().
                 UseChrome().
                     WithArguments("start-maximized").
-                    WithFixOfCommandExecutionDelay().
                     WithLocalDriverPath().
                 UseBaseUrl("https://demo.atata.io/").
                 UseCulture("en-us").
-                UseNUnitTestName().
-                AddNUnitTestContextLogging().
-                LogNUnitError().
+                UseAllNUnitFeatures().
                 Build();
         }
 
