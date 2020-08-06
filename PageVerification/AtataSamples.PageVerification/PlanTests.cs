@@ -19,12 +19,10 @@ namespace AtataSamples.PageVerification
             AtataContext.Configure().
                 UseChrome().
                     WithArguments("start-maximized").
+                    WithLocalDriverPath().
                 UseBaseUrl("https://demo.atata.io/").
                 UseCulture("en-us").
-                UseNUnitTestName().
-                AddNUnitTestContextLogging().
-                    WithoutSectionFinish().
-                LogNUnitError().
+                UseAllNUnitFeatures().
                 Build();
         }
 
