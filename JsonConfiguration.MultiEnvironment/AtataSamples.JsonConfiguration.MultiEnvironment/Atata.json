@@ -3,6 +3,9 @@
     "type": "chrome",
     "options": {
       "arguments": [ "start-maximized" ]
+    },
+    "service": {
+      "driverPath": "{basedir}"
     }
   },
   "useNUnitTestName": true,
