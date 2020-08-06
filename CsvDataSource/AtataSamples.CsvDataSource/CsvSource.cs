@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using CsvHelper;
 using NUnit.Framework;
 
@@ -16,7 +17,7 @@ namespace AtataSamples.CsvDataSource
                 : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filePath);
 
             using (StreamReader streamReader = new StreamReader(completeFilePath))
-            using (CsvReader csvReader = new CsvReader(streamReader))
+            using (CsvReader csvReader = new CsvReader(streamReader, Thread.CurrentThread.CurrentCulture))
             {
                 TestCaseData[] dataItems = csvReader.GetRecords<T>().
                     Select(x => new TestCaseData(x)).
