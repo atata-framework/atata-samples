@@ -4,13 +4,23 @@
       "type": "chrome",
       "options": {
         "arguments": [ "start-maximized" ]
+      },
+      "service": {
+        "driverPath": "{basedir}"
       }
     },
     {
-      "type": "internetexplorer"
+      "type": "internetexplorer",
+      "service": {
+        "driverPath": "{basedir}"
+      }
     },
     {
-      "type": "firefox"
+      "type": "firefox",
+      "service": {
+        "driverPath": "{basedir}",
+        "hostName": "127.0.0.1"
+      }
     },
     // For remote browser:
     {
