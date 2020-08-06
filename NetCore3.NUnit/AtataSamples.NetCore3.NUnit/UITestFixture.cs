@@ -14,9 +14,7 @@ namespace AtataSamples.NetCore3.NUnit
                     WithArguments("start-maximized").
                 UseBaseUrl("https://demo.atata.io/").
                 UseCulture("en-us").
-                UseNUnitTestName().
-                AddNUnitTestContextLogging().
-                LogNUnitError().
+                UseAllNUnitFeatures().
                 Build();
         }
 
