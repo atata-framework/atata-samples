@@ -12,11 +12,10 @@ namespace AtataSamples.Performance.ControlList
             AtataContext.Configure().
                 UseChrome().
                     WithArguments("start-maximized").
+                    WithLocalDriverPath().
                 UseBaseUrl("https://demo.atata.io/").
-                UseCulture("en-us").
-                UseNUnitTestName().
-                AddNUnitTestContextLogging().
-                LogNUnitError().
+                UseCulture("en-US").
+                UseAllNUnitFeatures().
                 Build();
         }
 

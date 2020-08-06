@@ -12,21 +12,21 @@ namespace AtataSamples.Performance.ControlList
                 Items.Ids.Should.Not.Contain(999);
         }
 
-        [Test, Explicit("Runs slowly about 60 seconds.")]
+        [Test, Explicit("Runs slowly about 30 seconds.")]
         public void TableList_VerifyNoItemWithId_Classic()
         {
             Go.To<TableListPage>().
                 Items.Rows.Should.Not.Contain(x => x.Id == 999);
         }
 
-        [Test, Explicit("Runs slowly about 60 seconds.")]
+        [Test, Explicit("Runs slowly about 30 seconds.")]
         public void TableList_VerifyNoItemWithId_Alternative_Exist()
         {
             Go.To<TableListPage>().
                 Items.Rows[x => x.Id == 999].Should.Not.Exist();
         }
 
-        [Test, Explicit("Runs slowly about 60 seconds.")]
+        [Test, Explicit("Runs slowly about 30 seconds.")]
         public void TableList_VerifyNoItemWithId_Alternative_SelectData()
         {
             Go.To<TableListPage>().
@@ -47,7 +47,7 @@ namespace AtataSamples.Performance.ControlList
                 Items.Names.Should.Contain("Item 250");
         }
 
-        [Test, Explicit("Runs slowly about 40 seconds.")]
+        [Test, Explicit("Runs slowly about 20 seconds.")]
         public void TableList_VerifyItemWithName_Classic()
         {
             Go.To<TableListPage>().
@@ -61,7 +61,7 @@ namespace AtataSamples.Performance.ControlList
                 Items.FindRowById(250).Name.Should.Equal("Item 250");
         }
 
-        [Test, Explicit("Runs slowly about 50 seconds.")]
+        [Test, Explicit("Runs slowly about 20 seconds.")]
         public void TableList_VerifyItemNameById_Classic()
         {
             Go.To<TableListPage>().
