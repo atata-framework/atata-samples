@@ -1,39 +1,15 @@
-queue:
-  name: Hosted VS2017
-  demands: vstest
-  
 variables:
   buildConfiguration: 'Debug'
-  
-steps:
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '**\packages.config'
-    restoreDirectory: '$(Build.SourcesDirectory)\packages'
-    verbosityRestore: Normal
 
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: restore
-    projects: '**\*.NetCore*.csproj'
-
-- task: DotNetCoreCLI@2
-  inputs:
-    projects: AtataSamples.sln
-    arguments: '-c $(buildConfiguration)
-
-- task: VSTest@2
-  inputs:
-    testAssemblyVer2: |
-     **\AtataSamples.*.dll
-     **\SampleApp.UITests.dll
-     !**\obj\**
-     !**\AtataSamples.MultipleBrowsersViaFixtureArguments.dll
-
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: test
-    projects: '**\*.NetCore*.csproj'
-    arguments: '-c $(buildConfiguration)
+jobs:
+- job: BuildAndRunTests
+  displayName: Build and run tests
+  pool:
+    vmImage: vs2017-win2016
+  steps:
+  - task: DotNetCoreCLI@2
+    displayName: 'Run tests'
+    inputs:
+      command: test
+      projects: 'AtataSamples.VS2019.sln'
+      arguments: -c $(buildConfiguration)
