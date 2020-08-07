@@ -16,10 +16,10 @@ namespace AtataSamples.Performance.ControlList
             public ControlList<ItemRow, _> Rows { get; private set; }
 
             public DataProvider<IEnumerable<int>, _> Ids
-                => Rows.SelectContentsByExtraXPath<int>(ItemRow.XPathTo.Id, "Ids");
+                => Rows.SelectContentsByExtraXPath<int>($"/{ItemRow.XPathTo.Id}", "Ids");
 
             public DataProvider<IEnumerable<string>, _> Names
-                => Rows.SelectContentsByExtraXPath(ItemRow.XPathTo.Name, "Names");
+                => Rows.SelectContentsByExtraXPath($"/{ItemRow.XPathTo.Name}", "Names");
 
             public ItemRow FindRowById(int id)
             {
@@ -45,9 +45,9 @@ namespace AtataSamples.Performance.ControlList
 
             public static class XPathTo
             {
-                public const string Id = "/td[contains(concat(' ', normalize-space(@class), ' '), ' id ')]";
+                public const string Id = "td[contains(concat(' ', normalize-space(@class), ' '), ' id ')]";
 
-                public const string Name = "/td[contains(concat(' ', normalize-space(@class), ' '), ' name ')]";
+                public const string Name = "td[contains(concat(' ', normalize-space(@class), ' '), ' name ')]";
             }
         }
     }
