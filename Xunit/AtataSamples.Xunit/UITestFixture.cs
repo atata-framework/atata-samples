@@ -14,8 +14,10 @@ namespace AtataSamples.Xunit
 
             AtataContext.Configure().
                 UseChrome().
+                    WithArguments("start-maximized").
+                    WithLocalDriverPath().
                 UseBaseUrl("https://demo.atata.io/").
-                UseCulture("en-us").
+                UseCulture("en-US").
                 UseTestName(testName).
                 AddLogConsumer(new TestOutputLogConsumer(output)).
                 Build();
