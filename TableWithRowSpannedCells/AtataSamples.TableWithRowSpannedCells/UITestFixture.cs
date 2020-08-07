@@ -11,12 +11,11 @@ namespace AtataSamples.TableWithRowSpannedCells
         {
             AtataContext.Configure().
                 UseChrome().
-                    WithArguments("start-maximized", "disable-infobars").
+                    WithArguments("start-maximized").
+                    WithLocalDriverPath().
                 UseBaseUrl("https://demo.atata.io/").
-                UseCulture("en-us").
-                UseNUnitTestName().
-                AddNUnitTestContextLogging().
-                LogNUnitError().
+                UseCulture("en-US").
+                UseAllNUnitFeatures().
                 Build();
         }
 
