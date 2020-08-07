@@ -3,42 +3,41 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.PageVerification", "PageVerification\AtataSamples.PageVerification\AtataSamples.PageVerification.csproj", "{8D9849F9-AE79-45CB-BD14-99D5CABADE26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.PageVerification", "PageVerification\AtataSamples.PageVerification\AtataSamples.PageVerification.csproj", "{8D9849F9-AE79-45CB-BD14-99D5CABADE26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.ValidationMessagesVerification", "ValidationMessagesVerification\AtataSamples.ValidationMessagesVerification\AtataSamples.ValidationMessagesVerification.csproj", "{62A7531B-BB9B-4DAC-A874-5945D89E8D60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.ValidationMessagesVerification", "ValidationMessagesVerification\AtataSamples.ValidationMessagesVerification\AtataSamples.ValidationMessagesVerification.csproj", "{62A7531B-BB9B-4DAC-A874-5945D89E8D60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.UITests", "SampleApp.UITests\SampleApp.UITests\SampleApp.UITests.csproj", "{57EF6AC7-C4A0-45FD-B61D-0CEA8A8E8FE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApp.UITests", "SampleApp.UITests\SampleApp.UITests\SampleApp.UITests.csproj", "{57EF6AC7-C4A0-45FD-B61D-0CEA8A8E8FE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.MultipleBrowsersViaFixtureArguments", "MultipleBrowsersViaFixtureArguments\AtataSamples.MultipleBrowsersViaFixtureArguments\AtataSamples.MultipleBrowsersViaFixtureArguments.csproj", "{67DBC114-6253-4210-8799-318E3099012B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MultipleBrowsersViaFixtureArguments", "MultipleBrowsersViaFixtureArguments\AtataSamples.MultipleBrowsersViaFixtureArguments\AtataSamples.MultipleBrowsersViaFixtureArguments.csproj", "{67DBC114-6253-4210-8799-318E3099012B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.Xunit", "Xunit\AtataSamples.Xunit\AtataSamples.Xunit.csproj", "{606968C2-2C1F-427E-BE0F-D54D9602D271}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.Xunit", "Xunit\AtataSamples.Xunit\AtataSamples.Xunit.csproj", "{606968C2-2C1F-427E-BE0F-D54D9602D271}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{192E13F2-560C-4C9A-9E3E-D9DE4D97BA43}"
 	ProjectSection(SolutionItems) = preProject
 		azure-pipelines.yml = azure-pipelines.yml
 		README.md = README.md
-		update-nuget-reference-path.ps1 = update-nuget-reference-path.ps1
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.ConfirmationPopups", "ConfirmationPopups\AtataSamples.ConfirmationPopups\AtataSamples.ConfirmationPopups.csproj", "{A659A370-ADF1-4BF7-B545-630EEDED8AA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.ConfirmationPopups", "ConfirmationPopups\AtataSamples.ConfirmationPopups\AtataSamples.ConfirmationPopups.csproj", "{A659A370-ADF1-4BF7-B545-630EEDED8AA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.CsvDataSource", "CsvDataSource\AtataSamples.CsvDataSource\AtataSamples.CsvDataSource.csproj", "{817CD90A-097D-4A03-9BF7-15FE26A41C8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.CsvDataSource", "CsvDataSource\AtataSamples.CsvDataSource\AtataSamples.CsvDataSource.csproj", "{817CD90A-097D-4A03-9BF7-15FE26A41C8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.JsonConfiguration.MultiEnvironment", "JsonConfiguration.MultiEnvironment\AtataSamples.JsonConfiguration.MultiEnvironment\AtataSamples.JsonConfiguration.MultiEnvironment.csproj", "{9509C8F8-E9FA-492E-8E92-4E1964947FA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.JsonConfiguration.MultiEnvironment", "JsonConfiguration.MultiEnvironment\AtataSamples.JsonConfiguration.MultiEnvironment\AtataSamples.JsonConfiguration.MultiEnvironment.csproj", "{9509C8F8-E9FA-492E-8E92-4E1964947FA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.MSTest", "MSTest\AtataSamples.MSTest\AtataSamples.MSTest.csproj", "{D35613E8-170A-4C6E-9369-87A3996B53B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MSTest", "MSTest\AtataSamples.MSTest\AtataSamples.MSTest.csproj", "{D35613E8-170A-4C6E-9369-87A3996B53B5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NetCore.NUnit", "NetCore.NUnit\AtataSamples.NetCore.NUnit\AtataSamples.NetCore.NUnit.csproj", "{B9065310-CC7A-4EE0-A838-63111402180C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.AppConfig", "AppConfig\AtataSamples.AppConfig\AtataSamples.AppConfig.csproj", "{F504BB5B-BFE4-4CD8-93CF-505C770B11C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.AppConfig", "AppConfig\AtataSamples.AppConfig\AtataSamples.AppConfig.csproj", "{F504BB5B-BFE4-4CD8-93CF-505C770B11C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.Performance.ControlList", "Performance.ControlList\AtataSamples.Performance.ControlList\AtataSamples.Performance.ControlList.csproj", "{F296B150-C376-44BF-8E82-212031B37736}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.Performance.ControlList", "Performance.ControlList\AtataSamples.Performance.ControlList\AtataSamples.Performance.ControlList.csproj", "{F296B150-C376-44BF-8E82-212031B37736}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.TableWithRowSpannedCells", "TableWithRowSpannedCells\AtataSamples.TableWithRowSpannedCells\AtataSamples.TableWithRowSpannedCells.csproj", "{0BBFDE9A-5075-4EA4-941B-8A8663621FFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.TableWithRowSpannedCells", "TableWithRowSpannedCells\AtataSamples.TableWithRowSpannedCells\AtataSamples.TableWithRowSpannedCells.csproj", "{0BBFDE9A-5075-4EA4-941B-8A8663621FFA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NetCore3.NUnit", "NetCore3.NUnit\AtataSamples.NetCore3.NUnit\AtataSamples.NetCore3.NUnit.csproj", "{A4022973-1419-4980-8B03-DA2ED5FFE925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments", "JsonConfiguration.MultiBrowserViaFixtureArguments\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments.csproj", "{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments", "JsonConfiguration.MultiBrowserViaFixtureArguments\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments.csproj", "{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.SpecFlow", "SpecFlow\AtataSamples.SpecFlow\AtataSamples.SpecFlow.csproj", "{1C4E1D11-ADE1-44F5-B163-6377C5CF80C4}"
 EndProject
