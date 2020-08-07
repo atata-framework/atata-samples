@@ -12,11 +12,10 @@ namespace SampleApp.UITests
             AtataContext.Configure().
                 UseChrome().
                     WithArguments("start-maximized").
+                    WithLocalDriverPath().
                 UseBaseUrl("https://demo.atata.io/").
-                UseNUnitTestName().
-                AddNUnitTestContextLogging().
-                    WithoutSectionFinish().
-                LogNUnitError().
+                UseCulture("en-US").
+                UseAllNUnitFeatures().
                 Build();
         }
 
