@@ -8,8 +8,15 @@ jobs:
     vmImage: windows-latest
   steps:
   - task: DotNetCoreCLI@2
-    displayName: 'Run tests'
+    displayName: Build solution
     inputs:
-      command: test
+      command: build
       projects: '**\*.csproj'
       arguments: -c $(buildConfiguration)
+  - task: VSTest@2
+    displayName: Run tests
+    timeoutInMinutes: 15
+    inputs:
+      testAssemblyVer2: |
+        **\*.dll
+        !**\obj\**
