@@ -11,5 +11,5 @@ jobs:
     displayName: 'Run tests'
     inputs:
       command: test
-      projects: 'AtataSamples.VS2019.sln'
+      projects: '**\*.csproj'
       arguments: -c $(buildConfiguration)
