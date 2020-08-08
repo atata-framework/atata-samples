@@ -1,6 +1,6 @@
 # Atata Samples
 
-[![Build status](https://dev.azure.com/atata-framework/atata-samples/_apis/build/status/atata-samples-ci)](https://dev.azure.com/atata-framework/atata-samples/_build/latest?definitionId=15)
+[![Build status](https://dev.azure.com/atata-framework/atata-samples/_apis/build/status/atata-samples-ci?branchName=master)](https://dev.azure.com/atata-framework/atata-samples/_build/latest?definitionId=30&branchName=master)
 [![Atata docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata.io)
 [![Gitter](https://badges.gitter.im/atata-framework/atata.svg)](https://gitter.im/atata-framework/atata)
 [![Slack](https://img.shields.io/badge/join-Slack-green.svg?colorB=4EB898)](https://join.slack.com/t/atata-framework/shared_invite/zt-5j3lyln7-WD1ZtMDzXBhPm0yXLDBzbA)
