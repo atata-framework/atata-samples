@@ -61,7 +61,7 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/HeadlessEdge).
   Configures Atata to use headless Edge browser based on Chromium.
 - **jQuery UI Components** - [`/JQueryUI`](../../tree/master/JQueryUI)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/JQueryUI).
+  | [download](../../raw/master/_archives/JQueryUI.zip).
   Demonstrates the creation of Atata custom controls using jQuery UI widgets as examples.
 
 Or just open either `AtataSamples.VS2017.sln` or `AtataSamples.VS2019.sln` (depending on your Visual Studio) that contain all sample projects.
