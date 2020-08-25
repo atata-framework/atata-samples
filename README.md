@@ -58,7 +58,7 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   Demonstrates the implementation of generic NUnit tests to execute against similar pages or to perform generic checks,
   like page title, as well as more complex workflows.
 - **Using Headless Edge** - [`/HeadlessEdge`](../../tree/master/HeadlessEdge)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/HeadlessEdge).
+  | [download](../../raw/master/_archives/HeadlessEdge.zip).
   Configures Atata to use headless Edge browser based on Chromium.
 - **jQuery UI Components** - [`/JQueryUI`](../../tree/master/JQueryUI)
   | [download](../../raw/master/_archives/JQueryUI.zip).
