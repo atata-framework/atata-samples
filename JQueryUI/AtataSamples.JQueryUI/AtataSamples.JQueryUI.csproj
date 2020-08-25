@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Company>Yevgeniy Shunevych</Company>
+    <Product>Atata Framework Samples</Product>
+    <Copyright>© Yevgeniy Shunevych 2020</Copyright>
+    <Authors>Yevgeniy Shunevych</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Atata" Version="1.6.0" />
+    <PackageReference Include="Atata.WebDriverExtras" Version="1.3.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.0" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="84.0.4147.3001" />
+  </ItemGroup>
+
+</Project>
