@@ -57,9 +57,13 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/NUnit.GenericPageTests).
   Demonstrates the implementation of generic NUnit tests to execute against similar pages or to perform generic checks,
   like page title, as well as more complex workflows.
+- **Using Headless Edge** - [`/HeadlessEdge`](../../tree/master/HeadlessEdge)
+  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/HeadlessEdge).
+  Configures Atata to use headless Edge browser based on Chromium.
 
 Or just open either `AtataSamples.VS2017.sln` or `AtataSamples.VS2019.sln` (depending on your Visual Studio) that contain all sample projects.
 
 ## License
 
-Atata is an open source software, licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+Atata is an open source software, licensed under the Apache License 2.0.
+See [LICENSE](LICENSE) for details.
