@@ -16,10 +16,10 @@ namespace AtataSamples.Performance.ControlList
             public ControlList<ItemRow, _> Rows { get; private set; }
 
             public DataProvider<IEnumerable<int>, _> Ids
-                => Rows.SelectContentsByExtraXPath<int>($"/{ItemRow.XPathTo.Id}", "Ids");
+                => Rows.SelectContentsByExtraXPath<int>(ItemRow.XPathTo.Id, "Ids");
 
             public DataProvider<IEnumerable<string>, _> Names
-                => Rows.SelectContentsByExtraXPath($"/{ItemRow.XPathTo.Name}", "Names");
+                => Rows.SelectContentsByExtraXPath(ItemRow.XPathTo.Name, "Names");
 
             public ItemRow FindRowById(int id)
             {
