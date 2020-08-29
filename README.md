@@ -11,7 +11,7 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 ## Projects
 
 - **Workflow Test** - [`/SampleApp.UITests`](../../tree/master/SampleApp.UITests)
-  | [download](../../raw/master/_archives/SampleApp.zip.UITests).
+  | [download](../../raw/master/_archives/SampleApp.UITests.zip).
   Used in [Atata - New Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework) article.
 - **Verification of Page** - [`/PageVerification`](../../tree/master/PageVerification)
   | [download](../../raw/master/_archives/PageVerification.zip).
