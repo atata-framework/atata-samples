@@ -11,50 +11,50 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 ## Projects
 
 - **Workflow Test** - [`/SampleApp.UITests`](../../tree/master/SampleApp.UITests)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/SampleApp.UITests).
+  | [download](../../raw/master/_archives/SampleApp.zip.UITests).
   Used in [Atata - New Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework) article.
 - **Verification of Page** - [`/PageVerification`](../../tree/master/PageVerification)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/PageVerification).
+  | [download](../../raw/master/_archives/PageVerification.zip).
   Used in [Verification of Page](https://atata.io/tutorials/verification-of-page/) tutorial.
 - **Verification of Validation Messages** - [`/ValidationMessagesVerification`](../../tree/master/ValidationMessagesVerification)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/ValidationMessagesVerification).
+  | [download](../../raw/master/_archives/ValidationMessagesVerification.zip).
   Used in [Verification of Validation Messages](https://atata.io/tutorials/verification-of-validation-messages/) tutorial.
 - **Handle Confirmation Popups** - [`/ConfirmationPopups`](../../tree/master/ConfirmationPopups)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/ConfirmationPopups).
+  | [download](../../raw/master/_archives/ConfirmationPopups.zip).
   Used in [Handle Confirmation Popups](https://atata.io/tutorials/handle-confirmation-popups/) tutorial.
 - **Multi-Browser Configuration via Fixture Arguments** - [`/MultipleBrowsersViaFixtureArguments`](../../tree/master/MultipleBrowsersViaFixtureArguments)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/MultipleBrowsersViaFixtureArguments).
+  | [download](../../raw/master/_archives/MultipleBrowsersViaFixtureArguments.zip).
   Used in [Multi-Browser Configuration via Fixture Arguments](https://atata.io/tutorials/multi-browser-configuration-via-fixture-arguments/) tutorial.
 - **Using CSV Data Source** - [`/CsvDataSource`](../../tree/master/CsvDataSource)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/CsvDataSource).
+  | [download](../../raw/master/_archives/CsvDataSource.zip).
 - **JSON Configuration: Multi-Browser via Fixture Arguments** - [`/JsonConfiguration.MultiBrowserViaFixtureArguments`](../../tree/master/JsonConfiguration.MultiBrowserViaFixtureArguments)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/JsonConfiguration.MultiBrowserViaFixtureArguments).
+  | [download](../../raw/master/_archives/JsonConfiguration.MultiBrowserViaFixtureArguments.zip).
 - **JSON Configuration: Multi-Environment** - [`/JsonConfiguration.MultiEnvironment`](../../tree/master/JsonConfiguration.MultiEnvironment)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/JsonConfiguration.MultiEnvironment).
+  | [download](../../raw/master/_archives/JsonConfiguration.MultiEnvironment.zip).
 - **App.Config Configuration** - [`/AppConfig`](../../tree/master/AppConfig)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/AppConfig).
+  | [download](../../raw/master/_archives/AppConfig.zip).
 - **Table with Row-Spanned Cells** - [`/TableWithRowSpannedCells`](../../tree/master/TableWithRowSpannedCells)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/TableWithRowSpannedCells).
+  | [download](../../raw/master/_archives/TableWithRowSpannedCells.zip).
   Demonstrates 3 different approaches to work with table that has cells with `rowspan`.
 - **Performance Practices for ControlList** - [`/Performance.ControlList`](../../tree/master/Performance.ControlList)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList).
+  | [download](../../raw/master/_archives/Performance.ControlList.zip).
   Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
 - **Parallel Tests Reusing Drivers** - [`/ParallelTestsReusingDrivers`](../../tree/master/ParallelTestsReusingDrivers)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/ParallelTestsReusingDrivers).
+  | [download](../../raw/master/_archives/ParallelTestsReusingDrivers.zip).
   Configures Atata to use a pool of drivers for tests execution.
   After the test finishes, the driver is not closed and can be reused by one of the next tests.
 - **Using Xunit** - [`/Xunit`](../../tree/master/Xunit)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Xunit).
+  | [download](../../raw/master/_archives/Xunit.zip).
 - **Using MSTest** - [`/MSTest`](../../tree/master/MSTest)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/MSTest).
+  | [download](../../raw/master/_archives/MSTest.zip).
 - **Using SpecFlow** - [`/SpecFlow`](../../tree/master/SpecFlow)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/SpecFlow).
+  | [download](../../raw/master/_archives/SpecFlow.zip).
 - **.NET Core 2.0 + NUnit** - [`/NetCore.NUnit`](../../tree/master/NetCore.NUnit)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/NetCore.NUnit).
+  | [download](../../raw/master/_archives/NetCore.NUnit.zip).
 - **.NET Core 3.0 + NUnit** - [`/NetCore3.NUnit`](../../tree/master/NetCore3.NUnit)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/NetCore3.NUnit).
+  | [download](../../raw/master/_archives/NetCore3.NUnit.zip).
 - **NUnit Generic Page Tests** - [`/NUnit.GenericPageTests`](../../tree/master/NUnit.GenericPageTests)
-  | [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/NUnit.GenericPageTests).
+  | [download](../../raw/master/_archives/NUnit.GenericPageTests.zip).
   Demonstrates the implementation of generic NUnit tests to execute against similar pages or to perform generic checks,
   like page title, as well as more complex workflows.
 - **Using Headless Edge** - [`/HeadlessEdge`](../../tree/master/HeadlessEdge)

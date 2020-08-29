@@ -1,11 +1,11 @@
 # [Atata Samples](https://github.com/atata-framework/atata-samples) / Performance Practices for ControlList
 
-[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList)
+[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://github.com/atata-framework/atata-samples/raw/master/_archives/Performance.ControlList.zip)
 
 Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
 Query execution time was decreased from 60 seconds to just 0.3 seconds for a single operation in scope of entire list.
 
-*[Download sources](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/atata-framework/atata-samples/tree/master/Performance.ControlList), run tests, check results and experiment with [Atata Framework](https://atata.io).*
+*[Download sources](https://github.com/atata-framework/atata-samples/raw/master/_archives/Performance.ControlList.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
 
 ## Page Under Test
 
@@ -33,13 +33,13 @@ namespace AtataSamples.Performance.ControlList
         [ControlDefinition("div", ContainingClass = "table-list", ComponentTypeName = "list")]
         public class ItemsContainer : Control<_>
         {
-            public ExtendedControlList<ItemRow, _> Rows { get; private set; }
+            public ControlList<ItemRow, _> Rows { get; private set; }
 
             public DataProvider<IEnumerable<int>, _> Ids
-                => Rows.SelectContents<int>("Ids", ItemRow.XPathTo.Id);
+                => Rows.SelectContentsByExtraXPath<int>(ItemRow.XPathTo.Id, "Ids");
 
             public DataProvider<IEnumerable<string>, _> Names
-                => Rows.SelectContents("Names", ItemRow.XPathTo.Name);
+                => Rows.SelectContentsByExtraXPath(ItemRow.XPathTo.Name, "Names");
 
             public ItemRow FindRowById(int id)
             {
@@ -65,9 +65,9 @@ namespace AtataSamples.Performance.ControlList
 
             public static class XPathTo
             {
-                public const string Id = "./td[contains(concat(' ', normalize-space(@class), ' '), ' id ')]";
+                public const string Id = "td[contains(concat(' ', normalize-space(@class), ' '), ' id ')]";
 
-                public const string Name = "./td[contains(concat(' ', normalize-space(@class), ' '), ' name ')]";
+                public const string Name = "td[contains(concat(' ', normalize-space(@class), ' '), ' name ')]";
             }
         }
     }

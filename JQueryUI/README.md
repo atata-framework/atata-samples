@@ -1,6 +1,6 @@
 # [Atata Samples](https://github.com/atata-framework/atata-samples) / jQuery UI Components
 
-[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](../../../raw/master/_archives/JQueryUI.zip)
+[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://github.com/atata-framework/atata-samples/raw/master/_archives/JQueryUI.zip)
 
 Demonstrates the creation of Atata custom controls using jQuery UI widgets as examples.
 
@@ -8,4 +8,4 @@ Contains Atata controls for:
 
 - [Autocomplete](https://jqueryui.com/autocomplete/)
 
-*[Download sources](../../../raw/master/_archives/JQueryUI.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
+*[Download sources](https://github.com/atata-framework/atata-samples/raw/master/_archives/JQueryUI.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
