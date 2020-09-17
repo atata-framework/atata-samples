@@ -5,7 +5,7 @@ namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments
 {
     [TestFixture(DriverAliases.Chrome)]
     [TestFixture(DriverAliases.InternetExplorer)]
-    [TestFixture(DriverAliases.Firefox)]
+    //[TestFixture(DriverAliases.Firefox)]
     //[TestFixture("chrome_remote")]
     [Parallelizable]
     public abstract class UITestFixture
