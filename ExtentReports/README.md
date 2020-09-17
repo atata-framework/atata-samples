@@ -6,6 +6,10 @@ Demonstrates the Atata reporting into [Extent Reports](https://extentreports.com
 
 *[Download sources](https://github.com/atata-framework/atata-samples/raw/master/_archives/ExtentReports.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
 
+## Packages
+
+In addition to [`Atata`](https://www.nuget.org/packages/Atata/) package, the [`ExtentReports`](https://www.nuget.org/packages/ExtentReports/) package should be added to the project.
+
 ## Implementation
 
 The functionality for Extent Reports is implemented in 3 files:
@@ -22,7 +26,7 @@ You can copy these files to your project and modify according to your project's 
 
 ## Configuration
 
-In order to connect Extent Reports to Atata add `ExtentLogConsumer` and `ExtentScreenshotConsumer` to `AtataContextBuilder`.
+In order to connect Extent Reports functionality to Atata add `ExtentLogConsumer` and `ExtentScreenshotConsumer` to `AtataContextBuilder`.
 
 *Configuraton defined in [`SetUpFixture.cs`](AtataSamples.ExtentReports/SetUpFixture.cs):*
 
