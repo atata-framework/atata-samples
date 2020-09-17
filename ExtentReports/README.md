@@ -28,20 +28,81 @@ You can copy these files to your project and modify according to your project's 
 
 In order to connect Extent Reports functionality to Atata add `ExtentLogConsumer` and `ExtentScreenshotConsumer` to `AtataContextBuilder`.
 
-*Configuraton defined in [`SetUpFixture.cs`](AtataSamples.ExtentReports/SetUpFixture.cs):*
+To perform generation of report file, the `Flush` should be performed as a final action of tests run.
+In NUnit it's good to do it in `OneTimeTearDown` method of `SetUpFixture.cs`.
+
+*[SetUpFixture.cs](AtataSamples.ExtentReports/SetUpFixture.cs)*
 
 ```cs
-AtataContext.GlobalConfiguration
-    .UseChrome()
-        .WithArguments("window-size=1024,768")
-        .WithLocalDriverPath()
-    .UseBaseUrl("https://atata.io/")
-    .UseCulture("en-US")
-    .UseAllNUnitFeatures()
-    // Extent Reports specific configuration:
-    .AddLogConsumer(new ExtentLogConsumer())
-    .AddScreenshotConsumer(new ExtentScreenshotConsumer());
+using Atata;
+using Atata.ExtentReports;
+using NUnit.Framework;
+
+namespace AtataSamples.ExtentReports
+{
+    [SetUpFixture]
+    public class SetUpFixture
+    {
+        [OneTimeSetUp]
+        public void GlobalSetUp()
+        {
+            AtataContext.GlobalConfiguration
+                .UseChrome()
+                    .WithArguments("window-size=1024,768")
+                    .WithLocalDriverPath()
+                .UseBaseUrl("https://atata.io/")
+                .UseCulture("en-US")
+                .UseAllNUnitFeatures()
+                // Extent Reports specific configuration:
+                .AddLogConsumer(new ExtentLogConsumer())
+                .AddScreenshotConsumer(new ExtentScreenshotConsumer());
+        }
+
+        [OneTimeTearDown]
+        public void GlobalTearDown()
+        {
+            ExtentContext.Reports.Flush();
+        }
+    }
+}
+
 ```
+
+## Tests
+
+2 sample tests were created in this sample.
+
+```cs
+using Atata;
+using NUnit.Framework;
+
+namespace AtataSamples.ExtentReports
+{
+    public class ExtentReportsTests : UITestFixture
+    {
+        [Test]
+        public void ExtentReports_Test1()
+        {
+            Go.To<HomePage>()
+                .Report.Screenshot()
+                .Header.Should.Contain("Atata");
+        }
+
+        [Test]
+        public void ExtentReports_Test2()
+        {
+            Go.To<HomePage>()
+                .Report.Screenshot()
+                .AggregateAssert(x => x
+                    .PageTitle.Should.Contain("Atata")
+                    .Header.Should.Contain("Atata"));
+        }
+    }
+}
+```
+
+In testing purposes the screenshot is taken after the navigation to the home page.
+Also when the test fails at any moment, the screenshot is taken as well.
 
 ## Results
 
