@@ -63,6 +63,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **jQuery UI Components** - [`/JQueryUI`](../../tree/master/JQueryUI)
   | [download](../../raw/master/_archives/JQueryUI.zip).
   Demonstrates the creation of Atata custom controls using jQuery UI widgets as examples.
+- **Extent Reports** - [`/ExtentReports`](../../tree/master/ExtentReports)
+  | [download](../../raw/master/_archives/ExtentReports.zip).
+  Demonstrates the Atata reporting into [Extent Reports](https://extentreports.com/).
 
 Or just open either `AtataSamples.VS2017.sln` or `AtataSamples.VS2019.sln` (depending on your Visual Studio) that contain all sample projects.
 

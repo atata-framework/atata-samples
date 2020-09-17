@@ -47,6 +47,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.HeadlessEdge",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.JQueryUI", "JQueryUI\AtataSamples.JQueryUI\AtataSamples.JQueryUI.csproj", "{43EFE330-F21B-4471-A4F6-D6590D9EB740}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.ExtentReports", "ExtentReports\AtataSamples.ExtentReports\AtataSamples.ExtentReports.csproj", "{F7C15D93-6D3A-40A1-816E-A422534E96CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{43EFE330-F21B-4471-A4F6-D6590D9EB740}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43EFE330-F21B-4471-A4F6-D6590D9EB740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43EFE330-F21B-4471-A4F6-D6590D9EB740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7C15D93-6D3A-40A1-816E-A422534E96CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7C15D93-6D3A-40A1-816E-A422534E96CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7C15D93-6D3A-40A1-816E-A422534E96CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7C15D93-6D3A-40A1-816E-A422534E96CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
