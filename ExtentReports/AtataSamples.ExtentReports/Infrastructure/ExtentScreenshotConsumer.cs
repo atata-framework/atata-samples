@@ -1,10 +1,8 @@
 ﻿using System.IO;
-using Atata;
-using Atata.ExtentReports;
 using AventStack.ExtentReports;
 using OpenQA.Selenium;
 
-namespace AtataSamples.ExtentReports
+namespace Atata.ExtentReports
 {
     public class ExtentScreenshotConsumer : IScreenshotConsumer
     {
