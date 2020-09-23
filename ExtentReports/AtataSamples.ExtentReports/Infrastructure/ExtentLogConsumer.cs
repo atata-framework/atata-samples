@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Web;
 using AventStack.ExtentReports;
 
 namespace Atata.ExtentReports
@@ -58,12 +61,13 @@ namespace Atata.ExtentReports
 
         private static string NormalizeMessage(string message)
         {
-            return message
-                .Replace("<", "&lt;")
-                .Replace(">", "&gt;")
-                .Replace(Environment.NewLine, "<br>")
-                .Replace("<br>   ", "<br>&nbsp;&nbsp;&nbsp;")
-                .Replace("<br>  ", "<br>&nbsp;&nbsp;");
+            message = HttpUtility.HtmlEncode(message)
+                .Replace(Environment.NewLine, "<br>");
+
+            return Regex.Replace(
+                message,
+                @"(?<=\<br\>)\s+",
+                match => string.Concat(Enumerable.Repeat("&nbsp;", match.Length)));
         }
     }
 }
