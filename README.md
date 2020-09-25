@@ -12,19 +12,27 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 
 - **Workflow Test** - [`/SampleApp.UITests`](../../tree/master/SampleApp.UITests)
   | [download](../../raw/master/_archives/SampleApp.UITests.zip).
-  Used in [Atata - New Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework) article.
+  Used in **[Atata - C# Web Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework)** introduction article.
 - **Verification of Page** - [`/PageVerification`](../../tree/master/PageVerification)
   | [download](../../raw/master/_archives/PageVerification.zip).
-  Used in [Verification of Page](https://atata.io/tutorials/verification-of-page/) tutorial.
+  Used in **[Verification of Page](https://atata.io/tutorials/verification-of-page/)** tutorial.
+  Demonstrates how to verify web page data using different approaches of Atata Framework.
 - **Verification of Validation Messages** - [`/ValidationMessagesVerification`](../../tree/master/ValidationMessagesVerification)
   | [download](../../raw/master/_archives/ValidationMessagesVerification.zip).
-  Used in [Verification of Validation Messages](https://atata.io/tutorials/verification-of-validation-messages/) tutorial.
+  Used in **[Verification of Validation Messages](https://atata.io/tutorials/verification-of-validation-messages/)** tutorial.
+  Demonstrates how to verify validation messages on web pages.
 - **Handle Confirmation Popups** - [`/ConfirmationPopups`](../../tree/master/ConfirmationPopups)
   | [download](../../raw/master/_archives/ConfirmationPopups.zip).
-  Used in [Handle Confirmation Popups](https://atata.io/tutorials/handle-confirmation-popups/) tutorial.
+  Used in **[Handle Confirmation Popups](https://atata.io/tutorials/handle-confirmation-popups/)** tutorial.
+  Demonstrates how to handle different confirmation popups using Atata Framework.
 - **Multi-Browser Configuration via Fixture Arguments** - [`/MultipleBrowsersViaFixtureArguments`](../../tree/master/MultipleBrowsersViaFixtureArguments)
   | [download](../../raw/master/_archives/MultipleBrowsersViaFixtureArguments.zip).
-  Used in [Multi-Browser Configuration via Fixture Arguments](https://atata.io/tutorials/multi-browser-configuration-via-fixture-arguments/) tutorial.
+  Demonstrates how to configure multi-browser tests application using NUnit fixture arguments.
+  Used in **[Multi-Browser Configuration via Fixture Arguments](https://atata.io/tutorials/multi-browser-configuration-via-fixture-arguments/)** tutorial.
+- **Extent Reports** - [`/ExtentReports`](../../tree/master/ExtentReports)
+  | [download](../../raw/master/_archives/ExtentReports.zip).
+  Used in **[Reporting to Extent Reports](https://atata.io/tutorials/reporting-to-extentreports/)** tutorial.
+  Demonstrates the Atata reporting to [Extent Reports](https://extentreports.com/).
 - **Using CSV Data Source** - [`/CsvDataSource`](../../tree/master/CsvDataSource)
   | [download](../../raw/master/_archives/CsvDataSource.zip).
 - **JSON Configuration: Multi-Browser via Fixture Arguments** - [`/JsonConfiguration.MultiBrowserViaFixtureArguments`](../../tree/master/JsonConfiguration.MultiBrowserViaFixtureArguments)
@@ -63,9 +71,6 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **jQuery UI Components** - [`/JQueryUI`](../../tree/master/JQueryUI)
   | [download](../../raw/master/_archives/JQueryUI.zip).
   Demonstrates the creation of Atata custom controls using jQuery UI widgets as examples.
-- **Extent Reports** - [`/ExtentReports`](../../tree/master/ExtentReports)
-  | [download](../../raw/master/_archives/ExtentReports.zip).
-  Demonstrates the Atata reporting into [Extent Reports](https://extentreports.com/).
 
 Or just open either `AtataSamples.VS2017.sln` or `AtataSamples.VS2019.sln` (depending on your Visual Studio) that contain all sample projects.
 
