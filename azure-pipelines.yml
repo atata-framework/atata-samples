@@ -9,7 +9,7 @@ jobs:
   steps:
   - task: DotNetCoreCLI@2
     displayName: 'Run tests'
-    timeoutInMinutes: 12
+    timeoutInMinutes: 20
     inputs:
       command: test
       projects: '**\*.csproj'
