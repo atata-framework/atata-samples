@@ -47,6 +47,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Performance Practices for ControlList** - [`/Performance.ControlList`](../../tree/master/Performance.ControlList)
   | [download](../../raw/master/_archives/Performance.ControlList.zip).
   Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
+- **Fixture Reusing Driver** - [`/FixtureReusingDriver`](../../tree/master/FixtureReusingDriver)
+  | [download](../../raw/master/_archives/FixtureReusingDriver.zip).
+  Demonstrates how to configure Atata to reuse the same driver instance by the tests in a fixture.
 - **Parallel Tests Reusing Drivers** - [`/ParallelTestsReusingDrivers`](../../tree/master/ParallelTestsReusingDrivers)
   | [download](../../raw/master/_archives/ParallelTestsReusingDrivers.zip).
   Configures Atata to use a pool of drivers for tests execution.
