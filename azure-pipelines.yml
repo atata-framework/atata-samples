@@ -13,4 +13,4 @@ jobs:
     inputs:
       command: test
       projects: '**\*.csproj'
-      arguments: -c $(buildConfiguration) --blame
+      arguments: -c $(buildConfiguration) -s "azure-pipelines.runsettings"

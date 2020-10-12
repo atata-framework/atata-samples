@@ -7,7 +7,7 @@ namespace AtataSamples.TableWithRowSpannedCells
     public class TableWithRowSpannedCellsTests : UITestFixture
     {
         [Test]
-        public void Table_WithRowSpans_UsingXPath()
+        public void UsingXPath()
         {
             Go.To<TableUsingXPathPage>().
                 Users.Rows.Should.HaveCount(3).
@@ -40,7 +40,7 @@ namespace AtataSamples.TableWithRowSpannedCells
         }
 
         [Test]
-        public void Table_WithRowSpans_UsingCustomFindAttributes()
+        public void UsingCustomFindAttributes()
         {
             Go.To<TableUsingCustomFindAttributesPage>().
                 Users.Rows.Should.HaveCount(3).
@@ -73,7 +73,7 @@ namespace AtataSamples.TableWithRowSpannedCells
         }
 
         [Test]
-        public void Table_WithRowSpans_UsingCustomFindStrategy()
+        public void UsingCustomFindStrategy()
         {
             Go.To<TableUsingCustomFindStrategyPage>().
                 Users.Rows.Should.HaveCount(3).

@@ -6,7 +6,7 @@ namespace AtataSamples.ConfirmationPopups
     public class ProductTests : UITestFixture
     {
         [Test]
-        public void Products_DeleteUsingJSConfirm()
+        public void DeleteUsingJSConfirm()
         {
             int count;
 
@@ -19,7 +19,7 @@ namespace AtataSamples.ConfirmationPopups
         }
 
         [Test]
-        public void Products_DeleteUsingBSModal()
+        public void DeleteUsingBSModal()
         {
             int count;
 
@@ -38,7 +38,7 @@ namespace AtataSamples.ConfirmationPopups
         }
 
         [Test]
-        public void Products_DeleteUsingBSModal_ViaTrigger()
+        public void DeleteUsingBSModal_ViaTrigger()
         {
             int count;
 
@@ -51,7 +51,7 @@ namespace AtataSamples.ConfirmationPopups
         }
 
         [Test]
-        public void Products_DeleteUsingJQueryConfirm()
+        public void DeleteUsingJQueryConfirm()
         {
             int count;
 
@@ -70,7 +70,7 @@ namespace AtataSamples.ConfirmationPopups
         }
 
         [Test]
-        public void Products_DeleteUsingJQueryConfirm_ViaTrigger()
+        public void DeleteUsingJQueryConfirm_ViaTrigger()
         {
             int count;
 

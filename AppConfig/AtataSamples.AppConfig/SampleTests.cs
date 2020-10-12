@@ -6,7 +6,7 @@ namespace AtataSamples.AppConfig
     public class SampleTests : UITestFixture
     {
         [Test]
-        public void AppConfig_SignIn()
+        public void SignIn()
         {
             Go.To<SignInPage>().
                 Email.Set(Config.Account.Email).

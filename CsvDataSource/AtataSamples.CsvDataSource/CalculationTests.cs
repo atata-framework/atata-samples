@@ -9,7 +9,7 @@ namespace AtataSamples.CsvDataSource
             CsvSource.Get<AdditionModel>("addition-models.csv", expectedResultType: typeof(int));
 
         [TestCaseSource(nameof(AdditionModels))]
-        public int Calculation_Addition(AdditionModel model)
+        public int Addition(AdditionModel model)
         {
             return Go.To<CalculationsPage>().
                 AdditionValue1.Set(model.Value1).

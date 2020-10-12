@@ -26,7 +26,7 @@ namespace AtataSamples.ValidationMessagesVerification
         }
 
         [Test]
-        public void SignUp_Validation_Required()
+        public void Validation_Required()
         {
             Go.To<SignUpPage>().
                 SignUp.Click().
@@ -39,7 +39,7 @@ namespace AtataSamples.ValidationMessagesVerification
         }
 
         [Test]
-        public void SignUp_Validation_Required_UsingExtensions()
+        public void Validation_Required_UsingExtensions()
         {
             Go.To<SignUpPage>().
                 SignUp.Click().
@@ -52,7 +52,7 @@ namespace AtataSamples.ValidationMessagesVerification
         }
 
         [Test]
-        public void SignUp_Validation_MinLength()
+        public void Validation_MinLength()
         {
             Go.To<SignUpPage>().
                 FirstName.Set("a").
@@ -65,7 +65,7 @@ namespace AtataSamples.ValidationMessagesVerification
         }
 
         [Test]
-        public void SignUp_Validation_MinLength_UsingExtensions()
+        public void Validation_MinLength_UsingExtensions()
         {
             Go.To<SignUpPage>().
                 FirstName.Set("a").
@@ -78,7 +78,7 @@ namespace AtataSamples.ValidationMessagesVerification
         }
 
         [Test]
-        public void SignUp_Validation_IncorrectEmail()
+        public void Validation_IncorrectEmail()
         {
             Go.To<SignUpPage>().
                 Email.Set("some@email").
@@ -90,7 +90,7 @@ namespace AtataSamples.ValidationMessagesVerification
         }
 
         [Test]
-        public void SignUp_Validation_IncorrectEmail_UsingExtensions()
+        public void Validation_IncorrectEmail_UsingExtensions()
         {
             Go.To<SignUpPage>().
                 Email.Set("some@email").

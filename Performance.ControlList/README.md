@@ -85,42 +85,42 @@ namespace AtataSamples.Performance.ControlList
     public class TableListTests : UITestFixture
     {
         [Test]
-        public void TableList_VerifyNoItemWithId_Fast()
+        public void VerifyNoItemWithId_Fast()
         {
             Go.To<TableListPage>().
                 Items.Ids.Should.Not.Contain(999);
         }
 
         [Test]
-        public void TableList_VerifyNoItemWithName_Fast()
+        public void VerifyNoItemWithName_Fast()
         {
             Go.To<TableListPage>().
                 Items.Names.Should.Not.Contain("Unknown name");
         }
 
         [Test]
-        public void TableList_VerifyItemWithName_Fast()
+        public void VerifyItemWithName_Fast()
         {
             Go.To<TableListPage>().
                 Items.Names.Should.Contain("Item 250");
         }
 
         [Test]
-        public void TableList_VerifyItemNameById_Fast()
+        public void VerifyItemNameById_Fast()
         {
             Go.To<TableListPage>().
                 Items.FindRowById(250).Name.Should.Equal("Item 250");
         }
 
         [Test]
-        public void TableList_VerifyItemByIdAndName_Fast()
+        public void VerifyItemByIdAndName_Fast()
         {
             Go.To<TableListPage>().
                 Items.FindRowByIdAndName(450, "Item 450").Should.BeVisible();
         }
 
         [Test]
-        public void TableList_VerifyNoItemByIdAndName_Fast()
+        public void VerifyNoItemByIdAndName_Fast()
         {
             Go.To<TableListPage>().
                 Items.FindRowByIdAndName(999, "Item 999").Should.Not.BeVisible();

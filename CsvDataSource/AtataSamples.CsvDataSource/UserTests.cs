@@ -9,7 +9,7 @@ namespace AtataSamples.CsvDataSource
             CsvSource.Get<UserModel>("user-models.csv");
 
         [TestCaseSource(nameof(UserModels))]
-        public void User_Create_New(UserModel model)
+        public void Create(UserModel model)
         {
             Login().
                 New.ClickAndGo().

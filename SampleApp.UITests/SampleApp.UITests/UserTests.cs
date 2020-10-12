@@ -6,7 +6,7 @@ namespace SampleApp.UITests
     public class UserTests : UITestFixture
     {
         [Test]
-        public void User_Create()
+        public void Create()
         {
             string firstName, lastName, email;
             Office office = Office.NewYork;
@@ -22,12 +22,13 @@ namespace SampleApp.UITests
                     General.Gender.Set(gender).
                     Save.ClickAndGo(). // Returns UsersPage.
                 Users.Rows[x => x.FirstName == firstName && x.LastName == lastName].View.ClickAndGo(). // Returns UserDetailsPage.
-                    Header.Should.Equal($"{firstName} {lastName}").
-                    Email.Should.Equal(email).
-                    Office.Should.Equal(office).
-                    Gender.Should.Equal(gender).
-                    Birthday.Should.Not.Exist().
-                    Notes.Should.Not.Exist();
+                    AggregateAssert(x => x.
+                        Header.Should.Equal($"{firstName} {lastName}").
+                        Email.Should.Equal(email).
+                        Office.Should.Equal(office).
+                        Gender.Should.Equal(gender).
+                        Birthday.Should.Not.Exist().
+                        Notes.Should.Not.Exist());
         }
     }
 }
