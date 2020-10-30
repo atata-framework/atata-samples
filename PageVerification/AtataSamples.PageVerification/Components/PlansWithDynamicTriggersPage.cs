@@ -9,7 +9,7 @@ namespace AtataSamples.PageVerification
     {
         public PlansWithDynamicTriggersPage()
         {
-            Triggers.Add(
+            Metadata.Add(
                 new VerifyTitleAttribute("Plans - Atata Sample App"),
                 new VerifyH1Attribute("Plans"),
                 new VerifyContentAttribute("Please choose your payment plan"));
