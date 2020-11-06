@@ -22,9 +22,13 @@ namespace AtataSamples.ExtJS
             control.Clear();
             control.Should.BeNullOrEmpty();
 
-            // Verify the list of drop-down options:
+            // Verify the list of drop-down options using JavaScript:
+            control.Options.Should.Contain(
+                "Alabama", "California", "Colorado", "Florida", "Pennsylvania");
+
+            // Verify the list of drop-down options visually:
             control.PickerTrigger.Click();
-            control.DropDownItems.Items.Contents.Should.Contain(
+            control.DropDownList.Items.Contents.Should.Contain(
                 "Alabama", "California", "Colorado", "Florida", "Pennsylvania");
         }
     }
