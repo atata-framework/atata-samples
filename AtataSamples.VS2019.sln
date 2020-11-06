@@ -56,6 +56,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MultipleBrowse
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.FixtureReusingDriver", "FixtureReusingDriver\AtataSamples.FixtureReusingDriver\AtataSamples.FixtureReusingDriver.csproj", "{2BF60EDA-115A-4218-8854-31319352A5D9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.ExtJS", "ExtJS\AtataSamples.ExtJS\AtataSamples.ExtJS.csproj", "{6F16C14D-B955-40F3-BE45-0796BAF064AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -154,6 +156,10 @@ Global
 		{2BF60EDA-115A-4218-8854-31319352A5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BF60EDA-115A-4218-8854-31319352A5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BF60EDA-115A-4218-8854-31319352A5D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F16C14D-B955-40F3-BE45-0796BAF064AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F16C14D-B955-40F3-BE45-0796BAF064AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F16C14D-B955-40F3-BE45-0796BAF064AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F16C14D-B955-40F3-BE45-0796BAF064AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

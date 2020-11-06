@@ -74,6 +74,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **jQuery UI Components** - [`/JQueryUI`](../../tree/master/JQueryUI)
   | [download](../../raw/master/_archives/JQueryUI.zip).
   Demonstrates the creation of Atata custom controls using jQuery UI widgets as examples.
+- **Ext JS Components** - [`/ExtJS`](../../tree/master/ExtJS)
+  | [download](../../raw/master/_archives/JQueryUI.zip).
+  Demonstrates the creation of Atata custom controls using Ext JS components as examples.
 - **Multiple Browsers in Test** - [`/MultipleBrowsersInTest`](../../tree/master/MultipleBrowsersInTest)
   | [download](../../raw/master/_archives/MultipleBrowsersInTest.zip).
   Demonstrates the usage of multiple browsers in a single test.
