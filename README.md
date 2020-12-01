@@ -25,6 +25,10 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/master/_archives/ConfirmationPopups.zip).
   Used in **[Handle Confirmation Popups](https://atata.io/tutorials/handle-confirmation-popups/)** tutorial.
   Demonstrates how to handle different confirmation popups using Atata Framework.
+- **Multi-Browser Configuration via .runsettings files** - [`/MultipleBrowsersViaRunSettings`](../../tree/master/MultipleBrowsersViaRunSettings)
+  | [download](../../raw/master/_archives/MultipleBrowsersViaRunSettings.zip).
+  Demonstrates how to configure multi-browser tests application using `.runsettings` files.
+  Used in **[Multi-Browser Configuration via .runsettings files](https://atata.io/tutorials/multi-browser-configuration-via-runsettings-files/)** tutorial.
 - **Multi-Browser Configuration via Fixture Arguments** - [`/MultipleBrowsersViaFixtureArguments`](../../tree/master/MultipleBrowsersViaFixtureArguments)
   | [download](../../raw/master/_archives/MultipleBrowsersViaFixtureArguments.zip).
   Demonstrates how to configure multi-browser tests application using NUnit fixture arguments.
