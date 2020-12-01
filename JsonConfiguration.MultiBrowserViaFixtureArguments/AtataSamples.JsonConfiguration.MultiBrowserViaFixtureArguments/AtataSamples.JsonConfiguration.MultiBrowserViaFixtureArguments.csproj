@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <Company>Yevgeniy Shunevych</Company>
     <Product>Atata Framework Samples</Product>
     <Copyright>© Yevgeniy Shunevych 2020</Copyright>

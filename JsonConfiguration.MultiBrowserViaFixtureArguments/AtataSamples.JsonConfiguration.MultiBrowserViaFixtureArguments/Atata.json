@@ -4,16 +4,10 @@
       "type": "chrome",
       "options": {
         "arguments": [ "start-maximized" ]
-      },
-      "service": {
-        "driverPath": "{basedir}"
       }
     },
     {
-      "type": "internetexplorer",
-      "service": {
-        "driverPath": "{basedir}"
-      }
+      "type": "internetexplorer"
     },
     {
       "type": "firefox",
@@ -34,13 +28,6 @@
     }
   ],
   "baseUrl": "https://demo.atata.io/",
-  "logNUnitError": true,
-  "takeScreenshotOnNUnitError": true,
-  "assertionExceptionType": "NUnit.Framework.AssertionException, nunit.framework",
-  "useNUnitAggregateAssertionStrategy": true,
-  "logConsumers": [
-    {
-      "type": "nunit"
-    }
-  ]
+  "culture": "en-US",
+  "useAllNUnitFeatures": true
 }
