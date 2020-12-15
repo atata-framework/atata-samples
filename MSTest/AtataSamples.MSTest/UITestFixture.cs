@@ -34,8 +34,24 @@ namespace AtataSamples.MSTest
             }
             catch (Exception exception)
             {
-                AtataContext.Current.Log.Error(exception);
+                OnException(exception);
                 throw;
+            }
+        }
+
+        private static void OnException(Exception exception)
+        {
+            ILogManager log = AtataContext.Current.Log;
+
+            log.Error(exception);
+
+            try
+            {
+                log.Screenshot("Failed");
+            }
+            catch (Exception screenshotException)
+            {
+                log.Error("Take screenshot failed.", screenshotException);
             }
         }
     }
