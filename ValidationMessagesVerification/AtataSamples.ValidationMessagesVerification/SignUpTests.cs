@@ -84,7 +84,7 @@ namespace AtataSamples.ValidationMessagesVerification
                 Email.Set("some@email").
                 SignUp.Click().
                 ValidationMessages[x => x.Email].Should.Equal("has incorrect format").
-                Email.Append(".com").
+                Email.Type(".com").
                 SignUp.Click().
                 ValidationMessages[x => x.Email].Should.Not.Exist();
         }
@@ -96,7 +96,7 @@ namespace AtataSamples.ValidationMessagesVerification
                 Email.Set("some@email").
                 SignUp.Click().
                 ValidationMessages[x => x.Email].Should.HaveIncorrectFormat().
-                Email.Append(".com").
+                Email.Type(".com").
                 SignUp.Click().
                 ValidationMessages[x => x.Email].Should.Not.Exist();
         }
