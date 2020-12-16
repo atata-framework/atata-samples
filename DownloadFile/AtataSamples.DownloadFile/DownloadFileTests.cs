@@ -8,10 +8,10 @@ namespace AtataSamples.DownloadFile
         [Test]
         public void DownloadFile()
         {
-            Go.To<SamplePage>(url: "/SampleApp.UITests")
+            Go.To<TutorialPage>(url: "/tutorials/verification-of-page/")
                 .DownloadSources.Click();
 
-            TestDownloads.ShouldContain("SampleApp.UITests.zip", secondsToWait: 20);
+            TestDownloads.ShouldContain("PageVerification.zip", secondsToWait: 20);
         }
     }
 }

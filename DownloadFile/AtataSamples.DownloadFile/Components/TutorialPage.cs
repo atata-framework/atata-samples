@@ -2,11 +2,11 @@
 
 namespace AtataSamples.DownloadFile
 {
-    using _ = SamplePage;
+    using _ = TutorialPage;
 
-    public class SamplePage : Page<_>
+    public class TutorialPage : Page<_>
     {
-        [FindByInnerXPath("img[@alt='Download sources']")]
+        [Term("Download sources")]
         public Link<_> DownloadSources { get; private set; }
     }
 }

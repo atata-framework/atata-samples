@@ -17,7 +17,7 @@ namespace AtataSamples.DownloadFile
                     .WithLocalDriverPath()
                 .OnBuilt(TestDownloads.DeleteDirectory)
                 .OnCleanUp(TestDownloads.DeleteDirectory)
-                .UseBaseUrl("https://github.com/atata-framework/atata-samples/tree/master/")
+                .UseBaseUrl("https://atata.io/")
                 .UseCulture("en-US")
                 .UseAllNUnitFeatures();
         }
