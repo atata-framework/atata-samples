@@ -84,6 +84,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Multiple Browsers in Test** - [`/MultipleBrowsersInTest`](../../tree/master/MultipleBrowsersInTest)
   | [download](../../raw/master/_archives/MultipleBrowsersInTest.zip).
   Demonstrates the usage of multiple browsers in a single test.
+- **Download File** - [`/DownloadFile`](../../tree/master/DownloadFile)
+  | [download](../../raw/master/_archives/DownloadFile.zip).
+  Demonstrates how to configure downloads directory of Chrome and verify that file is downloaded.
 
 You are also able to clone the whole repository and open either
 `AtataSamples.VS2017.sln` or `AtataSamples.VS2019.sln`

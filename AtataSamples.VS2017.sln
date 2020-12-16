@@ -58,6 +58,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.ExtJS", "ExtJS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MultipleBrowsersViaRunSettings", "MultipleBrowsersViaRunSettings\AtataSamples.MultipleBrowsersViaRunSettings\AtataSamples.MultipleBrowsersViaRunSettings.csproj", "{6C030F5B-FCFD-49E0-958D-2F43165D8737}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.DownloadFile", "DownloadFile\AtataSamples.DownloadFile\AtataSamples.DownloadFile.csproj", "{42BFD09A-3B58-4A92-9B1C-CF5F3022A63E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -160,6 +162,10 @@ Global
 		{6C030F5B-FCFD-49E0-958D-2F43165D8737}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C030F5B-FCFD-49E0-958D-2F43165D8737}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C030F5B-FCFD-49E0-958D-2F43165D8737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42BFD09A-3B58-4A92-9B1C-CF5F3022A63E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42BFD09A-3B58-4A92-9B1C-CF5F3022A63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42BFD09A-3B58-4A92-9B1C-CF5F3022A63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42BFD09A-3B58-4A92-9B1C-CF5F3022A63E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
