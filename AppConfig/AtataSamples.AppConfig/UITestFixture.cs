@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using Atata;
+﻿using Atata;
 using NUnit.Framework;
 
 namespace AtataSamples.AppConfig
@@ -10,9 +9,6 @@ namespace AtataSamples.AppConfig
         [SetUp]
         public void SetUp()
         {
-            var conf = System.Configuration.ConfigurationManager.OpenExeConfiguration(
-                Assembly.GetExecutingAssembly().Location);
-
             AtataContext.Configure().
                 UseChrome().
                     WithArguments("start-maximized").
