@@ -16,7 +16,7 @@ namespace AtataSamples.MSTest
                     WithLocalDriverPath().
                 UseBaseUrl("https://demo.atata.io/").
                 UseTestName(TestContext.TestName).
-                AddTraceLogging().
+                AddLogConsumer(new TextOutputLogConsumer(TestContext.WriteLine)).
                 Build();
         }
 
