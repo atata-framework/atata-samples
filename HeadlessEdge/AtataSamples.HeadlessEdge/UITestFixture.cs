@@ -1,7 +1,5 @@
-﻿using System;
-using Atata;
+﻿using Atata;
 using NUnit.Framework;
-using OpenQA.Selenium.Edge;
 
 namespace AtataSamples.HeadlessEdge
 {
@@ -11,22 +9,7 @@ namespace AtataSamples.HeadlessEdge
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Configure().
-                UseDriver(() =>
-                {
-                    EdgeOptions options = new EdgeOptions
-                    {
-                        UseChromium = true
-                    };
-
-                    options.AddArguments("headless", "disable-gpu", "window-size=1024,768");
-
-                    return new EdgeDriver(AppDomain.CurrentDomain.BaseDirectory, options);
-                }).
-                UseBaseUrl("https://demo.atata.io/").
-                UseCulture("en-US").
-                UseAllNUnitFeatures().
-                Build();
+            AtataContext.Configure().Build();
         }
 
         [TearDown]
