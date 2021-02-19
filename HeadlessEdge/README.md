@@ -4,7 +4,6 @@
 
 Configures Atata to use headless Edge browser based on Chromium.
 
-Note that in order to use headless Chrome, 4.0 alpha version of `Selenium.WebDriver` is used.
-Also `Selenium.WebDriver.MSEdgeDriver` package is used to download `msedgedriver`.
+Note that in order to use headless Chrome, 4.0 beta version of `Selenium.WebDriver` is used.
 
 *[Download sources](https://github.com/atata-framework/atata-samples/raw/master/_archives/HeadlessEdge.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
