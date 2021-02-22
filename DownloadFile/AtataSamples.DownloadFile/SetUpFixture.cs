@@ -14,12 +14,13 @@ namespace AtataSamples.DownloadFile
                     .WithArguments("start-maximized")
                     .WithOptions(x => x
                         .AddUserProfilePreference("download.default_directory", TestDownloads.DirectoryPath))
-                    .WithLocalDriverPath()
                 .OnBuilt(TestDownloads.DeleteDirectory)
                 .OnCleanUp(TestDownloads.DeleteDirectory)
                 .UseBaseUrl("https://atata.io/")
                 .UseCulture("en-US")
                 .UseAllNUnitFeatures();
+
+            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
     }
 }
