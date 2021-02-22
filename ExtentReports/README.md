@@ -61,6 +61,8 @@ namespace AtataSamples.ExtentReports
                 // Extent Reports specific configuration:
                 .AddLogConsumer(new ExtentLogConsumer())
                 .AddScreenshotConsumer(new ExtentScreenshotConsumer());
+
+            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
 
         [OneTimeTearDown]
