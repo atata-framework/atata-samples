@@ -9,8 +9,7 @@ namespace AtataSamples.JsonConfiguration.MultiEnvironment
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Configure().
-                Build();
+            AtataContext.Configure().Build();
         }
 
         [TearDown]

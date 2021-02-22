@@ -3,21 +3,8 @@
     "type": "chrome",
     "options": {
       "arguments": [ "start-maximized" ]
-    },
-    "service": {
-      "driverPath": "{basedir}"
     }
   },
-  "useNUnitTestName": true,
-  "logNUnitError": true,
-  "takeScreenshotOnNUnitError": true,
-  "assertionExceptionType": "NUnit.Framework.AssertionException, nunit.framework",
-  "useNUnitAggregateAssertionStrategy": true,
-  "logConsumers": [
-    {
-      "type": "nunit",
-      "minLevel": "Info",
-      "sectionFinish": false
-    }
-  ]
+  "culture": "en-US",
+  "useAllNUnitFeatures": true
 }

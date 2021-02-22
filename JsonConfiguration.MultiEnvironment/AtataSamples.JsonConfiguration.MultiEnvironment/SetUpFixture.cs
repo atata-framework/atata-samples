@@ -18,6 +18,8 @@ namespace AtataSamples.JsonConfiguration.MultiEnvironment
 #elif STAGING
                 ApplyJsonConfig<AppConfig>(environmentAlias: "STAGING");
 #endif
+
+            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
     }
 }
