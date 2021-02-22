@@ -12,10 +12,11 @@ namespace AtataSamples.FixtureReusingDriver
             AtataContext.GlobalConfiguration
                 .UseChrome()
                     .WithArguments("start-maximized")
-                    .WithLocalDriverPath()
                 .UseBaseUrl("https://demo.atata.io/")
                 .UseCulture("en-US")
                 .UseAllNUnitFeatures();
+
+            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
     }
 }
