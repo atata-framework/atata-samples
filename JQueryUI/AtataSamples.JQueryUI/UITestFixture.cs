@@ -9,14 +9,7 @@ namespace AtataSamples.JQueryUI
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Configure().
-                UseChrome().
-                    WithArguments("start-maximized").
-                    WithLocalDriverPath().
-                UseBaseUrl("https://jqueryui.com/").
-                UseCulture("en-US").
-                UseAllNUnitFeatures().
-                Build();
+            AtataContext.Configure().Build();
         }
 
         [TearDown]
