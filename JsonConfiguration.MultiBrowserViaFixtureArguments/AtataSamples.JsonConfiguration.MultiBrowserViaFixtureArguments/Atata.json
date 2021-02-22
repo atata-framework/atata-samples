@@ -12,7 +12,6 @@
     {
       "type": "firefox",
       "service": {
-        "driverPath": "{basedir}",
         "hostName": "127.0.0.1"
       }
     },
