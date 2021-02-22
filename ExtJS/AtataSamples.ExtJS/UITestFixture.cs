@@ -1,5 +1,4 @@
-﻿using System;
-using Atata;
+﻿using Atata;
 using NUnit.Framework;
 
 namespace AtataSamples.ExtJS
@@ -10,13 +9,7 @@ namespace AtataSamples.ExtJS
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Configure()
-                .UseChrome()
-                    .WithLocalDriverPath()
-                .UseCulture("en-US")
-                .UseAllNUnitFeatures()
-                .UseElementFindTimeout(TimeSpan.FromSeconds(15))
-                .Build();
+            AtataContext.Configure().Build();
         }
 
         [TearDown]
