@@ -14,8 +14,9 @@ namespace AtataSamples.AppConfig
                     .WithArguments("start-maximized")
                 .UseBaseUrl(Config.BaseUrl)
                 .UseCulture("en-US")
-                .UseAllNUnitFeatures()
-                .AutoSetUpDriverToUse();
+                .UseAllNUnitFeatures();
+
+            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
     }
 }
