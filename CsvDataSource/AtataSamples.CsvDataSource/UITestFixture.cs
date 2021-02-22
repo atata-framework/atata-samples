@@ -9,14 +9,7 @@ namespace AtataSamples.CsvDataSource
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Configure().
-                UseChrome().
-                    WithArguments("start-maximized").
-                    WithLocalDriverPath().
-                UseBaseUrl("https://demo.atata.io/").
-                UseCulture("en-US").
-                UseAllNUnitFeatures().
-                Build();
+            AtataContext.Configure().Build();
         }
 
         [TearDown]
