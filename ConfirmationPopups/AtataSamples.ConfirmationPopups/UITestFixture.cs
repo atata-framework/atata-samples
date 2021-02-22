@@ -9,13 +9,7 @@ namespace AtataSamples.ConfirmationPopups
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Configure().
-                UseChrome().
-                    WithArguments("start-maximized").
-                    WithLocalDriverPath().
-                UseBaseUrl("https://demo.atata.io/").
-                UseAllNUnitFeatures().
-                Build();
+            AtataContext.Configure().Build();
         }
 
         [TearDown]
