@@ -9,13 +9,14 @@ namespace AtataSamples.NUnit.GenericPageTests
         [OneTimeSetUp]
         public void GlobalSetUp()
         {
-            AtataContext.GlobalConfiguration.
-                UseChrome().
-                    WithArguments("start-maximized").
-                    WithLocalDriverPath().
-                UseBaseUrl("https://demo.atata.io/").
-                UseCulture("en-us").
-                UseAllNUnitFeatures();
+            AtataContext.GlobalConfiguration
+                .UseChrome()
+                    .WithArguments("start-maximized")
+                .UseBaseUrl("https://demo.atata.io/")
+                .UseCulture("en-US")
+                .UseAllNUnitFeatures();
+
+            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
     }
 }
