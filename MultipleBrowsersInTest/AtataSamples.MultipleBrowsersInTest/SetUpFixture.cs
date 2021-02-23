@@ -12,10 +12,11 @@ namespace AtataSamples.MultipleBrowsersInTest
             AtataContext.GlobalConfiguration
                 .UseChrome()
                     .WithArguments("window-size=1024,768")
-                    .WithLocalDriverPath()
                 .UseBaseUrl("https://demo.atata.io/")
                 .UseCulture("en-US")
                 .UseAllNUnitFeatures();
+
+            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
     }
 }
