@@ -1,4 +1,5 @@
 ﻿using Atata;
+using Atata.WebDriverSetup;
 using NUnit.Framework;
 
 namespace AtataSamples.MultipleBrowsersViaRunSettings
@@ -14,6 +15,11 @@ namespace AtataSamples.MultipleBrowsersViaRunSettings
             AtataContext.GlobalConfiguration
                 .ApplyJsonConfig()
                 .UseDriver(driverAlias);
+
+            DriverSetup.GetDefaultConfiguration(BrowserNames.InternetExplorer)
+                .WithX32Architecture();
+
+            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
     }
 }
