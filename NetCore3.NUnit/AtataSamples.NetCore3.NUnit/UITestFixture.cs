@@ -4,18 +4,13 @@ using NUnit.Framework;
 namespace AtataSamples.NetCore3.NUnit
 {
     [TestFixture]
+    [Parallelizable(ParallelScope.All)]
     public class UITestFixture
     {
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Configure().
-                UseChrome().
-                    WithArguments("start-maximized").
-                UseBaseUrl("https://demo.atata.io/").
-                UseCulture("en-us").
-                UseAllNUnitFeatures().
-                Build();
+            AtataContext.Configure().Build();
         }
 
         [TearDown]
