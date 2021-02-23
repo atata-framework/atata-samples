@@ -11,13 +11,10 @@ namespace AtataSamples.MSTest
         [TestInitialize]
         public void SetUp()
         {
-            AtataContext.Configure().
-                UseChrome().
-                    WithLocalDriverPath().
-                UseBaseUrl("https://demo.atata.io/").
-                UseTestName(TestContext.TestName).
-                AddLogConsumer(new TextOutputLogConsumer(TestContext.WriteLine)).
-                Build();
+            AtataContext.Configure()
+                .UseTestName(TestContext.TestName)
+                .AddLogConsumer(new TextOutputLogConsumer(TestContext.WriteLine))
+                .Build();
         }
 
         [TestCleanup]
