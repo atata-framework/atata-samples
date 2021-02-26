@@ -6,7 +6,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
     public static class AtataContextBuilderExtensions
     {
         /// <summary>
-        /// Use the driver pool with optionally resricting the pool with <paramref name="poolScopeObject"/>.
+        /// Use the driver pool with optionally restricting the pool with <paramref name="poolScopeObject"/>.
         /// </summary>
         /// <param name="builder">An <see cref="AtataContextBuilder"/>.</param>
         /// <param name="poolScopeObject">

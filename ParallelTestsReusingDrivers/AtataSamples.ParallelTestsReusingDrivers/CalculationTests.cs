@@ -16,10 +16,10 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         [TestCase(10000, 10000, ExpectedResult = 20000)]
         public int Addition(int value1, int value2)
         {
-            return Go.To<CalculationsPage>().
-                AdditionValue1.Set(value1).
-                AdditionValue2.Set(value2).
-                AdditionResult.Value;
+            return Go.To<CalculationsPage>()
+                .AdditionValue1.Set(value1)
+                .AdditionValue2.Set(value2)
+                .AdditionResult.Value;
         }
     }
 }

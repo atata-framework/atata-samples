@@ -7,15 +7,16 @@ namespace AtataSamples.ParallelTestsReusingDrivers
     [Parallelizable(ParallelScope.All)]
     public class UITestFixture
     {
-        protected virtual DriverPoolUsage DriverPoolUsage => DriverPoolUsage.None;
+        protected virtual DriverPoolUsage DriverPoolUsage =>
+            DriverPoolUsage.None;
 
         /// <summary>Sets up test a test.</summary>
         /// <seealso cref="SetUpFixture.GlobalSetUp"/>
         [SetUp]
         public void SetUp()
         {
-            ConfigureAtataContext(AtataContext.Configure()).
-                Build();
+            ConfigureAtataContext(AtataContext.Configure())
+                .Build();
         }
 
         protected virtual AtataContextBuilder ConfigureAtataContext(AtataContextBuilder builder)

@@ -10,9 +10,11 @@ namespace AtataSamples.ParallelTestsReusingDrivers
 {
     public static class DriverPool
     {
-        private static readonly ConcurrentBag<DriverEntry> GlobalEntries = new ConcurrentBag<DriverEntry>();
+        private static readonly ConcurrentBag<DriverEntry> GlobalEntries =
+            new ConcurrentBag<DriverEntry>();
 
-        private static readonly ConcurrentDictionary<object, ConcurrentBag<DriverEntry>> ScopedEntries = new ConcurrentDictionary<object, ConcurrentBag<DriverEntry>>();
+        private static readonly ConcurrentDictionary<object, ConcurrentBag<DriverEntry>> ScopedEntries =
+            new ConcurrentDictionary<object, ConcurrentBag<DriverEntry>>();
 
         private static IEnumerable<ConcurrentBag<DriverEntry>> AllEntryBags =>
             new[] { GlobalEntries }.Concat(ScopedEntries.Values);
@@ -21,7 +23,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
             AllEntryBags.SelectMany(x => x);
 
         /// <summary>
-        /// Acquires the driver for the speific <paramref name="driverFactory"/>.
+        /// Acquires the driver for the specific <paramref name="driverFactory"/>.
         /// </summary>
         /// <param name="driverFactory">The driver factory.</param>
         /// <param name="poolScopeObject">
