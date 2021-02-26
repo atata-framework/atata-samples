@@ -33,6 +33,7 @@ namespace AtataSamples.Performance.ControlList
         [ControlDefinition("div", ContainingClass = "table-list", ComponentTypeName = "list")]
         public class ItemsContainer : Control<_>
         {
+            [FindSettings(Visibility = Visibility.Any)]
             public ControlList<ItemRow, _> Rows { get; private set; }
 
             public DataProvider<IEnumerable<int>, _> Ids
@@ -87,43 +88,43 @@ namespace AtataSamples.Performance.ControlList
         [Test]
         public void VerifyNoItemWithId_Fast()
         {
-            Go.To<TableListPage>().
-                Items.Ids.Should.Not.Contain(999);
+            Go.To<TableListPage>()
+                .Items.Ids.Should.Not.Contain(999);
         }
 
         [Test]
         public void VerifyNoItemWithName_Fast()
         {
-            Go.To<TableListPage>().
-                Items.Names.Should.Not.Contain("Unknown name");
+            Go.To<TableListPage>()
+                .Items.Names.Should.Not.Contain("Unknown name");
         }
 
         [Test]
         public void VerifyItemWithName_Fast()
         {
-            Go.To<TableListPage>().
-                Items.Names.Should.Contain("Item 250");
+            Go.To<TableListPage>()
+                .Items.Names.Should.Contain("Item 250");
         }
 
         [Test]
         public void VerifyItemNameById_Fast()
         {
-            Go.To<TableListPage>().
-                Items.FindRowById(250).Name.Should.Equal("Item 250");
+            Go.To<TableListPage>()
+                .Items.FindRowById(250).Name.Should.Equal("Item 250");
         }
 
         [Test]
         public void VerifyItemByIdAndName_Fast()
         {
-            Go.To<TableListPage>().
-                Items.FindRowByIdAndName(450, "Item 450").Should.BeVisible();
+            Go.To<TableListPage>()
+                .Items.FindRowByIdAndName(450, "Item 450").Should.BeVisible();
         }
 
         [Test]
         public void VerifyNoItemByIdAndName_Fast()
         {
-            Go.To<TableListPage>().
-                Items.FindRowByIdAndName(999, "Item 999").Should.Not.BeVisible();
+            Go.To<TableListPage>()
+                .Items.FindRowByIdAndName(999, "Item 999").Should.Not.BeVisible();
         }
     }
 }
