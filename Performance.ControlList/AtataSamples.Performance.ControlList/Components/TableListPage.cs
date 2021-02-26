@@ -13,6 +13,7 @@ namespace AtataSamples.Performance.ControlList
         [ControlDefinition("div", ContainingClass = "table-list", ComponentTypeName = "list")]
         public class ItemsContainer : Control<_>
         {
+            [FindSettings(Visibility = Visibility.Any)]
             public ControlList<ItemRow, _> Rows { get; private set; }
 
             public DataProvider<IEnumerable<int>, _> Ids
