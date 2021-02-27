@@ -11,20 +11,20 @@ namespace AtataSamples.SpecFlow
         [BeforeTestRun]
         public static void SetUpTestRun()
         {
-            AtataContext.GlobalConfiguration.
-                UseChrome().
-                    WithArguments("start-maximized").
-                    WithLocalDriverPath().
-                UseBaseUrl("https://demo.atata.io/").
-                UseCulture("en-us").
-                UseAllNUnitFeatures();
+            AtataContext.GlobalConfiguration
+                .UseChrome()
+                    .WithArguments("start-maximized")
+                .UseBaseUrl("https://demo.atata.io/")
+                .UseCulture("en-US")
+                .UseAllNUnitFeatures();
+
+            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
 
         [BeforeScenario]
         public static void SetUpScenario()
         {
-            AtataContext.Configure().
-                Build();
+            AtataContext.Configure().Build();
         }
 
         [AfterScenario]
