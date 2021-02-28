@@ -11,8 +11,8 @@ namespace AtataSamples.ConfirmationPopups
 
         protected override void Execute<TOwner>(TriggerContext<TOwner> context)
         {
-            Go.To<DeletionJQueryConfirmBox<TOwner>>(temporarily: true).
-                Delete();
+            Go.To<DeletionJQueryConfirmBox<TOwner>>(temporarily: true)
+                .Delete();
         }
     }
 }
