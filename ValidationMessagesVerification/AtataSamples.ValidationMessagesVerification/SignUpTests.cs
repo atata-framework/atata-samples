@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace AtataSamples.ValidationMessagesVerification
 {
     [TestFixture]
-    public class SignUpTests
+    public class SignUpTests : UITestFixture
     {
         [Test]
         public void Validation_Required()
