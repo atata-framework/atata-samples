@@ -4,6 +4,7 @@ using NUnit.Framework;
 namespace AtataSamples.CsvDataSource
 {
     [TestFixture]
+    [Parallelizable(ParallelScope.Self)]
     public class UITestFixture
     {
         [SetUp]
