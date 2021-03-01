@@ -5,13 +5,13 @@
 Demonstrates the simple workflow automated UI test.
 The test creates a user record and verifies that this record is created with an appropriate data.
 
-The sample is used in [Atata - New Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework) article.
+The sample is used in [Atata - C# Web Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework) article.
 
 Automated UI test follows the test case:
-1. Sign In on <https://demo.atata.io/signin> page.
-1. Click "New" button on User List page.
+1. Sign in on <https://demo.atata.io/signin> page.
+1. Click "New" button on the user list page.
 1. Create a new user.
-1. Verify the new user's data on User List page.
+1. Verify that the new user is present on the user list page.
 1. Navigate to the user's details.
 1. Verify the user's details.
 
