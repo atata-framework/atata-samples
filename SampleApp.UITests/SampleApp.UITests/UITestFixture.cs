@@ -20,10 +20,10 @@ namespace SampleApp.UITests
 
         protected UsersPage Login()
         {
-            return Go.To<SignInPage>().
-                Email.Set("admin@mail.com").
-                Password.Set("abc123").
-                SignIn.ClickAndGo();
+            return Go.To<SignInPage>()
+                .Email.Set("admin@mail.com")
+                .Password.Set("abc123")
+                .SignIn.ClickAndGo();
         }
     }
 }
