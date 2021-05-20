@@ -60,6 +60,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MultipleBrowse
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.DownloadFile", "DownloadFile\AtataSamples.DownloadFile\AtataSamples.DownloadFile.csproj", "{42BFD09A-3B58-4A92-9B1C-CF5F3022A63E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MaterialUI", "MaterialUI\AtataSamples.MaterialUI\AtataSamples.MaterialUI.csproj", "{5E62E385-B4B3-4A76-916C-C206485096C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -166,6 +168,10 @@ Global
 		{42BFD09A-3B58-4A92-9B1C-CF5F3022A63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42BFD09A-3B58-4A92-9B1C-CF5F3022A63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42BFD09A-3B58-4A92-9B1C-CF5F3022A63E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E62E385-B4B3-4A76-916C-C206485096C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E62E385-B4B3-4A76-916C-C206485096C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E62E385-B4B3-4A76-916C-C206485096C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E62E385-B4B3-4A76-916C-C206485096C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
