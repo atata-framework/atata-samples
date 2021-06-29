@@ -32,10 +32,17 @@ namespace Atata.ExtentReports
 
                     if (isEndOfVerificationLogSection)
                     {
-                        var lastLogLevel = ExtentContext.LastLogEventOfCurrentTest.Level;
+                        if (eventInfo.SectionEnd.Exception is null)
+                        {
+                            var lastLogLevel = ExtentContext.LastLogEventOfCurrentTest.Level;
 
-                        if (lastLogLevel != LogLevel.Error && lastLogLevel != LogLevel.Warn)
-                            return Status.Pass;
+                            if (lastLogLevel != LogLevel.Error && lastLogLevel != LogLevel.Warn)
+                                return Status.Pass;
+                        }
+                        else
+                        {
+                            return Status.Fail;
+                        }
                     }
 
                     return Status.Info;
