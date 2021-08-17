@@ -39,8 +39,8 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   Demonstrates the Atata reporting to [Extent Reports](https://extentreports.com/).
 - **Using CSV Data Source** - [`/CsvDataSource`](../../tree/master/CsvDataSource)
   | [download](../../raw/master/_archives/CsvDataSource.zip).
-- **JSON Configuration: Multi-Browser via Fixture Arguments** - [`/JsonConfiguration.MultiBrowserViaFixtureArguments`](../../tree/master/JsonConfiguration.MultiBrowserViaFixtureArguments)
-  | [download](../../raw/master/_archives/JsonConfiguration.MultiBrowserViaFixtureArguments.zip).
+- **JSON Configuration: Multi-Browser via Fixture Arguments** - [`/JsonConfiguration.MultiBrowserViaFixtureArgs`](../../tree/master/JsonConfiguration.MultiBrowserViaFixtureArgs)
+  | [download](../../raw/master/_archives/JsonConfiguration.MultiBrowserViaFixtureArgs.zip).
 - **JSON Configuration: Multi-Environment** - [`/JsonConfiguration.MultiEnvironment`](../../tree/master/JsonConfiguration.MultiEnvironment)
   | [download](../../raw/master/_archives/JsonConfiguration.MultiEnvironment.zip).
 - **App.Config Configuration** - [`/AppConfig`](../../tree/master/AppConfig)
@@ -64,8 +64,6 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/master/_archives/MSTest.zip).
 - **Using SpecFlow** - [`/SpecFlow`](../../tree/master/SpecFlow)
   | [download](../../raw/master/_archives/SpecFlow.zip).
-- **.NET Core 2.1 + NUnit** - [`/NetCore.NUnit`](../../tree/master/NetCore.NUnit)
-  | [download](../../raw/master/_archives/NetCore.NUnit.zip).
 - **.NET Core 3.1 + NUnit** - [`/NetCore3.NUnit`](../../tree/master/NetCore3.NUnit)
   | [download](../../raw/master/_archives/NetCore3.NUnit.zip).
 - **NUnit Generic Page Tests** - [`/NUnit.GenericPageTests`](../../tree/master/NUnit.GenericPageTests)
@@ -91,9 +89,7 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/master/_archives/DownloadFile.zip).
   Demonstrates how to configure downloads directory of Chrome and verify that file is downloaded.
 
-You are also able to clone the whole repository and open either
-`AtataSamples.VS2017.sln` or `AtataSamples.VS2019.sln`
-(depending on your Visual Studio) that contain all sample projects.
+You are also able to clone the whole repository and open `AtataSamples.sln` that contain all sample projects.
 
 ## License
 
