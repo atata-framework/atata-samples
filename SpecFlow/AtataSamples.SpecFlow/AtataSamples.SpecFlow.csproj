@@ -16,9 +16,9 @@
     <PackageReference Include="NUnit" Version="3.13.2" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
-    <PackageReference Include="SpecFlow" Version="3.8.14" />
-    <PackageReference Include="SpecFlow.NUnit" Version="3.8.14" />
-    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.8.14" />
+    <PackageReference Include="SpecFlow" Version="3.9.22" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.22" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.22" />
   </ItemGroup>
 
   <ItemGroup>
