@@ -12,10 +12,7 @@ namespace AtataSamples.DownloadFile
             AtataContext.GlobalConfiguration
                 .UseChrome()
                     .WithArguments("start-maximized")
-                    .WithOptions(x => x
-                        .AddUserProfilePreference("download.default_directory", TestDownloads.DirectoryPath))
-                .OnBuilt(TestDownloads.DeleteDirectory)
-                .OnCleanUp(TestDownloads.DeleteDirectory)
+                    .WithArtifactsAsDownloadDirectory()
                 .UseBaseUrl("https://atata.io/")
                 .UseCulture("en-US")
                 .UseAllNUnitFeatures();

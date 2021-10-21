@@ -11,7 +11,7 @@ namespace AtataSamples.DownloadFile
             Go.To<TutorialPage>(url: "/tutorials/verification-of-page/")
                 .DownloadSources.Click();
 
-            TestDownloads.ShouldContain("PageVerification.zip", secondsToWait: 20);
+            AtataContext.Current.Artifacts.Should.Within(10).ContainFile("PageVerification.zip");
         }
     }
 }
