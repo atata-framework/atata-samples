@@ -18,15 +18,13 @@ namespace AtataSamples.MultipleBrowsersInTest
 
         protected AtataContext CreateContext()
         {
-            AtataContext context = null;
-
             AtataContextBuilder contextBuilder = AtataContext.Configure()
-                .OnCleanUp(() => Contexts.Remove(context));
+                .EventSubscriptions.Add<AtataContextCleanUpEvent>(e => Contexts.Remove(e.Context));
 
             if (AtataContext.Current != null)
                 contextBuilder.UseTestName($"{AtataContext.Current.TestName}[{Contexts.Count}]");
 
-            context = contextBuilder.Build();
+            AtataContext context = contextBuilder.Build();
 
             Contexts.Add(context);
 
