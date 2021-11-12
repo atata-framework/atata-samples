@@ -18,7 +18,7 @@
     <PackageReference Include="Atata.WebDriverSetup" Version="1.2.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
     <PackageReference Include="NUnit" Version="3.13.2" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.0.0-beta2" />
   </ItemGroup>
 
