@@ -2,7 +2,7 @@
 
 namespace AtataSamples.JsonConfiguration.MultiEnvironment
 {
-    public class AppConfig : JsonConfig<AppConfig>
+    public class AtataConfig : JsonConfig<AtataConfig>
     {
         public string AccountEmail { get; set; }
 

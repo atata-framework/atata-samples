@@ -1,10 +1,38 @@
 ﻿{
-  "driver": {
-    "type": "chrome",
-    "options": {
-      "arguments": [ "start-maximized" ]
+  "drivers": [
+    {
+      "type": "chrome",
+      "alias": "chrome",
+      "options": {
+        "arguments": [ "start-maximized" ],
+        "userProfilePreferences": {
+          "download.default_directory": "{artifacts}"
+        }
+      }
+    },
+    {
+      "type": "chrome",
+      "alias": "chrome-headless",
+      "options": {
+        "arguments": [ "headless", "window-size=1920,1080" ],
+        "userProfilePreferences": {
+          "download.default_directory": "{artifacts}"
+        }
+      }
     }
-  },
+  ],
   "culture": "en-US",
-  "useAllNUnitFeatures": true
+  "useAllNUnitFeatures": true,
+  "logConsumers": [
+    {
+      "type": "nlog-file",
+      "folderPath": "{artifacts}"
+    }
+  ],
+  "screenshotConsumers": [
+    {
+      "type": "file",
+      "folderPath": "{artifacts}"
+    }
+  ]
 }

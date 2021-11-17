@@ -9,15 +9,14 @@ namespace AtataSamples.JsonConfiguration.MultiEnvironment
         [OneTimeSetUp]
         public void GlobalSetUp()
         {
-            AtataContext.GlobalConfiguration.
-                ApplyJsonConfig<AppConfig>().
-#if DEV
-                ApplyJsonConfig<AppConfig>(environmentAlias: "DEV");
-#elif QA
-                ApplyJsonConfig<AppConfig>(environmentAlias: "QA");
-#elif STAGING
-                ApplyJsonConfig<AppConfig>(environmentAlias: "STAGING");
-#endif
+            string testEnvironmentAlias = TestContext.Parameters.Get("TestEnvironment", "local");
+            string driverAlias = TestContext.Parameters.Get("DriverAlias", DriverAliases.Chrome);
+
+            AtataContext.GlobalConfiguration
+                .ApplyJsonConfig<AtataConfig>()
+                .ApplyJsonConfig<AtataConfig>(environmentAlias: testEnvironmentAlias)
+                .AddSecretStringToMaskInLog(AtataConfig.Global.AccountPassword)
+                .UseDriver(driverAlias);
 
             AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }

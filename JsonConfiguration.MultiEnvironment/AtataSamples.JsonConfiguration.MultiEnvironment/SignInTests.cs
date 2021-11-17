@@ -8,10 +8,10 @@ namespace AtataSamples.JsonConfiguration.MultiEnvironment
         [Test]
         public void SignIn()
         {
-            Go.To<HomePage>().
-                SignIn.ClickAndGo().
-                    Email.Set(AppConfig.Current.AccountEmail).
-                    Password.Set(AppConfig.Current.AccountPassword);
+            Go.To<HomePage>()
+                .SignIn.ClickAndGo()
+                    .Email.Set(AtataConfig.Current.AccountEmail)
+                    .Password.Set(AtataConfig.Current.AccountPassword);
         }
     }
 }

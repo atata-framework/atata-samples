@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Configurations>Debug;QA;Staging</Configurations>
     <Company>Yevgeniy Shunevych</Company>
     <Product>Atata Framework Samples</Product>
     <Copyright>© Yevgeniy Shunevych 2021</Copyright>
@@ -15,6 +14,7 @@
     <PackageReference Include="Atata.WebDriverExtras" Version="1.5.0" />
     <PackageReference Include="Atata.WebDriverSetup" Version="1.2.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="NLog" Version="4.7.12" />
     <PackageReference Include="NUnit" Version="3.13.2" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
@@ -22,28 +22,18 @@
 
   <ItemGroup>
     <None Include="..\README.md" Link="README.md" />
-    <None Include="Atata.STAGING.json">
+    <None Update="Atata.QA.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Atata.QA.json">
+    <None Update="Atata.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Atata.DEV.json">
+    <None Update="Atata.env.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Atata.json">
+    <None Update="Atata.local.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
-  <PropertyGroup Condition="$(Configuration) == 'Debug'">
-    <DefineConstants>DEBUG;DEV</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'QA'">
-    <DefineConstants>QA</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="$(Configuration) == 'Staging'">
-    <DefineConstants>STAGING</DefineConstants>
-  </PropertyGroup>
 
 </Project>

@@ -4,6 +4,7 @@ using NUnit.Framework;
 namespace AtataSamples.JsonConfiguration.MultiEnvironment
 {
     [TestFixture]
+    [Parallelizable(ParallelScope.Self)]
     public class UITestFixture
     {
         [SetUp]
