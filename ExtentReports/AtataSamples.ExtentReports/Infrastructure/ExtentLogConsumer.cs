@@ -15,8 +15,9 @@ namespace Atata.ExtentReports
             string completeMessage = BuildCompleteMessage(eventInfo);
             completeMessage = NormalizeMessage(completeMessage);
 
-            ExtentContext.CurrentTest.Log(status, completeMessage);
-            ExtentContext.LastLogEventOfCurrentTest = eventInfo;
+            ExtentContext extentContext = ExtentContext.ResolveFor(eventInfo.Context);
+            extentContext.Test.Log(status, completeMessage);
+            extentContext.LastLogEvent = eventInfo;
         }
 
         private static Status ResolveLogStatus(LogEventInfo eventInfo)
@@ -28,20 +29,19 @@ namespace Atata.ExtentReports
                 case LogLevel.Debug:
                     return Status.Debug;
                 case LogLevel.Info:
-                    bool isEndOfVerificationLogSection = !(eventInfo.SectionEnd as VerificationLogSection)?.Message.StartsWith("Wait") ?? false;
-
-                    if (isEndOfVerificationLogSection)
+                    if (eventInfo.SectionEnd is VerificationLogSection)
                     {
-                        if (eventInfo.SectionEnd.Exception is null)
+                        if (eventInfo.SectionEnd.Exception != null)
                         {
-                            var lastLogLevel = ExtentContext.LastLogEventOfCurrentTest.Level;
+                            return Status.Fail;
+                        }
+                        else if (!eventInfo.SectionEnd.Message.StartsWith("Wait"))
+                        {
+                            var lastLogLevel = ExtentContext.ResolveFor(eventInfo.Context)
+                                .LastLogEvent.Level;
 
                             if (lastLogLevel != LogLevel.Error && lastLogLevel != LogLevel.Warn)
                                 return Status.Pass;
-                        }
-                        else
-                        {
-                            return Status.Fail;
                         }
                     }
 

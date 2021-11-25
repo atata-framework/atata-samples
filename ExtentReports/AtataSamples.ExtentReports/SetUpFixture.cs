@@ -13,20 +13,18 @@ namespace AtataSamples.ExtentReports
             AtataContext.GlobalConfiguration
                 .UseChrome()
                     .WithArguments("window-size=1024,768")
-                .UseBaseUrl("https://atata.io/")
+                .UseBaseUrl("https://demo.atata.io/")
                 .UseCulture("en-US")
                 .UseAllNUnitFeatures()
-                // Extent Reports specific configuration:
-                .AddLogConsumer(new ExtentLogConsumer())
-                .AddScreenshotConsumer(new ExtentScreenshotConsumer());
+                .AddScreenshotFileSaving()
+                    .WithArtifactsFolderPath()
+                .EventSubscriptions.Add(new ExtentScreenshotFileEventHandler());
 
             AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
 
         [OneTimeTearDown]
-        public void GlobalTearDown()
-        {
+        public void GlobalTearDown() =>
             ExtentContext.Reports.Flush();
-        }
     }
 }

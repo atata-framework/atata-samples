@@ -3,10 +3,10 @@ using NUnit.Framework;
 
 namespace AtataSamples.ExtentReports
 {
-    public class ExtentReportsTests : UITestFixture
+    public class UsingOwnDriverTests : UITestFixture
     {
         [Test]
-        public void ExtentReports_Test1()
+        public void Test1()
         {
             Go.To<HomePage>()
                 .Report.Screenshot()
@@ -14,7 +14,7 @@ namespace AtataSamples.ExtentReports
         }
 
         [Test]
-        public void ExtentReports_Test2()
+        public void Test2()
         {
             Go.To<HomePage>()
                 .Report.Screenshot()
