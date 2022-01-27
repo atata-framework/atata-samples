@@ -6,6 +6,7 @@ namespace AtataSamples.SalesforceLightning
     public class SLComboboxTests : UITestFixture
     {
         [Test]
+        [Explicit]
         public void AsString_GetAndSetValue()
         {
             var sut = Go.To<ComboboxPage>().StringBasedCombobox;
@@ -16,6 +17,7 @@ namespace AtataSamples.SalesforceLightning
         }
 
         [Test]
+        [Explicit]
         public void AsEnum_GetAndSetValue()
         {
             var sut = Go.To<ComboboxPage>().EnumBasedCombobox;
