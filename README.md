@@ -76,6 +76,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Material UI Components** - [`/MaterialUI`](../../tree/master/MaterialUI)
   | [download](../../raw/master/_archives/MaterialUI.zip).
   Demonstrates the creation of Atata custom controls using Material UI components as examples.
+- **Salesforce Lightning UI Components** - [`/MaterialUI`](../../tree/master/SalesforceLightning)
+  | [download](../../raw/master/_archives/SalesforceLightning.zip).
+  Demonstrates the creation of Atata custom controls using Salesforce Lightning components as examples.
 - **jQuery UI Components** - [`/JQueryUI`](../../tree/master/JQueryUI)
   | [download](../../raw/master/_archives/JQueryUI.zip).
   Demonstrates the creation of Atata custom controls using jQuery UI widgets as examples.
