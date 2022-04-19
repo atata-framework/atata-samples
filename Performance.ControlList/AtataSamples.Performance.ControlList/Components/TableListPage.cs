@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Atata;
+﻿using Atata;
+using System.Collections.Generic;
 
 namespace AtataSamples.Performance.ControlList
 {
@@ -16,10 +16,10 @@ namespace AtataSamples.Performance.ControlList
             [FindSettings(Visibility = Visibility.Any)]
             public ControlList<ItemRow, _> Rows { get; private set; }
 
-            public DataProvider<IEnumerable<int>, _> Ids
+            public ValueProvider<IEnumerable<int>, _> Ids
                 => Rows.SelectContentsByExtraXPath<int>(ItemRow.XPathTo.Id, "Ids");
 
-            public DataProvider<IEnumerable<string>, _> Names
+            public ValueProvider<IEnumerable<string>, _> Names
                 => Rows.SelectContentsByExtraXPath(ItemRow.XPathTo.Name, "Names");
 
             public ItemRow FindRowById(int id)

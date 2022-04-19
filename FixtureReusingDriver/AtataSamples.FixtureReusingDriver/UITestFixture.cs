@@ -1,6 +1,6 @@
 ﻿using Atata;
 using NUnit.Framework;
-using OpenQA.Selenium.Remote;
+using OpenQA.Selenium;
 
 namespace AtataSamples.FixtureReusingDriver
 {
@@ -9,7 +9,7 @@ namespace AtataSamples.FixtureReusingDriver
     {
         protected virtual bool ReuseDriver => false;
 
-        protected RemoteWebDriver PreservedDriver { get; private set; }
+        protected IWebDriver PreservedDriver { get; private set; }
 
         [OneTimeSetUp]
         public void SetUpFixture()

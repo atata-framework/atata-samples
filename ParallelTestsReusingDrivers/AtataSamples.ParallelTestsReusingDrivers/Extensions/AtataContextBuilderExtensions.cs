@@ -1,5 +1,5 @@
 ﻿using Atata;
-using OpenQA.Selenium.Remote;
+using OpenQA.Selenium;
 
 namespace AtataSamples.ParallelTestsReusingDrivers
 {
@@ -21,7 +21,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         {
             IDriverFactory driverFactory = builder.BuildingContext.DriverFactoryToUse;
 
-            RemoteWebDriver driver = DriverPool.Acquire(driverFactory, poolScopeObject);
+            IWebDriver driver = DriverPool.Acquire(driverFactory, poolScopeObject);
 
             return builder.UseDriver(driver)
                 .EventSubscriptions.Add<AtataContextCleanUpEvent>(ReleaseCurrentDriver);

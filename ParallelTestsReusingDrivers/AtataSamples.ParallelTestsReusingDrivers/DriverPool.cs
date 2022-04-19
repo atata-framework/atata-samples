@@ -1,20 +1,18 @@
-﻿using System;
+﻿using Atata;
+using OpenQA.Selenium;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using Atata;
-using OpenQA.Selenium.Remote;
 
 namespace AtataSamples.ParallelTestsReusingDrivers
 {
     public static class DriverPool
     {
-        private static readonly ConcurrentBag<DriverEntry> GlobalEntries =
-            new ConcurrentBag<DriverEntry>();
+        private static readonly ConcurrentBag<DriverEntry> GlobalEntries = new();
 
-        private static readonly ConcurrentDictionary<object, ConcurrentBag<DriverEntry>> ScopedEntries =
-            new ConcurrentDictionary<object, ConcurrentBag<DriverEntry>>();
+        private static readonly ConcurrentDictionary<object, ConcurrentBag<DriverEntry>> ScopedEntries = new();
 
         private static IEnumerable<ConcurrentBag<DriverEntry>> AllEntryBags =>
             new[] { GlobalEntries }.Concat(ScopedEntries.Values);
@@ -33,9 +31,9 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         /// When is <see langword="null"/> then will use whole global common pool;
         /// otherwise will use separate pool for particular scope object.
         /// </param>
-        /// <returns>A <see cref="RemoteWebDriver"/> created or gotten from pool.</returns>
+        /// <returns>An <see cref="IWebDriver"/> created or taken from pool.</returns>
         /// <exception cref="ArgumentNullException">driverFactory</exception>
-        public static RemoteWebDriver Acquire(IDriverFactory driverFactory, object poolScopeObject = null)
+        public static IWebDriver Acquire(IDriverFactory driverFactory, object poolScopeObject = null)
         {
             if (driverFactory == null)
                 throw new ArgumentNullException(nameof(driverFactory));
@@ -80,12 +78,12 @@ namespace AtataSamples.ParallelTestsReusingDrivers
 
         private static DriverEntry CreateDriverEntry(IDriverFactory driverFactory)
         {
-            RemoteWebDriver driver = driverFactory.Create();
+            IWebDriver driver = driverFactory.Create();
 
             return new DriverEntry(driverFactory.Alias, driver);
         }
 
-        public static void Release(RemoteWebDriver driver)
+        public static void Release(IWebDriver driver)
         {
             DriverEntry entry = AllEntries.FirstOrDefault(x => x.Driver == driver);
 
@@ -127,7 +125,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
 
         private class DriverEntry
         {
-            public DriverEntry(string alias, RemoteWebDriver driver)
+            public DriverEntry(string alias, IWebDriver driver)
             {
                 Alias = alias;
                 Driver = driver;
@@ -135,7 +133,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
 
             public string Alias { get; }
 
-            public RemoteWebDriver Driver { get; }
+            public IWebDriver Driver { get; }
 
             public bool IsAcquired { get; set; }
         }

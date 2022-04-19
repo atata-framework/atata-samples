@@ -1,6 +1,6 @@
-﻿using System;
-using Atata;
+﻿using Atata;
 using NUnit.Framework;
+using System;
 
 namespace AtataSamples.TableWithRowSpannedCells
 {
@@ -22,15 +22,15 @@ namespace AtataSamples.TableWithRowSpannedCells
 
                 .Users.Rows[0].ExpertiseLevel.Should.Equal("Architect")
                 .Users.Rows[1].ExpertiseLevel.Should.Equal("Architect")
-                .Users.Rows[2].ExpertiseLevel.Should.BeNull()
+                .Users.Rows[2].ExpertiseLevel.Should.BeEmpty()
 
                 .Users.Rows[0].Client.Should.Equal("SomeSoft")
                 .Users.Rows[1].Client.Should.Equal("Unassigned")
-                .Users.Rows[2].Client.Should.BeNull()
+                .Users.Rows[2].Client.Should.BeEmpty()
 
                 .Users.Rows[0].Project.Should.Equal("BioFruit")
                 .Users.Rows[1].Project.Should.Equal("Unassigned")
-                .Users.Rows[2].Project.Should.BeNull()
+                .Users.Rows[2].Project.Should.BeEmpty()
 
                 .Users.Rows.SelectData(x => x.DirectProjectCost).Should.EqualSequence(1693.42m, 564.47m, 2257.89m)
 
@@ -55,15 +55,15 @@ namespace AtataSamples.TableWithRowSpannedCells
 
                 .Users.Rows[0].ExpertiseLevel.Should.Equal("Architect")
                 .Users.Rows[1].ExpertiseLevel.Should.Equal("Architect")
-                .Users.Rows[2].ExpertiseLevel.Should.BeNull()
+                .Users.Rows[2].ExpertiseLevel.Should.BeEmpty()
 
                 .Users.Rows[0].Client.Should.Equal("SomeSoft")
                 .Users.Rows[1].Client.Should.Equal("Unassigned")
-                .Users.Rows[2].Client.Should.BeNull()
+                .Users.Rows[2].Client.Should.BeEmpty()
 
                 .Users.Rows[0].Project.Should.Equal("BioFruit")
                 .Users.Rows[1].Project.Should.Equal("Unassigned")
-                .Users.Rows[2].Project.Should.BeNull()
+                .Users.Rows[2].Project.Should.BeEmpty()
 
                 .Users.Rows.SelectData(x => x.DirectProjectCost).Should.EqualSequence(1693.42m, 564.47m, 2257.89m)
 
@@ -88,15 +88,15 @@ namespace AtataSamples.TableWithRowSpannedCells
 
                 .Users.Rows[0].ExpertiseLevel.Should.Equal("Architect")
                 .Users.Rows[1].ExpertiseLevel.Should.Equal("Architect")
-                .Users.Rows[2].ExpertiseLevel.Should.BeNull()
+                .Users.Rows[2].ExpertiseLevel.Should.BeEmpty()
 
                 .Users.Rows[0].Client.Should.Equal("SomeSoft")
                 .Users.Rows[1].Client.Should.Equal("Unassigned")
-                .Users.Rows[2].Client.Should.BeNull()
+                .Users.Rows[2].Client.Should.BeEmpty()
 
                 .Users.Rows[0].Project.Should.Equal("BioFruit")
                 .Users.Rows[1].Project.Should.Equal("Unassigned")
-                .Users.Rows[2].Project.Should.BeNull()
+                .Users.Rows[2].Project.Should.BeEmpty()
 
                 .Users.Rows.SelectData(x => x.DirectProjectCost).Should.EqualSequence(1693.42m, 564.47m, 2257.89m)
 

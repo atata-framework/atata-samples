@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Atata;
+using OpenQA.Selenium;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Atata;
-using OpenQA.Selenium;
 
 namespace AtataSamples.TableWithRowSpannedCells
 {
@@ -19,26 +19,26 @@ namespace AtataSamples.TableWithRowSpannedCells
 
         public string RowWithSpannedCellsXPathCondition { get; set; } = "td[@rowspan and normalize-space(@rowspan) != '1']";
 
-        public ComponentScopeLocateResult Find(ISearchContext scope, ComponentScopeLocateOptions options, SearchOptions searchOptions)
+        public ComponentScopeFindResult Find(ISearchContext scope, ComponentScopeFindOptions options, SearchOptions searchOptions)
         {
             string xPath = BuildXPath(scope, options);
 
             if (xPath == null)
             {
                 if (searchOptions.IsSafely)
-                    return new MissingComponentScopeFindResult();
+                    return ComponentScopeFindResult.Missing;
                 else
                     throw ExceptionFactory.CreateForNoSuchElement(options.GetTermsAsString(), searchContext: scope);
             }
 
-            ComponentScopeLocateOptions xPathOptions = options.Clone();
+            var xPathOptions = options.Clone();
             xPathOptions.Index = 0;
             xPathOptions.Terms = new string[] { xPath };
 
             return new SubsequentComponentScopeFindResult(scope, new FindByXPathStrategy(), xPathOptions);
         }
 
-        protected virtual string BuildXPath(ISearchContext scope, ComponentScopeLocateOptions options)
+        protected virtual string BuildXPath(ISearchContext scope, ComponentScopeFindOptions options)
         {
             List<ColumnInfo> columns = TableColumnsInfoCache.GetOrAdd(
                 options.Metadata.ParentComponentType,
