@@ -58,25 +58,22 @@ namespace AtataSamples.ExtentReports
                 .UseBaseUrl("https://atata.io/")
                 .UseCulture("en-US")
                 .UseAllNUnitFeatures()
-                // Extent Reports specific configuration:
-                .AddLogConsumer(new ExtentLogConsumer())
-                .AddScreenshotConsumer(new ExtentScreenshotConsumer());
+                .ScreenshotConsumers.AddFile()
+                .EventSubscriptions.Add(new ExtentScreenshotFileEventHandler());
 
             AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
 
         [OneTimeTearDown]
-        public void GlobalTearDown()
-        {
+        public void GlobalTearDown() =>
             ExtentContext.Reports.Flush();
-        }
     }
 }
 ```
 
 ## Tests
 
-2 sample tests were created in this sample.
+2 sample test fixtures were created in this sample.
 
 ```cs
 using Atata;
@@ -84,10 +81,10 @@ using NUnit.Framework;
 
 namespace AtataSamples.ExtentReports
 {
-    public class ExtentReportsTests : UITestFixture
+    public class UsingOwnDriverTests : UITestFixture
     {
         [Test]
-        public void ExtentReports_Test1()
+        public void Test1()
         {
             Go.To<HomePage>()
                 .Report.Screenshot()
@@ -95,13 +92,46 @@ namespace AtataSamples.ExtentReports
         }
 
         [Test]
-        public void ExtentReports_Test2()
+        public void Test2()
         {
             Go.To<HomePage>()
                 .Report.Screenshot()
                 .AggregateAssert(x => x
                     .PageTitle.Should.Contain("Atata")
                     .Header.Should.Contain("Atata"));
+        }
+    }
+}
+```
+
+```cs
+using Atata;
+using NUnit.Framework;
+
+namespace AtataSamples.ExtentReports
+{
+    public class UsingSameDriverTests : UITestFixture
+    {
+        protected override bool UseFixtureDriverForTests => true;
+
+        [OneTimeSetUp]
+        public void SetUpFixture()
+        {
+            Go.To<SignInPage>();
+        }
+
+        [Test]
+        public void Email()
+        {
+            BeingOn<SignInPage>()
+                .Email.Should.BeVisible();
+        }
+
+        [Test]
+        public void Password()
+        {
+            BeingOn<SignInPage>()
+                .Password.Should.BeVisible();
         }
     }
 }

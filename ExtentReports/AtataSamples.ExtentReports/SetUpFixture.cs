@@ -16,8 +16,7 @@ namespace AtataSamples.ExtentReports
                 .UseBaseUrl("https://demo.atata.io/")
                 .UseCulture("en-US")
                 .UseAllNUnitFeatures()
-                .AddScreenshotFileSaving()
-                    .WithArtifactsFolderPath()
+                .ScreenshotConsumers.AddFile()
                 .EventSubscriptions.Add(new ExtentScreenshotFileEventHandler());
 
             AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();

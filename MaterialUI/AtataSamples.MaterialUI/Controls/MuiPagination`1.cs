@@ -17,8 +17,8 @@ namespace AtataSamples.MaterialUI
         [FindByClass("Mui-selected")]
         public Button<TOwner> SelectedPageButton { get; private set; }
 
-        public DataProvider<int, TOwner> SelectedPageNumber =>
-            GetOrCreateDataProvider("selected page number", () => int.Parse(SelectedPageButton.Content.Value));
+        public ValueProvider<int, TOwner> SelectedPageNumber =>
+            CreateValueProvider("selected page number", () => int.Parse(SelectedPageButton.Content.Value));
 
         public Button<TOwner> FindButtonByPageNumber(int number)
         {

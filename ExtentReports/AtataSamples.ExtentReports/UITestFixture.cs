@@ -16,7 +16,7 @@ namespace AtataSamples.ExtentReports
         public void InitFixtureContext() =>
             FixtureContext = AtataContext.Configure()
                 .UseDriverInitializationStage(AtataContextDriverInitializationStage.OnDemand)
-                .AddLogConsumer<ExtentLogConsumer>()
+                .LogConsumers.Add<ExtentLogConsumer>()
                     .WithMinLevel(LogLevel.Warn)
                 .Build();
 
@@ -28,7 +28,7 @@ namespace AtataSamples.ExtentReports
         public void SetUp()
         {
             var testContextBuilder = AtataContext.Configure()
-                .AddLogConsumer<ExtentLogConsumer>();
+                .LogConsumers.Add<ExtentLogConsumer>();
 
             if (UseFixtureDriverForTests)
                 testContextBuilder.UseDriver(FixtureContext.Driver);

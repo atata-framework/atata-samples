@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Atata;
+using System;
 using System.Collections;
 using System.Linq;
-using Atata;
 
 namespace AtataSamples.ExtJS
 {
@@ -35,8 +35,8 @@ return results;";
         [ControlDefinition("div", ContainingClass = "x-form-trigger")]
         public Control<TOwner> PickerTrigger { get; private set; }
 
-        public DataProvider<string[], TOwner> Options =>
-            GetOrCreateDataProvider(
+        public ValueProvider<string[], TOwner> Options =>
+            CreateValueProvider(
                 "options",
                 () => Script.ExecuteAgainst<IEnumerable>(ScriptToGetOptionValues).Value.Cast<string>().ToArray());
 

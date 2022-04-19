@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Atata;
+using System;
 using System.Linq;
 using System.Reflection;
-using Atata;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -16,7 +16,7 @@ namespace AtataSamples.Xunit
 
             AtataContext.Configure()
                 .UseTestName(testName)
-                .AddLogConsumer(new TextOutputLogConsumer(output.WriteLine))
+                .LogConsumers.Add(new TextOutputLogConsumer(output.WriteLine))
                 .Build();
         }
 

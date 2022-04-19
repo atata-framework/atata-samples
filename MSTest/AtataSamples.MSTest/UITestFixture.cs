@@ -1,6 +1,6 @@
-﻿using System;
-using Atata;
+﻿using Atata;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace AtataSamples.MSTest
 {
@@ -13,7 +13,7 @@ namespace AtataSamples.MSTest
         {
             AtataContext.Configure()
                 .UseTestName(TestContext.TestName)
-                .AddLogConsumer(new TextOutputLogConsumer(TestContext.WriteLine))
+                .LogConsumers.Add(new TextOutputLogConsumer(TestContext.WriteLine))
                 .Build();
         }
 

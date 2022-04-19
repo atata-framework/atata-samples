@@ -30,8 +30,7 @@ namespace AtataSamples.SpecFlow
                 .UseNUnitWarningReportStrategy()
                 .LogNUnitError()
                 .TakeScreenshotOnNUnitError()
-                .AddScreenshotFileSaving()
-                    .WithArtifactsFolderPath();
+                .ScreenshotConsumers.AddFile();
 
             AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
         }
@@ -41,14 +40,12 @@ namespace AtataSamples.SpecFlow
         {
             AtataContext.Configure()
                 .EventSubscriptions.Add<ScreenshotFileSavedEvent>(eventData => _outputHelper.AddAttachment(eventData.FilePath))
-                .AddLogConsumer(new TextOutputLogConsumer(_outputHelper.WriteLine))
+                .LogConsumers.Add(new TextOutputLogConsumer(_outputHelper.WriteLine))
                 .Build();
         }
 
         [AfterScenario]
-        public void TearDownScenario()
-        {
+        public static void TearDownScenario() =>
             AtataContext.Current?.CleanUp();
-        }
     }
 }
