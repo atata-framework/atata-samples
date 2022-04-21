@@ -2,10 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Company>Yevgeniy Shunevych</Company>
-    <Product>Atata Framework Samples</Product>
-    <Copyright>© Yevgeniy Shunevych 2022</Copyright>
-    <Authors>Yevgeniy Shunevych</Authors>
   </PropertyGroup>
 
   <ItemGroup>
