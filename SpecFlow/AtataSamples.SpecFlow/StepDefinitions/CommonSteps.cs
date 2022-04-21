@@ -8,21 +8,15 @@ namespace AtataSamples.SpecFlow.StepDefinitions
     public sealed class CommonSteps : BaseSteps
     {
         [Given(@"I am on Home Page")]
-        public void GivenIAmOnHomePage()
-        {
+        public static void GivenIAmOnHomePage() =>
             Go.To<HomePage>();
-        }
 
         [When(@"I navigate to Calculations page by header's button")]
-        public void WhenINavigateToCalculationsPageByHeaderSButton()
-        {
+        public static void WhenINavigateToCalculationsPageByHeaderSButton() =>
             On<HomePage>().Calculations.ClickAndGo();
-        }
 
         [When(@"I navigate to Plans page by header's button")]
-        public void WhenINavigateToPlansPageByHeaderSButton()
-        {
+        public static void WhenINavigateToPlansPageByHeaderSButton() =>
             On<HomePage>().Plans.ClickAndGo();
-        }
     }
 }

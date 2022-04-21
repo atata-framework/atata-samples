@@ -16,7 +16,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         /// When is <see langword="null"/> then will use whole global common pool;
         /// otherwise will use separate pool for particular scope object.
         /// </param>
-        /// <returns></returns>
+        /// <returns>The same <see cref="AtataContextBuilder"/> instance.</returns>
         public static AtataContextBuilder UseDriverPool(this AtataContextBuilder builder, object poolScopeObject = null)
         {
             IDriverFactory driverFactory = builder.BuildingContext.DriverFactoryToUse;

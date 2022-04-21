@@ -13,18 +13,18 @@ namespace AtataSamples.NUnit.GenericPageTests
     public class PageTitleTests<TPage> : UITestFixture
         where TPage : PageObject<TPage>
     {
-        private readonly string expectedPageTitle;
+        private readonly string _expectedPageTitle;
 
         public PageTitleTests(string expectedPageTitle)
         {
-            this.expectedPageTitle = expectedPageTitle;
+            _expectedPageTitle = expectedPageTitle;
         }
 
         [Test]
         public void Test()
         {
-            Go.To<TPage>().
-                PageTitle.Should.Equal($"{expectedPageTitle} - Atata Sample App");
+            Go.To<TPage>()
+                .PageTitle.Should.Equal($"{_expectedPageTitle} - Atata Sample App");
         }
     }
 }

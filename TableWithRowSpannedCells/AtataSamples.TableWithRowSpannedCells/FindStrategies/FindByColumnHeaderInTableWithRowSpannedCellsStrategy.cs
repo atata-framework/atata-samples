@@ -1,10 +1,10 @@
-﻿using Atata;
-using OpenQA.Selenium;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Atata;
+using OpenQA.Selenium;
 
 namespace AtataSamples.TableWithRowSpannedCells
 {
@@ -33,7 +33,7 @@ namespace AtataSamples.TableWithRowSpannedCells
 
             var xPathOptions = options.Clone();
             xPathOptions.Index = 0;
-            xPathOptions.Terms = new string[] { xPath };
+            xPathOptions.Terms = new[] { xPath };
 
             return new SubsequentComponentScopeFindResult(scope, new FindByXPathStrategy(), xPathOptions);
         }

@@ -8,9 +8,7 @@ namespace AtataSamples.SpecFlow.StepDefinitions
     public sealed class PlansSteps : BaseSteps
     {
         [Then(@"I verify Plans page")]
-        public void ThenIVerifyPlansPage()
-        {
+        public static void ThenIVerifyPlansPage() =>
             On<PlansPage>().PlanItems.Count.Should.Equal(3);
-        }
     }
 }

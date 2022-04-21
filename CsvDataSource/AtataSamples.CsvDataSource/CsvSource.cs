@@ -16,30 +16,29 @@ namespace AtataSamples.CsvDataSource
                 ? filePath
                 : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filePath);
 
-            using (StreamReader streamReader = new StreamReader(completeFilePath))
-            using (CsvReader csvReader = new CsvReader(streamReader, Thread.CurrentThread.CurrentCulture))
+            using var streamReader = new StreamReader(completeFilePath);
+            using var csvReader = new CsvReader(streamReader, Thread.CurrentThread.CurrentCulture);
+
+            TestCaseData[] dataItems = csvReader.GetRecords<T>().
+                Select(x => new TestCaseData(x)).
+                ToArray();
+
+            if (expectedResultType != null)
             {
-                TestCaseData[] dataItems = csvReader.GetRecords<T>().
-                    Select(x => new TestCaseData(x)).
-                    ToArray();
+                // Reset stream reader to beginning.
+                streamReader.BaseStream.Position = 0;
 
-                if (expectedResultType != null)
+                // Read the header line.
+                csvReader.Read();
+
+                object[] expectedResults = GetExpectedResults(csvReader, expectedResultType, expectedResultName).ToArray();
+                for (int i = 0; i < dataItems.Length; i++)
                 {
-                    // Reset stream reader to beginning.
-                    streamReader.BaseStream.Position = 0;
-
-                    // Read the header line.
-                    csvReader.Read();
-
-                    object[] expectedResults = GetExpectedResults(csvReader, expectedResultType, expectedResultName).ToArray();
-                    for (int i = 0; i < dataItems.Length; i++)
-                    {
-                        dataItems[i].Returns(expectedResults[i]);
-                    }
+                    dataItems[i].Returns(expectedResults[i]);
                 }
-
-                return dataItems;
             }
+
+            return dataItems;
         }
 
         private static IEnumerable<object> GetExpectedResults(CsvReader csvReader, Type expectedResultType, string expectedResultName)

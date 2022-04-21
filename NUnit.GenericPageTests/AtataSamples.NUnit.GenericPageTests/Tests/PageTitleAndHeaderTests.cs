@@ -14,20 +14,20 @@ namespace AtataSamples.NUnit.GenericPageTests
     public class PageTitleAndHeaderTests<TPage> : UITestFixture
         where TPage : PageObject<TPage>, IPageWithHeader<TPage>
     {
-        private readonly string expectedPageTitle;
+        private readonly string _expectedPageTitle;
 
         public PageTitleAndHeaderTests(string expectedPageTitle)
         {
-            this.expectedPageTitle = expectedPageTitle;
+            _expectedPageTitle = expectedPageTitle;
         }
 
         [Test]
         public void Test()
         {
-            Go.To<TPage>().
-                AggregateAssert(x => x.
-                    PageTitle.Should.Equal($"{expectedPageTitle} - Atata Sample App").
-                    Header.Should.Equal(expectedPageTitle));
+            Go.To<TPage>()
+                .AggregateAssert(x => x
+                    .PageTitle.Should.Equal($"{_expectedPageTitle} - Atata Sample App")
+                    .Header.Should.Equal(_expectedPageTitle));
         }
     }
 }

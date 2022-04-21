@@ -18,7 +18,7 @@ namespace SampleApp.UITests
             AtataContext.Current?.CleanUp();
         }
 
-        protected UsersPage Login()
+        protected static UsersPage Login()
         {
             return Go.To<SignInPage>()
                 .Email.Set("admin@mail.com")

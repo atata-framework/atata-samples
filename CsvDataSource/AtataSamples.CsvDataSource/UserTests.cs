@@ -1,11 +1,12 @@
-﻿using Atata;
+﻿using System.Collections.Generic;
+using Atata;
 using NUnit.Framework;
 
 namespace AtataSamples.CsvDataSource
 {
     public class UserTests : UITestFixture
     {
-        public static TestCaseData[] UserModels =>
+        public static IEnumerable<TestCaseData> UserModels =>
             CsvSource.Get<UserModel>("user-models.csv");
 
         [TestCaseSource(nameof(UserModels))]

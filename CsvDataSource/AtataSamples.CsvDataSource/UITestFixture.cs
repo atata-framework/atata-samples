@@ -19,12 +19,10 @@ namespace AtataSamples.CsvDataSource
             AtataContext.Current?.CleanUp();
         }
 
-        protected UsersPage Login()
-        {
-            return Go.To<SignInPage>().
-                Email.Set("admin@mail.com").
-                Password.Set("abc123").
-                SignIn.ClickAndGo();
-        }
+        protected static UsersPage Login() =>
+            Go.To<SignInPage>()
+                .Email.Set("admin@mail.com")
+                .Password.Set("abc123")
+                .SignIn.ClickAndGo();
     }
 }

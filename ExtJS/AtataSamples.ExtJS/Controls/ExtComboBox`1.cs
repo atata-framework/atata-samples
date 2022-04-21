@@ -1,7 +1,7 @@
-﻿using Atata;
-using System;
+﻿using System;
 using System.Collections;
 using System.Linq;
+using Atata;
 
 namespace AtataSamples.ExtJS
 {
@@ -27,7 +27,7 @@ return results;";
 
                 return new Attribute[]
                 {
-                    new FindByIdAttribute($"{componentId}-picker") { ScopeSource = ScopeSource.Page}
+                    new FindByIdAttribute($"{componentId}-picker") { ScopeSource = ScopeSource.Page }
                 };
             });
 

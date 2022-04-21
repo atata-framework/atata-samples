@@ -1,6 +1,6 @@
-﻿using Atata;
+﻿using System;
+using Atata;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace AtataSamples.MSTest
 {
@@ -23,7 +23,7 @@ namespace AtataSamples.MSTest
             AtataContext.Current?.CleanUp();
         }
 
-        protected void Execute(Action action)
+        protected static void Execute(Action action)
         {
             try
             {

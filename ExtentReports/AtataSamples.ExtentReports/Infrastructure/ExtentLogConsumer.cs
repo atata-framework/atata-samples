@@ -35,7 +35,7 @@ namespace Atata.ExtentReports
                         {
                             return Status.Fail;
                         }
-                        else if (!eventInfo.SectionEnd.Message.StartsWith("Wait"))
+                        else if (!eventInfo.SectionEnd.Message.StartsWith("Wait", StringComparison.Ordinal))
                         {
                             var lastLogLevel = ExtentContext.ResolveFor(eventInfo.Context)
                                 .LastLogEvent.Level;

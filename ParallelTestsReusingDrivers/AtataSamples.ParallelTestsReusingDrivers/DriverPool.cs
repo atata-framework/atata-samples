@@ -1,21 +1,21 @@
-﻿using Atata;
-using OpenQA.Selenium;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using Atata;
+using OpenQA.Selenium;
 
 namespace AtataSamples.ParallelTestsReusingDrivers
 {
     public static class DriverPool
     {
-        private static readonly ConcurrentBag<DriverEntry> GlobalEntries = new();
+        private static readonly ConcurrentBag<DriverEntry> s_globalEntries = new ConcurrentBag<DriverEntry>();
 
-        private static readonly ConcurrentDictionary<object, ConcurrentBag<DriverEntry>> ScopedEntries = new();
+        private static readonly ConcurrentDictionary<object, ConcurrentBag<DriverEntry>> s_scopedEntries = new ConcurrentDictionary<object, ConcurrentBag<DriverEntry>>();
 
         private static IEnumerable<ConcurrentBag<DriverEntry>> AllEntryBags =>
-            new[] { GlobalEntries }.Concat(ScopedEntries.Values);
+            new[] { s_globalEntries }.Concat(s_scopedEntries.Values);
 
         private static IEnumerable<DriverEntry> AllEntries =>
             AllEntryBags.SelectMany(x => x);
@@ -32,7 +32,6 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         /// otherwise will use separate pool for particular scope object.
         /// </param>
         /// <returns>An <see cref="IWebDriver"/> created or taken from pool.</returns>
-        /// <exception cref="ArgumentNullException">driverFactory</exception>
         public static IWebDriver Acquire(IDriverFactory driverFactory, object poolScopeObject = null)
         {
             if (driverFactory == null)
@@ -72,8 +71,8 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         private static ConcurrentBag<DriverEntry> ResolveEntriesBag(object poolScopeObject)
         {
             return poolScopeObject == null
-                ? GlobalEntries
-                : ScopedEntries.GetOrAdd(poolScopeObject, _ => new ConcurrentBag<DriverEntry>());
+                ? s_globalEntries
+                : s_scopedEntries.GetOrAdd(poolScopeObject, _ => new ConcurrentBag<DriverEntry>());
         }
 
         private static DriverEntry CreateDriverEntry(IDriverFactory driverFactory)
@@ -93,7 +92,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
 
         public static void CloseAllForScope(object poolScopeObject)
         {
-            if (ScopedEntries.TryRemove(poolScopeObject, out var entries))
+            if (s_scopedEntries.TryRemove(poolScopeObject, out var entries))
             {
                 Close(entries);
             }
@@ -104,7 +103,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
             foreach (var entries in AllEntryBags)
                 Close(entries);
 
-            ScopedEntries.Clear();
+            s_scopedEntries.Clear();
         }
 
         private static void Close(ConcurrentBag<DriverEntry> entries)
@@ -117,6 +116,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
                 }
                 catch
                 {
+                    // Do nothing.
                 }
             }
 

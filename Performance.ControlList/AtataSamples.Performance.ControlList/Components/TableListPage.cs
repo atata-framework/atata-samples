@@ -1,5 +1,5 @@
-﻿using Atata;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Atata;
 
 namespace AtataSamples.Performance.ControlList
 {

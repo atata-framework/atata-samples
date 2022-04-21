@@ -9,7 +9,8 @@ namespace AtataSamples.TableWithRowSpannedCells
     {
         public Table<UserRow, _> Users { get; private set; }
 
-        [FindSettings(Strategy = typeof(FindByColumnHeaderInTableWithRowSpannedCellsStrategy),
+        [FindSettings(
+            Strategy = typeof(FindByColumnHeaderInTableWithRowSpannedCellsStrategy),
             TargetAttributeType = typeof(FindByColumnHeaderAttribute),
             TargetAnyType = true)]
         public class UserRow : TableRow<_>

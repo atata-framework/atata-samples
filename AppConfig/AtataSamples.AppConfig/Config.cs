@@ -6,13 +6,13 @@ namespace AtataSamples.AppConfig
 {
     public static class Config
     {
-        private static readonly Lazy<Configuration> lazyConfiguration = new Lazy<Configuration>(
+        private static readonly Lazy<Configuration> s_lazyConfiguration = new Lazy<Configuration>(
             () => ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location));
 
         public static string BaseUrl => GetAppSetting(nameof(BaseUrl));
 
         private static string GetAppSetting(string key) =>
-            lazyConfiguration.Value.AppSettings.Settings[key].Value;
+            s_lazyConfiguration.Value.AppSettings.Settings[key].Value;
 
         public static class Account
         {

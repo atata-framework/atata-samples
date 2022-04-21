@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AtataSamples.MSTest
 {
     [TestClass]
-    public class SetUpFixture
+    public static class SetUpFixture
     {
         [AssemblyInitialize]
         public static void GlobalSetUp(TestContext testContext)

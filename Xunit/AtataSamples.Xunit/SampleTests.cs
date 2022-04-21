@@ -7,7 +7,8 @@ namespace AtataSamples.Xunit
     public class SampleTests : UITestFixture
     {
         /// <summary>
-        /// It is required to define constructor with argument of ITestOutputHelper type for Xunit log output.
+        /// Initializes a new instance of the <see cref="SampleTests"/> class.
+        /// It is required to define constructor with parameter of ITestOutputHelper type for Xunit log output.
         /// </summary>
         /// <param name="output">The output.</param>
         public SampleTests(ITestOutputHelper output)

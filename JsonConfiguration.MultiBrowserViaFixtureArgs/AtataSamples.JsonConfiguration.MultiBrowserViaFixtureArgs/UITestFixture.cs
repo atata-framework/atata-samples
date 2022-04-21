@@ -5,24 +5,24 @@ namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments
 {
     [TestFixture(DriverAliases.Chrome)]
     [TestFixture(DriverAliases.InternetExplorer)]
-    //[TestFixture(DriverAliases.Firefox)]
-    //[TestFixture("chrome_remote")]
+    ////[TestFixture(DriverAliases.Firefox)]
+    ////[TestFixture("chrome_remote")]
     [Parallelizable]
     public abstract class UITestFixture
     {
-        private readonly string driverAlias;
+        private readonly string _driverAlias;
 
         protected UITestFixture(string driverAlias)
         {
-            this.driverAlias = driverAlias;
+            _driverAlias = driverAlias;
         }
 
         [SetUp]
         public void SetUp()
         {
             AtataContext.Configure().
-                UseDriver(driverAlias).
-                UseTestName(() => $"[{driverAlias}]{TestContext.CurrentContext.Test.Name}").
+                UseDriver(_driverAlias).
+                UseTestName(() => $"[{_driverAlias}]{TestContext.CurrentContext.Test.Name}").
                 Build();
         }
 

@@ -14,15 +14,17 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
                 .UseChrome()
                     .WithArguments("start-maximized")
                 .UseInternetExplorer()
+
                 // TODO: Specify Internet Explorer settings, like:
-                // WithOptions(x => x.EnableNativeEvents = true).
-                //.UseFirefox().
-                //    WithFixOfCommandExecutionDelay()
+                // .WithOptions(x => x.EnableNativeEvents = true)
+                // .UseFirefox()
+                //    .WithFixOfCommandExecutionDelay()
+
                 // TODO: You can also specify remote driver configuration(s):
-                // UseRemoteDriver().
-                // WithAlias("chrome_remote").
-                // WithRemoteAddress("http://127.0.0.1:4444/wd/hub").
-                // WithOptions(new ChromeOptions()).
+                // .UseRemoteDriver()
+                // .WithAlias("chrome_remote")
+                // .WithRemoteAddress("http://127.0.0.1:4444/wd/hub")
+                // .WithOptions(new ChromeOptions())
                 .UseBaseUrl("https://demo.atata.io/")
                 .UseCulture("en-US")
                 .UseAllNUnitFeatures();

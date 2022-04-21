@@ -1,6 +1,6 @@
-﻿using Atata;
+﻿using System;
+using Atata;
 using NUnit.Framework;
-using System;
 
 namespace AtataSamples.TableWithRowSpannedCells
 {

@@ -1,7 +1,7 @@
-﻿using Atata;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
+using Atata;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -25,7 +25,7 @@ namespace AtataSamples.Xunit
             AtataContext.Current?.CleanUp();
         }
 
-        private string ResolveTestName(ITestOutputHelper output)
+        private static string ResolveTestName(ITestOutputHelper output)
         {
             ITest test = (ITest)output.GetType().
                 GetFields(BindingFlags.NonPublic | BindingFlags.Instance).
@@ -35,7 +35,7 @@ namespace AtataSamples.Xunit
             return test?.DisplayName;
         }
 
-        protected void Execute(Action action)
+        protected static void Execute(Action action)
         {
             try
             {
