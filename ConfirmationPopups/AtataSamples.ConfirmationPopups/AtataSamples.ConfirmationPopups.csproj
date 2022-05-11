@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Atata" Version="2.0.0-beta.3" />
-    <PackageReference Include="Atata.Bootstrap" Version="2.0.0-beta.2" />
+    <PackageReference Include="Atata" Version="2.0.0" />
+    <PackageReference Include="Atata.Bootstrap" Version="2.0.0" />
     <PackageReference Include="Atata.WebDriverSetup" Version="2.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="NUnit" Version="3.13.3" />
