@@ -7,7 +7,7 @@ using Xunit.Abstractions;
 
 namespace AtataSamples.Xunit
 {
-    [Collection("Atata set up")]
+    [Collection(AtataSetUpCollection.Name)]
     public abstract class UITestFixture : IDisposable
     {
         protected UITestFixture(ITestOutputHelper output)

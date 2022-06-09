@@ -2,8 +2,9 @@
 
 namespace AtataSamples.Xunit
 {
-    [CollectionDefinition("Atata set up")]
+    [CollectionDefinition(Name)]
     public class AtataSetUpCollection : ICollectionFixture<AtataSetUpFixture>
     {
+        public const string Name = "Atata set up";
     }
 }
