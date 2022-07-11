@@ -18,13 +18,16 @@ namespace Atata.ExtentReports
         private static readonly Lazy<ExtReports> s_lazyReports =
             new Lazy<ExtReports>(CreateAndInitReportsInstance);
 
-        private static readonly ConcurrentDictionary<(string TestSuiteName, string TestName), ExtentContext> s_testExtentContextMap =
-            new ConcurrentDictionary<(string TestSuiteName, string TestName), ExtentContext>();
+        private static readonly LockingConcurrentDictionary<string, ExtentContext> s_testSuiteExtentContextMap =
+            new LockingConcurrentDictionary<string, ExtentContext>(StartExtentTestSuite);
 
-        public ExtentContext(ExtentTest test)
-        {
+        private static readonly LockingConcurrentDictionary<(string TestSuiteName, string TestName), ExtentContext> s_testExtentContextMap =
+            new LockingConcurrentDictionary<(string TestSuiteName, string TestName), ExtentContext>(StartExtentTest);
+
+        private readonly object _nodeCreationLock = new object();
+
+        public ExtentContext(ExtentTest test) =>
             Test = test;
-        }
 
         public static string WorkingDirectoryPath => s_workingDirectoryPath.Value;
 
@@ -40,26 +43,34 @@ namespace Atata.ExtentReports
         {
             string testSuiteName = context.TestSuiteName
                 ?? throw new InvalidOperationException($"{nameof(AtataContext)}.{nameof(AtataContext.TestSuiteName)} is not set and cannot be used to create Extent test.");
+            string testName = context.TestName;
 
-            return s_testExtentContextMap.GetOrAdd((testSuiteName, context.TestName), StartExtentTest);
+            return testName is null
+                ? ResolveForTestSuite(testSuiteName)
+                : ResolveForTest(testSuiteName, testName);
         }
 
-        public static ExtentContext ResolveFor((string TestSuiteName, string TestName) testInfo) =>
-            s_testExtentContextMap.GetOrAdd(testInfo, StartExtentTest);
+        private static ExtentContext ResolveForTestSuite(string testSuiteName) =>
+            s_testSuiteExtentContextMap.GetOrAdd(testSuiteName);
+
+        private static ExtentContext ResolveForTest(string testSuiteName, string testName) =>
+            s_testExtentContextMap.GetOrAdd((testSuiteName, testName));
+
+        private static ExtentContext StartExtentTestSuite(string testSuiteName)
+        {
+            ExtentTest extentTest = Reports.CreateTest(testSuiteName);
+
+            return new ExtentContext(extentTest);
+        }
 
         private static ExtentContext StartExtentTest((string TestSuiteName, string TestName) testInfo)
         {
+            var testSuiteContext = ResolveForTestSuite(testInfo.TestSuiteName);
+
             ExtentTest extentTest;
 
-            if (string.IsNullOrEmpty(testInfo.TestName))
-            {
-                extentTest = Reports.CreateTest(testInfo.TestSuiteName);
-            }
-            else
-            {
-                var suiteContext = ResolveFor((testInfo.TestSuiteName, null));
-                extentTest = suiteContext.Test.CreateNode(testInfo.TestName);
-            }
+            lock (testSuiteContext._nodeCreationLock)
+                extentTest = testSuiteContext.Test.CreateNode(testInfo.TestName);
 
             return new ExtentContext(extentTest);
         }
@@ -80,7 +91,7 @@ namespace Atata.ExtentReports
             Path.Combine(
                 AppDomain.CurrentDomain.BaseDirectory,
                 "artifacts",
-                AtataContext.BuildStart.Value.ToString("yyyy-MM-dd HH_mm_ss"))
+                AtataContext.BuildStart.Value.ToString("yyyyMMddTHHmmss"))
             + Path.DirectorySeparatorChar;
 
         private static IEnumerable<IExtentReporter> CreateReporters(string workingDirectoryPath)
@@ -93,6 +104,22 @@ namespace Atata.ExtentReports
             htmlReporter.Config.DocumentTitle = ReportTitle;
 
             yield return htmlReporter;
+        }
+
+        private class LockingConcurrentDictionary<TKey, TValue>
+        {
+            private readonly ConcurrentDictionary<TKey, Lazy<TValue>> _dictionary;
+
+            private readonly Func<TKey, Lazy<TValue>> _valueFactory;
+
+            public LockingConcurrentDictionary(Func<TKey, TValue> valueFactory)
+            {
+                _dictionary = new ConcurrentDictionary<TKey, Lazy<TValue>>();
+                _valueFactory = key => new Lazy<TValue>(() => valueFactory(key));
+            }
+
+            public TValue GetOrAdd(TKey key) =>
+                _dictionary.GetOrAdd(key, _valueFactory).Value;
         }
     }
 }
