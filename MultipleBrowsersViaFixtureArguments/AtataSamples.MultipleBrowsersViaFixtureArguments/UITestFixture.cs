@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace AtataSamples.MultipleBrowsersViaFixtureArguments
 {
     [TestFixture(DriverAliases.Chrome)]
-    [TestFixture(DriverAliases.InternetExplorer)]
+    [TestFixture(DriverAliases.Edge)]
     ////[TestFixture(DriverAliases.Firefox)]
     ////[TestFixture("chrome_remote")]
     [Parallelizable]

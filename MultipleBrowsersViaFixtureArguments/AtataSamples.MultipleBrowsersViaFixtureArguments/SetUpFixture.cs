@@ -13,12 +13,7 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
             AtataContext.GlobalConfiguration
                 .UseChrome()
                     .WithArguments("start-maximized")
-                .UseInternetExplorer()
-
-                // TODO: Specify Internet Explorer settings, like:
-                // .WithOptions(x => x.EnableNativeEvents = true)
-                // .UseFirefox()
-                //    .WithFixOfCommandExecutionDelay()
+                .UseEdge()
 
                 // TODO: You can also specify remote driver configuration(s):
                 // .UseRemoteDriver()
