@@ -13,8 +13,8 @@ namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments
         [Test]
         public void Home()
         {
-            Go.To<HomePage>().
-                Header.Should.Equal("Atata Sample App");
+            Go.To<HomePage>()
+                .Header.Should.Equal("Atata Sample App");
         }
     }
 }

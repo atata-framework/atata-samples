@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments
 {
     [TestFixture(DriverAliases.Chrome)]
-    [TestFixture(DriverAliases.InternetExplorer)]
+    [TestFixture(DriverAliases.Edge)]
     ////[TestFixture(DriverAliases.Firefox)]
     ////[TestFixture("chrome_remote")]
     [Parallelizable]
@@ -20,10 +20,10 @@ namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments
         [SetUp]
         public void SetUp()
         {
-            AtataContext.Configure().
-                UseDriver(_driverAlias).
-                UseTestName(() => $"[{_driverAlias}]{TestContext.CurrentContext.Test.Name}").
-                Build();
+            AtataContext.Configure()
+                .UseDriver(_driverAlias)
+                .UseTestName(() => $"[{_driverAlias}]{TestContext.CurrentContext.Test.Name}")
+                .Build();
         }
 
         [TearDown]

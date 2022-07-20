@@ -1,5 +1,4 @@
 ﻿using Atata;
-using Atata.WebDriverSetup;
 using NUnit.Framework;
 
 namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments
@@ -8,14 +7,9 @@ namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments
     public class SetUpFixture
     {
         [OneTimeSetUp]
-        public void GlobalSetUp()
-        {
-            AtataContext.GlobalConfiguration.ApplyJsonConfig();
-
-            DriverSetup.GetDefaultConfiguration(BrowserNames.InternetExplorer)
-                .WithX32Architecture();
-
-            AtataContext.GlobalConfiguration.AutoSetUpConfiguredDrivers();
-        }
+        public void GlobalSetUp() =>
+            AtataContext.GlobalConfiguration
+                .ApplyJsonConfig()
+                .AutoSetUpConfiguredDrivers();
     }
 }
