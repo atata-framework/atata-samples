@@ -6,10 +6,8 @@ namespace AtataSamples.MultipleBrowsersViaRunSettings
     public class HomeTests : UITestFixture
     {
         [Test]
-        public void Home()
-        {
-            Go.To<HomePage>().
-                Header.Should.Equal("Atata Sample App");
-        }
+        public void Home() =>
+            Go.To<HomePage>()
+                .Header.Should.Equal("Atata Sample App");
     }
 }

@@ -11,10 +11,8 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         [TestCase("Basic")]
         [TestCase("Plus")]
         [TestCase("Premium")]
-        public void Plans_Has(string title)
-        {
+        public void Plans_Has(string title) =>
             Go.To<PlansPage>()
                 .PlanItems[x => x.Title == title].Should.BeVisible();
-        }
     }
 }

@@ -15,16 +15,12 @@ namespace AtataSamples.NUnit.GenericPageTests
     {
         private readonly string _expectedPageTitle;
 
-        public PageTitleTests(string expectedPageTitle)
-        {
+        public PageTitleTests(string expectedPageTitle) =>
             _expectedPageTitle = expectedPageTitle;
-        }
 
         [Test]
-        public void Test()
-        {
+        public void Test() =>
             Go.To<TPage>()
                 .PageTitle.Should.Equal($"{_expectedPageTitle} - Atata Sample App");
-        }
     }
 }

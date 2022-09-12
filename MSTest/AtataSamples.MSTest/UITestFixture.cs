@@ -9,19 +9,15 @@ namespace AtataSamples.MSTest
         public TestContext TestContext { get; set; }
 
         [TestInitialize]
-        public void SetUp()
-        {
+        public void SetUp() =>
             AtataContext.Configure()
                 .UseTestName(TestContext.TestName)
                 .LogConsumers.Add(new TextOutputLogConsumer(TestContext.WriteLine))
                 .Build();
-        }
 
         [TestCleanup]
-        public void TearDown()
-        {
+        public void TearDown() =>
             AtataContext.Current?.CleanUp();
-        }
 
         protected static void Execute(Action action)
         {

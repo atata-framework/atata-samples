@@ -20,17 +20,15 @@ namespace AtataSamples.Xunit
                 .Build();
         }
 
-        public void Dispose()
-        {
+        public void Dispose() =>
             AtataContext.Current?.CleanUp();
-        }
 
         private static string ResolveTestName(ITestOutputHelper output)
         {
-            ITest test = (ITest)output.GetType().
-                GetFields(BindingFlags.NonPublic | BindingFlags.Instance).
-                FirstOrDefault(x => x.FieldType == typeof(ITest))?.
-                GetValue(output);
+            ITest test = (ITest)output.GetType()
+                .GetFields(BindingFlags.NonPublic | BindingFlags.Instance)
+                .FirstOrDefault(x => x.FieldType == typeof(ITest))
+                ?.GetValue(output);
 
             return test?.DisplayName;
         }

@@ -6,28 +6,22 @@ namespace AtataSamples.MaterialUI
     public class MuiPaginationTests : UITestFixture
     {
         [Test]
-        public void ClickNext()
-        {
+        public void ClickNext() =>
             Go.To<PaginationPage>()
                 .Pagination.Next.Click()
                 .Pagination.SelectedPageNumber.Should.Equal(2);
-        }
 
         [Test]
-        public void ClickPrevious()
-        {
+        public void ClickPrevious() =>
             Go.To<PaginationPage>()
                 .Pagination.Next.Click()
                 .Pagination.Previous.Click()
                 .Pagination.SelectedPageNumber.Should.Equal(1);
-        }
 
         [Test]
-        public void FindButtonByPageNumber()
-        {
+        public void FindButtonByPageNumber() =>
             Go.To<PaginationPage>()
                 .Pagination.FindButtonByPageNumber(3).Click()
                 .Pagination.SelectedPageNumber.Should.Equal(3);
-        }
     }
 }

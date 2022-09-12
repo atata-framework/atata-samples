@@ -9,10 +9,8 @@ namespace AtataSamples.SpecFlow
     {
         private readonly ISpecFlowOutputHelper _outputHelper;
 
-        public SpecFlowHooks(ISpecFlowOutputHelper outputHelper)
-        {
+        public SpecFlowHooks(ISpecFlowOutputHelper outputHelper) =>
             _outputHelper = outputHelper;
-        }
 
         [BeforeTestRun]
         public static void SetUpTestRun()
@@ -36,13 +34,11 @@ namespace AtataSamples.SpecFlow
         }
 
         [BeforeScenario]
-        public void SetUpScenario()
-        {
+        public void SetUpScenario() =>
             AtataContext.Configure()
                 .EventSubscriptions.Add<ScreenshotFileSavedEvent>(eventData => _outputHelper.AddAttachment(eventData.FilePath))
                 .LogConsumers.Add(new TextOutputLogConsumer(_outputHelper.WriteLine))
                 .Build();
-        }
 
         [AfterScenario]
         public static void TearDownScenario() =>

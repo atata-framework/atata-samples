@@ -27,9 +27,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
                 .EventSubscriptions.Add<AtataContextCleanUpEvent>(ReleaseCurrentDriver);
         }
 
-        private static void ReleaseCurrentDriver(AtataContextCleanUpEvent eventData)
-        {
+        private static void ReleaseCurrentDriver(AtataContextCleanUpEvent eventData) =>
             DriverPool.Release(eventData.Context.Driver);
-        }
     }
 }

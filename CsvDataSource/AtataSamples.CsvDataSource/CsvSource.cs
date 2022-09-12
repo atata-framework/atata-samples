@@ -19,9 +19,9 @@ namespace AtataSamples.CsvDataSource
             using var streamReader = new StreamReader(completeFilePath);
             using var csvReader = new CsvReader(streamReader, Thread.CurrentThread.CurrentCulture);
 
-            TestCaseData[] dataItems = csvReader.GetRecords<T>().
-                Select(x => new TestCaseData(x)).
-                ToArray();
+            TestCaseData[] dataItems = csvReader.GetRecords<T>()
+                .Select(x => new TestCaseData(x))
+                .ToArray();
 
             if (expectedResultType != null)
             {

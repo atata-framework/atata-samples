@@ -14,11 +14,9 @@ namespace AtataSamples.NUnit.GenericPageTests
         where TPage : AppPage<TPage>
     {
         [Test]
-        public void Test()
-        {
-            Go.To<TPage>().
-                Menu.SignIn.ClickAndGo().
-                    Header.Should.StartWith("Sign In");
-        }
+        public void Test() =>
+            Go.To<TPage>()
+                .Menu.SignIn.ClickAndGo()
+                    .Header.Should.StartWith("Sign In");
     }
 }

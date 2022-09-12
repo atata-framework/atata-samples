@@ -30,10 +30,8 @@ namespace AtataSamples.FixtureReusingDriver
         }
 
         [TearDown]
-        public void TearDown()
-        {
+        public void TearDown() =>
             AtataContext.Current?.CleanUp(!ReuseDriver);
-        }
 
         [OneTimeTearDown]
         public void TearDownFixture()

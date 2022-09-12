@@ -44,9 +44,9 @@ namespace AtataSamples.TableWithRowSpannedCells
                 options.Metadata.ParentComponentType,
                 _ => GetColumnInfoItems((IWebElement)scope));
 
-            ColumnInfo column = columns.
-                Where(x => options.Match.IsMatch(x.HeaderName, options.Terms)).
-                ElementAtOrDefault(options.Index ?? 0);
+            ColumnInfo column = columns
+                .Where(x => options.Match.IsMatch(x.HeaderName, options.Terms))
+                .ElementAtOrDefault(options.Index ?? 0);
 
             return column != null ? BuildXPathForCell(column, columns) : null;
         }
@@ -84,10 +84,8 @@ namespace AtataSamples.TableWithRowSpannedCells
             }).ToList();
         }
 
-        private ReadOnlyCollection<IWebElement> GetHeaderCells(IWebElement row)
-        {
-            return row.GetAll(By.XPath(HeaderCellsXPath).AtOnce().OfAnyVisibility());
-        }
+        private ReadOnlyCollection<IWebElement> GetHeaderCells(IWebElement row) =>
+            row.GetAll(By.XPath(HeaderCellsXPath).AtOnce().OfAnyVisibility());
 
         private ReadOnlyCollection<IWebElement> GetCellsOfRowWithSpannedCells(IWebElement row)
         {

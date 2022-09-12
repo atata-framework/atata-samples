@@ -9,10 +9,8 @@ namespace AtataSamples.ConfirmationPopups
         {
         }
 
-        protected override void Execute<TOwner>(TriggerContext<TOwner> context)
-        {
+        protected override void Execute<TOwner>(TriggerContext<TOwner> context) =>
             Go.To<DeletionConfirmationBSModal<TOwner>>(temporarily: true)
                 .Delete();
-        }
     }
 }

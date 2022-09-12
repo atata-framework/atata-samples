@@ -20,9 +20,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         }
 
         [OneTimeTearDown]
-        public void GlobalTearDown()
-        {
+        public void GlobalTearDown() =>
             DriverPool.CloseAll();
-        }
     }
 }

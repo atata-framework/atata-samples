@@ -13,12 +13,13 @@ namespace AtataSamples.SpecFlow.StepDefinitions
 
         [When(@"I type (.*) and (.*) to the form")]
         public static void WhenITypeArgumentsToTheForm(int argument1, int argument2) =>
-            On<CalculationsPage>().
-                AdditionValue1.Set(argument1).
-                AdditionValue2.Set(argument2);
+            On<CalculationsPage>()
+                .AdditionValue1.Set(argument1)
+                .AdditionValue2.Set(argument2);
 
         [Then(@"I should see (.*) in result field")]
         public static void ThenIShouldSeeInResultField(int result) =>
-            On<CalculationsPage>().AdditionResult.Should.Equal(result);
+            On<CalculationsPage>()
+                .AdditionResult.Should.Equal(result);
     }
 }

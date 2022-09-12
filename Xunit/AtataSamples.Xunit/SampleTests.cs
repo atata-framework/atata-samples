@@ -21,11 +21,9 @@ namespace AtataSamples.Xunit
         /// For example, when you use Visual Studio or CI system to view the log, as exception is displayed there any way.
         /// </summary>
         [Fact]
-        public void XUnitTest()
-        {
-            Go.To<HomePage>().
-               Header.Should.Equal("Atata Sample App");
-        }
+        public void XUnitTest() =>
+            Go.To<HomePage>()
+                .Header.Should.Equal("Atata Sample App");
 
         /// <summary>
         /// Use such approach with <see cref="UITestFixture.Execute(System.Action)"/> method when you need to add exception/error information to the log.
@@ -33,14 +31,9 @@ namespace AtataSamples.Xunit
         /// It is not required when you just use ITestOutputHelper as a single log target.
         /// </summary>
         [Fact]
-        public void XUnitTestWithExceptionLogging()
-        {
+        public void XUnitTestWithExceptionLogging() =>
             Execute(() =>
-            {
-                Go.To<HomePage>().
-                    Header.Should.Equal("Atata Sample App");
-                ////Header.Should.Equal("Unknown Title");
-            });
-        }
+                Go.To<HomePage>()
+                    .Header.Should.Equal("Atata Sample App"));
     }
 }

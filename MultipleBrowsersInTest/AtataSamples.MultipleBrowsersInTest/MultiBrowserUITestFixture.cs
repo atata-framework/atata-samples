@@ -11,10 +11,8 @@ namespace AtataSamples.MultipleBrowsersInTest
         protected List<AtataContext> Contexts { get; } = new List<AtataContext>();
 
         [SetUp]
-        public void SetUp()
-        {
+        public void SetUp() =>
             CreateContext();
-        }
 
         protected AtataContext CreateContext()
         {
@@ -31,10 +29,8 @@ namespace AtataSamples.MultipleBrowsersInTest
             return context;
         }
 
-        protected void SwitchToContext(int indexOfContext)
-        {
+        protected void SwitchToContext(int indexOfContext) =>
             SwitchToContext(Contexts[indexOfContext]);
-        }
 
         protected void SwitchToContext(AtataContext context)
         {

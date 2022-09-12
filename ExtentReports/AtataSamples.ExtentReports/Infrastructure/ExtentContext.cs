@@ -13,18 +13,18 @@ namespace Atata.ExtentReports
     public class ExtentContext
     {
         private static readonly Lazy<string> s_workingDirectoryPath =
-            new Lazy<string>(BuildWorkingDirectoryPath);
+            new(BuildWorkingDirectoryPath);
 
         private static readonly Lazy<ExtReports> s_lazyReports =
-            new Lazy<ExtReports>(CreateAndInitReportsInstance);
+            new(CreateAndInitReportsInstance);
 
         private static readonly LockingConcurrentDictionary<string, ExtentContext> s_testSuiteExtentContextMap =
-            new LockingConcurrentDictionary<string, ExtentContext>(StartExtentTestSuite);
+            new(StartExtentTestSuite);
 
         private static readonly LockingConcurrentDictionary<(string TestSuiteName, string TestName), ExtentContext> s_testExtentContextMap =
-            new LockingConcurrentDictionary<(string TestSuiteName, string TestName), ExtentContext>(StartExtentTest);
+            new(StartExtentTest);
 
-        private readonly object _nodeCreationLock = new object();
+        private readonly object _nodeCreationLock = new();
 
         public ExtentContext(ExtentTest test) =>
             Test = test;

@@ -7,8 +7,7 @@ namespace AtataSamples.TableWithRowSpannedCells
     public class TableWithRowSpannedCellsTests : UITestFixture
     {
         [Test]
-        public void UsingXPath()
-        {
+        public void UsingXPath() =>
             Go.To<TableUsingXPathPage>()
                 .Users.Rows.Should.HaveCount(3)
 
@@ -37,11 +36,9 @@ namespace AtataSamples.TableWithRowSpannedCells
                 .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.Exist()
                 .Users.Rows[x => x.Name == "John Smith" && x.Client == "SomeSoft"].Project.Should.Equal("BioFruit")
                 .Users.Rows[x => x.Name == "Total"].GrossMarginPercent.Should.Equal(0.36m);
-        }
 
         [Test]
-        public void UsingCustomFindAttributes()
-        {
+        public void UsingCustomFindAttributes() =>
             Go.To<TableUsingCustomFindAttributesPage>()
                 .Users.Rows.Should.HaveCount(3)
 
@@ -70,11 +67,9 @@ namespace AtataSamples.TableWithRowSpannedCells
                 .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.Exist()
                 .Users.Rows[x => x.Name == "John Smith" && x.Client == "SomeSoft"].Project.Should.Equal("BioFruit")
                 .Users.Rows[x => x.Name == "Total"].GrossMarginPercent.Should.Equal(0.36m);
-        }
 
         [Test]
-        public void UsingCustomFindStrategy()
-        {
+        public void UsingCustomFindStrategy() =>
             Go.To<TableUsingCustomFindStrategyPage>()
                 .Users.Rows.Should.HaveCount(3)
 
@@ -103,6 +98,5 @@ namespace AtataSamples.TableWithRowSpannedCells
                 .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.Exist()
                 .Users.Rows[x => x.Name == "John Smith" && x.Client == "SomeSoft"].Project.Should.Equal("BioFruit")
                 .Users.Rows[x => x.Name == "Total"].GrossMarginPercent.Should.Equal(0.36m);
-        }
     }
 }

@@ -16,18 +16,14 @@ namespace AtataSamples.NUnit.GenericPageTests
     {
         private readonly string _expectedPageTitle;
 
-        public PageTitleAndHeaderTests(string expectedPageTitle)
-        {
+        public PageTitleAndHeaderTests(string expectedPageTitle) =>
             _expectedPageTitle = expectedPageTitle;
-        }
 
         [Test]
-        public void Test()
-        {
+        public void Test() =>
             Go.To<TPage>()
                 .AggregateAssert(x => x
                     .PageTitle.Should.Equal($"{_expectedPageTitle} - Atata Sample App")
                     .Header.Should.Equal(_expectedPageTitle));
-        }
     }
 }

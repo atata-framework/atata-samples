@@ -7,6 +7,6 @@ namespace AtataSamples.ValidationMessagesVerification
         where TOwner : PageObject<TOwner>
     {
         public new FieldVerificationProvider<string, ValidationMessage<TOwner>, TOwner> Should =>
-            new FieldVerificationProvider<string, ValidationMessage<TOwner>, TOwner>(this);
+            new(this);
     }
 }

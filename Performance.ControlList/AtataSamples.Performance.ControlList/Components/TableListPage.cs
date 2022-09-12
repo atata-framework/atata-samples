@@ -16,21 +16,17 @@ namespace AtataSamples.Performance.ControlList
             [FindSettings(Visibility = Visibility.Any)]
             public ControlList<ItemRow, _> Rows { get; private set; }
 
-            public ValueProvider<IEnumerable<int>, _> Ids
-                => Rows.SelectContentsByExtraXPath<int>(ItemRow.XPathTo.Id, "Ids");
+            public ValueProvider<IEnumerable<int>, _> Ids =>
+                Rows.SelectContentsByExtraXPath<int>(ItemRow.XPathTo.Id, "Ids");
 
-            public ValueProvider<IEnumerable<string>, _> Names
-                => Rows.SelectContentsByExtraXPath(ItemRow.XPathTo.Name, "Names");
+            public ValueProvider<IEnumerable<string>, _> Names =>
+                Rows.SelectContentsByExtraXPath(ItemRow.XPathTo.Name, "Names");
 
-            public ItemRow FindRowById(int id)
-            {
-                return Rows.GetByXPathCondition($"Id={id}", $"{ItemRow.XPathTo.Id}[.='{id}']");
-            }
+            public ItemRow FindRowById(int id) =>
+                Rows.GetByXPathCondition($"Id={id}", $"{ItemRow.XPathTo.Id}[.='{id}']");
 
-            public ItemRow FindRowByIdAndName(int id, string name)
-            {
-                return Rows.GetByXPathCondition($"Id={id} & Name={name}", $"{ItemRow.XPathTo.Id}[.='{id}'] and {ItemRow.XPathTo.Name}[.='{name}']");
-            }
+            public ItemRow FindRowByIdAndName(int id, string name) =>
+                Rows.GetByXPathCondition($"Id={id} & Name={name}", $"{ItemRow.XPathTo.Id}[.='{id}'] and {ItemRow.XPathTo.Name}[.='{name}']");
         }
 
         public class ItemRow : TableRow<_>

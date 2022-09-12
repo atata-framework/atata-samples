@@ -13,11 +13,9 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         /// <summary>Sets up test a test.</summary>
         /// <seealso cref="SetUpFixture.GlobalSetUp"/>
         [SetUp]
-        public void SetUp()
-        {
+        public void SetUp() =>
             ConfigureAtataContext(AtataContext.Configure())
                 .Build();
-        }
 
         protected virtual AtataContextBuilder ConfigureAtataContext(AtataContextBuilder builder)
         {
@@ -34,10 +32,8 @@ namespace AtataSamples.ParallelTestsReusingDrivers
         /// </summary>
         /// <seealso cref="SetUpFixture.GlobalTearDown"/>
         [TearDown]
-        public void TearDown()
-        {
+        public void TearDown() =>
             AtataContext.Current?.CleanUp(quitDriver: false);
-        }
 
         [OneTimeTearDown]
         public void TearDownFixture()

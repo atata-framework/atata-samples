@@ -22,9 +22,7 @@ namespace AtataSamples.SalesforceLightning
         [CloseAlertBox(TriggerEvents.AfterSet)]
         public SLCombobox<Progress, _> EnumBasedCombobox { get; private set; }
 
-        protected override void OnInitCompleted()
-        {
+        protected override void OnInitCompleted() =>
             Find<Button<_>>(new FindByIdAttribute("onetrust-accept-btn-handler")).Click();
-        }
     }
 }

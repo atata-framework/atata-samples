@@ -8,23 +8,17 @@ namespace AtataSamples.ExtentReports
         protected override bool UseFixtureDriverForTests => true;
 
         [OneTimeSetUp]
-        public void SetUpFixture()
-        {
+        public void SetUpFixture() =>
             Go.To<SignInPage>();
-        }
 
         [Test]
-        public void Email()
-        {
+        public void Email() =>
             BeingOn<SignInPage>()
                 .Email.Should.BeVisible();
-        }
 
         [Test]
-        public void Password()
-        {
+        public void Password() =>
             BeingOn<SignInPage>()
                 .Password.Should.BeVisible();
-        }
     }
 }

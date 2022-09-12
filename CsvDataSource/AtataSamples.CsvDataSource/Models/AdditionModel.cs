@@ -6,9 +6,7 @@
 
         public int Value2 { get; set; }
 
-        public override string ToString()
-        {
-            return TestParametersFormatter.Format(this);
-        }
+        public override string ToString() =>
+            TestParametersFormatter.Format(this);
     }
 }

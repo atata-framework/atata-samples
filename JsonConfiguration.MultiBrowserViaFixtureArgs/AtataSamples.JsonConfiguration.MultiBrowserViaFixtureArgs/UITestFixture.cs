@@ -12,24 +12,18 @@ namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments
     {
         private readonly string _driverAlias;
 
-        protected UITestFixture(string driverAlias)
-        {
+        protected UITestFixture(string driverAlias) =>
             _driverAlias = driverAlias;
-        }
 
         [SetUp]
-        public void SetUp()
-        {
+        public void SetUp() =>
             AtataContext.Configure()
                 .UseDriver(_driverAlias)
                 .UseTestName(() => $"[{_driverAlias}]{TestContext.CurrentContext.Test.Name}")
                 .Build();
-        }
 
         [TearDown]
-        public void TearDown()
-        {
+        public void TearDown() =>
             AtataContext.Current?.CleanUp();
-        }
     }
 }

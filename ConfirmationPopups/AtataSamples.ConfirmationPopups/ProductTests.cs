@@ -6,19 +6,16 @@ namespace AtataSamples.ConfirmationPopups
     public class ProductTests : UITestFixture
     {
         [Test]
-        public void DeleteUsingJSConfirm()
-        {
+        public void DeleteUsingJSConfirm() =>
             Go.To<ProductsPage>()
                 .Products.Rows.Count.Get(out int count)
 
                 .Products.Rows[x => x.Name == "Table"].DeleteUsingJSConfirm()
                 .Products.Rows[x => x.Name == "Table"].Should.Not.Exist()
                 .Products.Rows.Count.Should.Equal(count - 1);
-        }
 
         [Test]
-        public void DeleteUsingBSModal()
-        {
+        public void DeleteUsingBSModal() =>
             Go.To<ProductsPage>()
                 .Products.Rows.Count.Get(out int count)
 
@@ -31,22 +28,18 @@ namespace AtataSamples.ConfirmationPopups
                     .Delete() // Delete and verify that item is deleted.
                 .Products.Rows[x => x.Name == "Chair"].Should.Not.Exist()
                 .Products.Rows.Count.Should.Equal(count - 1);
-        }
 
         [Test]
-        public void DeleteUsingBSModal_ViaTrigger()
-        {
+        public void DeleteUsingBSModal_ViaTrigger() =>
             Go.To<ProductsPage>()
                 .Products.Rows.Count.Get(out int count)
 
                 .Products.Rows[x => x.Name == "Chair"].DeleteUsingBSModalViaTrigger()
                 .Products.Rows[x => x.Name == "Chair"].Should.Not.Exist()
                 .Products.Rows.Count.Should.Equal(count - 1);
-        }
 
         [Test]
-        public void DeleteUsingJQueryConfirm()
-        {
+        public void DeleteUsingJQueryConfirm() =>
             Go.To<ProductsPage>()
                 .Products.Rows.Count.Get(out int count)
 
@@ -59,17 +52,14 @@ namespace AtataSamples.ConfirmationPopups
                     .Delete() // Delete and verify that item is deleted.
                 .Products.Rows[x => x.Name == "Desk"].Should.Not.Exist()
                 .Products.Rows.Count.Should.Equal(count - 1);
-        }
 
         [Test]
-        public void DeleteUsingJQueryConfirm_ViaTrigger()
-        {
+        public void DeleteUsingJQueryConfirm_ViaTrigger() =>
             Go.To<ProductsPage>()
                 .Products.Rows.Count.Get(out int count)
 
                 .Products.Rows[x => x.Name == "Desk"].DeleteUsingJQueryConfirmViaTrigger()
                 .Products.Rows[x => x.Name == "Desk"].Should.Not.Exist()
                 .Products.Rows.Count.Should.Equal(count - 1);
-        }
     }
 }

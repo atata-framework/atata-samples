@@ -57,14 +57,12 @@ namespace Atata.ExtentReports
             }
         }
 
-        private static string BuildCompleteMessage(LogEventInfo eventInfo)
-        {
-            return !string.IsNullOrWhiteSpace(eventInfo.Message) && eventInfo.Exception != null
+        private static string BuildCompleteMessage(LogEventInfo eventInfo) =>
+            !string.IsNullOrWhiteSpace(eventInfo.Message) && eventInfo.Exception != null
                 ? $"{eventInfo.Message} {eventInfo.Exception}"
                 : eventInfo.Exception != null
                 ? eventInfo.Exception.ToString()
                 : eventInfo.Message;
-        }
 
         private static string NormalizeMessage(string message)
         {

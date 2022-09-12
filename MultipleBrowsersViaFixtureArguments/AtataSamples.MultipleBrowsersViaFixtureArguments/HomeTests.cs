@@ -11,10 +11,8 @@ namespace AtataSamples.MultipleBrowsersViaFixtureArguments
         }
 
         [Test]
-        public void Home()
-        {
-            Go.To<HomePage>().
-                Header.Should.Equal("Atata Sample App");
-        }
+        public void Home() =>
+            Go.To<HomePage>()
+                .Header.Should.Equal("Atata Sample App");
     }
 }

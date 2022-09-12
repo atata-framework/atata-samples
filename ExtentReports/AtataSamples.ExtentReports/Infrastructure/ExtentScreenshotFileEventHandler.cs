@@ -4,7 +4,7 @@ namespace Atata.ExtentReports
 {
     public class ExtentScreenshotFileEventHandler : IEventHandler<ScreenshotFileSavedEvent>
     {
-        private static readonly object s_mediaProviderSyncRoot = new object();
+        private static readonly object s_mediaProviderSyncRoot = new();
 
         public void Handle(ScreenshotFileSavedEvent eventData, AtataContext context)
         {

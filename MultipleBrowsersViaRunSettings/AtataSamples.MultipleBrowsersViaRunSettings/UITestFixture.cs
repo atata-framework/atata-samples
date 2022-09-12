@@ -7,15 +7,11 @@ namespace AtataSamples.MultipleBrowsersViaRunSettings
     public abstract class UITestFixture
     {
         [SetUp]
-        public void SetUp()
-        {
+        public void SetUp() =>
             AtataContext.Configure().Build();
-        }
 
         [TearDown]
-        public void TearDown()
-        {
+        public void TearDown() =>
             AtataContext.Current?.CleanUp();
-        }
     }
 }

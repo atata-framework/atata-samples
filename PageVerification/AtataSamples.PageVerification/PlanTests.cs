@@ -14,35 +14,26 @@ namespace AtataSamples.PageVerification
         private const string Feature6 = "Feature 6";
 
         [Test]
-        public void PrimaryPageDataVerification_InTest()
-        {
+        public void PrimaryPageDataVerification_InTest() =>
             Go.To<PlansPage>()
                 .PageTitle.Should.Equal("Plans - Atata Sample App")
                 .Header.Should.Equal("Plans")
                 .Content.Should.Contain("Please choose your payment plan");
-        }
 
         [Test]
-        public void PrimaryPageDataVerification_OnVerify()
-        {
+        public void PrimaryPageDataVerification_OnVerify() =>
             Go.To<PlansWithOnVerifyPage>();
-        }
 
         [Test]
-        public void PrimaryPageDataVerification_StaticTriggers()
-        {
+        public void PrimaryPageDataVerification_StaticTriggers() =>
             Go.To<PlansWithStaticTriggersPage>();
-        }
 
         [Test]
-        public void PrimaryPageDataVerification_DynamicTriggers()
-        {
+        public void PrimaryPageDataVerification_DynamicTriggers() =>
             Go.To<PlansWithDynamicTriggersPage>();
-        }
 
         [Test]
-        public void ComplexPageDataVerification()
-        {
+        public void ComplexPageDataVerification() =>
             Go.To<PlansPage>()
                 .AggregateAssert(x => x
                     .PlanItems.Count.Should.Equal(3)
@@ -60,6 +51,5 @@ namespace AtataSamples.PageVerification
                     .PlanItems[2].Price.Should.Equal(49.99m)
                     .PlanItems[2].NumberOfProjects.Should.Equal(10)
                     .PlanItems[2].Features.Items.Should.EqualSequence(Feature1, Feature2, Feature3, Feature4, Feature5, Feature6));
-        }
     }
 }
