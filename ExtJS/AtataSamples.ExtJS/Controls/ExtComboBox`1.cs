@@ -23,7 +23,7 @@ return results;";
         public UnorderedList<ListItem<TOwner>, TOwner> DropDownList =>
             Controls.Resolve<UnorderedList<ListItem<TOwner>, TOwner>>(nameof(DropDownList), () =>
             {
-                string componentId = Attributes["data-componentid"];
+                string componentId = DomAttributes["data-componentid"];
 
                 return new Attribute[]
                 {

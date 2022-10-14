@@ -11,8 +11,8 @@ namespace AtataSamples.SalesforceLightning
 
         protected override T GetValue()
         {
-            string valueAsString = Scope.TagName == "input"
-                ? Attributes.Value
+            string valueAsString = TagName == "input"
+                ? DomProperties.Value
                 : Content;
 
             return ConvertStringToValueUsingGetFormat(valueAsString);
