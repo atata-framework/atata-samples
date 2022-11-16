@@ -52,14 +52,8 @@ namespace AtataSamples.Xunit
 
             context.Log.Error(exception);
 
-            try
-            {
-                context.TakeScreenshot("Failed");
-            }
-            catch (Exception screenshotException)
-            {
-                context.Log.Error("Take screenshot failed.", screenshotException);
-            }
+            context.TakeScreenshot("Failed");
+            context.TakePageSnapshot("Failed");
         }
     }
 }
