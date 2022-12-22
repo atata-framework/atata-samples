@@ -1,13 +1,12 @@
 ﻿using Atata;
 
-namespace AtataSamples.NUnit.GenericPageTests
-{
-    using _ = ProductsPage;
+namespace AtataSamples.NUnit.GenericPageTests;
 
-    [Url("products")]
-    [VerifyH1]
-    public class ProductsPage : AppPage<_>, IPageWithHeader<_>
-    {
-        public H1<_> Header { get; private set; }
-    }
+using _ = ProductsPage;
+
+[Url("products")]
+[VerifyH1]
+public class ProductsPage : AppPage<_>, IPageWithHeader<_>
+{
+    public H1<_> Header { get; private set; }
 }

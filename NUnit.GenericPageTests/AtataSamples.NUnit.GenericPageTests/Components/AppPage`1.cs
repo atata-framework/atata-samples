@@ -1,10 +1,9 @@
 ﻿using Atata;
 
-namespace AtataSamples.NUnit.GenericPageTests
+namespace AtataSamples.NUnit.GenericPageTests;
+
+public class AppPage<TOwner> : Page<TOwner>
+    where TOwner : AppPage<TOwner>
 {
-    public class AppPage<TOwner> : Page<TOwner>
-        where TOwner : AppPage<TOwner>
-    {
-        public AppMenu<TOwner> Menu { get; private set; }
-    }
+    public AppMenu<TOwner> Menu { get; private set; }
 }

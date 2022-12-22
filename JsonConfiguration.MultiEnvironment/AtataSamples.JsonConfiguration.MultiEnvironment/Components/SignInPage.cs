@@ -1,13 +1,12 @@
 ﻿using Atata;
 
-namespace AtataSamples.JsonConfiguration.MultiEnvironment
+namespace AtataSamples.JsonConfiguration.MultiEnvironment;
+
+using _ = SignInPage;
+
+public class SignInPage : Page<_>
 {
-    using _ = SignInPage;
+    public TextInput<_> Email { get; private set; }
 
-    public class SignInPage : Page<_>
-    {
-        public TextInput<_> Email { get; private set; }
-
-        public PasswordInput<_> Password { get; private set; }
-    }
+    public PasswordInput<_> Password { get; private set; }
 }

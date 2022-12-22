@@ -1,13 +1,12 @@
 ﻿using Atata;
 
-namespace AtataSamples.JQueryUI
-{
-    using _ = JQAutocompleteDemoPage;
+namespace AtataSamples.JQueryUI;
 
-    [Url("/resources/demos/autocomplete/default.html")]
-    public class JQAutocompleteDemoPage : PageObject<_>
-    {
-        [FindById]
-        public JQAutocomplete<_> Tags { get; private set; }
-    }
+using _ = JQAutocompleteDemoPage;
+
+[Url("/resources/demos/autocomplete/default.html")]
+public class JQAutocompleteDemoPage : PageObject<_>
+{
+    [FindById]
+    public JQAutocomplete<_> Tags { get; private set; }
 }

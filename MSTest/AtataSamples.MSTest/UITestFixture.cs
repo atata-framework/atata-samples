@@ -2,44 +2,43 @@
 using Atata;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace AtataSamples.MSTest
+namespace AtataSamples.MSTest;
+
+public class UITestFixture
 {
-    public class UITestFixture
+    public TestContext TestContext { get; set; }
+
+    [TestInitialize]
+    public void SetUp() =>
+        AtataContext.Configure()
+            .UseTestName(TestContext.TestName)
+            .LogConsumers.Add(new TextOutputLogConsumer(TestContext.WriteLine))
+            .Build();
+
+    [TestCleanup]
+    public void TearDown() =>
+        AtataContext.Current?.CleanUp();
+
+    protected static void Execute(Action action)
     {
-        public TestContext TestContext { get; set; }
-
-        [TestInitialize]
-        public void SetUp() =>
-            AtataContext.Configure()
-                .UseTestName(TestContext.TestName)
-                .LogConsumers.Add(new TextOutputLogConsumer(TestContext.WriteLine))
-                .Build();
-
-        [TestCleanup]
-        public void TearDown() =>
-            AtataContext.Current?.CleanUp();
-
-        protected static void Execute(Action action)
+        try
         {
-            try
-            {
-                action?.Invoke();
-            }
-            catch (Exception exception)
-            {
-                OnException(exception);
-                throw;
-            }
+            action?.Invoke();
         }
-
-        private static void OnException(Exception exception)
+        catch (Exception exception)
         {
-            var context = AtataContext.Current;
-
-            context.Log.Error(exception);
-
-            context.TakeScreenshot("Failed");
-            context.TakePageSnapshot("Failed");
+            OnException(exception);
+            throw;
         }
+    }
+
+    private static void OnException(Exception exception)
+    {
+        var context = AtataContext.Current;
+
+        context.Log.Error(exception);
+
+        context.TakeScreenshot("Failed");
+        context.TakePageSnapshot("Failed");
     }
 }

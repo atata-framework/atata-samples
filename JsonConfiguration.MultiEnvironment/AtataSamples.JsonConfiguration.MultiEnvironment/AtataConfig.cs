@@ -1,11 +1,10 @@
 ﻿using Atata.Configuration.Json;
 
-namespace AtataSamples.JsonConfiguration.MultiEnvironment
-{
-    public class AtataConfig : JsonConfig<AtataConfig>
-    {
-        public string AccountEmail { get; set; }
+namespace AtataSamples.JsonConfiguration.MultiEnvironment;
 
-        public string AccountPassword { get; set; }
-    }
+public class AtataConfig : JsonConfig<AtataConfig>
+{
+    public string AccountEmail { get; set; }
+
+    public string AccountPassword { get; set; }
 }

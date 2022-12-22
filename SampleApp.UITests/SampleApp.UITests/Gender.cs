@@ -1,8 +1,7 @@
-﻿namespace SampleApp.UITests
+﻿namespace SampleApp.UITests;
+
+public enum Gender
 {
-    public enum Gender
-    {
-        Male,
-        Female
-    }
+    Male,
+    Female
 }

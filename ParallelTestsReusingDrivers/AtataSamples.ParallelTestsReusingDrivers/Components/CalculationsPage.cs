@@ -1,19 +1,18 @@
 ﻿using Atata;
 
-namespace AtataSamples.ParallelTestsReusingDrivers
+namespace AtataSamples.ParallelTestsReusingDrivers;
+
+using _ = CalculationsPage;
+
+[Url("calculations")]
+public class CalculationsPage : Page<_>
 {
-    using _ = CalculationsPage;
+    [FindById]
+    public Input<int, _> AdditionValue1 { get; private set; }
 
-    [Url("calculations")]
-    public class CalculationsPage : Page<_>
-    {
-        [FindById]
-        public Input<int, _> AdditionValue1 { get; private set; }
+    [FindById]
+    public Input<int, _> AdditionValue2 { get; private set; }
 
-        [FindById]
-        public Input<int, _> AdditionValue2 { get; private set; }
-
-        [FindById]
-        public Input<int, _> AdditionResult { get; private set; }
-    }
+    [FindById]
+    public Input<int, _> AdditionResult { get; private set; }
 }

@@ -6,47 +6,46 @@ using System.Threading;
 using CsvHelper;
 using NUnit.Framework;
 
-namespace AtataSamples.CsvDataSource
+namespace AtataSamples.CsvDataSource;
+
+public static class CsvSource
 {
-    public static class CsvSource
+    public static TestCaseData[] Get<T>(string filePath, Type expectedResultType = null, string expectedResultName = "ExpectedResult")
     {
-        public static TestCaseData[] Get<T>(string filePath, Type expectedResultType = null, string expectedResultName = "ExpectedResult")
+        string completeFilePath = Path.IsPathRooted(filePath)
+            ? filePath
+            : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filePath);
+
+        using var streamReader = new StreamReader(completeFilePath);
+        using var csvReader = new CsvReader(streamReader, Thread.CurrentThread.CurrentCulture);
+
+        TestCaseData[] dataItems = csvReader.GetRecords<T>()
+            .Select(x => new TestCaseData(x))
+            .ToArray();
+
+        if (expectedResultType != null)
         {
-            string completeFilePath = Path.IsPathRooted(filePath)
-                ? filePath
-                : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filePath);
+            // Reset stream reader to beginning.
+            streamReader.BaseStream.Position = 0;
 
-            using var streamReader = new StreamReader(completeFilePath);
-            using var csvReader = new CsvReader(streamReader, Thread.CurrentThread.CurrentCulture);
+            // Read the header line.
+            csvReader.Read();
 
-            TestCaseData[] dataItems = csvReader.GetRecords<T>()
-                .Select(x => new TestCaseData(x))
-                .ToArray();
-
-            if (expectedResultType != null)
+            object[] expectedResults = GetExpectedResults(csvReader, expectedResultType, expectedResultName).ToArray();
+            for (int i = 0; i < dataItems.Length; i++)
             {
-                // Reset stream reader to beginning.
-                streamReader.BaseStream.Position = 0;
-
-                // Read the header line.
-                csvReader.Read();
-
-                object[] expectedResults = GetExpectedResults(csvReader, expectedResultType, expectedResultName).ToArray();
-                for (int i = 0; i < dataItems.Length; i++)
-                {
-                    dataItems[i].Returns(expectedResults[i]);
-                }
+                dataItems[i].Returns(expectedResults[i]);
             }
-
-            return dataItems;
         }
 
-        private static IEnumerable<object> GetExpectedResults(CsvReader csvReader, Type expectedResultType, string expectedResultName)
+        return dataItems;
+    }
+
+    private static IEnumerable<object> GetExpectedResults(CsvReader csvReader, Type expectedResultType, string expectedResultName)
+    {
+        while (csvReader.Read())
         {
-            while (csvReader.Read())
-            {
-                yield return csvReader.GetField(expectedResultType, expectedResultName);
-            }
+            yield return csvReader.GetField(expectedResultType, expectedResultName);
         }
     }
 }

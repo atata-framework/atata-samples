@@ -1,18 +1,17 @@
-﻿namespace AtataSamples.CsvDataSource
+﻿namespace AtataSamples.CsvDataSource;
+
+public class UserModel
 {
-    public class UserModel
-    {
-        public string FirstName { get; set; }
+    public string FirstName { get; set; }
 
-        public string LastName { get; set; }
+    public string LastName { get; set; }
 
-        public string Email { get; set; }
+    public string Email { get; set; }
 
-        public Office Office { get; set; }
+    public Office Office { get; set; }
 
-        public Gender Gender { get; set; }
+    public Gender Gender { get; set; }
 
-        public override string ToString() =>
-            TestParametersFormatter.Format(this);
-    }
+    public override string ToString() =>
+        TestParametersFormatter.Format(this);
 }

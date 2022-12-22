@@ -1,51 +1,50 @@
 ﻿using System.Collections.Generic;
 using Atata;
 
-namespace AtataSamples.Performance.ControlList
+namespace AtataSamples.Performance.ControlList;
+
+using _ = TableListPage;
+
+[Url("table-list")]
+public class TableListPage : Page<_>
 {
-    using _ = TableListPage;
+    public ItemsContainer Items { get; set; }
 
-    [Url("table-list")]
-    public class TableListPage : Page<_>
+    [ControlDefinition("div", ContainingClass = "table-list", ComponentTypeName = "list")]
+    public class ItemsContainer : Control<_>
     {
-        public ItemsContainer Items { get; set; }
+        [FindSettings(Visibility = Visibility.Any)]
+        public ControlList<ItemRow, _> Rows { get; private set; }
 
-        [ControlDefinition("div", ContainingClass = "table-list", ComponentTypeName = "list")]
-        public class ItemsContainer : Control<_>
+        public ValueProvider<IEnumerable<int>, _> Ids =>
+            Rows.SelectContentsByExtraXPath<int>(ItemRow.XPathTo.Id, "Ids");
+
+        public ValueProvider<IEnumerable<string>, _> Names =>
+            Rows.SelectContentsByExtraXPath(ItemRow.XPathTo.Name, "Names");
+
+        public ItemRow FindRowById(int id) =>
+            Rows.GetByXPathCondition($"Id={id}", $"{ItemRow.XPathTo.Id}[.='{id}']");
+
+        public ItemRow FindRowByIdAndName(int id, string name) =>
+            Rows.GetByXPathCondition($"Id={id} & Name={name}", $"{ItemRow.XPathTo.Id}[.='{id}'] and {ItemRow.XPathTo.Name}[.='{name}']");
+    }
+
+    public class ItemRow : TableRow<_>
+    {
+        [FindByXPath(XPathTo.Id)]
+        public Number<_> Id { get; private set; }
+
+        [FindByXPath(XPathTo.Name)]
+        public Text<_> Name { get; private set; }
+
+        [FindByClass]
+        public Text<_> Description { get; private set; }
+
+        public static class XPathTo
         {
-            [FindSettings(Visibility = Visibility.Any)]
-            public ControlList<ItemRow, _> Rows { get; private set; }
+            public const string Id = "td[contains(concat(' ', normalize-space(@class), ' '), ' id ')]";
 
-            public ValueProvider<IEnumerable<int>, _> Ids =>
-                Rows.SelectContentsByExtraXPath<int>(ItemRow.XPathTo.Id, "Ids");
-
-            public ValueProvider<IEnumerable<string>, _> Names =>
-                Rows.SelectContentsByExtraXPath(ItemRow.XPathTo.Name, "Names");
-
-            public ItemRow FindRowById(int id) =>
-                Rows.GetByXPathCondition($"Id={id}", $"{ItemRow.XPathTo.Id}[.='{id}']");
-
-            public ItemRow FindRowByIdAndName(int id, string name) =>
-                Rows.GetByXPathCondition($"Id={id} & Name={name}", $"{ItemRow.XPathTo.Id}[.='{id}'] and {ItemRow.XPathTo.Name}[.='{name}']");
-        }
-
-        public class ItemRow : TableRow<_>
-        {
-            [FindByXPath(XPathTo.Id)]
-            public Number<_> Id { get; private set; }
-
-            [FindByXPath(XPathTo.Name)]
-            public Text<_> Name { get; private set; }
-
-            [FindByClass]
-            public Text<_> Description { get; private set; }
-
-            public static class XPathTo
-            {
-                public const string Id = "td[contains(concat(' ', normalize-space(@class), ' '), ' id ')]";
-
-                public const string Name = "td[contains(concat(' ', normalize-space(@class), ' '), ' name ')]";
-            }
+            public const string Name = "td[contains(concat(' ', normalize-space(@class), ' '), ' name ')]";
         }
     }
 }

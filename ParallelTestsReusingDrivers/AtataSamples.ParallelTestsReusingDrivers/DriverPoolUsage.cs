@@ -1,9 +1,8 @@
-﻿namespace AtataSamples.ParallelTestsReusingDrivers
+﻿namespace AtataSamples.ParallelTestsReusingDrivers;
+
+public enum DriverPoolUsage
 {
-    public enum DriverPoolUsage
-    {
-        None,
-        Fixture,
-        Global
-    }
+    None,
+    Fixture,
+    Global
 }

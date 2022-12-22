@@ -1,13 +1,12 @@
 ﻿using Atata;
 using NUnit.Framework;
 
-namespace AtataSamples.MultipleBrowsersViaRunSettings
+namespace AtataSamples.MultipleBrowsersViaRunSettings;
+
+public class HomeTests : UITestFixture
 {
-    public class HomeTests : UITestFixture
-    {
-        [Test]
-        public void Home() =>
-            Go.To<HomePage>()
-                .Header.Should.Equal("Atata Sample App");
-    }
+    [Test]
+    public void Home() =>
+        Go.To<HomePage>()
+            .Header.Should.Equal("Atata Sample App");
 }

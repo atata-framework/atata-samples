@@ -1,8 +1,7 @@
-﻿namespace AtataSamples.CsvDataSource
+﻿namespace AtataSamples.CsvDataSource;
+
+public enum Gender
 {
-    public enum Gender
-    {
-        Male,
-        Female
-    }
+    Male,
+    Female
 }

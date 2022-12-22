@@ -1,10 +1,9 @@
 ﻿using Atata;
 
-namespace AtataSamples.NUnit.GenericPageTests
+namespace AtataSamples.NUnit.GenericPageTests;
+
+public interface IPageWithHeader<TPage>
+    where TPage : PageObject<TPage>, IPageWithHeader<TPage>
 {
-    public interface IPageWithHeader<TPage>
-        where TPage : PageObject<TPage>, IPageWithHeader<TPage>
-    {
-        H1<TPage> Header { get; }
-    }
+    H1<TPage> Header { get; }
 }

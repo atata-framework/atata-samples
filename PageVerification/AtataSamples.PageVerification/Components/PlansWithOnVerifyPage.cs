@@ -1,21 +1,20 @@
 ﻿using Atata;
 
-namespace AtataSamples.PageVerification
+namespace AtataSamples.PageVerification;
+
+using _ = PlansWithOnVerifyPage;
+
+[Url("plans")]
+public class PlansWithOnVerifyPage : Page<_>
 {
-    using _ = PlansWithOnVerifyPage;
+    public H1<_> Header { get; private set; }
 
-    [Url("plans")]
-    public class PlansWithOnVerifyPage : Page<_>
+    protected override void OnVerify()
     {
-        public H1<_> Header { get; private set; }
+        base.OnVerify();
 
-        protected override void OnVerify()
-        {
-            base.OnVerify();
-
-            PageTitle.Should.Equal("Plans - Atata Sample App");
-            Header.Should.Equal("Plans");
-            Content.Should.Contain("Please choose your payment plan");
-        }
+        PageTitle.Should.Equal("Plans - Atata Sample App");
+        Header.Should.Equal("Plans");
+        Content.Should.Contain("Please choose your payment plan");
     }
 }

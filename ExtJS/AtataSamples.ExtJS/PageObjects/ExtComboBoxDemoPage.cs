@@ -1,26 +1,25 @@
 ﻿using Atata;
 
-namespace AtataSamples.ExtJS
+namespace AtataSamples.ExtJS;
+
+using _ = ExtComboBoxDemoPage;
+
+[Url("https://examples.sencha.com/extjs/7.1.0/examples/kitchensink/#simple-combo")]
+public class ExtComboBoxDemoPage : PageObject<_>
 {
-    using _ = ExtComboBoxDemoPage;
+    [FindByLabel("Select State:")]
+    public ExtComboBox<_> State { get; private set; }
 
-    [Url("https://examples.sencha.com/extjs/7.1.0/examples/kitchensink/#simple-combo")]
-    public class ExtComboBoxDemoPage : PageObject<_>
+    protected override void OnInitCompleted()
     {
-        [FindByLabel("Select State:")]
-        public ExtComboBox<_> State { get; private set; }
+        base.OnInitCompleted();
 
-        protected override void OnInitCompleted()
-        {
-            base.OnInitCompleted();
+        SwitchToFirstFrame();
+    }
 
-            SwitchToFirstFrame();
-        }
-
-        private void SwitchToFirstFrame()
-        {
-            var frame = Controls.Create<Frame<_>>("Test");
-            Driver.SwitchTo().Frame(frame.Scope);
-        }
+    private void SwitchToFirstFrame()
+    {
+        var frame = Controls.Create<Frame<_>>("Test");
+        Driver.SwitchTo().Frame(frame.Scope);
     }
 }

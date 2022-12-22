@@ -1,11 +1,10 @@
 ﻿using Atata;
 
-namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments
-{
-    using _ = HomePage;
+namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments;
 
-    public class HomePage : Page<_>
-    {
-        public H1<_> Header { get; private set; }
-    }
+using _ = HomePage;
+
+public class HomePage : Page<_>
+{
+    public H1<_> Header { get; private set; }
 }

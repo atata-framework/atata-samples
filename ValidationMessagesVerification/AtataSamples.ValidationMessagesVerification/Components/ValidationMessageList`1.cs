@@ -1,21 +1,20 @@
 ﻿using Atata;
 using OpenQA.Selenium;
 
-namespace AtataSamples.ValidationMessagesVerification
+namespace AtataSamples.ValidationMessagesVerification;
+
+public class ValidationMessageList<TOwner> : AssociatedControlList<ValidationMessage<TOwner>, TOwner>
+    where TOwner : PageObject<TOwner>
 {
-    public class ValidationMessageList<TOwner> : AssociatedControlList<ValidationMessage<TOwner>, TOwner>
-        where TOwner : PageObject<TOwner>
+    protected override ValidationMessage<TOwner> CreateAssociatedControl(Control<TOwner> control)
     {
-        protected override ValidationMessage<TOwner> CreateAssociatedControl(Control<TOwner> control)
+        var validationMessageDefinition = UIComponentResolver.GetControlDefinition(typeof(ValidationMessage<TOwner>));
+
+        PlainScopeLocator scopeLocator = new PlainScopeLocator(By.XPath("ancestor::" + validationMessageDefinition.ScopeXPath))
         {
-            var validationMessageDefinition = UIComponentResolver.GetControlDefinition(typeof(ValidationMessage<TOwner>));
+            SearchContext = control.Scope
+        };
 
-            PlainScopeLocator scopeLocator = new PlainScopeLocator(By.XPath("ancestor::" + validationMessageDefinition.ScopeXPath))
-            {
-                SearchContext = control.Scope
-            };
-
-            return Component.Controls.Create<ValidationMessage<TOwner>>(control.ComponentName, scopeLocator);
-        }
+        return Component.Controls.Create<ValidationMessage<TOwner>>(control.ComponentName, scopeLocator);
     }
 }

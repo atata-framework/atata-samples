@@ -1,12 +1,11 @@
-﻿namespace AtataSamples.CsvDataSource
+﻿namespace AtataSamples.CsvDataSource;
+
+public class AdditionModel
 {
-    public class AdditionModel
-    {
-        public int Value1 { get; set; }
+    public int Value1 { get; set; }
 
-        public int Value2 { get; set; }
+    public int Value2 { get; set; }
 
-        public override string ToString() =>
-            TestParametersFormatter.Format(this);
-    }
+    public override string ToString() =>
+        TestParametersFormatter.Format(this);
 }

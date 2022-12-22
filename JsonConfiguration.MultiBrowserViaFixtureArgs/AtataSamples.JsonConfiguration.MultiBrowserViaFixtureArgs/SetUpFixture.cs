@@ -1,15 +1,14 @@
 ﻿using Atata;
 using NUnit.Framework;
 
-namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments
+namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments;
+
+[SetUpFixture]
+public class SetUpFixture
 {
-    [SetUpFixture]
-    public class SetUpFixture
-    {
-        [OneTimeSetUp]
-        public void GlobalSetUp() =>
-            AtataContext.GlobalConfiguration
-                .ApplyJsonConfig()
-                .AutoSetUpConfiguredDrivers();
-    }
+    [OneTimeSetUp]
+    public void GlobalSetUp() =>
+        AtataContext.GlobalConfiguration
+            .ApplyJsonConfig()
+            .AutoSetUpConfiguredDrivers();
 }

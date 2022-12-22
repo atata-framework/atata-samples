@@ -1,11 +1,10 @@
 ﻿using Atata;
 
-namespace AtataSamples.AppConfig
-{
-    using _ = UsersPage;
+namespace AtataSamples.AppConfig;
 
-    public class UsersPage : Page<_>
-    {
-        public H1<_> Heading { get; private set; }
-    }
+using _ = UsersPage;
+
+public class UsersPage : Page<_>
+{
+    public H1<_> Heading { get; private set; }
 }

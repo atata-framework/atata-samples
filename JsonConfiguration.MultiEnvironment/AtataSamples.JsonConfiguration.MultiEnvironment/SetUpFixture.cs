@@ -1,24 +1,23 @@
 ﻿using Atata;
 using NUnit.Framework;
 
-namespace AtataSamples.JsonConfiguration.MultiEnvironment
+namespace AtataSamples.JsonConfiguration.MultiEnvironment;
+
+[SetUpFixture]
+public class SetUpFixture
 {
-    [SetUpFixture]
-    public class SetUpFixture
+    [OneTimeSetUp]
+    public void GlobalSetUp()
     {
-        [OneTimeSetUp]
-        public void GlobalSetUp()
-        {
-            string testEnvironmentAlias = TestContext.Parameters.Get("TestEnvironment", "local");
-            string driverAlias = TestContext.Parameters.Get("DriverAlias", DriverAliases.Chrome);
+        string testEnvironmentAlias = TestContext.Parameters.Get("TestEnvironment", "local");
+        string driverAlias = TestContext.Parameters.Get("DriverAlias", DriverAliases.Chrome);
 
-            AtataContext.GlobalConfiguration
-                .ApplyJsonConfig<AtataConfig>()
-                .ApplyJsonConfig<AtataConfig>(environmentAlias: testEnvironmentAlias)
-                .AddSecretStringToMaskInLog(AtataConfig.Global.AccountPassword)
-                .UseDriver(driverAlias);
+        AtataContext.GlobalConfiguration
+            .ApplyJsonConfig<AtataConfig>()
+            .ApplyJsonConfig<AtataConfig>(environmentAlias: testEnvironmentAlias)
+            .AddSecretStringToMaskInLog(AtataConfig.Global.AccountPassword)
+            .UseDriver(driverAlias);
 
-            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
-        }
+        AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
     }
 }
