@@ -64,6 +64,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MaterialUI", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.SalesforceLightning", "SalesforceLightning\AtataSamples.SalesforceLightning\AtataSamples.SalesforceLightning.csproj", "{EA3945C9-3674-4D15-9366-7EC1D50911C1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.JsonExtendedConfiguration", "JsonExtendedConfiguration\AtataSamples.JsonExtendedConfiguration\AtataSamples.JsonExtendedConfiguration.csproj", "{7E7CAFC2-8AEE-4509-B8FC-041D56548368}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -178,6 +180,10 @@ Global
 		{EA3945C9-3674-4D15-9366-7EC1D50911C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA3945C9-3674-4D15-9366-7EC1D50911C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA3945C9-3674-4D15-9366-7EC1D50911C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E7CAFC2-8AEE-4509-B8FC-041D56548368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7CAFC2-8AEE-4509-B8FC-041D56548368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7CAFC2-8AEE-4509-B8FC-041D56548368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7CAFC2-8AEE-4509-B8FC-041D56548368}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

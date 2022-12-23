@@ -43,6 +43,11 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/master/_archives/JsonConfiguration.MultiBrowserViaFixtureArgs.zip).
 - **JSON Configuration: Multi-Environment** - [`/JsonConfiguration.MultiEnvironment`](../../tree/master/JsonConfiguration.MultiEnvironment)
   | [download](../../raw/master/_archives/JsonConfiguration.MultiEnvironment.zip).
+  Demonstrates the way to support multiple environments using JSON configuration files.
+- **JSON Extended Configuration** - [`/JsonExtendedConfiguration`](../../tree/master/JsonExtendedConfiguration)
+  | [download](../../raw/master/_archives/JsonExtendedConfiguration.zip).
+  Demonstrates the way to implement complex configuration for different environments using
+  JSON configuration files, .runsettings files, NUnit parameters, environment variables, `Microsoft.Extensions.Configuration` and user secrets.
 - **App.Config Configuration** - [`/AppConfig`](../../tree/master/AppConfig)
   | [download](../../raw/master/_archives/AppConfig.zip).
 - **Table with Row-Spanned Cells** - [`/TableWithRowSpannedCells`](../../tree/master/TableWithRowSpannedCells)
