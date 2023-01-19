@@ -121,7 +121,7 @@ public static class DriverPool
         entries.Clear();
     }
 
-    private class DriverEntry
+    private sealed class DriverEntry
     {
         public DriverEntry(string alias, IWebDriver driver)
         {

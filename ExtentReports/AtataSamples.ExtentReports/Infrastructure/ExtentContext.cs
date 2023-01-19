@@ -106,7 +106,7 @@ public class ExtentContext
         yield return htmlReporter;
     }
 
-    private class LockingConcurrentDictionary<TKey, TValue>
+    private sealed class LockingConcurrentDictionary<TKey, TValue>
     {
         private readonly ConcurrentDictionary<TKey, Lazy<TValue>> _dictionary;
 
