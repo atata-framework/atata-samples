@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Atata" Version="2.6.1" />
+    <PackageReference Include="Atata" Version="2.7.0" />
     <PackageReference Include="Atata.Configuration.Json" Version="2.2.0" />
     <PackageReference Include="Atata.WebDriverSetup" Version="2.5.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
