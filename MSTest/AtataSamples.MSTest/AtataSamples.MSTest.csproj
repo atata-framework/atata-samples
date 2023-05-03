@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Atata" Version="2.7.0" />
-    <PackageReference Include="Atata.WebDriverSetup" Version="2.5.0" />
+    <PackageReference Include="Atata.WebDriverSetup" Version="2.6.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.0.2" />
     <PackageReference Include="MSTest.TestFramework" Version="3.0.2" />
