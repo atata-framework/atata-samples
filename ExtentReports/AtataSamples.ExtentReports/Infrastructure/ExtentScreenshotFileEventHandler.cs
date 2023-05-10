@@ -17,7 +17,7 @@ public class ExtentScreenshotFileEventHandler : IEventHandler<ScreenshotFileSave
 
     private static MediaEntityModelProvider CreateMediaEntityModelProvider(string relativeFilePath, string title)
     {
-        // Locking is added because of a thread synchronization issue in ExtentReports in methods below.
+        // Locking is added because of a thread synchronization issue in ExtentReports in the method below.
         lock (s_mediaProviderSyncRoot)
             return MediaEntityBuilder.CreateScreenCaptureFromPath(relativeFilePath, title).Build();
     }

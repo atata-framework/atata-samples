@@ -42,7 +42,6 @@ public class UITestFixture
         AtataContext.Current?.CleanUp(quitDriver: !UseFixtureDriverForTests);
 
     protected virtual TPageObject BeingOn<TPageObject>()
-        where TPageObject : PageObject<TPageObject>
-        =>
+        where TPageObject : PageObject<TPageObject> =>
         Go.To<TPageObject>(navigate: false);
 }
