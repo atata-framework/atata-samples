@@ -6,7 +6,7 @@ namespace AtataSamples.MultipleBrowsersInTest;
 public class SampleTests : MultiBrowserUITestFixture
 {
     [Test]
-    public void MutipleBrowsersInTest()
+    public void MultipleBrowsersInTest()
     {
         // Navigate to "Products" page in scope of the first context's browser.
         var productsPage = Go.To<OrdinaryPage>(url: "products")

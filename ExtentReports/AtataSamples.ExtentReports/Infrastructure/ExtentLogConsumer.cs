@@ -40,7 +40,7 @@ public class ExtentLogConsumer : ILogConsumer
                         var lastLogLevel = ExtentContext.ResolveFor(eventInfo.Context)
                             .LastLogEvent.Level;
 
-                        if (lastLogLevel != LogLevel.Error && lastLogLevel != LogLevel.Warn)
+                        if (lastLogLevel is not LogLevel.Error and not LogLevel.Warn)
                             return Status.Pass;
                     }
                 }
