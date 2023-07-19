@@ -7,16 +7,12 @@ namespace AtataSamples.NetCore3.NUnit
     public class SetUpFixture
     {
         [OneTimeSetUp]
-        public void GlobalSetUp()
-        {
+        public void GlobalSetUp() =>
             AtataContext.GlobalConfiguration
                 .UseChrome()
                     .WithArguments("start-maximized")
                 .UseBaseUrl("https://demo.atata.io/")
                 .UseCulture("en-US")
                 .UseAllNUnitFeatures();
-
-            AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
-        }
     }
 }
