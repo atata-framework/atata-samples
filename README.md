@@ -69,8 +69,6 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/master/_archives/MSTest.zip).
 - **Using SpecFlow** - [`/SpecFlow`](../../tree/master/SpecFlow)
   | [download](../../raw/master/_archives/SpecFlow.zip).
-- **.NET Core 3.1 + NUnit** - [`/NetCore3.NUnit`](../../tree/master/NetCore3.NUnit)
-  | [download](../../raw/master/_archives/NetCore3.NUnit.zip).
 - **NUnit Generic Page Tests** - [`/NUnit.GenericPageTests`](../../tree/master/NUnit.GenericPageTests)
   | [download](../../raw/master/_archives/NUnit.GenericPageTests.zip).
   Demonstrates the implementation of generic NUnit tests to execute against similar pages or to perform generic checks,
