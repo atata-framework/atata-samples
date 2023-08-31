@@ -21,4 +21,10 @@ public class ComboboxPage : Page<_>
     [FindByName("progress")]
     [CloseAlertBox(TriggerEvents.AfterSet)]
     public SLCombobox<Progress, _> EnumBasedCombobox { get; private set; }
+
+    [FindById("onetrust-accept-btn-handler")]
+    public Button<_> AcceptAllCookies { get; private set; }
+
+    protected override void OnInitCompleted() =>
+        AcceptAllCookies.Click();
 }
