@@ -7,11 +7,11 @@
     <Copyright>© Yevgeniy Shunevych 2023</Copyright>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-    <AnalysisLevel>6.0-All</AnalysisLevel>
+    <AnalysisLevel>6.0-all</AnalysisLevel>
   </PropertyGroup>
 
   <ItemGroup Label="Code analysis packages">
-    <PackageReference Include="SonarAnalyzer.CSharp" Version="9.4.0.72892" PrivateAssets="All" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="9.8.0.76515" PrivateAssets="All" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.507" PrivateAssets="All" />
   </ItemGroup>
 
