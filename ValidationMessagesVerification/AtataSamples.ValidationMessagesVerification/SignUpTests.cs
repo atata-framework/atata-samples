@@ -62,7 +62,7 @@ public class SignUpTests : UITestFixture
             .ValidationMessages[x => x.Email].Should.Equal("has incorrect format")
             .Email.Type(".com")
             .SignUp.Click()
-            .ValidationMessages[x => x.Email].Should.Not.Exist();
+            .ValidationMessages[x => x.Email].Should.Not.BePresent();
 
     [Test]
     public void Validation_IncorrectEmail_UsingExtensions() =>
@@ -72,5 +72,5 @@ public class SignUpTests : UITestFixture
             .ValidationMessages[x => x.Email].Should.HaveIncorrectFormat()
             .Email.Type(".com")
             .SignUp.Click()
-            .ValidationMessages[x => x.Email].Should.Not.Exist();
+            .ValidationMessages[x => x.Email].Should.Not.BePresent();
 }

@@ -24,45 +24,44 @@ But able to find only by indices, check Approach #3 to find cells by column head
 ```cs
 using Atata;
 
-namespace AtataSamples.TableWithRowSpannedCells
+namespace AtataSamples.TableWithRowSpannedCells;
+
+using _ = TableUsingXPathPage;
+
+[Url("table-with-row-spanned-cells")]
+public class TableUsingXPathPage : Page<_>
 {
-    using _ = TableUsingXPathPage;
+    public Table<UserRow, _> Users { get; private set; }
 
-    [Url("table-with-row-spanned-cells")]
-    public class TableUsingXPathPage : Page<_>
+    public class UserRow : TableRow<_>
     {
-        public Table<UserRow, _> Users { get; private set; }
+        [FindByXPath(XPathTo.RowSpannedCell, Index = 0)]
+        public Text<_> Name { get; private set; }
 
-        public class UserRow : TableRow<_>
+        [FindByXPath(XPathTo.RowSpannedCell, Index = 2)]
+        [Format("yyyy-MM-dd")]
+        public Date<_> StartDate { get; private set; }
+
+        [FindByXPath(XPathTo.RowSpannedCell, Index = 8)]
+        public Text<_> ExpertiseLevel { get; private set; }
+
+        [FindByXPath(XPathTo.NonRowSpannedCell, Index = 0)]
+        public Text<_> Client { get; private set; }
+
+        [FindByXPath(XPathTo.NonRowSpannedCell, Index = 1)]
+        public Text<_> Project { get; private set; }
+
+        [FindByXPath(XPathTo.NonRowSpannedCell, Index = 16)]
+        public Number<_> DirectProjectCost { get; private set; }
+
+        [FindByXPath(XPathTo.RowSpannedCell, Index = 22)]
+        public Number<_> GrossMarginPercent { get; private set; }
+
+        private static class XPathTo
         {
-            [FindByXPath(XPathTo.RowSpannedCell, Index = 0)]
-            public Text<_> Name { get; private set; }
+            public const string RowSpannedCell = "(self::*[td[@rowspan]] | preceding-sibling::tr[td[@rowspan]])[last()]/td[@rowspan]";
 
-            [FindByXPath(XPathTo.RowSpannedCell, Index = 2)]
-            [Format("yyyy-MM-dd")]
-            public Date<_> StartDate { get; private set; }
-
-            [FindByXPath(XPathTo.RowSpannedCell, Index = 8)]
-            public Text<_> ExpertiseLevel { get; private set; }
-
-            [FindByXPath(XPathTo.NonRowSpannedCell, Index = 0)]
-            public Text<_> Client { get; private set; }
-
-            [FindByXPath(XPathTo.NonRowSpannedCell, Index = 1)]
-            public Text<_> Project { get; private set; }
-
-            [FindByXPath(XPathTo.NonRowSpannedCell, Index = 16)]
-            public Number<_> DirectProjectCost { get; private set; }
-
-            [FindByXPath(XPathTo.RowSpannedCell, Index = 22)]
-            public Number<_> GrossMarginPercent { get; private set; }
-
-            private static class XPathTo
-            {
-                public const string RowSpannedCell = "(self::*[td[@rowspan]] | preceding-sibling::tr[td[@rowspan]])[last()]/td[@rowspan]";
-
-                public const string NonRowSpannedCell = "td[not(@rowspan)]";
-            }
+            public const string NonRowSpannedCell = "td[not(@rowspan)]";
         }
     }
 }
@@ -80,16 +79,13 @@ Extraction gives better usability of XPath search.
 ```cs
 using Atata;
 
-namespace AtataSamples.TableWithRowSpannedCells
+namespace AtataSamples.TableWithRowSpannedCells;
+
+public class FindByRowSpannedCellIndexAttribute : FindByXPathAttribute
 {
-    public class FindByRowSpannedCellIndexAttribute : FindByXPathAttribute
-    {
-        public FindByRowSpannedCellIndexAttribute(int index)
-            : base($"(self::*[td[@rowspan]] | preceding-sibling::tr[td[@rowspan]])[last()]/td[@rowspan]")
-        {
-            Index = index;
-        }
-    }
+    public FindByRowSpannedCellIndexAttribute(int index)
+        : base($"(self::*[td[@rowspan]] | preceding-sibling::tr[td[@rowspan]])[last()]/td[@rowspan]") =>
+        Index = index;
 }
 ```
 
@@ -97,16 +93,13 @@ namespace AtataSamples.TableWithRowSpannedCells
 ```cs
 using Atata;
 
-namespace AtataSamples.TableWithRowSpannedCells
+namespace AtataSamples.TableWithRowSpannedCells;
+
+public class FindByNonRowSpannedCellIndexAttribute : FindByXPathAttribute
 {
-    public class FindByNonRowSpannedCellIndexAttribute : FindByXPathAttribute
-    {
-        public FindByNonRowSpannedCellIndexAttribute(int index)
-            : base($"td[not(@rowspan)]")
-        {
-            Index = index;
-        }
-    }
+    public FindByNonRowSpannedCellIndexAttribute(int index)
+        : base($"td[not(@rowspan)]") =>
+        Index = index;
 }
 ```
 
@@ -117,39 +110,38 @@ namespace AtataSamples.TableWithRowSpannedCells
 ```cs
 using Atata;
 
-namespace AtataSamples.TableWithRowSpannedCells
+namespace AtataSamples.TableWithRowSpannedCells;
+
+using _ = TableUsingCustomFindAttributesPage;
+
+[Url("table-with-row-spanned-cells")]
+public class TableUsingCustomFindAttributesPage : Page<_>
 {
-    using _ = TableUsingCustomFindAttributesPage;
+    public Table<UserRow, _> Users { get; private set; }
 
-    [Url("table-with-row-spanned-cells")]
-    public class TableUsingCustomFindAttributesPage : Page<_>
+    public class UserRow : TableRow<_>
     {
-        public Table<UserRow, _> Users { get; private set; }
+        [FindByRowSpannedCellIndex(0)]
+        public Text<_> Name { get; private set; }
 
-        public class UserRow : TableRow<_>
-        {
-            [FindByRowSpannedCellIndex(0)]
-            public Text<_> Name { get; private set; }
+        [FindByRowSpannedCellIndex(2)]
+        [Format("yyyy-MM-dd")]
+        public Date<_> StartDate { get; private set; }
 
-            [FindByRowSpannedCellIndex(2)]
-            [Format("yyyy-MM-dd")]
-            public Date<_> StartDate { get; private set; }
+        [FindByRowSpannedCellIndex(8)]
+        public Text<_> ExpertiseLevel { get; private set; }
 
-            [FindByRowSpannedCellIndex(8)]
-            public Text<_> ExpertiseLevel { get; private set; }
+        [FindByNonRowSpannedCellIndex(0)]
+        public Text<_> Client { get; private set; }
 
-            [FindByNonRowSpannedCellIndex(0)]
-            public Text<_> Client { get; private set; }
+        [FindByNonRowSpannedCellIndex(1)]
+        public Text<_> Project { get; private set; }
 
-            [FindByNonRowSpannedCellIndex(1)]
-            public Text<_> Project { get; private set; }
+        [FindByNonRowSpannedCellIndex(16)]
+        public Number<_> DirectProjectCost { get; private set; }
 
-            [FindByNonRowSpannedCellIndex(16)]
-            public Number<_> DirectProjectCost { get; private set; }
-
-            [FindByRowSpannedCellIndex(22)]
-            public Number<_> GrossMarginPercent { get; private set; }
-        }
+        [FindByRowSpannedCellIndex(22)]
+        public Number<_> GrossMarginPercent { get; private set; }
     }
 }
 ```
@@ -172,105 +164,102 @@ using System.Linq;
 using Atata;
 using OpenQA.Selenium;
 
-namespace AtataSamples.TableWithRowSpannedCells
+namespace AtataSamples.TableWithRowSpannedCells;
+
+public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeFindStrategy
 {
-    public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeLocateStrategy
+    protected static ConcurrentDictionary<Type, List<ColumnInfo>> TableColumnsInfoCache { get; } =
+        new ConcurrentDictionary<Type, List<ColumnInfo>>();
+
+    public string RowXPath { get; set; } = "tr";
+
+    public string HeaderCellsXPath { get; set; } = "(ancestor::table)[position() = last()]/thead//th";
+
+    public string RowWithSpannedCellsXPathCondition { get; set; } = "td[@rowspan and normalize-space(@rowspan) != '1']";
+
+    public ComponentScopeFindResult Find(ISearchContext scope, ComponentScopeFindOptions options, SearchOptions searchOptions)
     {
-        protected static ConcurrentDictionary<Type, List<ColumnInfo>> TableColumnsInfoCache { get; } =
-            new ConcurrentDictionary<Type, List<ColumnInfo>>();
+        string xPath = BuildXPath(scope, options);
 
-        public string RowXPath { get; set; } = "tr";
-
-        public string HeaderCellsXPath { get; set; } = "(ancestor::table)[position() = last()]/thead//th";
-
-        public string RowWithSpannedCellsXPathCondition { get; set; } = "td[@rowspan and normalize-space(@rowspan) != '1']";
-
-        public ComponentScopeLocateResult Find(IWebElement scope, ComponentScopeLocateOptions options, SearchOptions searchOptions)
+        if (xPath == null)
         {
-            string xPath = BuildXPath(scope, options);
-
-            if (xPath == null)
-            {
-                if (searchOptions.IsSafely)
-                    return new MissingComponentScopeLocateResult();
-                else
-                    throw ExceptionFactory.CreateForNoSuchElement(options.GetTermsAsString(), searchContext: scope);
-            }
-
-            ComponentScopeLocateOptions xPathOptions = options.Clone();
-            xPathOptions.Index = 0;
-            xPathOptions.Terms = new string[] { xPath };
-
-            return new FindByXPathStrategy().Find(scope, xPathOptions, searchOptions);
-        }
-
-        protected virtual string BuildXPath(IWebElement scope, ComponentScopeLocateOptions options)
-        {
-            List<ColumnInfo> columns = TableColumnsInfoCache.GetOrAdd(
-                options.Metadata.ParentComponentType,
-                _ => GetColumnInfoItems(scope));
-
-            ColumnInfo column = columns.
-                Where(x => options.Match.IsMatch(x.HeaderName, options.Terms)).
-                ElementAtOrDefault(options.Index ?? 0);
-
-            return column != null ? BuildXPathForCell(column, columns) : null;
-        }
-
-        protected virtual string BuildXPathForCell(ColumnInfo column, List<ColumnInfo> columns)
-        {
-            string rowSpannedCellXPathCondition = $"count(td) = {columns.Count}";
-            int columnIndex = columns.IndexOf(column);
-
-            if (column.HasRowSpan)
-            {
-                return $"(self::{RowXPath} | preceding-sibling::{RowXPath})[{rowSpannedCellXPathCondition}][last()]/td[{columnIndex + 1}]";
-            }
+            if (searchOptions.IsSafely)
+                return ComponentScopeFindResult.Missing;
             else
+                throw ElementExceptionFactory.CreateForNotFound(options.GetTermsAsString(), searchContext: scope);
+        }
+
+        var xPathOptions = options.Clone();
+        xPathOptions.Index = 0;
+        xPathOptions.Terms = new[] { xPath };
+
+        return new SubsequentComponentScopeFindResult(scope, new FindByXPathStrategy(), xPathOptions);
+    }
+
+    protected virtual string BuildXPath(ISearchContext scope, ComponentScopeFindOptions options)
+    {
+        List<ColumnInfo> columns = TableColumnsInfoCache.GetOrAdd(
+            options.Metadata.ParentComponentType,
+            _ => GetColumnInfoItems((IWebElement)scope));
+
+        ColumnInfo column = columns
+            .Where(x => options.Match.IsMatch(x.HeaderName, options.Terms))
+            .ElementAtOrDefault(options.Index ?? 0);
+
+        return column != null ? BuildXPathForCell(column, columns) : null;
+    }
+
+    protected virtual string BuildXPathForCell(ColumnInfo column, List<ColumnInfo> columns)
+    {
+        string rowSpannedCellXPathCondition = $"count(td) = {columns.Count}";
+        int columnIndex = columns.IndexOf(column);
+
+        if (column.HasRowSpan)
+        {
+            return $"(self::{RowXPath} | preceding-sibling::{RowXPath})[{rowSpannedCellXPathCondition}][last()]/td[{columnIndex + 1}]";
+        }
+        else
+        {
+            int countOfPrecedingColumnsWithoutRowSpan = columns.Take(columnIndex).Count(x => !x.HasRowSpan);
+            return $"(self::{RowXPath}[{rowSpannedCellXPathCondition}]/td[{columnIndex + 1}] | self::{RowXPath}[not({rowSpannedCellXPathCondition})]/td[{countOfPrecedingColumnsWithoutRowSpan + 1}])";
+        }
+    }
+
+    protected virtual List<ColumnInfo> GetColumnInfoItems(IWebElement row)
+    {
+        var headers = GetHeaderCells(row);
+        var cells = GetCellsOfRowWithSpannedCells(row);
+
+        return headers.Select((header, index) =>
+        {
+            string cellRowSpanValue = cells.ElementAtOrDefault(index)?.GetAttribute("rowspan")?.Trim();
+
+            return new ColumnInfo
             {
-                int countOfPrecedingColumnsWithoutRowSpan = columns.Take(columnIndex).Count(x => !x.HasRowSpan);
-                return $"(self::{RowXPath}[{rowSpannedCellXPathCondition}]/td[{columnIndex + 1}] | self::{RowXPath}[not({rowSpannedCellXPathCondition})]/td[{countOfPrecedingColumnsWithoutRowSpan + 1}])";
-            }
-        }
+                HeaderName = header.Text,
+                HasRowSpan = !string.IsNullOrEmpty(cellRowSpanValue) && cellRowSpanValue != "1"
+            };
+        }).ToList();
+    }
 
-        protected virtual List<ColumnInfo> GetColumnInfoItems(IWebElement row)
-        {
-            var headers = GetHeaderCells(row);
-            var cells = GetCellsOfRowWithSpannedCells(row);
+    private ReadOnlyCollection<IWebElement> GetHeaderCells(IWebElement row) =>
+        row.GetAll(By.XPath(HeaderCellsXPath).AtOnce().OfAnyVisibility());
 
-            return headers.Select((header, index) =>
-            {
-                string cellRowSpanValue = cells.ElementAtOrDefault(index)?.GetAttribute("rowspan")?.Trim();
+    private ReadOnlyCollection<IWebElement> GetCellsOfRowWithSpannedCells(IWebElement row)
+    {
+        ReadOnlyCollection<IWebElement> cells = row.GetAll(
+            By.XPath($"../{RowXPath}[{RowWithSpannedCellsXPathCondition}][1]/td").AtOnce().OfAnyVisibility());
 
-                return new ColumnInfo
-                {
-                    HeaderName = header.Text,
-                    HasRowSpan = !string.IsNullOrEmpty(cellRowSpanValue) && cellRowSpanValue != "1"
-                };
-            }).ToList();
-        }
+        return cells.Any()
+            ? cells
+            : row.GetAll(By.XPath("./td").AtOnce().OfAnyVisibility());
+    }
 
-        private ReadOnlyCollection<IWebElement> GetHeaderCells(IWebElement row)
-        {
-            return row.GetAll(By.XPath(HeaderCellsXPath).AtOnce().OfAnyVisibility());
-        }
+    protected class ColumnInfo
+    {
+        public string HeaderName { get; set; }
 
-        private ReadOnlyCollection<IWebElement> GetCellsOfRowWithSpannedCells(IWebElement row)
-        {
-            ReadOnlyCollection<IWebElement> cells = row.GetAll(
-                By.XPath($"../{RowXPath}[{RowWithSpannedCellsXPathCondition}][1]/td").AtOnce().OfAnyVisibility());
-
-            return cells.Any()
-                ? cells
-                : row.GetAll(By.XPath("./td").AtOnce().OfAnyVisibility());
-        }
-
-        protected class ColumnInfo
-        {
-            public string HeaderName { get; set; }
-
-            public bool HasRowSpan { get; set; }
-        }
+        public bool HasRowSpan { get; set; }
     }
 }
 ```
@@ -282,38 +271,38 @@ namespace AtataSamples.TableWithRowSpannedCells
 ```cs
 using Atata;
 
-namespace AtataSamples.TableWithRowSpannedCells
+namespace AtataSamples.TableWithRowSpannedCells;
+
+using _ = TableUsingCustomFindStrategyPage;
+
+[Url("table-with-row-spanned-cells")]
+public class TableUsingCustomFindStrategyPage : Page<_>
 {
-    using _ = TableUsingCustomFindStrategyPage;
+    public Table<UserRow, _> Users { get; private set; }
 
-    [Url("table-with-row-spanned-cells")]
-    public class TableUsingCustomFindStrategyPage : Page<_>
+    [FindSettings(
+        Strategy = typeof(FindByColumnHeaderInTableWithRowSpannedCellsStrategy),
+        TargetAttributeType = typeof(FindByColumnHeaderAttribute),
+        TargetAnyType = true)]
+    public class UserRow : TableRow<_>
     {
-        public Table<UserRow, _> Users { get; private set; }
+        public Text<_> Name { get; private set; }
 
-        [FindSettings(Strategy = typeof(FindByColumnHeaderInTableWithRowSpannedCellsStrategy),
-            TargetAttributeType = typeof(FindByColumnHeaderAttribute),
-            TargetAnyType = true)]
-        public class UserRow : TableRow<_>
-        {
-            public Text<_> Name { get; private set; }
+        [Term(TermCase.Sentence)] // Uses sentence case as the column header is "Start date".
+        [Format("yyyy-MM-dd")]
+        public Date<_> StartDate { get; private set; }
 
-            [Term(TermCase.Sentence)] // Uses sentence case as the column header is "Start date".
-            [Format("yyyy-MM-dd")]
-            public Date<_> StartDate { get; private set; }
+        public Text<_> ExpertiseLevel { get; private set; }
 
-            public Text<_> ExpertiseLevel { get; private set; }
+        public Text<_> Client { get; private set; }
 
-            public Text<_> Client { get; private set; }
+        public Text<_> Project { get; private set; }
 
-            public Text<_> Project { get; private set; }
+        [Term(TermMatch.StartsWith)] // Column header is "Direct Project Cost (BGN)". StartsWith or Format can be used.
+        public Number<_> DirectProjectCost { get; private set; }
 
-            [Term(TermMatch.StartsWith)] // Column header is "Direct Project Cost (BGN)". StartsWith or Format can be used.
-            public Number<_> DirectProjectCost { get; private set; }
-
-            [Term(Format = "{0} (BGN)")] // Column header is "Gross Margin Percent (BGN)". StartsWith or Format can be used.
-            public Number<_> GrossMarginPercent { get; private set; }
-        }
+        [Term(Format = "{0} (BGN)")] // Column header is "Gross Margin Percent (BGN)". StartsWith or Format can be used.
+        public Number<_> GrossMarginPercent { get; private set; }
     }
 }
 ```
@@ -348,7 +337,7 @@ Go.To<TableUsingXPathPage>()
 
     .Users.Rows.SelectData(x => x.DirectProjectCost).Should.EqualSequence(1693.42m, 564.47m, 2257.89m)
 
-    .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.Exist()
+    .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.BePresent()
     .Users.Rows[x => x.Name == "John Smith" && x.Client == "SomeSoft"].Project.Should.Equal("BioFruit")
     .Users.Rows[x => x.Name == "Total"].GrossMarginPercent.Should.Equal(0.36m);
 ```

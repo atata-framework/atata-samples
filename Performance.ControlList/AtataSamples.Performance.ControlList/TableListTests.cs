@@ -20,7 +20,7 @@ public class TableListTests : UITestFixture
     [Explicit("Runs slowly about 30 seconds.")]
     public void VerifyNoItemWithId_Alternative_Exist() =>
         Go.To<TableListPage>()
-            .Items.Rows[x => x.Id == 999].Should.Not.Exist();
+            .Items.Rows[x => x.Id == 999].Should.Not.BePresent();
 
     [Test]
     [Explicit("Runs slowly about 30 seconds.")]

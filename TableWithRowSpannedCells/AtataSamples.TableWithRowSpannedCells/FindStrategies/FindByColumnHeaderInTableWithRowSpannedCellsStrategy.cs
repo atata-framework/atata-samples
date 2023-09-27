@@ -28,7 +28,7 @@ public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentSc
             if (searchOptions.IsSafely)
                 return ComponentScopeFindResult.Missing;
             else
-                throw ExceptionFactory.CreateForNoSuchElement(options.GetTermsAsString(), searchContext: scope);
+                throw ElementExceptionFactory.CreateForNotFound(options.GetTermsAsString(), searchContext: scope);
         }
 
         var xPathOptions = options.Clone();

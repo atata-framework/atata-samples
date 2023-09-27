@@ -22,6 +22,6 @@ public class UserTests : UITestFixture
                     .Email.Should.Equal(email)
                     .Office.Should.Equal(office)
                     .Gender.Should.Equal(gender)
-                    .Birthday.Should.Not.Exist()
-                    .Notes.Should.Not.Exist());
+                    .Birthday.Should.Not.BePresent()
+                    .Notes.Should.Not.BePresent());
 }

@@ -33,7 +33,7 @@ public class TableWithRowSpannedCellsTests : UITestFixture
 
             .Users.Rows.SelectData(x => x.DirectProjectCost).Should.EqualSequence(1693.42m, 564.47m, 2257.89m)
 
-            .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.Exist()
+            .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.BePresent()
             .Users.Rows[x => x.Name == "John Smith" && x.Client == "SomeSoft"].Project.Should.Equal("BioFruit")
             .Users.Rows[x => x.Name == "Total"].GrossMarginPercent.Should.Equal(0.36m);
 
@@ -64,7 +64,7 @@ public class TableWithRowSpannedCellsTests : UITestFixture
 
             .Users.Rows.SelectData(x => x.DirectProjectCost).Should.EqualSequence(1693.42m, 564.47m, 2257.89m)
 
-            .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.Exist()
+            .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.BePresent()
             .Users.Rows[x => x.Name == "John Smith" && x.Client == "SomeSoft"].Project.Should.Equal("BioFruit")
             .Users.Rows[x => x.Name == "Total"].GrossMarginPercent.Should.Equal(0.36m);
 
@@ -95,7 +95,7 @@ public class TableWithRowSpannedCellsTests : UITestFixture
 
             .Users.Rows.SelectData(x => x.DirectProjectCost).Should.EqualSequence(1693.42m, 564.47m, 2257.89m)
 
-            .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.Exist()
+            .Users.Rows[x => x.Name == "John Smith" && x.Client == "Unassigned" && x.Project == "Unassigned"].Should.BePresent()
             .Users.Rows[x => x.Name == "John Smith" && x.Client == "SomeSoft"].Project.Should.Equal("BioFruit")
             .Users.Rows[x => x.Name == "Total"].GrossMarginPercent.Should.Equal(0.36m);
 }
