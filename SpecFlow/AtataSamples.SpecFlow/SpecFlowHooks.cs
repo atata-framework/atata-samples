@@ -28,6 +28,7 @@ public sealed class SpecFlowHooks
             .UseNUnitWarningReportStrategy()
             .LogNUnitError()
             .TakeScreenshotOnNUnitError()
+            .TakePageSnapshotOnNUnitError()
             .ScreenshotConsumers.AddFile();
 
         AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
@@ -36,7 +37,7 @@ public sealed class SpecFlowHooks
     [BeforeScenario]
     public void SetUpScenario() =>
         AtataContext.Configure()
-            .EventSubscriptions.Add<ScreenshotFileSavedEvent>(eventData => _outputHelper.AddAttachment(eventData.FilePath))
+            .EventSubscriptions.Add<ArtifactAddedEvent>(eventData => _outputHelper.AddAttachment(eventData.AbsoluteFilePath))
             .LogConsumers.Add(new TextOutputLogConsumer(_outputHelper.WriteLine))
             .Build();
 
