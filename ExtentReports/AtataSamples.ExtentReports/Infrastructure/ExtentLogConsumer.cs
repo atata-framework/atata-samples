@@ -25,9 +25,8 @@ public class ExtentLogConsumer : ILogConsumer
         switch (eventInfo.Level)
         {
             case LogLevel.Trace:
-                return Status.Debug;
             case LogLevel.Debug:
-                return Status.Debug;
+                return 0;
             case LogLevel.Info:
                 if (eventInfo.SectionEnd is VerificationLogSection)
                 {
@@ -40,7 +39,9 @@ public class ExtentLogConsumer : ILogConsumer
                         var lastLogLevel = ExtentContext.ResolveFor(eventInfo.Context)
                             .LastLogEvent.Level;
 
-                        if (lastLogLevel is not LogLevel.Error and not LogLevel.Warn)
+                        if (lastLogLevel is LogLevel.Error)
+                            return Status.Fail;
+                        else if (lastLogLevel is not LogLevel.Warn)
                             return Status.Pass;
                     }
                 }
@@ -49,9 +50,9 @@ public class ExtentLogConsumer : ILogConsumer
             case LogLevel.Warn:
                 return Status.Warning;
             case LogLevel.Error:
-                return Status.Fail;
+                return Status.Error;
             case LogLevel.Fatal:
-                return Status.Fatal;
+                return Status.Error;
             default:
                 throw ExceptionFactory.CreateForUnsupportedEnumValue(eventInfo.Level, $"{nameof(eventInfo)}.{nameof(LogEventInfo.Level)}");
         }

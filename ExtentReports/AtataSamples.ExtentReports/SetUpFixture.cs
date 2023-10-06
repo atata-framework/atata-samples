@@ -17,7 +17,7 @@ public class SetUpFixture
             .UseCulture("en-US")
             .UseAllNUnitFeatures()
             .ScreenshotConsumers.AddFile()
-            .EventSubscriptions.Add(new ExtentScreenshotFileEventHandler());
+            .EventSubscriptions.Add(new ExtentArtifactAddedEventHandler());
 
         AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
     }

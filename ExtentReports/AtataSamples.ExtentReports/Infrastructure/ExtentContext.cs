@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using AventStack.ExtentReports;
-using AventStack.ExtentReports.Core;
+using AventStack.ExtentReports.Listener.Entity;
 using AventStack.ExtentReports.Reporter;
 using ExtReports = AventStack.ExtentReports.ExtentReports;
 
@@ -32,6 +32,8 @@ public class ExtentContext
     public static string WorkingDirectoryPath => s_workingDirectoryPath.Value;
 
     public static string ReportTitle { get; set; } = "UI Tests Report";
+
+    public static string ReportFileName { get; set; } = "Report.html";
 
     public static ExtReports Reports => s_lazyReports.Value;
 
@@ -77,10 +79,9 @@ public class ExtentContext
 
     private static ExtReports CreateAndInitReportsInstance()
     {
-        string workingDirectoryPath = BuildWorkingDirectoryPath();
         ExtReports reports = new ExtReports();
 
-        IEnumerable<IExtentReporter> reporters = CreateReporters(workingDirectoryPath);
+        var reporters = CreateReporters(WorkingDirectoryPath);
 
         reports.AttachReporter(reporters.ToArray());
 
@@ -94,16 +95,14 @@ public class ExtentContext
             AtataContext.BuildStart.Value.ToString("yyyyMMddTHHmmss"))
         + Path.DirectorySeparatorChar;
 
-    private static IEnumerable<IExtentReporter> CreateReporters(string workingDirectoryPath)
+    private static IEnumerable<IObserver<ReportEntity>> CreateReporters(string workingDirectoryPath)
     {
-        var htmlReporter = new ExtentHtmlReporter(
-            workingDirectoryPath.EndsWith(Path.DirectorySeparatorChar)
-            ? workingDirectoryPath
-            : workingDirectoryPath + Path.DirectorySeparatorChar);
+        var sparkReporter = new ExtentSparkReporter(
+            Path.Combine(workingDirectoryPath, ReportFileName));
 
-        htmlReporter.Config.DocumentTitle = ReportTitle;
+        sparkReporter.Config.DocumentTitle = $"{ReportTitle} / {AtataContext.BuildStart.Value:yyyy-MM-dd HH:mm:ss}";
 
-        yield return htmlReporter;
+        yield return sparkReporter;
     }
 
     private sealed class LockingConcurrentDictionary<TKey, TValue>
