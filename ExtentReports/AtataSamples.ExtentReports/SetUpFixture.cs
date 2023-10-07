@@ -16,6 +16,7 @@ public class SetUpFixture
             .UseBaseUrl("https://demo.atata.io/")
             .UseCulture("en-US")
             .UseAllNUnitFeatures()
+            .LogConsumers.AddNLogFile()
             .ScreenshotConsumers.AddFile()
             .EventSubscriptions.Add(new ExtentArtifactAddedEventHandler());
 

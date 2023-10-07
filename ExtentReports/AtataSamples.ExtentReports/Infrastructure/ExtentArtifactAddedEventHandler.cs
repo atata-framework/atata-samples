@@ -3,7 +3,7 @@ using AventStack.ExtentReports.Model;
 
 namespace Atata.ExtentReports;
 
-public class ExtentArtifactAddedEventHandler : IEventHandler<ArtifactAddedEvent>
+public sealed class ExtentArtifactAddedEventHandler : IEventHandler<ArtifactAddedEvent>
 {
     private static readonly object s_mediaProviderSyncRoot = new();
 

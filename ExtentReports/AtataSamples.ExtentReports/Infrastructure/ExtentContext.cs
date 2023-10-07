@@ -10,7 +10,7 @@ using ExtReports = AventStack.ExtentReports.ExtentReports;
 
 namespace Atata.ExtentReports;
 
-public class ExtentContext
+public sealed class ExtentContext
 {
     private static readonly Lazy<string> s_workingDirectoryPath =
         new(BuildWorkingDirectoryPath);
@@ -23,8 +23,6 @@ public class ExtentContext
 
     private static readonly LockingConcurrentDictionary<(string TestSuiteName, string TestName), ExtentContext> s_testExtentContextMap =
         new(StartExtentTest);
-
-    private readonly object _nodeCreationLock = new();
 
     public ExtentContext(ExtentTest test) =>
         Test = test;
@@ -71,8 +69,7 @@ public class ExtentContext
 
         ExtentTest extentTest;
 
-        lock (testSuiteContext._nodeCreationLock)
-            extentTest = testSuiteContext.Test.CreateNode(testInfo.TestName);
+        extentTest = testSuiteContext.Test.CreateNode(testInfo.TestName);
 
         return new ExtentContext(extentTest);
     }

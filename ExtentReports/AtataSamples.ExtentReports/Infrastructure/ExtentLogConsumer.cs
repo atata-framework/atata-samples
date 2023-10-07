@@ -6,7 +6,7 @@ using AventStack.ExtentReports;
 
 namespace Atata.ExtentReports;
 
-public class ExtentLogConsumer : ILogConsumer
+public sealed class ExtentLogConsumer : ILogConsumer
 {
     public void Log(LogEventInfo eventInfo)
     {

@@ -29,7 +29,9 @@ public class UITestFixture
     public void SetUp()
     {
         var testContextBuilder = AtataContext.Configure()
-            .LogConsumers.Add<ExtentLogConsumer>();
+            .LogConsumers.Add<ExtentLogConsumer>()
+                .WithMinLevel(LogLevel.Info)
+            .EventSubscriptions.Add(new AddArtifactsToExtentReportOnCleanUpEventHandler());
 
         if (UseFixtureDriverForTests)
             testContextBuilder.UseDriver(FixtureContext.Driver);
