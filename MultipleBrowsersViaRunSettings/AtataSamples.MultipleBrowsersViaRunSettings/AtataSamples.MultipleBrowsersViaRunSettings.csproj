@@ -19,5 +19,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  
+  <ProjectExtensions><VisualStudio><UserProperties atata_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

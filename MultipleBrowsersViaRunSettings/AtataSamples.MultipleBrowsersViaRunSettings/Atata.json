@@ -11,11 +11,11 @@
       "type": "chrome",
       "alias": "chrome-headless",
       "options": {
-        "arguments": [ "headless", "window-size=1920,1080" ]
+        "arguments": [ "headless=new", "window-size=1920,1080" ]
       }
     },
     {
-      "type": "internetexplorer"
+      "type": "firefox"
     }
   ],
   "baseUrl": "https://demo.atata.io/",

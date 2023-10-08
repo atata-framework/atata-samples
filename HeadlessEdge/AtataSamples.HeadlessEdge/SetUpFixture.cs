@@ -11,7 +11,7 @@ public class SetUpFixture
     {
         AtataContext.GlobalConfiguration
             .UseEdge()
-                .WithArguments("headless", "disable-gpu", "window-size=1024,768")
+                .WithArguments("headless=new", "window-size=1024,768")
             .UseBaseUrl("https://demo.atata.io/")
             .UseCulture("en-US")
             .UseAllNUnitFeatures();
