@@ -11,6 +11,11 @@ concat
 CSS
 Ctrl
 dasherize
+deinitialization
+deinitialize
+deinitialized
+deinitializes
+deinitializing
 dropdown
 enum
 enums
@@ -31,6 +36,8 @@ multicast
 multiline
 mutex
 MVC
+nav
+navbar
 NG
 NPM
 nullable
