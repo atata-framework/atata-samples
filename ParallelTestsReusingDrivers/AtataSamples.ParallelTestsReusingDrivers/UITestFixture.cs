@@ -33,12 +33,12 @@ public class UITestFixture
     /// <seealso cref="SetUpFixture.GlobalTearDown"/>
     [TearDown]
     public void TearDown() =>
-        AtataContext.Current?.CleanUp(quitDriver: false);
+        AtataContext.Current?.Dispose();
 
     [OneTimeTearDown]
     public void TearDownFixture()
     {
         if (DriverPoolUsage == DriverPoolUsage.Fixture)
-            DriverPool.CloseAllForScope(this);
+            DriverPool.DisposeAllForScope(this);
     }
 }

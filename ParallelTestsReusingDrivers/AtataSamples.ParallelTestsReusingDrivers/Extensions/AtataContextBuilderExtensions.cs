@@ -24,9 +24,10 @@ public static class AtataContextBuilderExtensions
         IWebDriver driver = DriverPool.Acquire(driverFactory, poolScopeObject);
 
         return builder.UseDriver(driver)
-            .EventSubscriptions.Add<AtataContextCleanUpEvent>(ReleaseCurrentDriver);
+            .UseDisposeDriver(false)
+            .EventSubscriptions.Add<DriverDeInitEvent>(ReleaseCurrentDriver);
     }
 
-    private static void ReleaseCurrentDriver(AtataContextCleanUpEvent eventData) =>
-        DriverPool.Release(eventData.Context.Driver);
+    private static void ReleaseCurrentDriver(DriverDeInitEvent eventData) =>
+        DriverPool.Release(eventData.Driver);
 }

@@ -12,5 +12,5 @@ public class UITestFixture
 
     [TearDown]
     public void TearDown() =>
-        AtataContext.Current?.CleanUp();
+        AtataContext.Current?.Dispose();
 }

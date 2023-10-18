@@ -21,5 +21,5 @@ public class SetUpFixture
 
     [OneTimeTearDown]
     public void GlobalTearDown() =>
-        DriverPool.CloseAll();
+        DriverPool.DisposeAll();
 }

@@ -17,9 +17,9 @@ public class MultiBrowserUITestFixture
     protected AtataContext CreateContext()
     {
         AtataContextBuilder contextBuilder = AtataContext.Configure()
-            .EventSubscriptions.Add<AtataContextCleanUpEvent>(e => Contexts.Remove(e.Context));
+            .EventSubscriptions.Add<AtataContextDeInitCompletedEvent>(e => Contexts.Remove(e.Context));
 
-        if (AtataContext.Current != null)
+        if (AtataContext.Current is not null)
             contextBuilder.UseTestName($"{AtataContext.Current.TestName}[{Contexts.Count}]");
 
         AtataContext context = contextBuilder.Build();
@@ -48,7 +48,7 @@ public class MultiBrowserUITestFixture
     {
         foreach (var context in Contexts.ToArray())
         {
-            context.CleanUp();
+            context.Dispose();
         }
     }
 }

@@ -15,49 +15,48 @@ The base `UITestFixture` class should have additional functionality to preserve 
 ```cs
 using Atata;
 using NUnit.Framework;
-using OpenQA.Selenium.Remote;
+using OpenQA.Selenium;
 
-namespace AtataSamples.FixtureReusingDriver
+namespace AtataSamples.FixtureReusingDriver;
+
+[TestFixture]
+public class UITestFixture
 {
-    [TestFixture]
-    public class UITestFixture
+    protected virtual bool ReuseDriver => false;
+
+    protected IWebDriver PreservedDriver { get; private set; }
+
+    [OneTimeSetUp]
+    public void SetUpFixture()
     {
-        protected virtual bool ReuseDriver => false;
+        if (ReuseDriver)
+            PreservedDriver = AtataContext.GlobalConfiguration.BuildingContext.DriverFactoryToUse.Create();
+    }
 
-        protected RemoteWebDriver PreservedDriver { get; private set; }
+    [SetUp]
+    public void SetUp()
+    {
+        AtataContextBuilder contextBuilder = AtataContext.Configure();
 
-        [OneTimeSetUp]
-        public void SetUpFixture()
+        if (ReuseDriver && PreservedDriver is not null)
+            contextBuilder
+                .UseDriver(PreservedDriver)
+                .UseDisposeDriver(false);
+
+        contextBuilder.Build();
+    }
+
+    [TearDown]
+    public void TearDown() =>
+        AtataContext.Current?.Dispose();
+
+    [OneTimeTearDown]
+    public void TearDownFixture()
+    {
+        if (PreservedDriver is not null)
         {
-            if (ReuseDriver)
-                PreservedDriver = AtataContext.GlobalConfiguration.BuildingContext.DriverFactoryToUse.Create();
-        }
-
-        [SetUp]
-        public void SetUp()
-        {
-            AtataContextBuilder contextBuilder = AtataContext.Configure();
-
-            if (ReuseDriver && PreservedDriver != null)
-                contextBuilder = contextBuilder.UseDriver(PreservedDriver);
-
-            contextBuilder.Build();
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            AtataContext.Current?.CleanUp(!ReuseDriver);
-        }
-
-        [OneTimeTearDown]
-        public void TearDownFixture()
-        {
-            if (PreservedDriver != null)
-            {
-                PreservedDriver.Dispose();
-                PreservedDriver = null;
-            }
+            PreservedDriver.Dispose();
+            PreservedDriver = null;
         }
     }
 }
@@ -72,31 +71,26 @@ Driver reusing functionality is optional here and is disabled by default.
 using Atata;
 using NUnit.Framework;
 
-namespace AtataSamples.FixtureReusingDriver
+namespace AtataSamples.FixtureReusingDriver;
+
+public class PlanTests : UITestFixture
 {
-    public class PlanTests : UITestFixture
-    {
-        protected override bool ReuseDriver => true;
+    protected override bool ReuseDriver => true;
 
-        [Test]
-        public void Plans_HasCorrectHeader()
-        {
-            Go.To<PlansPage>()
-                .AggregateAssert(x => x
-                    .PageTitle.Should.StartWith("Plans")
-                    .Header.Should.Equal("Plans")
-                    .Content.Should.Contain("Please choose your payment plan"));
-        }
+    [Test]
+    public void Plans_HasCorrectHeader() =>
+        Go.To<PlansPage>()
+            .AggregateAssert(x => x
+                .PageTitle.Should.StartWith("Plans")
+                .Header.Should.Equal("Plans")
+                .Content.Should.Contain("Please choose your payment plan"));
 
-        [TestCase("Basic")]
-        [TestCase("Plus")]
-        [TestCase("Premium")]
-        public void Plans_Has(string planTitle)
-        {
-            Go.To<PlansPage>()
-                .PlanItems[x => x.Title == planTitle].Should.BeVisible();
-        }
-    }
+    [TestCase("Basic")]
+    [TestCase("Plus")]
+    [TestCase("Premium")]
+    public void Plans_Has(string planTitle) =>
+        Go.To<PlansPage>()
+            .PlanItems[x => x.Title == planTitle].Should.BeVisible();
 }
 ```
 

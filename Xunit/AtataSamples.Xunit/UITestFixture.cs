@@ -21,7 +21,7 @@ public abstract class UITestFixture : IDisposable
     }
 
     public void Dispose() =>
-        AtataContext.Current?.CleanUp();
+        AtataContext.Current?.Dispose();
 
     private static string ResolveTestName(ITestOutputHelper output)
     {

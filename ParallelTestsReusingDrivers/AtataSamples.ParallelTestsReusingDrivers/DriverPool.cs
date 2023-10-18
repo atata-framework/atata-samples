@@ -88,23 +88,23 @@ public static class DriverPool
             entry.IsAcquired = false;
     }
 
-    public static void CloseAllForScope(object poolScopeObject)
+    public static void DisposeAllForScope(object poolScopeObject)
     {
         if (s_scopedEntries.TryRemove(poolScopeObject, out var entries))
         {
-            Close(entries);
+            DisposeAndClear(entries);
         }
     }
 
-    public static void CloseAll()
+    public static void DisposeAll()
     {
         foreach (var entries in AllEntryBags)
-            Close(entries);
+            DisposeAndClear(entries);
 
         s_scopedEntries.Clear();
     }
 
-    private static void Close(ConcurrentBag<DriverEntry> entries)
+    private static void DisposeAndClear(ConcurrentBag<DriverEntry> entries)
     {
         foreach (DriverEntry entry in entries)
         {

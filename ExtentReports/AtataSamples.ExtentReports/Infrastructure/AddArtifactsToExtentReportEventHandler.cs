@@ -9,9 +9,9 @@ using AventStack.ExtentReports.MarkupUtils;
 
 namespace AtataSamples.ExtentReports;
 
-public sealed class AddArtifactsToExtentReportOnCleanUpEventHandler : IEventHandler<AtataContextCleanUpEvent>
+public sealed class AddArtifactsToExtentReportEventHandler : IEventHandler<AtataContextDeInitCompletedEvent>
 {
-    public void Handle(AtataContextCleanUpEvent eventData, AtataContext context)
+    public void Handle(AtataContextDeInitCompletedEvent eventData, AtataContext context)
     {
         DirectoryInfo directory = context.Artifacts.Object;
 
@@ -19,7 +19,7 @@ public sealed class AddArtifactsToExtentReportOnCleanUpEventHandler : IEventHand
         {
             var relativeFilePaths = directory.EnumerateFiles("*", SearchOption.AllDirectories)
                 .OrderBy(x => x.CreationTimeUtc)
-                .Select(x => x.FullName.Replace(ExtentContext.WorkingDirectoryPath, null));
+                .Select(x => x.FullName.TrimStart(ExtentContext.WorkingDirectoryPath));
 
             IMarkup markup = new ArtifactsListMarkup(relativeFilePaths);
 

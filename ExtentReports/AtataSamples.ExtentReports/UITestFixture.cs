@@ -31,17 +31,19 @@ public class UITestFixture
         var testContextBuilder = AtataContext.Configure()
             .LogConsumers.Add<ExtentLogConsumer>()
                 .WithMinLevel(LogLevel.Info)
-            .EventSubscriptions.Add(new AddArtifactsToExtentReportOnCleanUpEventHandler());
+            .EventSubscriptions.Add(new AddArtifactsToExtentReportEventHandler());
 
         if (UseFixtureDriverForTests)
-            testContextBuilder.UseDriver(FixtureContext.Driver);
+            testContextBuilder
+                .UseDriver(FixtureContext.Driver)
+                .UseDisposeDriver(false);
 
         testContextBuilder.Build();
     }
 
     [TearDown]
     public void TearDown() =>
-        AtataContext.Current?.CleanUp(quitDriver: !UseFixtureDriverForTests);
+        AtataContext.Current?.Dispose();
 
     protected virtual TPageObject BeingOn<TPageObject>()
         where TPageObject : PageObject<TPageObject> =>

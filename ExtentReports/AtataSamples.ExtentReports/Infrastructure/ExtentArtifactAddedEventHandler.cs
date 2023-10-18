@@ -11,7 +11,7 @@ public sealed class ExtentArtifactAddedEventHandler : IEventHandler<ArtifactAdde
     {
         if (eventData.ArtifactType == ArtifactTypes.Screenshot)
         {
-            string relativeFilePath = eventData.AbsoluteFilePath.Replace(ExtentContext.WorkingDirectoryPath, null);
+            string relativeFilePath = eventData.AbsoluteFilePath.TrimStart(ExtentContext.WorkingDirectoryPath);
 
             ExtentContext.ResolveFor(context).Test.Log(
                 Status.Info,

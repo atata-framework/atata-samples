@@ -26,9 +26,9 @@ public sealed class SpecFlowHooks
             .UseNUnitAssertionExceptionType()
             .UseNUnitAggregateAssertionStrategy()
             .UseNUnitWarningReportStrategy()
-            .LogNUnitError()
-            .TakeScreenshotOnNUnitError()
-            .TakePageSnapshotOnNUnitError()
+            .EventSubscriptions.LogNUnitError()
+            .EventSubscriptions.TakeScreenshotOnNUnitError()
+            .EventSubscriptions.TakePageSnapshotOnNUnitError()
             .ScreenshotConsumers.AddFile();
 
         AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
@@ -43,5 +43,5 @@ public sealed class SpecFlowHooks
 
     [AfterScenario]
     public static void TearDownScenario() =>
-        AtataContext.Current?.CleanUp();
+        AtataContext.Current?.Dispose();
 }

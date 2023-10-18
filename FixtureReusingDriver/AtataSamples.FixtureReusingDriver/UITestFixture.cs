@@ -23,20 +23,22 @@ public class UITestFixture
     {
         AtataContextBuilder contextBuilder = AtataContext.Configure();
 
-        if (ReuseDriver && PreservedDriver != null)
-            contextBuilder = contextBuilder.UseDriver(PreservedDriver);
+        if (ReuseDriver && PreservedDriver is not null)
+            contextBuilder
+                .UseDriver(PreservedDriver)
+                .UseDisposeDriver(false);
 
         contextBuilder.Build();
     }
 
     [TearDown]
     public void TearDown() =>
-        AtataContext.Current?.CleanUp(!ReuseDriver);
+        AtataContext.Current?.Dispose();
 
     [OneTimeTearDown]
     public void TearDownFixture()
     {
-        if (PreservedDriver != null)
+        if (PreservedDriver is not null)
         {
             PreservedDriver.Dispose();
             PreservedDriver = null;
