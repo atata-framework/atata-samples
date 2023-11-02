@@ -20,7 +20,7 @@ public class MultiBrowserUITestFixture
             .EventSubscriptions.Add<AtataContextDeInitCompletedEvent>(e => Contexts.Remove(e.Context));
 
         if (AtataContext.Current is not null)
-            contextBuilder.UseTestName($"{AtataContext.Current.TestName}[{Contexts.Count}]");
+            contextBuilder.UseTestName($"{AtataContext.Current.Test.Name}[{Contexts.Count}]");
 
         AtataContext context = contextBuilder.Build();
 

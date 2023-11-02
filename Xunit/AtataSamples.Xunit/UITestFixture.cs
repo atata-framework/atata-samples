@@ -50,7 +50,7 @@ public abstract class UITestFixture : IDisposable
     {
         var context = AtataContext.Current;
 
-        context.Log.Error(exception);
+        context.Log.Error(exception, null);
 
         context.TakeScreenshot("Failed");
         context.TakePageSnapshot("Failed");

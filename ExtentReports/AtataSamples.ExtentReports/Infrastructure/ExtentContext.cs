@@ -41,9 +41,9 @@ public sealed class ExtentContext
 
     public static ExtentContext ResolveFor(AtataContext context)
     {
-        string testSuiteName = context.TestSuiteName
-            ?? throw new InvalidOperationException($"{nameof(AtataContext)}.{nameof(AtataContext.TestSuiteName)} is not set and cannot be used to create Extent test.");
-        string testName = context.TestName;
+        string testSuiteName = context.Test.SuiteName
+            ?? throw new InvalidOperationException($"{nameof(AtataContext)}.{nameof(AtataContext.Test)}.{nameof(TestInfo.SuiteName)} is not set and cannot be used to create Extent test.");
+        string testName = context.Test.Name;
 
         return testName is null
             ? ResolveForTestSuite(testSuiteName)
