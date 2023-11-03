@@ -5,7 +5,7 @@ using TechTalk.SpecFlow;
 namespace AtataSamples.SpecFlow.StepDefinitions;
 
 [Binding]
-public sealed class CalculationsSteps : BaseSteps
+public sealed class CalculationsSteps : Steps
 {
     [Given(@"I am on the Calculations page")]
     public static void GivenIAmOnTheCalculationsPage() =>
@@ -13,12 +13,12 @@ public sealed class CalculationsSteps : BaseSteps
 
     [When(@"I type (.*) and (.*) to the form")]
     public static void WhenITypeArgumentsToTheForm(int argument1, int argument2) =>
-        On<CalculationsPage>()
+        Go.On<CalculationsPage>()
             .AdditionValue1.Set(argument1)
             .AdditionValue2.Set(argument2);
 
     [Then(@"I should see (.*) in result field")]
     public static void ThenIShouldSeeInResultField(int result) =>
-        On<CalculationsPage>()
+        Go.On<CalculationsPage>()
             .AdditionResult.Should.Equal(result);
 }

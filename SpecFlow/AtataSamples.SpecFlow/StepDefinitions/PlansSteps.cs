@@ -5,9 +5,9 @@ using TechTalk.SpecFlow;
 namespace AtataSamples.SpecFlow.StepDefinitions;
 
 [Binding]
-public sealed class PlansSteps : BaseSteps
+public sealed class PlansSteps : Steps
 {
     [Then(@"I verify Plans page")]
     public static void ThenIVerifyPlansPage() =>
-        On<PlansPage>().PlanItems.Count.Should.Equal(3);
+        Go.On<PlansPage>().PlanItems.Count.Should.Equal(3);
 }
