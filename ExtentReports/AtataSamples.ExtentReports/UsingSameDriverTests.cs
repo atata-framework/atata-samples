@@ -13,11 +13,11 @@ public class UsingSameDriverTests : UITestFixture
 
     [Test]
     public void Email() =>
-        BeingOn<SignInPage>()
+        Go.On<SignInPage>()
             .Email.Should.BeVisible();
 
     [Test]
     public void Password() =>
-        BeingOn<SignInPage>()
+        Go.On<SignInPage>()
             .Password.Should.BeVisible();
 }
