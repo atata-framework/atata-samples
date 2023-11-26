@@ -1,4 +1,5 @@
-﻿Feature: Common
+﻿@ReusesFeatureDriver
+Feature: Common
 
 Scenario: Navigation to Calculations page
 	Given I am on Home Page
