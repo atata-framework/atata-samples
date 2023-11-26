@@ -35,7 +35,7 @@ public class UITestFixture
 
         if (UseFixtureDriverForTests)
             testContextBuilder
-                .UseDriver(FixtureContext.Driver)
+                .UseDriver(() => FixtureContext.Driver)
                 .UseDisposeDriver(false);
 
         testContextBuilder.Build();
