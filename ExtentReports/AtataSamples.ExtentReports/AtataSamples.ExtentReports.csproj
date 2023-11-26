@@ -13,7 +13,7 @@
     <PackageReference Include="Atata.WebDriverSetup" Version="2.9.0" />
     <PackageReference Include="ExtentReports" Version="5.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
-    <PackageReference Include="NLog" Version="5.2.5" />
+    <PackageReference Include="NLog" Version="5.2.6" />
     <PackageReference Include="NUnit" Version="3.14.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
   </ItemGroup>
