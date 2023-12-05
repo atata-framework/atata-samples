@@ -31,6 +31,7 @@ public class UITestFixture
         var testContextBuilder = AtataContext.Configure()
             .LogConsumers.Add<ExtentLogConsumer>()
                 .WithMinLevel(LogLevel.Info)
+                .WithSectionEnd(LogSectionEndOption.IncludeForBlocks)
             .EventSubscriptions.Add(new AddArtifactsToExtentReportEventHandler());
 
         if (UseFixtureDriverForTests)

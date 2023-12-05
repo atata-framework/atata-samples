@@ -37,7 +37,7 @@ public class MultiBrowserUITestFixture
         int currentContextIndex = Contexts.IndexOf(AtataContext.Current);
         AtataContext.Current.Log.Info($"Switching from context #{currentContextIndex}");
 
-        AtataContext.Current = context;
+        context.SetAsCurrent();
 
         int targetContextIndex = Contexts.IndexOf(context);
         AtataContext.Current.Log.Info($"Switched to context #{targetContextIndex}");
