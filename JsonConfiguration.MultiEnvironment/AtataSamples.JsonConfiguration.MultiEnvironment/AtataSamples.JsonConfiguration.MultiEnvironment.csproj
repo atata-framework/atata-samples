@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Atata" Version="2.13.0" />
-    <PackageReference Include="Atata.Configuration.Json" Version="2.5.0" />
+    <PackageReference Include="Atata.Configuration.Json" Version="2.6.0" />
     <PackageReference Include="Atata.WebDriverSetup" Version="2.9.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="NLog" Version="5.2.7" />
