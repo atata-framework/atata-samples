@@ -37,6 +37,22 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/master/_archives/ExtentReports.zip).
   Used in **[Reporting to Extent Reports](https://atata.io/tutorials/reporting-to-extentreports/)** tutorial.
   Demonstrates the Atata reporting to [Extent Reports](https://extentreports.com/).
+- **NUnit / Basic Test Project** - [`/NUnit.BasicTestProject`](../../tree/master/NUnit.BasicTestProject)
+  | [download](../../raw/master/_archives/NUnit.BasicTestProject.zip).
+  Demonstrates a basic Atata + NUnit test project.
+- **NUnit / Advanced Test Project** - [`/NUnit.AdvancedTestProject`](../../tree/master/NUnit.AdvancedTestProject)
+  | [download](../../raw/master/_archives/NUnit.AdvancedTestProject.zip).
+  Demonstrates an advanced Atata + NUnit test project.
+- **Using Xunit** - [`/Xunit`](../../tree/master/Xunit)
+  | [download](../../raw/master/_archives/Xunit.zip).
+- **Using MSTest** - [`/MSTest`](../../tree/master/MSTest)
+  | [download](../../raw/master/_archives/MSTest.zip).
+- **Using SpecFlow** - [`/SpecFlow`](../../tree/master/SpecFlow)
+  | [download](../../raw/master/_archives/SpecFlow.zip).
+- **NUnit Generic Page Tests** - [`/NUnit.GenericPageTests`](../../tree/master/NUnit.GenericPageTests)
+  | [download](../../raw/master/_archives/NUnit.GenericPageTests.zip).
+  Demonstrates the implementation of generic NUnit tests to execute against similar pages or to perform generic checks,
+  like page title, as well as more complex workflows.
 - **Using CSV Data Source** - [`/CsvDataSource`](../../tree/master/CsvDataSource)
   | [download](../../raw/master/_archives/CsvDataSource.zip).
 - **JSON Configuration: Multi-Browser via Fixture Arguments** - [`/JsonConfiguration.MultiBrowserViaFixtureArgs`](../../tree/master/JsonConfiguration.MultiBrowserViaFixtureArgs)
@@ -63,16 +79,6 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/master/_archives/ParallelTestsReusingDrivers.zip).
   Configures Atata to use a pool of drivers for tests execution.
   After the test finishes, the driver is not closed and can be reused by one of the next tests.
-- **Using Xunit** - [`/Xunit`](../../tree/master/Xunit)
-  | [download](../../raw/master/_archives/Xunit.zip).
-- **Using MSTest** - [`/MSTest`](../../tree/master/MSTest)
-  | [download](../../raw/master/_archives/MSTest.zip).
-- **Using SpecFlow** - [`/SpecFlow`](../../tree/master/SpecFlow)
-  | [download](../../raw/master/_archives/SpecFlow.zip).
-- **NUnit Generic Page Tests** - [`/NUnit.GenericPageTests`](../../tree/master/NUnit.GenericPageTests)
-  | [download](../../raw/master/_archives/NUnit.GenericPageTests.zip).
-  Demonstrates the implementation of generic NUnit tests to execute against similar pages or to perform generic checks,
-  like page title, as well as more complex workflows.
 - **Using Headless Edge** - [`/HeadlessEdge`](../../tree/master/HeadlessEdge)
   | [download](../../raw/master/_archives/HeadlessEdge.zip).
   Configures Atata to use headless Edge browser based on Chromium.

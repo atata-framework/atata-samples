@@ -1,0 +1,36 @@
+{
+  "drivers": [
+    {
+      "type": "chrome",
+      "alias": "chrome",
+      "options": {
+        "arguments": [ "start-maximized" ],
+        "userProfilePreferences": {
+          "download.default_directory": "{artifacts}"
+        }
+      }
+    },
+    {
+      "type": "chrome",
+      "alias": "chrome-headless",
+      "options": {
+        "arguments": [ "headless=new", "window-size=1920,1080" ],
+        "userProfilePreferences": {
+          "download.default_directory": "{artifacts}"
+        }
+      }
+    }
+  ],
+  "culture": "en-US",
+  "useAllNUnitFeatures": true,
+  "logConsumers": [
+    {
+      "type": "nlog-file"
+    }
+  ],
+  "screenshotConsumers": [
+    {
+      "type": "file"
+    }
+  ]
+}

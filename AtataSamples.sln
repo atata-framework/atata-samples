@@ -64,6 +64,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.SalesforceLigh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.JsonExtendedConfiguration", "JsonExtendedConfiguration\AtataSamples.JsonExtendedConfiguration\AtataSamples.JsonExtendedConfiguration.csproj", "{7E7CAFC2-8AEE-4509-B8FC-041D56548368}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NUnit.BasicTestProject", "NUnit.BasicTestProject\AtataSamples.NUnit.BasicTestProject\AtataSamples.NUnit.BasicTestProject.csproj", "{1C3E24EB-8055-4973-A013-D42F73D8C146}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NUnit.AdvancedTestProject", "NUnit.AdvancedTestProject\AtataSamples.NUnit.AdvancedTestProject\AtataSamples.NUnit.AdvancedTestProject.csproj", "{10BD9F36-C50A-486F-A9B2-D720937EAB19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -178,6 +182,14 @@ Global
 		{7E7CAFC2-8AEE-4509-B8FC-041D56548368}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E7CAFC2-8AEE-4509-B8FC-041D56548368}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E7CAFC2-8AEE-4509-B8FC-041D56548368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C3E24EB-8055-4973-A013-D42F73D8C146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C3E24EB-8055-4973-A013-D42F73D8C146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C3E24EB-8055-4973-A013-D42F73D8C146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C3E24EB-8055-4973-A013-D42F73D8C146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10BD9F36-C50A-486F-A9B2-D720937EAB19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10BD9F36-C50A-486F-A9B2-D720937EAB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10BD9F36-C50A-486F-A9B2-D720937EAB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10BD9F36-C50A-486F-A9B2-D720937EAB19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
