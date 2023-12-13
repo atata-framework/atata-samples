@@ -69,6 +69,12 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **App.Config Configuration** - [`/AppConfig`](../../tree/master/AppConfig)
   | [download](../../raw/master/_archives/AppConfig.zip).
 
+### Cloud Platform Configuration
+
+- **SauceLabs Configuration** - [`/SauceLabs`](../../tree/master/SauceLabs)
+  Demonstrates how to configure Atata for SauceLabs.
+  | [download](../../raw/master/_archives/SauceLabs.zip).
+
 ### UI Components
 
 - **Material UI Components** - [`/MaterialUI`](../../tree/master/MaterialUI)
