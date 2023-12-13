@@ -10,6 +10,8 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 
 ## Projects
 
+### From [Atata Tutorials](https://atata.io/tutorials/)
+
 - **Workflow Test** - [`/SampleApp.UITests`](../../tree/master/SampleApp.UITests)
   | [download](../../raw/master/_archives/SampleApp.UITests.zip).
   Used in **[Atata - C# Web Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework)** introduction article.
@@ -37,6 +39,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/master/_archives/ExtentReports.zip).
   Used in **[Reporting to Extent Reports](https://atata.io/tutorials/reporting-to-extentreports/)** tutorial.
   Demonstrates the Atata reporting to [Extent Reports](https://extentreports.com/).
+
+### Test Frameworks
+
 - **NUnit / Basic Test Project** - [`/NUnit.BasicTestProject`](../../tree/master/NUnit.BasicTestProject)
   | [download](../../raw/master/_archives/NUnit.BasicTestProject.zip).
   Demonstrates a basic Atata + NUnit test project.
@@ -49,12 +54,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/master/_archives/MSTest.zip).
 - **Using SpecFlow** - [`/SpecFlow`](../../tree/master/SpecFlow)
   | [download](../../raw/master/_archives/SpecFlow.zip).
-- **NUnit Generic Page Tests** - [`/NUnit.GenericPageTests`](../../tree/master/NUnit.GenericPageTests)
-  | [download](../../raw/master/_archives/NUnit.GenericPageTests.zip).
-  Demonstrates the implementation of generic NUnit tests to execute against similar pages or to perform generic checks,
-  like page title, as well as more complex workflows.
-- **Using CSV Data Source** - [`/CsvDataSource`](../../tree/master/CsvDataSource)
-  | [download](../../raw/master/_archives/CsvDataSource.zip).
+
+### Configuration
+
 - **JSON Configuration: Multi-Browser via Fixture Arguments** - [`/JsonConfiguration.MultiBrowserViaFixtureArgs`](../../tree/master/JsonConfiguration.MultiBrowserViaFixtureArgs)
   | [download](../../raw/master/_archives/JsonConfiguration.MultiBrowserViaFixtureArgs.zip).
 - **JSON Configuration: Multi-Environment** - [`/JsonConfiguration.MultiEnvironment`](../../tree/master/JsonConfiguration.MultiEnvironment)
@@ -66,6 +68,29 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   JSON configuration files, .runsettings files, NUnit parameters, environment variables, `Microsoft.Extensions.Configuration` and user secrets.
 - **App.Config Configuration** - [`/AppConfig`](../../tree/master/AppConfig)
   | [download](../../raw/master/_archives/AppConfig.zip).
+
+### UI Components
+
+- **Material UI Components** - [`/MaterialUI`](../../tree/master/MaterialUI)
+  | [download](../../raw/master/_archives/MaterialUI.zip).
+  Demonstrates the creation of Atata custom controls using Material UI components as examples.
+- **Salesforce Lightning UI Components** - [`/SalesforceLightning`](../../tree/master/SalesforceLightning)
+  | [download](../../raw/master/_archives/SalesforceLightning.zip).
+  Demonstrates the creation of Atata custom controls using Salesforce Lightning components as examples.
+- **jQuery UI Components** - [`/JQueryUI`](../../tree/master/JQueryUI)
+  | [download](../../raw/master/_archives/JQueryUI.zip).
+  Demonstrates the creation of Atata custom controls using jQuery UI widgets as examples.
+- **Ext JS Components** - [`/ExtJS`](../../tree/master/ExtJS)
+  | [download](../../raw/master/_archives/JQueryUI.zip).
+
+### Other
+
+- **NUnit Generic Page Tests** - [`/NUnit.GenericPageTests`](../../tree/master/NUnit.GenericPageTests)
+  | [download](../../raw/master/_archives/NUnit.GenericPageTests.zip).
+  Demonstrates the implementation of generic NUnit tests to execute against similar pages or to perform generic checks,
+  like page title, as well as more complex workflows.
+- **Using CSV Data Source** - [`/CsvDataSource`](../../tree/master/CsvDataSource)
+  | [download](../../raw/master/_archives/CsvDataSource.zip).
 - **Table with Row-Spanned Cells** - [`/TableWithRowSpannedCells`](../../tree/master/TableWithRowSpannedCells)
   | [download](../../raw/master/_archives/TableWithRowSpannedCells.zip).
   Demonstrates 3 different approaches to work with table that has cells with `rowspan`.
@@ -82,17 +107,6 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Using Headless Edge** - [`/HeadlessEdge`](../../tree/master/HeadlessEdge)
   | [download](../../raw/master/_archives/HeadlessEdge.zip).
   Configures Atata to use headless Edge browser based on Chromium.
-- **Material UI Components** - [`/MaterialUI`](../../tree/master/MaterialUI)
-  | [download](../../raw/master/_archives/MaterialUI.zip).
-  Demonstrates the creation of Atata custom controls using Material UI components as examples.
-- **Salesforce Lightning UI Components** - [`/SalesforceLightning`](../../tree/master/SalesforceLightning)
-  | [download](../../raw/master/_archives/SalesforceLightning.zip).
-  Demonstrates the creation of Atata custom controls using Salesforce Lightning components as examples.
-- **jQuery UI Components** - [`/JQueryUI`](../../tree/master/JQueryUI)
-  | [download](../../raw/master/_archives/JQueryUI.zip).
-  Demonstrates the creation of Atata custom controls using jQuery UI widgets as examples.
-- **Ext JS Components** - [`/ExtJS`](../../tree/master/ExtJS)
-  | [download](../../raw/master/_archives/JQueryUI.zip).
   Demonstrates the creation of Atata custom controls using Ext JS components as examples.
 - **Multiple Browsers in Test** - [`/MultipleBrowsersInTest`](../../tree/master/MultipleBrowsersInTest)
   | [download](../../raw/master/_archives/MultipleBrowsersInTest.zip).
@@ -101,7 +115,8 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/master/_archives/DownloadFile.zip).
   Demonstrates how to configure downloads directory of Chrome and verify that file is downloaded.
 
-You are also able to clone the whole repository and open `AtataSamples.sln` that contain all sample projects.
+You are also able to clone the whole repository and open `AtataSamples.sln`,
+which contains all sample projects.
 
 ## License
 
