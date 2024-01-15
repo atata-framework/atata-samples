@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Atata" Version="2.14.1" />
-    <PackageReference Include="Atata.Bootstrap" Version="2.1.0" />
+    <PackageReference Include="Atata.Bootstrap" Version="2.2.0" />
     <PackageReference Include="Atata.WebDriverSetup" Version="2.9.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="NUnit" Version="4.0.1" />
