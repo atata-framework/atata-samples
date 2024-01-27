@@ -33,6 +33,15 @@ public sealed class ExtentContext
 
     public static string ReportFileName { get; set; } = "Report.html";
 
+    public static string AdditionalReportStyle { get; set; } =
+@" <style>
+  tr.event-row > td { vertical-align: top; font-family: ""Cascadia Mono"", Consolas, ""Courier New""; color: #222; line-height: 1.5 !important; }
+  .table-sm > tbody > tr > td, .table-sm > thead > tr > th { padding: 0.2em; }
+  .mb-3 { margin-bottom: 0 !important; }
+  .detail-body img { padding: 0; border: 1px solid #ccc; }
+ </style>
+";
+
     public static ExtReports Reports => s_lazyReports.Value;
 
     public ExtentTest Test { get; }
@@ -48,6 +57,40 @@ public sealed class ExtentContext
         return testName is null
             ? ResolveForTestSuite(testSuiteName)
             : ResolveForTest(testSuiteName, testName);
+    }
+
+    public static void Flush()
+    {
+        Reports.Flush();
+
+        AddStyleToHtmlReport();
+    }
+
+    private static void AddStyleToHtmlReport()
+    {
+        if (string.IsNullOrEmpty(AdditionalReportStyle))
+            return;
+
+        string reportFilePath = Path.Combine(WorkingDirectoryPath, ReportFileName);
+
+        try
+        {
+            if (File.Exists(reportFilePath))
+            {
+                string reportContent = File.ReadAllText(reportFilePath);
+                int headEndIndex = reportContent.IndexOf("</head>", StringComparison.Ordinal);
+
+                if (headEndIndex >= 0)
+                {
+                    string updatedReportContent = reportContent.Insert(headEndIndex, AdditionalReportStyle);
+                    File.WriteAllText(reportFilePath, updatedReportContent);
+                }
+            }
+        }
+        catch
+        {
+            // Do nothing. Not critical.
+        }
     }
 
     private static ExtentContext ResolveForTestSuite(string testSuiteName) =>
@@ -67,9 +110,7 @@ public sealed class ExtentContext
     {
         var testSuiteContext = ResolveForTestSuite(testInfo.TestSuiteName);
 
-        ExtentTest extentTest;
-
-        extentTest = testSuiteContext.Test.CreateNode(testInfo.TestName);
+        ExtentTest extentTest = testSuiteContext.Test.CreateNode(testInfo.TestName);
 
         return new ExtentContext(extentTest);
     }

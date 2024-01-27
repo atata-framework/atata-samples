@@ -25,5 +25,5 @@ public class SetUpFixture
 
     [OneTimeTearDown]
     public void GlobalTearDown() =>
-        ExtentContext.Reports.Flush();
+        ExtentContext.Flush();
 }
