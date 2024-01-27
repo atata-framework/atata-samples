@@ -1,5 +1,4 @@
 ﻿using Atata;
-using Atata.ExtentReports;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 
@@ -17,8 +16,6 @@ public class UITestFixture
     public void InitFixtureContext() =>
         FixtureContext = AtataContext.Configure()
             .UseDriverInitializationStage(AtataContextDriverInitializationStage.OnDemand)
-            .LogConsumers.Add<ExtentLogConsumer>()
-                .WithMinLevel(LogLevel.Warn)
             .Build();
 
     [OneTimeTearDown]
@@ -28,11 +25,7 @@ public class UITestFixture
     [SetUp]
     public void SetUp()
     {
-        var testContextBuilder = AtataContext.Configure()
-            .LogConsumers.Add<ExtentLogConsumer>()
-                .WithMinLevel(LogLevel.Info)
-                .WithSectionEnd(LogSectionEndOption.IncludeForBlocks)
-            .EventSubscriptions.Add(new AddArtifactsToExtentReportEventHandler());
+        var testContextBuilder = AtataContext.Configure();
 
         if (UseFixtureDriverForTests)
             testContextBuilder

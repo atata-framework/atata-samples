@@ -38,7 +38,9 @@ public sealed class ExtentContext
   tr.event-row > td { vertical-align: top; font-family: ""Cascadia Mono"", Consolas, ""Courier New""; color: #222; line-height: 1.5 !important; }
   .table-sm > tbody > tr > td, .table-sm > thead > tr > th { padding: 0.2em; }
   .mb-3 { margin-bottom: 0 !important; }
+  .mt-4 { margin-top: 0.5rem !important; }
   .detail-body img { padding: 0; border: 1px solid #ccc; }
+  .artifacts { padding-left: 2em; }
  </style>
 ";
 

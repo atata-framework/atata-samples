@@ -16,9 +16,13 @@ public class SetUpFixture
             .UseBaseUrl("https://demo.atata.io/")
             .UseCulture("en-US")
             .UseAllNUnitFeatures()
-            .LogConsumers.AddNLogFile()
             .ScreenshotConsumers.AddFile()
-            .EventSubscriptions.Add(new ExtentArtifactAddedEventHandler());
+            .LogConsumers.AddNLogFile()
+            .LogConsumers.Add<ExtentLogConsumer>()
+                .WithMinLevel(LogLevel.Info)
+                .WithSectionEnd(LogSectionEndOption.IncludeForBlocks)
+            .EventSubscriptions.Add(new ExtentArtifactAddedEventHandler())
+            .EventSubscriptions.Add(new AddArtifactsToExtentReportEventHandler());
 
         AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
     }

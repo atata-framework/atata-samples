@@ -23,12 +23,14 @@ public sealed class ExtentLogConsumer : ILogConsumer
         }
     }
 
-    // Temporary workaround to skip messages that should and will have Trace log level.
+    // Temporary workaround to skip messages that should and will have Trace/Debug log level.
     // After upgrade Atata to v3, remove this method.
     private static bool ShouldLog(LogEventInfo eventInfo) =>
         !eventInfo.Message.StartsWith("Take screenshot", StringComparison.Ordinal) &&
         !eventInfo.Message.StartsWith("Take page snapshot", StringComparison.Ordinal) &&
-        !eventInfo.Message.StartsWith("Screenshot saved to file", StringComparison.Ordinal);
+        !eventInfo.Message.StartsWith("Screenshot saved to file", StringComparison.Ordinal) &&
+        !eventInfo.Message.StartsWith("Starting test", StringComparison.Ordinal) &&
+        !eventInfo.Message.StartsWith("Finished test", StringComparison.Ordinal);
 
     private static Status ResolveLogStatus(LogEventInfo eventInfo)
     {

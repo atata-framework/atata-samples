@@ -18,11 +18,18 @@ public sealed class AddArtifactsToExtentReportEventHandler : IEventHandler<Atata
 
         if (directory.Exists)
         {
-            var relativeFilePaths = directory.EnumerateFiles("*", SearchOption.AllDirectories)
+            bool isTestContext = !string.IsNullOrEmpty(context.Test.Name);
+
+            SearchOption directorySearchOption = isTestContext
+                ? SearchOption.AllDirectories
+                : SearchOption.TopDirectoryOnly;
+            string label = isTestContext ? "Artifacts" : "Test suite artifacts";
+
+            var relativeFilePaths = directory.EnumerateFiles("*", directorySearchOption)
                 .OrderBy(x => x.CreationTimeUtc)
                 .Select(x => x.FullName.TrimStart(ExtentContext.WorkingDirectoryPath));
 
-            IMarkup markup = new ArtifactsListMarkup(relativeFilePaths);
+            IMarkup markup = new ArtifactsListMarkup(label, relativeFilePaths);
 
             ExtentContext.ResolveFor(context).Test.Log(Status.Info, markup);
         }
@@ -30,14 +37,19 @@ public sealed class AddArtifactsToExtentReportEventHandler : IEventHandler<Atata
 
     private sealed class ArtifactsListMarkup : IMarkup
     {
+        private readonly string _label;
+
         private readonly IEnumerable<string> _relativeFilePaths;
 
-        public ArtifactsListMarkup(IEnumerable<string> relativeFilePaths) =>
+        public ArtifactsListMarkup(string label, IEnumerable<string> relativeFilePaths)
+        {
+            _label = label;
             _relativeFilePaths = relativeFilePaths;
+        }
 
         public string GetMarkup()
         {
-            StringBuilder builder = new StringBuilder("<span>Artifacts:</span><ul>");
+            StringBuilder builder = new StringBuilder($"{_label}:<ul class=\"artifacts\">");
 
             foreach (string relativeFilePath in _relativeFilePaths)
             {
