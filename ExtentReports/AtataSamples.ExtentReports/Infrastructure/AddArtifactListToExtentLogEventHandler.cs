@@ -10,7 +10,7 @@ using AventStack.ExtentReports.MarkupUtils;
 
 namespace AtataSamples.ExtentReports;
 
-public sealed class AddArtifactsToExtentReportEventHandler : IEventHandler<AtataContextDeInitCompletedEvent>
+public sealed class AddArtifactListToExtentLogEventHandler : IEventHandler<AtataContextDeInitCompletedEvent>
 {
     public void Handle(AtataContextDeInitCompletedEvent eventData, AtataContext context)
     {

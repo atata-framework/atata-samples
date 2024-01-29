@@ -3,7 +3,7 @@ using AventStack.ExtentReports.Model;
 
 namespace Atata.ExtentReports;
 
-public sealed class ExtentArtifactAddedEventHandler : IEventHandler<ArtifactAddedEvent>
+public sealed class AddScreenshotToExtentLogEventHandler : IEventHandler<ArtifactAddedEvent>
 {
     public void Handle(ArtifactAddedEvent eventData, AtataContext context)
     {

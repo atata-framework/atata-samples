@@ -21,8 +21,10 @@ public class SetUpFixture
             .LogConsumers.Add<ExtentLogConsumer>()
                 .WithMinLevel(LogLevel.Info)
                 .WithSectionEnd(LogSectionEndOption.IncludeForBlocks)
-            .EventSubscriptions.Add(new ExtentArtifactAddedEventHandler())
-            .EventSubscriptions.Add(new AddArtifactsToExtentReportEventHandler());
+            .EventSubscriptions.Add(new StartExtentTestItemEventHandler())
+            .EventSubscriptions.Add(new EndExtentTestItemEventHandler())
+            .EventSubscriptions.Add(new AddScreenshotToExtentLogEventHandler())
+            .EventSubscriptions.Add(new AddArtifactListToExtentLogEventHandler());
 
         AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
     }
