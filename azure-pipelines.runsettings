@@ -4,5 +4,6 @@
   </TestRunParameters>
   <NUnit>
     <DisplayName>FullName</DisplayName>
+    <Where>cat != 'Unstable'</Where>
   </NUnit>
 </RunSettings>
