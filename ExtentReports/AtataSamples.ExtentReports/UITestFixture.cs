@@ -1,10 +1,8 @@
 ﻿using Atata;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
 
 namespace AtataSamples.ExtentReports;
 
-[TestFixture]
 [Parallelizable(ParallelScope.Fixtures)]
 public class UITestFixture
 {
