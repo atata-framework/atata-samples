@@ -12,8 +12,7 @@ public sealed class SetUpFixture
                 .WithArguments("start-maximized")
             .UseBaseUrl("https://atata.io/")
             .UseCulture("en-US")
-            .UseAllNUnitFeatures()
-            .ScreenshotConsumers.AddFile();
+            .UseAllNUnitFeatures();
 
         AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
     }

@@ -129,18 +129,14 @@ public sealed class ExtentContext
     }
 
     private static string BuildWorkingDirectoryPath() =>
-        Path.Combine(
-            AppDomain.CurrentDomain.BaseDirectory,
-            "artifacts",
-            AtataContext.BuildStart.Value.ToString("yyyyMMddTHHmmss"))
-        + Path.DirectorySeparatorChar;
+        AtataContext.GlobalProperties.ArtifactsRootPath + Path.DirectorySeparatorChar;
 
     private static IEnumerable<IObserver<ReportEntity>> CreateReporters(string workingDirectoryPath)
     {
         var sparkReporter = new ExtentSparkReporter(
             Path.Combine(workingDirectoryPath, ReportFileName));
 
-        sparkReporter.Config.DocumentTitle = $"{ReportTitle} / {AtataContext.BuildStart.Value:yyyy-MM-dd HH:mm:ss}";
+        sparkReporter.Config.DocumentTitle = $"{ReportTitle} / {AtataContext.GlobalProperties.BuildStart:yyyy-MM-dd HH:mm:ss}";
 
         yield return sparkReporter;
     }

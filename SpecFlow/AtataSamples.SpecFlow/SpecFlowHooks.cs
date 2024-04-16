@@ -23,8 +23,7 @@ public sealed class SpecFlowHooks
                 .WithArguments("start-maximized")
             .UseBaseUrl("https://demo.atata.io/")
             .UseCulture("en-US")
-            .UseSpecFlowNUnitFeatures()
-            .ScreenshotConsumers.AddFile();
+            .UseSpecFlowNUnitFeatures();
 
         AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
     }

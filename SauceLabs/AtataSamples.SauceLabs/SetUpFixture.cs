@@ -15,7 +15,6 @@ public sealed class SetUpFixture
             .UseBaseUrl("https://atata.io/")
             .UseCulture("en-US")
             .UseAllNUnitFeatures()
-            .ScreenshotConsumers.AddFile()
             .EventSubscriptions.Add<AtataContextDeInitEvent>(OnAtataContextDeInit);
 
     private static DriverOptions CreateSauceLabsDriverOptions()
@@ -30,7 +29,7 @@ public sealed class SetUpFixture
         {
             ["username"] = GetRequiredEnvironmentVariable("SAUCE_USERNAME"),
             ["accessKey"] = GetRequiredEnvironmentVariable("SAUCE_ACCESS_KEY"),
-            ["build"] = $"AtataSamples.SauceLabs / {AtataContext.BuildStartUtc:yyyyMMddTHHmmss}",
+            ["build"] = $"AtataSamples.SauceLabs / {AtataContext.GlobalProperties.BuildStart:yyyyMMddTHHmmss}",
             ["name"] = AtataContext.Current.Test.FullName
         };
 

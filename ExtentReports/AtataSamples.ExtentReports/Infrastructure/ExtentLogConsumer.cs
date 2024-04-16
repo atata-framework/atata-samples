@@ -10,27 +10,15 @@ public sealed class ExtentLogConsumer : ILogConsumer
 {
     public void Log(LogEventInfo eventInfo)
     {
-        if (ShouldLog(eventInfo))
-        {
-            Status status = ResolveLogStatus(eventInfo);
+        Status status = ResolveLogStatus(eventInfo);
 
-            string completeMessage = BuildCompleteMessage(eventInfo);
-            completeMessage = NormalizeMessage(completeMessage);
+        string completeMessage = BuildCompleteMessage(eventInfo);
+        completeMessage = NormalizeMessage(completeMessage);
 
-            ExtentContext extentContext = ExtentContext.ResolveFor(eventInfo.Context);
-            extentContext.Test.Log(status, completeMessage);
-            extentContext.LastLogEvent = eventInfo;
-        }
+        ExtentContext extentContext = ExtentContext.ResolveFor(eventInfo.Context);
+        extentContext.Test.Log(status, completeMessage);
+        extentContext.LastLogEvent = eventInfo;
     }
-
-    // Temporary workaround to skip messages that should and will have Trace/Debug log level.
-    // After upgrade Atata to v3, remove this method.
-    private static bool ShouldLog(LogEventInfo eventInfo) =>
-        !eventInfo.Message.StartsWith("Take screenshot", StringComparison.Ordinal) &&
-        !eventInfo.Message.StartsWith("Take page snapshot", StringComparison.Ordinal) &&
-        !eventInfo.Message.StartsWith("Screenshot saved to file", StringComparison.Ordinal) &&
-        !eventInfo.Message.StartsWith("Starting test", StringComparison.Ordinal) &&
-        !eventInfo.Message.StartsWith("Finished test", StringComparison.Ordinal);
 
     private static Status ResolveLogStatus(LogEventInfo eventInfo)
     {

@@ -18,7 +18,7 @@ public sealed class EndExtentTestItemEventHandler : IEventHandler<AtataContextDe
         }
     }
 
-    // TODO: Atata v3. Get status from AtataContext test info.
+    // TODO: Atata vNext. Get status from AtataContext test info.
     private static Status ResolveCurrentTestStatus() =>
         TestContext.CurrentContext.Result.Outcome.Status switch
         {

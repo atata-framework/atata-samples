@@ -27,10 +27,5 @@
     {
       "type": "nlog-file"
     }
-  ],
-  "screenshotConsumers": [
-    {
-      "type": "file"
-    }
   ]
 }
