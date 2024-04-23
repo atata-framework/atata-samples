@@ -1,10 +1,10 @@
 # [Atata Samples](https://github.com/atata-framework/atata-samples) / Fixture Reusing Driver
 
-[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://github.com/atata-framework/atata-samples/raw/master/_archives/FixtureReusingDriver.zip)
+[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://github.com/atata-framework/atata-samples/raw/main/_archives/FixtureReusingDriver.zip)
 
 Demonstrates how to configure Atata to reuse the same driver instance by the tests in a fixture.
 
-*[Download sources](https://github.com/atata-framework/atata-samples/raw/master/_archives/FixtureReusingDriver.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
+*[Download sources](https://github.com/atata-framework/atata-samples/raw/main/_archives/FixtureReusingDriver.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
 
 ## Implementation
 

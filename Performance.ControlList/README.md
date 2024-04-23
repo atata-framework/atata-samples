@@ -1,11 +1,11 @@
 # [Atata Samples](https://github.com/atata-framework/atata-samples) / Performance Practices for ControlList
 
-[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://github.com/atata-framework/atata-samples/raw/master/_archives/Performance.ControlList.zip)
+[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://github.com/atata-framework/atata-samples/raw/main/_archives/Performance.ControlList.zip)
 
 Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
 Query execution time was decreased from 60 seconds to just 0.3 seconds for a single operation in scope of entire list.
 
-*[Download sources](https://github.com/atata-framework/atata-samples/raw/master/_archives/Performance.ControlList.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
+*[Download sources](https://github.com/atata-framework/atata-samples/raw/main/_archives/Performance.ControlList.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
 
 ## Page Under Test
 
