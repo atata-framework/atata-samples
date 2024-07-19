@@ -33,15 +33,15 @@ public sealed class ExtentContext
 
     public static string ReportFileName { get; set; } = "Report.html";
 
-    public static string AdditionalReportStyle { get; set; } =
-@" <style>
+    public static string ReportAdditionalCss { get; set; } =
+@"
   tr.event-row > td { vertical-align: top; font-family: ""Cascadia Mono"", Consolas, ""Courier New""; color: #222; line-height: 1.5 !important; }
+  tr.event-row > td:nth-child(2) { color: #666; }
   .table-sm > tbody > tr > td, .table-sm > thead > tr > th { padding: 0.2em; }
   .mb-3 { margin-bottom: 0 !important; }
   .mt-4 { margin-top: 0.5rem !important; }
   .detail-body img { padding: 0; border: 1px solid #ccc; }
   .artifacts { padding-left: 2em; }
- </style>
 ";
 
     public static ExtReports Reports => s_lazyReports.Value;
@@ -61,39 +61,8 @@ public sealed class ExtentContext
             : ResolveForTest(testSuiteName, testName);
     }
 
-    public static void Flush()
-    {
+    public static void Flush() =>
         Reports.Flush();
-
-        AddStyleToHtmlReport();
-    }
-
-    private static void AddStyleToHtmlReport()
-    {
-        if (string.IsNullOrEmpty(AdditionalReportStyle))
-            return;
-
-        string reportFilePath = Path.Combine(WorkingDirectoryPath, ReportFileName);
-
-        try
-        {
-            if (File.Exists(reportFilePath))
-            {
-                string reportContent = File.ReadAllText(reportFilePath);
-                int headEndIndex = reportContent.IndexOf("</head>", StringComparison.Ordinal);
-
-                if (headEndIndex >= 0)
-                {
-                    string updatedReportContent = reportContent.Insert(headEndIndex, AdditionalReportStyle);
-                    File.WriteAllText(reportFilePath, updatedReportContent);
-                }
-            }
-        }
-        catch
-        {
-            // Do nothing. Not critical.
-        }
-    }
 
     private static ExtentContext ResolveForTestSuite(string testSuiteName) =>
         s_testSuiteExtentContextMap.GetOrAdd(testSuiteName);
@@ -137,6 +106,8 @@ public sealed class ExtentContext
             Path.Combine(workingDirectoryPath, ReportFileName));
 
         sparkReporter.Config.DocumentTitle = $"{ReportTitle} / {AtataContext.GlobalProperties.BuildStart:yyyy-MM-dd HH:mm:ss}";
+        sparkReporter.Config.TimeStampFormat = "HH:mm:ss.fff";
+        sparkReporter.Config.CSS = ReportAdditionalCss;
 
         yield return sparkReporter;
     }
