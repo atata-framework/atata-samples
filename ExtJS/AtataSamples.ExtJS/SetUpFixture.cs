@@ -12,7 +12,7 @@ public class SetUpFixture
     {
         AtataContext.GlobalConfiguration
             .UseChrome()
-                .WithArguments("start-maximized")
+                .WithArguments("start-maximized", "disable-search-engine-choice-screen")
             .UseBaseUrl("https://demo.atata.io/")
             .UseCulture("en-US")
             .UseAllNUnitFeatures()

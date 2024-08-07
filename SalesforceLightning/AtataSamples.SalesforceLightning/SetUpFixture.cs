@@ -11,7 +11,7 @@ public class SetUpFixture
     {
         AtataContext.GlobalConfiguration
             .UseChrome()
-                .WithArguments("start-maximized")
+                .WithArguments("start-maximized", "disable-search-engine-choice-screen")
             .UseBaseUrl("https://developer.salesforce.com/docs/component-library/bundle/")
             .UseCulture("en-US")
             .UseAllNUnitFeatures();

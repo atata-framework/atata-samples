@@ -9,7 +9,7 @@ public sealed class SetUpFixture
         // Find information about AtataContext configuration on https://atata.io/getting-started/#configuration
         AtataContext.GlobalConfiguration
             .UseChrome()
-                .WithArguments("start-maximized")
+                .WithArguments("start-maximized", "disable-search-engine-choice-screen")
             .UseBaseUrl("https://atata.io/")
             .UseCulture("en-US")
             .UseAllNUnitFeatures();

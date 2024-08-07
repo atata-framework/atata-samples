@@ -4,14 +4,21 @@
       "type": "chrome",
       "alias": "chrome",
       "options": {
-        "arguments": [ "start-maximized" ]
+        "arguments": [
+          "start-maximized",
+          "disable-search-engine-choice-screen"
+        ]
       }
     },
     {
       "type": "chrome",
       "alias": "chrome-headless",
       "options": {
-        "arguments": [ "headless=new", "window-size=1920,1080" ]
+        "arguments": [
+          "headless=new",
+          "window-size=1920,1080",
+          "disable-search-engine-choice-screen"
+        ]
       }
     },
     {

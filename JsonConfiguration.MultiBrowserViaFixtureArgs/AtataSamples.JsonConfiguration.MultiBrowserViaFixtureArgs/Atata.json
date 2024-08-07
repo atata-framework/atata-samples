@@ -3,7 +3,10 @@
     {
       "type": "chrome",
       "options": {
-        "arguments": [ "start-maximized" ]
+        "arguments": [
+          "start-maximized",
+          "disable-search-engine-choice-screen"
+        ]
       }
     },
     {
