@@ -12,10 +12,13 @@ public abstract class UITestFixture : IDisposable
 {
     protected UITestFixture(ITestOutputHelper output)
     {
-        string testName = ResolveTestName(output);
+        string testFullName = ResolveTestName(output);
+        Type testSuiteType = GetType();
+        string testName = testFullName.Replace(testSuiteType.FullName, null).TrimStart('.');
 
         AtataContext.Configure()
             .UseTestName(testName)
+            .UseTestSuiteType(testSuiteType)
             .LogConsumers.Add(new TextOutputLogConsumer(output.WriteLine))
             .Build();
     }
