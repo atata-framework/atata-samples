@@ -33,7 +33,7 @@ public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentSc
 
         var xPathOptions = options.Clone();
         xPathOptions.Index = 0;
-        xPathOptions.Terms = new[] { xPath };
+        xPathOptions.Terms = [xPath];
 
         return new SubsequentComponentScopeFindResult(scope, new FindByXPathStrategy(), xPathOptions);
     }

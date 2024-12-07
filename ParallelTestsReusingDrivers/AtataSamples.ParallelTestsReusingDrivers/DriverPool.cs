@@ -10,7 +10,7 @@ namespace AtataSamples.ParallelTestsReusingDrivers;
 
 public static class DriverPool
 {
-    private static readonly ConcurrentBag<DriverEntry> s_globalEntries = new();
+    private static readonly ConcurrentBag<DriverEntry> s_globalEntries = [];
 
     private static readonly ConcurrentDictionary<object, ConcurrentBag<DriverEntry>> s_scopedEntries = new();
 
@@ -71,7 +71,7 @@ public static class DriverPool
     private static ConcurrentBag<DriverEntry> ResolveEntriesBag(object poolScopeObject) =>
         poolScopeObject == null
             ? s_globalEntries
-            : s_scopedEntries.GetOrAdd(poolScopeObject, _ => new ConcurrentBag<DriverEntry>());
+            : s_scopedEntries.GetOrAdd(poolScopeObject, _ => []);
 
     private static DriverEntry CreateDriverEntry(IDriverFactory driverFactory)
     {

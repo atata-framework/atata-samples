@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Linq;
 using Atata;
 
@@ -25,10 +24,7 @@ return results;";
         {
             string componentId = DomAttributes["data-componentid"];
 
-            return new Attribute[]
-            {
-                new FindByIdAttribute($"{componentId}-picker") { ScopeSource = ScopeSource.Page }
-            };
+            return [new FindByIdAttribute($"{componentId}-picker") { ScopeSource = ScopeSource.Page }];
         });
 
     [FindFirst(OuterXPath = "parent::*/following-sibling::")]

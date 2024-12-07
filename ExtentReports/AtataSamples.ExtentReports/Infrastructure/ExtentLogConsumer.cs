@@ -6,7 +6,7 @@ using AventStack.ExtentReports;
 
 namespace Atata.ExtentReports;
 
-public sealed class ExtentLogConsumer : ILogConsumer
+public sealed partial class ExtentLogConsumer : ILogConsumer
 {
     public void Log(LogEventInfo eventInfo)
     {
@@ -70,9 +70,10 @@ public sealed class ExtentLogConsumer : ILogConsumer
         message = HttpUtility.HtmlEncode(message)
             .Replace(Environment.NewLine, "<br>");
 
-        return Regex.Replace(
-            message,
-            @"(?<=\<br\>)\s+",
-            match => string.Concat(Enumerable.Repeat("&nbsp;", match.Length)));
+        return GetNormalizeMessageLineBreakRegex()
+            .Replace(message, match => string.Concat(Enumerable.Repeat("&nbsp;", match.Length)));
     }
+
+    [GeneratedRegex(@"(?<=\<br\>)\s+")]
+    private static partial Regex GetNormalizeMessageLineBreakRegex();
 }
