@@ -40,7 +40,7 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   Used in **[Reporting to Extent Reports](https://atata.io/tutorials/reporting-to-extentreports/)** tutorial.
   Demonstrates the Atata reporting to [Extent Reports](https://extentreports.com/).
 
-### Test Frameworks
+### Test frameworks
 
 - **NUnit / Basic Test Project** - [`/NUnit.BasicTestProject`](../../tree/main/NUnit.BasicTestProject)
   | [download](../../raw/main/_archives/NUnit.BasicTestProject.zip).
@@ -69,13 +69,13 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **App.Config Configuration** - [`/AppConfig`](../../tree/main/AppConfig)
   | [download](../../raw/main/_archives/AppConfig.zip).
 
-### Cloud Platform Configuration
+### Cloud platform configuration
 
 - **SauceLabs Configuration** - [`/SauceLabs`](../../tree/main/SauceLabs)
   | [download](../../raw/main/_archives/SauceLabs.zip).
   Demonstrates how to configure Atata for SauceLabs.
 
-### UI Components
+### UI components
 
 - **Material UI Components** - [`/MaterialUI`](../../tree/main/MaterialUI)
   | [download](../../raw/main/_archives/MaterialUI.zip).
@@ -83,6 +83,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Salesforce Lightning UI Components** - [`/SalesforceLightning`](../../tree/main/SalesforceLightning)
   | [download](../../raw/main/_archives/SalesforceLightning.zip).
   Demonstrates the creation of Atata custom controls using Salesforce Lightning components as examples.
+- **DevExtreme Components** - [`/DevExtreme`](../../tree/main/DevExtreme)
+  | [download](../../raw/main/_archives/DevExtreme.zip).
+  Demonstrates the creation of Atata custom controls using DevExpress DevExtreme components as examples.
 - **jQuery UI Components** - [`/JQueryUI`](../../tree/main/JQueryUI)
   | [download](../../raw/main/_archives/JQueryUI.zip).
   Demonstrates the creation of Atata custom controls using jQuery UI widgets as examples.
