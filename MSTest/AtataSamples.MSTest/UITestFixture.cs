@@ -12,6 +12,7 @@ public class UITestFixture
     public void SetUp() =>
         AtataContext.Configure()
             .UseTestName(TestContext.TestName)
+            .UseTestSuiteType(GetType())
             .LogConsumers.Add(new TextOutputLogConsumer(TestContext.WriteLine))
             .Build();
 
