@@ -92,7 +92,7 @@ public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentSc
         ReadOnlyCollection<IWebElement> cells = row.GetAll(
             By.XPath($"../{RowXPath}[{RowWithSpannedCellsXPathCondition}][1]/td").AtOnce().OfAnyVisibility());
 
-        return cells.Any()
+        return cells.Count != 0
             ? cells
             : row.GetAll(By.XPath("./td").AtOnce().OfAnyVisibility());
     }

@@ -34,8 +34,7 @@ public static class DriverPool
     /// <returns>An <see cref="IWebDriver"/> created or taken from pool.</returns>
     public static IWebDriver Acquire(IDriverFactory driverFactory, object poolScopeObject = null)
     {
-        if (driverFactory == null)
-            throw new ArgumentNullException(nameof(driverFactory));
+        ArgumentNullException.ThrowIfNull(driverFactory);
 
         ConcurrentBag<DriverEntry> entries = ResolveEntriesBag(poolScopeObject);
 
