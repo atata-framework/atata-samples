@@ -19,9 +19,7 @@ public static class CsvSource
         using var streamReader = new StreamReader(completeFilePath);
         using var csvReader = new CsvReader(streamReader, Thread.CurrentThread.CurrentCulture);
 
-        TestCaseData[] dataItems = csvReader.GetRecords<T>()
-            .Select(x => new TestCaseData(x))
-            .ToArray();
+        TestCaseData[] dataItems = [.. csvReader.GetRecords<T>().Select(x => new TestCaseData(x))];
 
         if (expectedResultType != null)
         {
@@ -31,7 +29,7 @@ public static class CsvSource
             // Read the header line.
             csvReader.Read();
 
-            object[] expectedResults = GetExpectedResults(csvReader, expectedResultType, expectedResultName).ToArray();
+            object[] expectedResults = [.. GetExpectedResults(csvReader, expectedResultType, expectedResultName)];
             for (int i = 0; i < dataItems.Length; i++)
             {
                 dataItems[i].Returns(expectedResults[i]);

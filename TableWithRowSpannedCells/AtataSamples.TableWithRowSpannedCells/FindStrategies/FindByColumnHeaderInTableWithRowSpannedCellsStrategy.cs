@@ -72,7 +72,7 @@ public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentSc
         var headers = GetHeaderCells(row);
         var cells = GetCellsOfRowWithSpannedCells(row);
 
-        return headers.Select((header, index) =>
+        return [.. headers.Select((header, index) =>
         {
             string cellRowSpanValue = cells.ElementAtOrDefault(index)?.GetAttribute("rowspan")?.Trim();
 
@@ -81,7 +81,7 @@ public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentSc
                 HeaderName = header.Text,
                 HasRowSpan = !string.IsNullOrEmpty(cellRowSpanValue) && cellRowSpanValue != "1"
             };
-        }).ToList();
+        })];
     }
 
     private ReadOnlyCollection<IWebElement> GetHeaderCells(IWebElement row) =>

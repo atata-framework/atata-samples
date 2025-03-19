@@ -2,7 +2,6 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Listener.Entity;
 using AventStack.ExtentReports.Reporter;
@@ -92,7 +91,7 @@ public sealed class ExtentContext
 
         var reporters = CreateReporters(WorkingDirectoryPath);
 
-        reports.AttachReporter(reporters.ToArray());
+        reports.AttachReporter([.. reporters]);
 
         return reports;
     }
