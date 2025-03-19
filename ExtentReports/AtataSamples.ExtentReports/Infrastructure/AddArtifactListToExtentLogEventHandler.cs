@@ -4,11 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Atata;
-using Atata.ExtentReports;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.MarkupUtils;
 
-namespace AtataSamples.ExtentReports;
+namespace Atata.ExtentReports;
 
 public sealed class AddArtifactListToExtentLogEventHandler : IEventHandler<AtataContextDeInitCompletedEvent>
 {
