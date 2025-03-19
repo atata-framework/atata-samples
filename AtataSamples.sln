@@ -15,8 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.Xunit", "Xunit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{192E13F2-560C-4C9A-9E3E-D9DE4D97BA43}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		azure-pipelines.runsettings = azure-pipelines.runsettings
 		azure-pipelines.yml = azure-pipelines.yml
+		Directory.Build.props = Directory.Build.props
+		en-US_User.dic = en-US_User.dic
 		README.md = README.md
 	EndProjectSection
 EndProject
