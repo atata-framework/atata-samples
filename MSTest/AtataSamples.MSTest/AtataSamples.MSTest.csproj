@@ -12,8 +12,8 @@
     <PackageReference Include="Atata" Version="3.4.0" />
     <PackageReference Include="Atata.WebDriverSetup" Version="3.3.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="3.7.2" />
-    <PackageReference Include="MSTest.TestFramework" Version="3.7.2" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.8.3" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.8.3" />
   </ItemGroup>
 
 </Project>
