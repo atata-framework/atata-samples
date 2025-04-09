@@ -2,15 +2,27 @@ variables:
   buildConfiguration: 'Debug'
 
 jobs:
-- job: BuildAndRunTests
-  displayName: Build and run tests
+- job: BuildAndRunCodeAnalysis
+  displayName: Build and run code analysis
   pool:
     vmImage: windows-latest
   steps:
   - task: DotNetCoreCLI@2
-    displayName: 'Run tests'
+    displayName: Build solution with code analysis
+    inputs:
+      command: build
+      projects: '**\*.csproj'
+      arguments: -c $(buildConfiguration) -warnaserror
+
+- job: RunTests
+  displayName: Run tests
+  pool:
+    vmImage: windows-latest
+  steps:
+  - task: DotNetCoreCLI@2
+    displayName: Run tests
     timeoutInMinutes: 20
     inputs:
       command: test
       projects: '**\*.csproj'
-      arguments: -c $(buildConfiguration) -s "azure-pipelines.runsettings"
+      arguments: -c $(buildConfiguration) -s "azure-pipelines.runsettings" -p:RunAnalyzers=false
