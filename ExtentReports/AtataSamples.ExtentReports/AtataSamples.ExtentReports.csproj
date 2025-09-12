@@ -14,7 +14,7 @@
     <PackageReference Include="ExtentReports" Version="5.0.4" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageReference Include="NLog" Version="6.0.2" />
-    <PackageReference Include="NUnit" Version="4.3.2" />
+    <PackageReference Include="NUnit" Version="4.4.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
     <!-- Directly referencing System.Security.Permissions" 8.0.0,
     because ExtentReports through RazorEngine.NetCore.nixFix 1.0.1
