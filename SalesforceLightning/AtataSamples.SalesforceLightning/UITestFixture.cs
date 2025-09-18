@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.SalesforceLightning;
+﻿namespace AtataSamples.SalesforceLightning;
 
 [TestFixture]
 public class UITestFixture

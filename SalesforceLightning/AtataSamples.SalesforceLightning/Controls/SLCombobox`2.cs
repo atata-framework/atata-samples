@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.SalesforceLightning;
+﻿namespace AtataSamples.SalesforceLightning;
 
 [ControlDefinition(ComponentTypeName = "combobox")]
 public class SLCombobox<T, TOwner> : EditableField<T, TOwner>

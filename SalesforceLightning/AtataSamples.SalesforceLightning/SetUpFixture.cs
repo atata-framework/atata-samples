@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.SalesforceLightning;
+﻿namespace AtataSamples.SalesforceLightning;
 
 [SetUpFixture]
 public class SetUpFixture

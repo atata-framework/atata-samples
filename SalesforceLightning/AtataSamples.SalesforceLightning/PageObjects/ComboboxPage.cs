@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.SalesforceLightning;
+﻿namespace AtataSamples.SalesforceLightning;
 
 using _ = ComboboxPage;
 
