@@ -1,8 +1,4 @@
-﻿using Atata;
-using Xunit;
-using Xunit.Abstractions;
-
-namespace AtataSamples.Xunit;
+﻿namespace AtataSamples.Xunit;
 
 public class SampleTests : UITestFixture
 {

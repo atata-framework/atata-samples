@@ -1,11 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using Atata;
-using Xunit;
-using Xunit.Abstractions;
-
-namespace AtataSamples.Xunit;
+﻿namespace AtataSamples.Xunit;
 
 [Collection(AtataSetUpCollection.Name)]
 public abstract class UITestFixture : IDisposable

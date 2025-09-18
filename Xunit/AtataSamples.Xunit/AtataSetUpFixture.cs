@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.Xunit;
+﻿namespace AtataSamples.Xunit;
 
 public class AtataSetUpFixture
 {

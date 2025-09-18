@@ -1,6 +1,4 @@
-﻿using Xunit;
-
-namespace AtataSamples.Xunit;
+﻿namespace AtataSamples.Xunit;
 
 [CollectionDefinition(Name)]
 public class AtataSetUpCollection : ICollectionFixture<AtataSetUpFixture>
