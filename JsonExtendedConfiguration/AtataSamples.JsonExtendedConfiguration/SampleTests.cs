@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.JsonExtendedConfiguration;
+﻿namespace AtataSamples.JsonExtendedConfiguration;
 
 public class SampleTests : UITestFixture
 {

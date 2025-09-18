@@ -1,6 +1,4 @@
-﻿using Atata.Configuration.Json;
-
-namespace AtataSamples.JsonExtendedConfiguration;
+﻿namespace AtataSamples.JsonExtendedConfiguration;
 
 public class AtataConfig : JsonConfig<AtataConfig>
 {

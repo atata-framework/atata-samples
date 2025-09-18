@@ -1,7 +1,4 @@
-﻿using System;
-using Atata;
-using Microsoft.Extensions.Configuration;
-using NUnit.Framework;
+﻿using Microsoft.Extensions.Configuration;
 
 namespace AtataSamples.JsonExtendedConfiguration;
 
