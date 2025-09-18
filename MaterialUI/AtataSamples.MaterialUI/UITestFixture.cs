@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.MaterialUI;
+﻿namespace AtataSamples.MaterialUI;
 
 [TestFixture]
 public class UITestFixture

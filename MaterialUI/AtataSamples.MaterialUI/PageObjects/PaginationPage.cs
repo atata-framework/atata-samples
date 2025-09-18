@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.MaterialUI;
+﻿namespace AtataSamples.MaterialUI;
 
 using _ = PaginationPage;
 

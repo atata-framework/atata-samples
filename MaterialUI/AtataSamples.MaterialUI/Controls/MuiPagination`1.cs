@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.MaterialUI;
+﻿namespace AtataSamples.MaterialUI;
 
 [ControlDefinition(ContainingClass = "MuiPagination-root", ComponentTypeName = "pagination")]
 public class MuiPagination<TOwner> : Control<TOwner>
