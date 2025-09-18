@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.DownloadFile;
+﻿namespace AtataSamples.DownloadFile;
 
 using _ = TutorialPage;
 

@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.DownloadFile;
+﻿namespace AtataSamples.DownloadFile;
 
 [SetUpFixture]
 public class SetUpFixture
