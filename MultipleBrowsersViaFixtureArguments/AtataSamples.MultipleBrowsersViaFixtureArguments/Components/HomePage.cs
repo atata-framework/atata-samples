@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.MultipleBrowsersViaFixtureArguments;
+﻿namespace AtataSamples.MultipleBrowsersViaFixtureArguments;
 
 using _ = HomePage;
 

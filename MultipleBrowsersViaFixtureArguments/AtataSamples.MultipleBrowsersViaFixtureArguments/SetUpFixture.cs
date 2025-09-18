@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.MultipleBrowsersViaFixtureArguments;
+﻿namespace AtataSamples.MultipleBrowsersViaFixtureArguments;
 
 [SetUpFixture]
 public class SetUpFixture
