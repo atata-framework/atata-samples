@@ -1,8 +1,4 @@
-﻿using System;
-using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.ExtJS;
+﻿namespace AtataSamples.ExtJS;
 
 [SetUpFixture]
 public class SetUpFixture

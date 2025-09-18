@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.ExtJS;
+﻿namespace AtataSamples.ExtJS;
 
 using _ = ExtComboBoxDemoPage;
 

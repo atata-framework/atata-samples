@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Linq;
-using Atata;
-
-namespace AtataSamples.ExtJS;
+﻿namespace AtataSamples.ExtJS;
 
 [ControlDefinition("input[@role='combobox']", ContainingClass = "x-form-text", ComponentTypeName = "combo box")]
 public class ExtComboBox<TOwner> : Input<string, TOwner>
@@ -10,14 +6,14 @@ public class ExtComboBox<TOwner> : Input<string, TOwner>
 {
     private const string ScriptToGetOptionValues =
         """
-var component = Ext.getCmp(arguments[0].getAttribute('data-componentid'));
-var displayField = component.displayField;
-var dataItems = component.store.data.items;
+        var component = Ext.getCmp(arguments[0].getAttribute('data-componentid'));
+        var displayField = component.displayField;
+        var dataItems = component.store.data.items;
 
-var results = [];
-for (var i = 0; i < dataItems.length; i++) {
-  results.push(dataItems[i].data[displayField]);
-}
+        var results = [];
+        for (var i = 0; i < dataItems.length; i++) {
+          results.push(dataItems[i].data[displayField]);
+        }
         return results;
         """;
 
