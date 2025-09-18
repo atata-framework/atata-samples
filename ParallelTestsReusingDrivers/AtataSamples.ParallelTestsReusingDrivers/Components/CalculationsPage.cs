@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.ParallelTestsReusingDrivers;
+﻿namespace AtataSamples.ParallelTestsReusingDrivers;
 
 using _ = CalculationsPage;
 

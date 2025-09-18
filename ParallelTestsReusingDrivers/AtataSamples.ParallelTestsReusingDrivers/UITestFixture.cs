@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.ParallelTestsReusingDrivers;
+﻿namespace AtataSamples.ParallelTestsReusingDrivers;
 
 [TestFixture]
 [Parallelizable(ParallelScope.All)]
@@ -10,8 +7,6 @@ public class UITestFixture
     protected virtual DriverPoolUsage DriverPoolUsage =>
         DriverPoolUsage.None;
 
-    /// <summary>Sets up test a test.</summary>
-    /// <seealso cref="SetUpFixture.GlobalSetUp"/>
     [SetUp]
     public void SetUp() =>
         ConfigureAtataContext(AtataContext.Configure())
@@ -27,10 +22,6 @@ public class UITestFixture
             return builder;
     }
 
-    /// <summary>
-    /// Tears down a test.
-    /// </summary>
-    /// <seealso cref="SetUpFixture.GlobalTearDown"/>
     [TearDown]
     public void TearDown() =>
         AtataContext.Current?.Dispose();

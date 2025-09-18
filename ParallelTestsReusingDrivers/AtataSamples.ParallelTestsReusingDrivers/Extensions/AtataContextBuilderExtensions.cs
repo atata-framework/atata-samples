@@ -1,7 +1,4 @@
-﻿using Atata;
-using OpenQA.Selenium;
-
-namespace AtataSamples.ParallelTestsReusingDrivers;
+﻿namespace AtataSamples.ParallelTestsReusingDrivers;
 
 public static class AtataContextBuilderExtensions
 {

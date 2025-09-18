@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.ParallelTestsReusingDrivers;
+﻿namespace AtataSamples.ParallelTestsReusingDrivers;
 
 [SetUpFixture]
 public class SetUpFixture
