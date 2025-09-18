@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using Atata;
-using NUnit.Framework;
-using NUnit.Framework.Internal;
-
-namespace AtataSamples.MultipleBrowsersInTest;
+﻿namespace AtataSamples.MultipleBrowsersInTest;
 
 [TestFixture]
 public class MultiBrowserUITestFixture

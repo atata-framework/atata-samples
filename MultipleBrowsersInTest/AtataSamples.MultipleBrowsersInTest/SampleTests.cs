@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.MultipleBrowsersInTest;
+﻿namespace AtataSamples.MultipleBrowsersInTest;
 
 public class SampleTests : MultiBrowserUITestFixture
 {
