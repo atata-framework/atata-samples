@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.TableWithRowSpannedCells;
+﻿namespace AtataSamples.TableWithRowSpannedCells;
 
 using _ = TableUsingXPathPage;
 

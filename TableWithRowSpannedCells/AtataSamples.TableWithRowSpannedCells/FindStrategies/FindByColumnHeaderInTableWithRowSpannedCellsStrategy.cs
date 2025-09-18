@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using Atata;
-using OpenQA.Selenium;
-
-namespace AtataSamples.TableWithRowSpannedCells;
+﻿namespace AtataSamples.TableWithRowSpannedCells;
 
 public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeFindStrategy
 {

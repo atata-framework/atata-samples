@@ -1,8 +1,4 @@
-﻿using System;
-using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.TableWithRowSpannedCells;
+﻿namespace AtataSamples.TableWithRowSpannedCells;
 
 public class TableWithRowSpannedCellsTests : UITestFixture
 {
