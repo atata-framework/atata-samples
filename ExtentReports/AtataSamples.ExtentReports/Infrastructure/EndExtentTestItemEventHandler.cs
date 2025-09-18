@@ -1,6 +1,4 @@
-﻿using System;
-using AventStack.ExtentReports;
-using NUnit.Framework;
+﻿using AventStack.ExtentReports;
 using NUnit.Framework.Interfaces;
 
 namespace Atata.ExtentReports;

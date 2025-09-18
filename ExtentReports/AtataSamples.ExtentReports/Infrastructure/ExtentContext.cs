@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.IO;
-using AventStack.ExtentReports;
+﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Listener.Entity;
 using AventStack.ExtentReports.Reporter;
 using ExtReports = AventStack.ExtentReports.ExtentReports;

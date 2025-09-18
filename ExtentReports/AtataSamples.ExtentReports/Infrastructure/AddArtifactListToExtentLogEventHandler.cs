@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using Atata;
+﻿using System.Text;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.MarkupUtils;
 
@@ -48,7 +43,7 @@ public sealed class AddArtifactListToExtentLogEventHandler : IEventHandler<Atata
 
         public string GetMarkup()
         {
-            StringBuilder builder = new StringBuilder($"{_label}:<ul class=\"artifacts\">");
+            StringBuilder builder = new($"{_label}:<ul class=\"artifacts\">");
 
             foreach (string relativeFilePath in _relativeFilePaths)
             {
