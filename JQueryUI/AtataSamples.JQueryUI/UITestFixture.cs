@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.JQueryUI;
+﻿namespace AtataSamples.JQueryUI;
 
 [TestFixture]
 public class UITestFixture

@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.JQueryUI;
+﻿namespace AtataSamples.JQueryUI;
 
 using _ = JQAutocompleteDemoPage;
 

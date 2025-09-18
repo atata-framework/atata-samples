@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.JQueryUI;
+﻿namespace AtataSamples.JQueryUI;
 
 [ControlDefinition("input", ContainingClass = "ui-autocomplete-input", ComponentTypeName = "autocomplete")]
 public class JQAutocomplete<TOwner> : Input<string, TOwner>
