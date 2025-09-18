@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.NUnit.GenericPageTests;
+﻿namespace AtataSamples.NUnit.GenericPageTests;
 
 [TestFixture]
 [Parallelizable(ParallelScope.All)]

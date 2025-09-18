@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.NUnit.GenericPageTests;
+﻿namespace AtataSamples.NUnit.GenericPageTests;
 
 using _ = SignInPage;
 

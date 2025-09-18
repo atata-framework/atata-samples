@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.NUnit.GenericPageTests;
+﻿namespace AtataSamples.NUnit.GenericPageTests;
 
 public class AppPage<TOwner> : Page<TOwner>
     where TOwner : AppPage<TOwner>

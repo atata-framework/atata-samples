@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.NUnit.GenericPageTests;
+﻿namespace AtataSamples.NUnit.GenericPageTests;
 
 [ControlDefinition("nav", ComponentTypeName = "menu")]
 public class AppMenu<TOwner> : Control<TOwner>

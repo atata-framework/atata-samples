@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.NUnit.GenericPageTests;
+﻿namespace AtataSamples.NUnit.GenericPageTests;
 
 /// <summary>
 /// An example of fixture that verifies the page title and header.
