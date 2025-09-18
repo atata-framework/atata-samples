@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.FixtureReusingDriver;
+﻿namespace AtataSamples.FixtureReusingDriver;
 
 using _ = PlansPage;
 

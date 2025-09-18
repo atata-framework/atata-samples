@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.FixtureReusingDriver;
+﻿namespace AtataSamples.FixtureReusingDriver;
 
 [SetUpFixture]
 public class SetUpFixture
