@@ -8,7 +8,8 @@ namespace AtataSamples.ExtJS;
 public class ExtComboBox<TOwner> : Input<string, TOwner>
     where TOwner : PageObject<TOwner>
 {
-    private const string ScriptToGetOptionValues = @"
+    private const string ScriptToGetOptionValues =
+        """
 var component = Ext.getCmp(arguments[0].getAttribute('data-componentid'));
 var displayField = component.displayField;
 var dataItems = component.store.data.items;
@@ -17,7 +18,8 @@ var results = [];
 for (var i = 0; i < dataItems.length; i++) {
   results.push(dataItems[i].data[displayField]);
 }
-return results;";
+        return results;
+        """;
 
     public UnorderedList<ListItem<TOwner>, TOwner> DropDownList =>
         Controls.Resolve<UnorderedList<ListItem<TOwner>, TOwner>>(nameof(DropDownList), () =>
