@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.PageVerification;
+﻿namespace AtataSamples.PageVerification;
 
 [SetUpFixture]
 public class SetUpFixture

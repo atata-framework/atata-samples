@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.PageVerification;
+﻿namespace AtataSamples.PageVerification;
 
 using _ = PlansWithStaticTriggersPage;
 
