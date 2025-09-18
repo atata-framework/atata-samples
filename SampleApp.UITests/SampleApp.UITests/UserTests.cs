@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace SampleApp.UITests;
+﻿namespace SampleApp.UITests;
 
 public class UserTests : UITestFixture
 {
