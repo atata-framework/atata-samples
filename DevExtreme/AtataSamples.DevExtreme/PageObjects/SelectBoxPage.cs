@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.DevExtreme;
+﻿namespace AtataSamples.DevExtreme;
 
 using _ = SelectBoxPage;
 

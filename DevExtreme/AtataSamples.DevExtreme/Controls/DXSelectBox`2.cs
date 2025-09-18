@@ -1,7 +1,4 @@
-﻿using System.Linq;
-using Atata;
-
-namespace AtataSamples.DevExtreme;
+﻿namespace AtataSamples.DevExtreme;
 
 [ControlDefinition(ContainingClass = "dx-selectbox", ComponentTypeName = "select box")]
 public class DXSelectBox<T, TOwner> : EditableField<T, TOwner>

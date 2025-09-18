@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.DevExtreme;
+﻿namespace AtataSamples.DevExtreme;
 
 [TestFixture]
 public class UITestFixture
