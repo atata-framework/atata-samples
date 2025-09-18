@@ -1,7 +1,4 @@
-﻿using Atata;
-using OpenQA.Selenium;
-
-namespace AtataSamples.ValidationMessagesVerification;
+﻿namespace AtataSamples.ValidationMessagesVerification;
 
 public class ValidationMessageList<TOwner> : AssociatedControlList<ValidationMessage<TOwner>, TOwner>
     where TOwner : PageObject<TOwner>
@@ -10,7 +7,7 @@ public class ValidationMessageList<TOwner> : AssociatedControlList<ValidationMes
     {
         var validationMessageDefinition = UIComponentResolver.GetControlDefinition(typeof(ValidationMessage<TOwner>));
 
-        PlainScopeLocator scopeLocator = new PlainScopeLocator(By.XPath("ancestor::" + validationMessageDefinition.ScopeXPath))
+        PlainScopeLocator scopeLocator = new(By.XPath("ancestor::" + validationMessageDefinition.ScopeXPath))
         {
             SearchContext = control.Scope
         };

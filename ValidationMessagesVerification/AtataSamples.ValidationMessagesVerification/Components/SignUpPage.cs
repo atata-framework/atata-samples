@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.ValidationMessagesVerification;
+﻿namespace AtataSamples.ValidationMessagesVerification;
 
 using _ = SignUpPage;
 

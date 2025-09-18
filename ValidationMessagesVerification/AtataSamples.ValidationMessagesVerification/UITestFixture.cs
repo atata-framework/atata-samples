@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.ValidationMessagesVerification;
+﻿namespace AtataSamples.ValidationMessagesVerification;
 
 [TestFixture]
 public class UITestFixture

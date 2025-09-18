@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.ValidationMessagesVerification;
+﻿namespace AtataSamples.ValidationMessagesVerification;
 
 [ControlDefinition("div[contains(concat(' ', normalize-space(@class), ' '), ' has-error ')]//span[contains(concat(' ', normalize-space(@class), ' '), ' help-block ')]")]
 public class ValidationMessage<TOwner> : Text<TOwner>
