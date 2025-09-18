@@ -1,8 +1,4 @@
-﻿using System;
-using Atata;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace AtataSamples.MSTest;
+﻿namespace AtataSamples.MSTest;
 
 public class UITestFixture
 {

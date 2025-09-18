@@ -1,7 +1,4 @@
-﻿using Atata;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace AtataSamples.MSTest;
+﻿namespace AtataSamples.MSTest;
 
 [TestClass]
 public static class SetUpFixture

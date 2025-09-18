@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.MSTest;
+﻿namespace AtataSamples.MSTest;
 
 using _ = HomePage;
 
