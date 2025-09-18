@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.Performance.ControlList;
+﻿namespace AtataSamples.Performance.ControlList;
 
 public class TableListTests : UITestFixture
 {

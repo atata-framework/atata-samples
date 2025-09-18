@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using Atata;
-
-namespace AtataSamples.Performance.ControlList;
+﻿namespace AtataSamples.Performance.ControlList;
 
 using _ = TableListPage;
 
