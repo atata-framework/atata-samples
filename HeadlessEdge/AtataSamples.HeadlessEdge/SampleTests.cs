@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.HeadlessEdge;
+﻿namespace AtataSamples.HeadlessEdge;
 
 public class SampleTests : UITestFixture
 {

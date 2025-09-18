@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.HeadlessEdge;
+﻿namespace AtataSamples.HeadlessEdge;
 
 [SetUpFixture]
 public class SetUpFixture
