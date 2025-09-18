@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.AppConfig;
+﻿namespace AtataSamples.AppConfig;
 
 [SetUpFixture]
 public class SetUpFixture

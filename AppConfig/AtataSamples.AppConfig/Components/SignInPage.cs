@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.AppConfig;
+﻿namespace AtataSamples.AppConfig;
 
 using _ = SignInPage;
 
