@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.MultipleBrowsersViaRunSettings;
+﻿namespace AtataSamples.MultipleBrowsersViaRunSettings;
 
 public class HomeTests : UITestFixture
 {

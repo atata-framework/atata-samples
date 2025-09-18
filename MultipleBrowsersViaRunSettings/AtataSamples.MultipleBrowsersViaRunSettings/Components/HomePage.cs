@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.MultipleBrowsersViaRunSettings;
+﻿namespace AtataSamples.MultipleBrowsersViaRunSettings;
 
 using _ = HomePage;
 
