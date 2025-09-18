@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments;
+﻿namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments;
 
 [TestFixture(DriverAliases.Chrome)]
 [TestFixture(DriverAliases.Edge)]

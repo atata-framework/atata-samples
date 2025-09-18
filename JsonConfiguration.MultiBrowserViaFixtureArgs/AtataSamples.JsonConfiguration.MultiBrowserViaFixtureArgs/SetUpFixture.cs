@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments;
+﻿namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments;
 
 [SetUpFixture]
 public class SetUpFixture

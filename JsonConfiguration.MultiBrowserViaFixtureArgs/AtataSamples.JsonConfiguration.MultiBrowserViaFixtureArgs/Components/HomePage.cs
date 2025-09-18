@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments;
+﻿namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments;
 
 using _ = HomePage;
 
