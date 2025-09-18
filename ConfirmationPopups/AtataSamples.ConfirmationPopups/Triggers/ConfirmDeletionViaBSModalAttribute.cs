@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.ConfirmationPopups;
+﻿namespace AtataSamples.ConfirmationPopups;
 
 public class ConfirmDeletionViaBSModalAttribute : TriggerAttribute
 {

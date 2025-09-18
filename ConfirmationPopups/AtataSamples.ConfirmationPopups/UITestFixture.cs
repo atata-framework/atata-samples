@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.ConfirmationPopups;
+﻿namespace AtataSamples.ConfirmationPopups;
 
 [TestFixture]
 public class UITestFixture

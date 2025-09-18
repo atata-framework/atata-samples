@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.ConfirmationPopups;
+﻿namespace AtataSamples.ConfirmationPopups;
 
 [PageObjectDefinition("div", ContainingClass = "jconfirm-box", ComponentTypeName = "confirm box")]
 [WindowTitleElementDefinition("span", ContainingClass = "jconfirm-title")]

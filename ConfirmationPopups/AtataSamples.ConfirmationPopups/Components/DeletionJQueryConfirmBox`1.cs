@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.ConfirmationPopups;
+﻿namespace AtataSamples.ConfirmationPopups;
 
 [Name("Deletion Confirmation")]
 [WindowTitle("Confirmation")]
