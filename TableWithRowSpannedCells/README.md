@@ -168,8 +168,7 @@ namespace AtataSamples.TableWithRowSpannedCells;
 
 public sealed class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeFindStrategy
 {
-    protected static ConcurrentDictionary<Type, List<ColumnInfo>> TableColumnsInfoCache { get; } =
-        new ConcurrentDictionary<Type, List<ColumnInfo>>();
+    protected static ConcurrentDictionary<Type, List<ColumnInfo>> TableColumnsInfoCache { get; } = [];
 
     public string RowXPath { get; set; } = "tr";
 
@@ -181,7 +180,7 @@ public sealed class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComp
     {
         string xPath = BuildXPath(scope, options);
 
-        if (xPath == null)
+        if (xPath is null)
         {
             if (searchOptions.IsSafely)
                 return ComponentScopeFindResult.Missing;
@@ -206,7 +205,7 @@ public sealed class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComp
             .Where(x => options.Match.IsMatch(x.HeaderName, options.Terms))
             .ElementAtOrDefault(options.Index ?? 0);
 
-        return column != null ? BuildXPathForCell(column, columns) : null;
+        return column is not null ? BuildXPathForCell(column, columns) : null;
     }
 
     protected virtual string BuildXPathForCell(ColumnInfo column, List<ColumnInfo> columns)
