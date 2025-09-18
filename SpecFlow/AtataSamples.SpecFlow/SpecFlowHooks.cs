@@ -1,9 +1,4 @@
-﻿using System.Linq;
-using Atata;
-using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Infrastructure;
-
-namespace AtataSamples.SpecFlow;
+﻿namespace AtataSamples.SpecFlow;
 
 [Binding]
 public sealed class SpecFlowHooks

@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.SpecFlow.Components;
+﻿namespace AtataSamples.SpecFlow.Components;
 
 using _ = HomePage;
 
