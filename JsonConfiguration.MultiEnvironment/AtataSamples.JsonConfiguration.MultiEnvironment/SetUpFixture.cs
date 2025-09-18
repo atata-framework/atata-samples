@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.JsonConfiguration.MultiEnvironment;
+﻿namespace AtataSamples.JsonConfiguration.MultiEnvironment;
 
 [SetUpFixture]
 public class SetUpFixture
