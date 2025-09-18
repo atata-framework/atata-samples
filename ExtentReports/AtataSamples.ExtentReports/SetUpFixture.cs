@@ -1,8 +1,4 @@
-﻿using Atata;
-using Atata.ExtentReports;
-using NUnit.Framework;
-
-namespace AtataSamples.ExtentReports;
+﻿namespace AtataSamples.ExtentReports;
 
 [SetUpFixture]
 public class SetUpFixture

@@ -1,8 +1,4 @@
-﻿using System.Collections.Concurrent;
-using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.ExtentReports;
+﻿namespace AtataSamples.ExtentReports;
 
 [Parallelizable(ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]

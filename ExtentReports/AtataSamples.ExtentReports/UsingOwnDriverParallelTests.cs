@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.ExtentReports;
+﻿namespace AtataSamples.ExtentReports;
 
 public class UsingOwnDriverParallelTests : ParallelWithInstancePerTestCaseUITestFixture
 {

@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.ExtentReports;
+﻿namespace AtataSamples.ExtentReports;
 
 using _ = SignInPage;
 
