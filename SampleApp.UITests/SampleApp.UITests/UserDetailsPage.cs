@@ -2,7 +2,7 @@
 
 using _ = UserDetailsPage;
 
-public class UserDetailsPage : Page<_>
+public sealed class UserDetailsPage : Page<_>
 {
     [FindFirst]
     public H1<_> Header { get; private set; }

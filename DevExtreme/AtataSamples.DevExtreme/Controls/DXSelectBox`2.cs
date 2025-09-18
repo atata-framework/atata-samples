@@ -39,7 +39,7 @@ public class DXSelectBox<T, TOwner> : EditableField<T, TOwner>
     [ControlDefinition(ContainingClass = "dx-list-item", ComponentTypeName = "option")]
     [GetsContentFromSource(ContentSource.TextContent)]
     [ScrollTo]
-    public class Option : Text<TOwner>
+    public sealed class Option : Text<TOwner>
     {
     }
 }

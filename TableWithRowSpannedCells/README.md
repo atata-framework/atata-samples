@@ -29,11 +29,11 @@ namespace AtataSamples.TableWithRowSpannedCells;
 using _ = TableUsingXPathPage;
 
 [Url("table-with-row-spanned-cells")]
-public class TableUsingXPathPage : Page<_>
+public sealed class TableUsingXPathPage : Page<_>
 {
     public Table<UserRow, _> Users { get; private set; }
 
-    public class UserRow : TableRow<_>
+    public sealed class UserRow : TableRow<_>
     {
         [FindByXPath(XPathTo.RowSpannedCell, Index = 0)]
         public Text<_> Name { get; private set; }
@@ -81,7 +81,7 @@ using Atata;
 
 namespace AtataSamples.TableWithRowSpannedCells;
 
-public class FindByRowSpannedCellIndexAttribute : FindByXPathAttribute
+public sealed class FindByRowSpannedCellIndexAttribute : FindByXPathAttribute
 {
     public FindByRowSpannedCellIndexAttribute(int index)
         : base($"(self::*[td[@rowspan]] | preceding-sibling::tr[td[@rowspan]])[last()]/td[@rowspan]") =>
@@ -95,7 +95,7 @@ using Atata;
 
 namespace AtataSamples.TableWithRowSpannedCells;
 
-public class FindByNonRowSpannedCellIndexAttribute : FindByXPathAttribute
+public sealed class FindByNonRowSpannedCellIndexAttribute : FindByXPathAttribute
 {
     public FindByNonRowSpannedCellIndexAttribute(int index)
         : base($"td[not(@rowspan)]") =>
@@ -115,11 +115,11 @@ namespace AtataSamples.TableWithRowSpannedCells;
 using _ = TableUsingCustomFindAttributesPage;
 
 [Url("table-with-row-spanned-cells")]
-public class TableUsingCustomFindAttributesPage : Page<_>
+public sealed class TableUsingCustomFindAttributesPage : Page<_>
 {
     public Table<UserRow, _> Users { get; private set; }
 
-    public class UserRow : TableRow<_>
+    public sealed class UserRow : TableRow<_>
     {
         [FindByRowSpannedCellIndex(0)]
         public Text<_> Name { get; private set; }
@@ -166,7 +166,7 @@ using OpenQA.Selenium;
 
 namespace AtataSamples.TableWithRowSpannedCells;
 
-public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeFindStrategy
+public sealed class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeFindStrategy
 {
     protected static ConcurrentDictionary<Type, List<ColumnInfo>> TableColumnsInfoCache { get; } =
         new ConcurrentDictionary<Type, List<ColumnInfo>>();
@@ -276,7 +276,7 @@ namespace AtataSamples.TableWithRowSpannedCells;
 using _ = TableUsingCustomFindStrategyPage;
 
 [Url("table-with-row-spanned-cells")]
-public class TableUsingCustomFindStrategyPage : Page<_>
+public sealed class TableUsingCustomFindStrategyPage : Page<_>
 {
     public Table<UserRow, _> Users { get; private set; }
 
@@ -284,7 +284,7 @@ public class TableUsingCustomFindStrategyPage : Page<_>
         Strategy = typeof(FindByColumnHeaderInTableWithRowSpannedCellsStrategy),
         TargetAttributeType = typeof(FindByColumnHeaderAttribute),
         TargetAnyType = true)]
-    public class UserRow : TableRow<_>
+    public sealed class UserRow : TableRow<_>
     {
         public Text<_> Name { get; private set; }
 

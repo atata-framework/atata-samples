@@ -1,7 +1,7 @@
 ﻿namespace AtataSamples.DownloadFile;
 
 [SetUpFixture]
-public class SetUpFixture
+public sealed class SetUpFixture
 {
     [OneTimeSetUp]
     public void GlobalSetUp()

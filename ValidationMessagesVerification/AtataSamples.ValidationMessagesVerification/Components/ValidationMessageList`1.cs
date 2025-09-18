@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.ValidationMessagesVerification;
 
-public class ValidationMessageList<TOwner> : AssociatedControlList<ValidationMessage<TOwner>, TOwner>
+public sealed class ValidationMessageList<TOwner> : AssociatedControlList<ValidationMessage<TOwner>, TOwner>
     where TOwner : PageObject<TOwner>
 {
     protected override ValidationMessage<TOwner> CreateAssociatedControl(Control<TOwner> control)

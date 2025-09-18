@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.HeadlessEdge;
 
-public class SampleTests : UITestFixture
+public sealed class SampleTests : UITestFixture
 {
     [Test]
     public void Edge_Headless() =>

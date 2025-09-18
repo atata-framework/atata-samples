@@ -1,7 +1,6 @@
 ﻿namespace AtataSamples.PageVerification;
 
-[TestFixture]
-public class UITestFixture
+public abstract class UITestFixture
 {
     [SetUp]
     public void SetUp() =>

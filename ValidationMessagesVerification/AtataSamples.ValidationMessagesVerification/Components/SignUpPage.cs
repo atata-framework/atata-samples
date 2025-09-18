@@ -3,7 +3,7 @@
 using _ = SignUpPage;
 
 [Url("signup")]
-public class SignUpPage : Page<_>
+public sealed class SignUpPage : Page<_>
 {
     public TextInput<_> FirstName { get; private set; }
 

@@ -3,11 +3,11 @@
 using _ = TableUsingXPathPage;
 
 [Url("table-with-row-spanned-cells")]
-public class TableUsingXPathPage : Page<_>
+public sealed class TableUsingXPathPage : Page<_>
 {
     public Table<UserRow, _> Users { get; private set; }
 
-    public class UserRow : TableRow<_>
+    public sealed class UserRow : TableRow<_>
     {
         [FindByXPath(XPathTo.RowSpannedCell, Index = 0)]
         public Text<_> Name { get; private set; }

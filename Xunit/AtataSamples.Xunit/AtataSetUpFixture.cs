@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.Xunit;
 
-public class AtataSetUpFixture
+public sealed class AtataSetUpFixture
 {
     public AtataSetUpFixture()
     {

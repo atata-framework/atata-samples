@@ -3,7 +3,7 @@
 using _ = PlansWithOnVerifyPage;
 
 [Url("plans")]
-public class PlansWithOnVerifyPage : Page<_>
+public sealed class PlansWithOnVerifyPage : Page<_>
 {
     public H1<_> Header { get; private set; }
 

@@ -1,7 +1,7 @@
 ﻿namespace AtataSamples.MSTest;
 
 [TestClass]
-public class SampleTests : UITestFixture
+public sealed class SampleTests : UITestFixture
 {
     /// <summary>
     /// Simple test approach when you don't need to add exception/error information to the log.

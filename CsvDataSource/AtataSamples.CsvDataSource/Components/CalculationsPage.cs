@@ -3,7 +3,7 @@
 using _ = CalculationsPage;
 
 [Url("calculations")]
-public class CalculationsPage : Page<_>
+public sealed class CalculationsPage : Page<_>
 {
     [FindById]
     public Input<int, _> AdditionValue1 { get; private set; }

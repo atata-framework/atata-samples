@@ -1,7 +1,7 @@
 ﻿namespace AtataSamples.ExtentReports;
 
 [Parallelizable(ParallelScope.Fixtures)]
-public class UITestFixture
+public abstract class UITestFixture
 {
     protected AtataContext FixtureContext { get; set; }
 

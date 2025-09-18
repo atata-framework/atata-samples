@@ -2,14 +2,14 @@
 
 using _ = NewUserWindow;
 
-public class NewUserWindow : BSModal<_>
+public sealed class NewUserWindow : BSModal<_>
 {
     [FindById]
     public GeneralTabPane General { get; private set; }
 
     public Button<UsersPage, _> Create { get; private set; }
 
-    public class GeneralTabPane : BSTabPane<_>
+    public sealed class GeneralTabPane : BSTabPane<_>
     {
         public TextInput<_> FirstName { get; private set; }
 

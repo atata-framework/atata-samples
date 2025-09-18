@@ -25,7 +25,7 @@ public class SLCombobox<T, TOwner> : EditableField<T, TOwner>
     }
 
     [ControlDefinition(ContainingClass = "slds-media__body", ComponentTypeName = "option")]
-    public class DropDownOption : Text<TOwner>
+    public sealed class DropDownOption : Text<TOwner>
     {
     }
 }

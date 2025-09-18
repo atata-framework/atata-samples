@@ -6,6 +6,6 @@ using _ = PlansWithStaticTriggersPage;
 [VerifyTitle("Plans - Atata Sample App")]
 [VerifyH1("Plans")]
 [VerifyContent("Please choose your payment plan")]
-public class PlansWithStaticTriggersPage : Page<_>
+public sealed class PlansWithStaticTriggersPage : Page<_>
 {
 }

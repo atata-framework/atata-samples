@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.JsonExtendedConfiguration;
 
-public class AtataConfig : JsonConfig<AtataConfig>
+public sealed class AtataConfig : JsonConfig<AtataConfig>
 {
     public string Username { get; set; }
 

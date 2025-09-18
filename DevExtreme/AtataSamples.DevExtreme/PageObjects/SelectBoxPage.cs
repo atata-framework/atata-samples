@@ -3,7 +3,7 @@
 using _ = SelectBoxPage;
 
 [Url("/SelectBox/Overview/MaterialBlueLight/")]
-public class SelectBoxPage : Page<_>
+public sealed class SelectBoxPage : Page<_>
 {
     public enum Product
     {

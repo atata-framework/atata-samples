@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.DownloadFile;
 
-public class DownloadFileTests : UITestFixture
+public sealed class DownloadFileTests : UITestFixture
 {
     [Test]
     public void DownloadFile()

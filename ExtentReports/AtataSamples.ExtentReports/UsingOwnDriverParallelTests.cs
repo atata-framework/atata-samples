@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.ExtentReports;
 
-public class UsingOwnDriverParallelTests : ParallelWithInstancePerTestCaseUITestFixture
+public sealed class UsingOwnDriverParallelTests : ParallelWithInstancePerTestCaseUITestFixture
 {
     [Test]
     public void Test1() =>

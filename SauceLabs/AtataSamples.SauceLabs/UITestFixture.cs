@@ -1,7 +1,7 @@
 ﻿namespace AtataSamples.SauceLabs;
 
 [Parallelizable(ParallelScope.Self)]
-public class UITestFixture
+public abstract class UITestFixture
 {
     [SetUp]
     public void SetUp() =>

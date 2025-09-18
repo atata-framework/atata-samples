@@ -2,7 +2,7 @@
 
 using _ = UserEditWindow;
 
-public class UserEditWindow : BSModal<_>
+public sealed class UserEditWindow : BSModal<_>
 {
     [FindById]
     public GeneralTabPane General { get; private set; }
@@ -13,7 +13,7 @@ public class UserEditWindow : BSModal<_>
     [Term("Save", "Create")]
     public Button<UsersPage, _> Save { get; private set; }
 
-    public class GeneralTabPane : BSTabPane<_>
+    public sealed class GeneralTabPane : BSTabPane<_>
     {
         public TextInput<_> FirstName { get; private set; }
 
@@ -28,7 +28,7 @@ public class UserEditWindow : BSModal<_>
         public RadioButtonList<Gender?, _> Gender { get; private set; }
     }
 
-    public class AdditionalTabPane : BSTabPane<_>
+    public sealed class AdditionalTabPane : BSTabPane<_>
     {
         public DateInput<_> Birthday { get; private set; }
 

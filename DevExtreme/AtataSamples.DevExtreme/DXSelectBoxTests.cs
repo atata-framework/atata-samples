@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.DevExtreme;
 
-public class DXSelectBoxTests : UITestFixture
+public sealed class DXSelectBoxTests : UITestFixture
 {
     [Test]
     [Explicit]

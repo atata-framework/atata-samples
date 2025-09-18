@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.MultipleBrowsersInTest;
 
-public class SampleTests : MultiBrowserUITestFixture
+public sealed class SampleTests : MultiBrowserUITestFixture
 {
     [Test]
     public void MultipleBrowsersInTest()

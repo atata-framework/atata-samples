@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.FixtureReusingDriver;
 
-public class PlanTests : UITestFixture
+public sealed class PlanTests : UITestFixture
 {
     protected override bool ReuseDriver => true;
 

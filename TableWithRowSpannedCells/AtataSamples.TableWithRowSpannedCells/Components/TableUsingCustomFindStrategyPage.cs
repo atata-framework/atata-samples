@@ -3,7 +3,7 @@
 using _ = TableUsingCustomFindStrategyPage;
 
 [Url("table-with-row-spanned-cells")]
-public class TableUsingCustomFindStrategyPage : Page<_>
+public sealed class TableUsingCustomFindStrategyPage : Page<_>
 {
     public Table<UserRow, _> Users { get; private set; }
 
@@ -11,7 +11,7 @@ public class TableUsingCustomFindStrategyPage : Page<_>
         Strategy = typeof(FindByColumnHeaderInTableWithRowSpannedCellsStrategy),
         TargetAttributeType = typeof(FindByColumnHeaderAttribute),
         TargetAnyType = true)]
-    public class UserRow : TableRow<_>
+    public sealed class UserRow : TableRow<_>
     {
         public Text<_> Name { get; private set; }
 

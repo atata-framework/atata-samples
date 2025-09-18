@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.ConfirmationPopups;
 
-public class ConfirmDeletionViaBSModalAttribute : TriggerAttribute
+public sealed class ConfirmDeletionViaBSModalAttribute : TriggerAttribute
 {
     public ConfirmDeletionViaBSModalAttribute(TriggerEvents on = TriggerEvents.AfterClick, TriggerPriority priority = TriggerPriority.Medium)
         : base(on, priority)

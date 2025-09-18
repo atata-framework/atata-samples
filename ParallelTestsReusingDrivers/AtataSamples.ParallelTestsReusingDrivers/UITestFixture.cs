@@ -1,8 +1,7 @@
 ﻿namespace AtataSamples.ParallelTestsReusingDrivers;
 
-[TestFixture]
 [Parallelizable(ParallelScope.All)]
-public class UITestFixture
+public abstract class UITestFixture
 {
     protected virtual DriverPoolUsage DriverPoolUsage =>
         DriverPoolUsage.None;

@@ -1,7 +1,6 @@
 ﻿namespace AtataSamples.MultipleBrowsersInTest;
 
-[TestFixture]
-public class MultiBrowserUITestFixture
+public abstract class MultiBrowserUITestFixture
 {
     protected List<AtataContext> Contexts { get; } = [];
 

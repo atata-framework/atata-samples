@@ -1,6 +1,5 @@
 ﻿namespace AtataSamples.MultipleBrowsersViaRunSettings;
 
-[TestFixture]
 public abstract class UITestFixture
 {
     [SetUp]

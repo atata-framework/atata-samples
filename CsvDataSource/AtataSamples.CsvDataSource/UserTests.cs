@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.CsvDataSource;
 
-public class UserTests : UITestFixture
+public sealed class UserTests : UITestFixture
 {
     public static IEnumerable<TestCaseData> UserModels =>
         CsvSource.Get<UserModel>("user-models.csv");

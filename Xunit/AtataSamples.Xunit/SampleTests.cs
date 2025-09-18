@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.Xunit;
 
-public class SampleTests : UITestFixture
+public sealed class SampleTests : UITestFixture
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="SampleTests"/> class.

@@ -8,7 +8,7 @@
 /// <typeparam name="TPage">The type of the page.</typeparam>
 [TestFixture(typeof(PlansPage), "Plans")]
 [TestFixture(typeof(ProductsPage), "Products")]
-public class PageTitleAndHeaderTests<TPage> : UITestFixture
+public sealed class PageTitleAndHeaderTests<TPage> : UITestFixture
     where TPage : PageObject<TPage>, IPageWithHeader<TPage>
 {
     private readonly string _expectedPageTitle;

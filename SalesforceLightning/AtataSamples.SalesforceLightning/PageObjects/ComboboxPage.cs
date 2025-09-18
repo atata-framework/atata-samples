@@ -3,7 +3,7 @@
 using _ = ComboboxPage;
 
 [Url("lightning:combobox/example")]
-public class ComboboxPage : Page<_>
+public sealed class ComboboxPage : Page<_>
 {
     public enum Progress
     {

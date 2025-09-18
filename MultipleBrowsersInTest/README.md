@@ -11,17 +11,11 @@ Demonstrates the usage of multiple browsers in a single test.
 ### MultiBrowserUITestFixture
 
 ```cs
-using System.Collections.Generic;
-using Atata;
-using NUnit.Framework;
-using NUnit.Framework.Internal;
-
 namespace AtataSamples.MultipleBrowsersInTest;
 
-[TestFixture]
-public class MultiBrowserUITestFixture
+public abstract class MultiBrowserUITestFixture
 {
-    protected List<AtataContext> Contexts { get; } = new List<AtataContext>();
+    protected List<AtataContext> Contexts { get; } = [];
 
     [SetUp]
     public void SetUp() =>
@@ -65,7 +59,6 @@ public class MultiBrowserUITestFixture
         }
     }
 }
-
 ```
 
 ### Test

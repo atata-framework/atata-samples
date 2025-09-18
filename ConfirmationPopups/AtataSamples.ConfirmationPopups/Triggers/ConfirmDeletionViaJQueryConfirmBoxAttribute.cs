@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.ConfirmationPopups;
 
-public class ConfirmDeletionViaJQueryConfirmBoxAttribute : TriggerAttribute
+public sealed class ConfirmDeletionViaJQueryConfirmBoxAttribute : TriggerAttribute
 {
     public ConfirmDeletionViaJQueryConfirmBoxAttribute(TriggerEvents on = TriggerEvents.AfterClick, TriggerPriority priority = TriggerPriority.Medium)
         : base(on, priority)

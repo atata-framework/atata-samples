@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.ExtJS;
 
-public class ExtComboBoxTests : UITestFixture
+public sealed class ExtComboBoxTests : UITestFixture
 {
     [Test]
     public void ExtJS_ComboBox()

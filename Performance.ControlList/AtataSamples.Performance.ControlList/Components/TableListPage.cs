@@ -3,12 +3,12 @@
 using _ = TableListPage;
 
 [Url("table-list")]
-public class TableListPage : Page<_>
+public sealed class TableListPage : Page<_>
 {
     public ItemsContainer Items { get; set; }
 
     [ControlDefinition("div", ContainingClass = "table-list", ComponentTypeName = "list")]
-    public class ItemsContainer : Control<_>
+    public sealed class ItemsContainer : Control<_>
     {
         [FindSettings(Visibility = Visibility.Any)]
         public ControlList<ItemRow, _> Rows { get; private set; }
@@ -26,7 +26,7 @@ public class TableListPage : Page<_>
             Rows.GetByXPathCondition($"Id={id} & Name={name}", $"{ItemRow.XPathTo.Id}[.='{id}'] and {ItemRow.XPathTo.Name}[.='{name}']");
     }
 
-    public class ItemRow : TableRow<_>
+    public sealed class ItemRow : TableRow<_>
     {
         [FindByXPath(XPathTo.Id)]
         public Number<_> Id { get; private set; }

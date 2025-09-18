@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArguments;
 
-public class HomeTests : UITestFixture
+public sealed class HomeTests : UITestFixture
 {
     public HomeTests(string driverAlias)
         : base(driverAlias)

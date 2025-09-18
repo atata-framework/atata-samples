@@ -1,7 +1,7 @@
 ﻿namespace AtataSamples.ExtJS;
 
 [ControlDefinition("input[@role='combobox']", ContainingClass = "x-form-text", ComponentTypeName = "combo box")]
-public class ExtComboBox<TOwner> : Input<string, TOwner>
+public sealed class ExtComboBox<TOwner> : Input<string, TOwner>
     where TOwner : PageObject<TOwner>
 {
     private const string ScriptToGetOptionValues =

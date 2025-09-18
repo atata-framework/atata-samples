@@ -3,7 +3,7 @@
 using _ = ExtComboBoxDemoPage;
 
 [Url("https://examples.sencha.com/extjs/7.1.0/examples/kitchensink/#simple-combo")]
-public class ExtComboBoxDemoPage : PageObject<_>
+public sealed class ExtComboBoxDemoPage : PageObject<_>
 {
     [FindByLabel("Select State:")]
     public ExtComboBox<_> State { get; private set; }

@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.Performance.ControlList;
 
-public class TableListTests : UITestFixture
+public sealed class TableListTests : UITestFixture
 {
     [Test]
     public void VerifyNoItemWithId_Fast() =>

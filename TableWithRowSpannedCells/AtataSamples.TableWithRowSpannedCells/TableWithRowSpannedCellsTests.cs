@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.TableWithRowSpannedCells;
 
-public class TableWithRowSpannedCellsTests : UITestFixture
+public sealed class TableWithRowSpannedCellsTests : UITestFixture
 {
     [Test]
     public void UsingXPath() =>

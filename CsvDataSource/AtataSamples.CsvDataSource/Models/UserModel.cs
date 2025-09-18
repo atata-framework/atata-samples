@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.CsvDataSource;
 
-public class UserModel
+public sealed class UserModel
 {
     public string FirstName { get; set; }
 

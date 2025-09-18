@@ -3,11 +3,11 @@
 using _ = TableUsingCustomFindAttributesPage;
 
 [Url("table-with-row-spanned-cells")]
-public class TableUsingCustomFindAttributesPage : Page<_>
+public sealed class TableUsingCustomFindAttributesPage : Page<_>
 {
     public Table<UserRow, _> Users { get; private set; }
 
-    public class UserRow : TableRow<_>
+    public sealed class UserRow : TableRow<_>
     {
         [FindByRowSpannedCellIndex(0)]
         public Text<_> Name { get; private set; }

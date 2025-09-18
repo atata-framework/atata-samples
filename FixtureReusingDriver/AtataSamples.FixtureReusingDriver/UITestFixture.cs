@@ -1,9 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿namespace AtataSamples.FixtureReusingDriver;
 
-namespace AtataSamples.FixtureReusingDriver;
-
-[TestFixture]
-public class UITestFixture
+public abstract class UITestFixture
 {
     protected virtual bool ReuseDriver => false;
 

@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.ExtentReports;
 
-public class UsingSameDriverTests : UITestFixture
+public sealed class UsingSameDriverTests : UITestFixture
 {
     protected override bool UseFixtureDriverForTests => true;
 

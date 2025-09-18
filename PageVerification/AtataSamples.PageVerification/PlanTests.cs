@@ -1,7 +1,6 @@
 ﻿namespace AtataSamples.PageVerification;
 
-[TestFixture]
-public class PlanTests : UITestFixture
+public sealed class PlanTests : UITestFixture
 {
     private const string Feature1 = "Feature 1";
     private const string Feature2 = "Feature 2";

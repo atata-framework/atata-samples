@@ -1,8 +1,7 @@
 ﻿namespace AtataSamples.NUnit.GenericPageTests;
 
-[TestFixture]
 [Parallelizable(ParallelScope.All)]
-public class UITestFixture
+public abstract class UITestFixture
 {
     [SetUp]
     public void SetUp() =>

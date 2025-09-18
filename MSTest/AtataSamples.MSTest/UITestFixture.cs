@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.MSTest;
 
-public class UITestFixture
+public abstract class UITestFixture
 {
     public TestContext TestContext { get; set; }
 

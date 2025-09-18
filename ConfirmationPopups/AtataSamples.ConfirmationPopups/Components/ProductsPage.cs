@@ -3,11 +3,11 @@
 using _ = ProductsPage;
 
 [Url("products")]
-public class ProductsPage : Page<_>
+public sealed class ProductsPage : Page<_>
 {
     public Table<ProductTableRow, _> Products { get; private set; }
 
-    public class ProductTableRow : TableRow<_>
+    public sealed class ProductTableRow : TableRow<_>
     {
         public Text<_> Name { get; private set; }
 

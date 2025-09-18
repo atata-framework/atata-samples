@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.ParallelTestsReusingDrivers;
 
-public class CalculationTests : UITestFixture
+public sealed class CalculationTests : UITestFixture
 {
     protected override DriverPoolUsage DriverPoolUsage => DriverPoolUsage.Global;
 

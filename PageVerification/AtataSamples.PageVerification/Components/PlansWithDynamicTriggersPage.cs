@@ -3,7 +3,7 @@
 using _ = PlansWithDynamicTriggersPage;
 
 [Url("plans")]
-public class PlansWithDynamicTriggersPage : Page<_>
+public sealed class PlansWithDynamicTriggersPage : Page<_>
 {
     public PlansWithDynamicTriggersPage() =>
         Metadata.Add(

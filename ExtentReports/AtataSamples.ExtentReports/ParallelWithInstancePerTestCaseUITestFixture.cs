@@ -2,7 +2,7 @@
 
 [Parallelizable(ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
-public class ParallelWithInstancePerTestCaseUITestFixture
+public abstract class ParallelWithInstancePerTestCaseUITestFixture
 {
     private static readonly ConcurrentDictionary<string, AtataContext> s_testIdAtataContextMap = new();
 

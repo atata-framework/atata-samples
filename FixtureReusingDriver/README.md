@@ -13,14 +13,9 @@ Demonstrates how to configure Atata to reuse the same driver instance by the tes
 The base `UITestFixture` class should have additional functionality to preserve and reuse driver.
 
 ```cs
-using Atata;
-using NUnit.Framework;
-using OpenQA.Selenium;
-
 namespace AtataSamples.FixtureReusingDriver;
 
-[TestFixture]
-public class UITestFixture
+public abstract class UITestFixture
 {
     protected virtual bool ReuseDriver => false;
 
@@ -68,12 +63,9 @@ Driver reusing functionality is optional here and is disabled by default.
 ### Test Fixture
 
 ```cs
-using Atata;
-using NUnit.Framework;
-
 namespace AtataSamples.FixtureReusingDriver;
 
-public class PlanTests : UITestFixture
+public sealed class PlanTests : UITestFixture
 {
     protected override bool ReuseDriver => true;
 

@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.SalesforceLightning;
 
-public class SLComboboxTests : UITestFixture
+public sealed class SLComboboxTests : UITestFixture
 {
     [Test]
     [Explicit]
