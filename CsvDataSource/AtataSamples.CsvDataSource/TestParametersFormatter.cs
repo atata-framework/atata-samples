@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace AtataSamples.CsvDataSource;
+﻿namespace AtataSamples.CsvDataSource;
 
 public static class TestParametersFormatter
 {

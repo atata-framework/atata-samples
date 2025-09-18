@@ -1,6 +1,4 @@
-﻿using Atata;
-
-namespace AtataSamples.CsvDataSource;
+﻿namespace AtataSamples.CsvDataSource;
 
 using _ = CalculationsPage;
 

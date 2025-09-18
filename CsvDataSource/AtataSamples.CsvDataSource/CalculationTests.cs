@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.CsvDataSource;
+﻿namespace AtataSamples.CsvDataSource;
 
 public class CalculationTests : UITestFixture
 {

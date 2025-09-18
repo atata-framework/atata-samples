@@ -1,7 +1,4 @@
-﻿using Atata;
-using NUnit.Framework;
-
-namespace AtataSamples.CsvDataSource;
+﻿namespace AtataSamples.CsvDataSource;
 
 [SetUpFixture]
 public class SetUpFixture

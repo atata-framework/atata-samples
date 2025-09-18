@@ -1,7 +1,4 @@
-﻿using Atata;
-using Atata.Bootstrap;
-
-namespace AtataSamples.CsvDataSource;
+﻿namespace AtataSamples.CsvDataSource;
 
 using _ = NewUserWindow;
 
