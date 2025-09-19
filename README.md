@@ -54,6 +54,8 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/main/_archives/MSTest.zip).
 - **Using SpecFlow** - [`/SpecFlow`](../../tree/main/SpecFlow)
   | [download](../../raw/main/_archives/SpecFlow.zip).
+- **Using Reqnroll** - [`/Reqnroll`](../../tree/main/Reqnroll)
+  | [download](../../raw/main/_archives/Reqnroll.zip).
 
 ### Configuration
 
