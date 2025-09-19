@@ -7,7 +7,7 @@ public abstract class UITestFixture : IDisposable
     {
         string testFullName = ResolveTestName(output);
         Type testSuiteType = GetType();
-        string testName = testFullName.Replace(testSuiteType.FullName, null).TrimStart('.');
+        string testName = testFullName.Replace(testSuiteType.FullName!, null).TrimStart('.');
 
         AtataContext.Configure()
             .UseTestName(testName)
@@ -23,10 +23,10 @@ public abstract class UITestFixture : IDisposable
     {
         ITest test = (ITest)output.GetType()
             .GetFields(BindingFlags.NonPublic | BindingFlags.Instance)
-            .FirstOrDefault(x => x.FieldType == typeof(ITest))
-            ?.GetValue(output);
+            .FirstOrDefault(x => x.FieldType == typeof(ITest))!
+            .GetValue(output)!;
 
-        return test?.DisplayName;
+        return test.DisplayName;
     }
 
     protected static void Execute(Action action)

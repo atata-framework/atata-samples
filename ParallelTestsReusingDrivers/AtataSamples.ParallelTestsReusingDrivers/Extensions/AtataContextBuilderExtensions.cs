@@ -14,7 +14,7 @@ public static class AtataContextBuilderExtensions
     /// otherwise will use separate pool for particular scope object.
     /// </param>
     /// <returns>The same <see cref="AtataContextBuilder"/> instance.</returns>
-    public static AtataContextBuilder UseDriverPool(this AtataContextBuilder builder, object poolScopeObject = null)
+    public static AtataContextBuilder UseDriverPool(this AtataContextBuilder builder, object? poolScopeObject = null)
     {
         IDriverFactory driverFactory = builder.BuildingContext.DriverFactoryToUse;
 

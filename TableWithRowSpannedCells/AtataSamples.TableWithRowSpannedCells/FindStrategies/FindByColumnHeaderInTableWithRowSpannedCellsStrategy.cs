@@ -12,7 +12,7 @@ public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentSc
 
     public ComponentScopeFindResult Find(ISearchContext scope, ComponentScopeFindOptions options, SearchOptions searchOptions)
     {
-        string xPath = BuildXPath(scope, options);
+        string? xPath = BuildXPath(scope, options);
 
         if (xPath is null)
         {
@@ -29,13 +29,13 @@ public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentSc
         return new SubsequentComponentScopeFindResult(scope, new FindByXPathStrategy(), xPathOptions);
     }
 
-    protected virtual string BuildXPath(ISearchContext scope, ComponentScopeFindOptions options)
+    protected virtual string? BuildXPath(ISearchContext scope, ComponentScopeFindOptions options)
     {
         List<ColumnInfo> columns = TableColumnsInfoCache.GetOrAdd(
             options.Metadata.ParentComponentType,
             _ => GetColumnInfoItems((IWebElement)scope));
 
-        ColumnInfo column = columns
+        ColumnInfo? column = columns
             .Where(x => options.Match.IsMatch(x.HeaderName, options.Terms))
             .ElementAtOrDefault(options.Index ?? 0);
 
@@ -65,7 +65,7 @@ public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentSc
 
         return [.. headers.Select((header, index) =>
         {
-            string cellRowSpanValue = cells.ElementAtOrDefault(index)?.GetAttribute("rowspan")?.Trim();
+            string? cellRowSpanValue = cells.ElementAtOrDefault(index)?.GetAttribute("rowspan")?.Trim();
 
             return new ColumnInfo
             {

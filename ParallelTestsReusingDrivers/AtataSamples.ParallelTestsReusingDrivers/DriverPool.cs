@@ -24,7 +24,7 @@ public static class DriverPool
     /// otherwise will use separate pool for particular scope object.
     /// </param>
     /// <returns>An <see cref="IWebDriver"/> created or taken from pool.</returns>
-    public static IWebDriver Acquire(IDriverFactory driverFactory, object poolScopeObject = null)
+    public static IWebDriver Acquire(IDriverFactory driverFactory, object? poolScopeObject = null)
     {
         ArgumentNullException.ThrowIfNull(driverFactory);
 
@@ -34,7 +34,7 @@ public static class DriverPool
 
         try
         {
-            DriverEntry entry = entries.FirstOrDefault(x => x.Alias == driverFactory.Alias && !x.IsAcquired);
+            DriverEntry? entry = entries.FirstOrDefault(x => x.Alias == driverFactory.Alias && !x.IsAcquired);
 
             if (entry is null)
             {
@@ -59,8 +59,8 @@ public static class DriverPool
         }
     }
 
-    private static ConcurrentBag<DriverEntry> ResolveEntriesBag(object poolScopeObject) =>
-        poolScopeObject == null
+    private static ConcurrentBag<DriverEntry> ResolveEntriesBag(object? poolScopeObject) =>
+        poolScopeObject is null
             ? s_globalEntries
             : s_scopedEntries.GetOrAdd(poolScopeObject, _ => []);
 
@@ -73,9 +73,9 @@ public static class DriverPool
 
     public static void Release(IWebDriver driver)
     {
-        DriverEntry entry = AllEntries.FirstOrDefault(x => x.Driver == driver);
+        DriverEntry? entry = AllEntries.FirstOrDefault(x => x.Driver == driver);
 
-        if (entry != null)
+        if (entry is not null)
             entry.IsAcquired = false;
     }
 

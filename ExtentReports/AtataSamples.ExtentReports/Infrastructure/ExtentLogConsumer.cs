@@ -28,7 +28,7 @@ public sealed partial class ExtentLogConsumer : ILogConsumer
             case LogLevel.Info:
                 if (eventInfo.SectionEnd is VerificationLogSection)
                 {
-                    if (eventInfo.SectionEnd.Exception != null)
+                    if (eventInfo.SectionEnd.Exception is not null)
                     {
                         return Status.Fail;
                     }
@@ -57,11 +57,11 @@ public sealed partial class ExtentLogConsumer : ILogConsumer
     }
 
     private static string BuildCompleteMessage(LogEventInfo eventInfo) =>
-        !string.IsNullOrWhiteSpace(eventInfo.Message) && eventInfo.Exception != null
+        !string.IsNullOrWhiteSpace(eventInfo.Message) && eventInfo.Exception is not null
             ? $"{eventInfo.Message} {eventInfo.Exception}"
-            : eventInfo.Exception != null
-            ? eventInfo.Exception.ToString()
-            : eventInfo.Message;
+            : eventInfo.Exception is not null
+                ? eventInfo.Exception.ToString()
+                : eventInfo.Message;
 
     private static string NormalizeMessage(string message)
     {

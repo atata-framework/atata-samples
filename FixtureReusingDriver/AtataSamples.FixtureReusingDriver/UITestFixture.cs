@@ -4,7 +4,7 @@ public abstract class UITestFixture
 {
     protected virtual bool ReuseDriver => false;
 
-    protected IWebDriver PreservedDriver { get; private set; }
+    protected IWebDriver? PreservedDriver { get; private set; }
 
     [OneTimeSetUp]
     public void SetUpFixture()

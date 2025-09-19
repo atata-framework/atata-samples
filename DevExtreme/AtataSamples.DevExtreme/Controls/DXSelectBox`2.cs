@@ -14,7 +14,7 @@ public class DXSelectBox<T, TOwner> : EditableField<T, TOwner>
 
     protected override T GetValue()
     {
-        string valueAsString = AssociatedInput.Value;
+        string? valueAsString = AssociatedInput.Value;
 
         if (valueAsString.Length == 0)
             valueAsString = null;
