@@ -12,8 +12,8 @@ public sealed class PlanTests : UITestFixture
     [Test]
     public void PrimaryPageDataVerification_InTest() =>
         Go.To<PlansPage>()
-            .PageTitle.Should.Equal("Plans - Atata Sample App")
-            .Header.Should.Equal("Plans")
+            .PageTitle.Should.Be("Plans - Atata Sample App")
+            .Header.Should.Be("Plans")
             .Content.Should.Contain("Please choose your payment plan");
 
     [Test]
@@ -32,19 +32,19 @@ public sealed class PlanTests : UITestFixture
     public void ComplexPageDataVerification() =>
         Go.To<PlansPage>()
             .AggregateAssert(x => x
-                .PlanItems.Count.Should.Equal(3)
-                .PlanItems[0].Title.Should.Equal("Basic")
-                .PlanItems[0].Price.Should.Equal(0)
-                .PlanItems[0].NumberOfProjects.Should.Equal(1)
+                .PlanItems.Count.Should.Be(3)
+                .PlanItems[0].Title.Should.Be("Basic")
+                .PlanItems[0].Price.Should.Be(0)
+                .PlanItems[0].NumberOfProjects.Should.Be(1)
                 .PlanItems[0].Features.Items.Should.EqualSequence(Feature1, Feature2)
 
-                .PlanItems[1].Title.Should.Equal("Plus")
-                .PlanItems[1].Price.Should.Equal(19.99m)
-                .PlanItems[1].NumberOfProjects.Should.Equal(3)
+                .PlanItems[1].Title.Should.Be("Plus")
+                .PlanItems[1].Price.Should.Be(19.99m)
+                .PlanItems[1].NumberOfProjects.Should.Be(3)
                 .PlanItems[1].Features.Items.Should.EqualSequence(Feature1, Feature2, Feature3, Feature4)
 
-                .PlanItems[2].Title.Should.Equal("Premium")
-                .PlanItems[2].Price.Should.Equal(49.99m)
-                .PlanItems[2].NumberOfProjects.Should.Equal(10)
+                .PlanItems[2].Title.Should.Be("Premium")
+                .PlanItems[2].Price.Should.Be(49.99m)
+                .PlanItems[2].NumberOfProjects.Should.Be(10)
                 .PlanItems[2].Features.Items.Should.EqualSequence(Feature1, Feature2, Feature3, Feature4, Feature5, Feature6));
 }

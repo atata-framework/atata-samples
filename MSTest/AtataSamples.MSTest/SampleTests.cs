@@ -10,7 +10,7 @@ public sealed class SampleTests : UITestFixture
     [TestMethod]
     public void MSTest() =>
         Go.To<HomePage>()
-           .Header.Should.Equal("Atata Sample App");
+           .Header.Should.Be("Atata Sample App");
 
     /// <summary>
     /// Use such approach with <see cref="UITestFixture.Execute(System.Action)"/> method when you need to add exception/error information to the log.
@@ -20,5 +20,5 @@ public sealed class SampleTests : UITestFixture
     public void MSTestWithExceptionLogging() =>
         Execute(() =>
             Go.To<HomePage>()
-                .Header.Should.Equal("Atata Sample App"));
+                .Header.Should.Be("Atata Sample App"));
 }

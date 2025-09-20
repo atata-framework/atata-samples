@@ -9,11 +9,11 @@ public sealed class ExtComboBoxTests : UITestFixture
 
         // Set the value by typing its text:
         control.Set("Washington");
-        control.Should.Equal("Washington");
+        control.Should.Be("Washington");
 
         // Set the value by selecting it from drop-down:
         control.Select("Michigan");
-        control.Should.Equal("Michigan");
+        control.Should.Be("Michigan");
 
         // Clear the value:
         control.Clear();

@@ -7,11 +7,11 @@ public sealed class SignUpTests : UITestFixture
         Go.To<SignUpPage>()
             .SignUp.Click()
             .AggregateAssert(page => page
-                .ValidationMessages[x => x.FirstName].Should.Equal("is required")
-                .ValidationMessages[x => x.LastName].Should.Equal("is required")
-                .ValidationMessages[x => x.Email].Should.Equal("is required")
-                .ValidationMessages[x => x.Password].Should.Equal("is required")
-                .ValidationMessages[x => x.Agreement].Should.Equal("is required")
+                .ValidationMessages[x => x.FirstName].Should.Be("is required")
+                .ValidationMessages[x => x.LastName].Should.Be("is required")
+                .ValidationMessages[x => x.Email].Should.Be("is required")
+                .ValidationMessages[x => x.Password].Should.Be("is required")
+                .ValidationMessages[x => x.Agreement].Should.Be("is required")
                 .ValidationMessages.Should.HaveCount(5));
 
     [Test]
@@ -34,9 +34,9 @@ public sealed class SignUpTests : UITestFixture
             .Password.Set("a")
             .SignUp.Click()
             .AggregateAssert(page => page
-                .ValidationMessages[x => x.FirstName].Should.Equal("minimum length is 2")
-                .ValidationMessages[x => x.LastName].Should.Equal("minimum length is 2")
-                .ValidationMessages[x => x.Password].Should.Equal("minimum length is 6"));
+                .ValidationMessages[x => x.FirstName].Should.Be("minimum length is 2")
+                .ValidationMessages[x => x.LastName].Should.Be("minimum length is 2")
+                .ValidationMessages[x => x.Password].Should.Be("minimum length is 6"));
 
     [Test]
     public void Validation_MinLength_UsingExtensions() =>
@@ -55,7 +55,7 @@ public sealed class SignUpTests : UITestFixture
         Go.To<SignUpPage>()
             .Email.Set("some@email")
             .SignUp.Click()
-            .ValidationMessages[x => x.Email].Should.Equal("has incorrect format")
+            .ValidationMessages[x => x.Email].Should.Be("has incorrect format")
             .Email.Type(".com")
             .SignUp.Click()
             .ValidationMessages[x => x.Email].Should.Not.BePresent();

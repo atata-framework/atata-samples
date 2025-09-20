@@ -6,7 +6,7 @@ public sealed class UserTests : UITestFixture
     public void Create() =>
         Login() // Returns UsersPage.
             .New.ClickAndGo() // Returns UserEditWindow.
-                .ModalTitle.Should.Equal("New User")
+                .ModalTitle.Should.Be("New User")
                 .General.FirstName.SetRandom(out string firstName)
                 .General.LastName.SetRandom(out string lastName)
                 .General.Email.SetRandom(out string email)
@@ -15,10 +15,10 @@ public sealed class UserTests : UITestFixture
                 .Save.ClickAndGo() // Returns UsersPage.
             .Users.Rows[x => x.Email == email].View.ClickAndGo() // Returns UserDetailsPage.
                 .AggregateAssert(page => page
-                    .Header.Should.Equal($"{firstName} {lastName}")
-                    .Email.Should.Equal(email)
-                    .Office.Should.Equal(office)
-                    .Gender.Should.Equal(gender)
+                    .Header.Should.Be($"{firstName} {lastName}")
+                    .Email.Should.Be(email)
+                    .Office.Should.Be(office)
+                    .Gender.Should.Be(gender)
                     .Birthday.Should.Not.BePresent()
                     .Notes.Should.Not.BePresent());
 }

@@ -9,7 +9,7 @@ public sealed class PlanTests : UITestFixture
         Go.To<PlansPage>()
             .AggregateAssert(x => x
                 .PageTitle.Should.StartWith("Plans")
-                .Header.Should.Equal("Plans")
+                .Header.Should.Be("Plans")
                 .Content.Should.Contain("Please choose your payment plan"));
 
     [TestCase("Basic")]

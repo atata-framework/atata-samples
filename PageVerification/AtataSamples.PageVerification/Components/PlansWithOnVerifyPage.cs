@@ -11,8 +11,8 @@ public sealed class PlansWithOnVerifyPage : Page<_>
     {
         base.OnVerify();
 
-        PageTitle.Should.Equal("Plans - Atata Sample App");
-        Header.Should.Equal("Plans");
+        PageTitle.Should.Be("Plans - Atata Sample App");
+        Header.Should.Be("Plans");
         Content.Should.Contain("Please choose your payment plan");
     }
 }

@@ -20,6 +20,6 @@ public sealed class PageTitleAndHeaderTests<TPage> : UITestFixture
     public void Test() =>
         Go.To<TPage>()
             .AggregateAssert(x => x
-                .PageTitle.Should.Equal($"{_expectedPageTitle} - Atata Sample App")
-                .Header.Should.Equal(_expectedPageTitle));
+                .PageTitle.Should.Be($"{_expectedPageTitle} - Atata Sample App")
+                .Header.Should.Be(_expectedPageTitle));
 }

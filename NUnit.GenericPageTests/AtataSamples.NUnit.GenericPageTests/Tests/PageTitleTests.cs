@@ -18,5 +18,5 @@ public sealed class PageTitleTests<TPage> : UITestFixture
     [Test]
     public void Test() =>
         Go.To<TPage>()
-            .PageTitle.Should.Equal($"{_expectedPageTitle} - Atata Sample App");
+            .PageTitle.Should.Be($"{_expectedPageTitle} - Atata Sample App");
 }

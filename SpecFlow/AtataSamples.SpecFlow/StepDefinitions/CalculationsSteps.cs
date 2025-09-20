@@ -16,5 +16,5 @@ public sealed class CalculationsSteps : Steps
     [Then(@"I should see (.*) in result field")]
     public static void ThenIShouldSeeInResultField(int result) =>
         Go.On<CalculationsPage>()
-            .AdditionResult.Should.Equal(result);
+            .AdditionResult.Should.Be(result);
 }

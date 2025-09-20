@@ -44,13 +44,13 @@ public sealed class TableListTests : UITestFixture
     [Test]
     public void VerifyItemNameById_Fast() =>
         Go.To<TableListPage>()
-            .Items.FindRowById(250).Name.Should.Equal("Item 250");
+            .Items.FindRowById(250).Name.Should.Be("Item 250");
 
     [Test]
     [Explicit("Runs slowly about 20 seconds.")]
     public void VerifyItemNameById_Classic() =>
         Go.To<TableListPage>()
-            .Items.Rows[x => x.Id == 250].Name.Should.Equal("Item 250");
+            .Items.Rows[x => x.Id == 250].Name.Should.Be("Item 250");
 
     [Test]
     public void VerifyItemByIdAndName_Fast() =>

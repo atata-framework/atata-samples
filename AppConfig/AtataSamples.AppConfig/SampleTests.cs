@@ -8,5 +8,5 @@ public sealed class SampleTests : UITestFixture
             .Email.Set(Config.Account.Email)
             .Password.Set(Config.Account.Password)
             .SignIn.ClickAndGo()
-                .Heading.Should.Equal("Users"); // Verify that we are navigated to "Users" page.
+                .Heading.Should.Be("Users"); // Verify that we are navigated to "Users" page.
 }

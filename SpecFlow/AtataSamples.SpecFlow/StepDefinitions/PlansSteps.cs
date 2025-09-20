@@ -5,5 +5,5 @@ public sealed class PlansSteps : Steps
 {
     [Then(@"I verify Plans page")]
     public static void ThenIVerifyPlansPage() =>
-        Go.On<PlansPage>().PlanItems.Count.Should.Equal(3);
+        Go.On<PlansPage>().PlanItems.Count.Should.Be(3);
 }
