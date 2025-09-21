@@ -1,7 +1,7 @@
 ﻿namespace AtataSamples.DevExtreme;
 
 [ControlDefinition(ContainingClass = "dx-selectbox", ComponentTypeName = "select box")]
-public class DXSelectBox<T, TOwner> : EditableField<T, TOwner>
+public class DXSelectBox<TValue, TOwner> : EditableField<TValue, TOwner>
     where TOwner : PageObject<TOwner>
 {
     [FindFirst]
@@ -12,22 +12,19 @@ public class DXSelectBox<T, TOwner> : EditableField<T, TOwner>
     [FindByClass("dx-overlay-content", ScopeSource = ScopeSource.Page)]
     public ItemsControl<Option, TOwner> DropDownList { get; private set; }
 
-    protected override T GetValue()
+    protected override TValue GetValue()
     {
-        string? valueAsString = AssociatedInput.Value;
+        string valueAsString = AssociatedInput.Value;
 
-        if (valueAsString.Length == 0)
-            valueAsString = null;
-
-        return ConvertStringToValueUsingGetFormat(valueAsString);
+        return ConvertStringToValueUsingGetFormat(valueAsString)!;
     }
 
-    protected override void SetValue(T value)
+    protected override void SetValue(TValue value)
     {
-        string valueAsString = ConvertValueToStringUsingSetFormat(value);
+        string? valueAsString = ConvertValueToStringUsingSetFormat(value);
 
         Click();
-        DropDownList.Items.GetByXPathCondition(valueAsString, $". = '{valueAsString}'").Click();
+        DropDownList.Items.GetByXPathCondition(valueAsString, $".='{valueAsString}'").Click();
     }
 
     protected override bool GetIsReadOnly() =>

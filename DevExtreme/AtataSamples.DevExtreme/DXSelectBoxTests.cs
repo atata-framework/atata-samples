@@ -1,13 +1,13 @@
 ﻿namespace AtataSamples.DevExtreme;
 
-public sealed class DXSelectBoxTests : UITestFixture
+public sealed class DXSelectBoxTests : AtataTestSuite
 {
     [Test]
     [Explicit]
     public void AsString_GetAndSetValue()
     {
         var sut = Go.To<SelectBoxPage>().StringBasedCombobox;
-        sut.Should.BeNull();
+        sut.Should.BeEmpty();
 
         sut.Set("ExcelRemote IP");
         sut.Should.Be("ExcelRemote IP");
