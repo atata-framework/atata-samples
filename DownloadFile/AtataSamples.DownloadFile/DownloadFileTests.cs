@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.DownloadFile;
 
-public sealed class DownloadFileTests : UITestFixture
+public sealed class DownloadFileTests : AtataTestSuite
 {
     [Test]
     public void DownloadFile()
@@ -8,6 +8,6 @@ public sealed class DownloadFileTests : UITestFixture
         Go.To<TutorialPage>(url: "/tutorials/verification-of-page/")
             .DownloadSources.Click();
 
-        AtataContext.Current.Artifacts.Should.WithinSeconds(10).ContainFile("PageVerification.zip");
+        Context.Artifacts.Should.WithinSeconds(10).ContainFile("PageVerification.zip");
     }
 }
