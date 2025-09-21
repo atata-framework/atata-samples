@@ -1,9 +1,9 @@
 ﻿namespace AtataSamples.ExtentReports;
 
-public sealed class UsingSameDriverTests : UITestFixture
+[Parallelizable(ParallelScope.Self)]
+[StartSessionAndShare(typeof(WebDriverSession))]
+public sealed class UsingSameDriverTests : AtataTestSuite
 {
-    protected override bool UseFixtureDriverForTests => true;
-
     [OneTimeSetUp]
     public void SetUpFixture() =>
         Go.To<SignInPage>();

@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.ExtentReports;
 
-public sealed class UsingOwnDriverTests : UITestFixture
+public sealed class UsingOwnDriverTests : AtataTestSuite
 {
     [Test]
     public void Test1() =>
