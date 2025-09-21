@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.ConfirmationPopups;
 
-public sealed class ProductTests : UITestFixture
+public sealed class ProductTests : AtataTestSuite
 {
     [Test]
     public void DeleteUsingJSConfirm() =>
