@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.CsvDataSource;
 
-public sealed class AdditionModel
+public sealed record class AdditionModel
 {
     public int Value1 { get; set; }
 

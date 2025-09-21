@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.CsvDataSource;
 
-public sealed class UserTests : UITestFixture
+public sealed class UserTests : AtataTestSuite
 {
     public static IEnumerable<TestCaseData> UserModels =>
         CsvSource.Get<UserModel>("user-models.csv");
@@ -20,4 +20,10 @@ public sealed class UserTests : UITestFixture
                 row.LastName == model.LastName &&
                 row.Email == model.Email &&
                 row.Office == model.Office);
+
+    private static UsersPage Login() =>
+        Go.To<SignInPage>()
+            .Email.Set("admin@mail.com")
+            .Password.Set("abc123")
+            .SignIn.ClickAndGo();
 }

@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.CsvDataSource;
 
-public sealed class CalculationTests : UITestFixture
+public sealed class CalculationTests : AtataTestSuite
 {
     public static IEnumerable<TestCaseData> AdditionModels =>
         CsvSource.Get<AdditionModel>("addition-models.csv", expectedResultType: typeof(int));
