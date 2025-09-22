@@ -20,7 +20,7 @@ public sealed class ExtComboBox<TOwner> : Input<string, TOwner>
     public UnorderedList<ListItem<TOwner>, TOwner> DropDownList =>
         Controls.Resolve<UnorderedList<ListItem<TOwner>, TOwner>>(nameof(DropDownList), () =>
         {
-            string componentId = DomAttributes["data-componentid"];
+            string? componentId = DomAttributes["data-componentid"];
 
             return [new FindByIdAttribute($"{componentId}-picker") { ScopeSource = ScopeSource.Page }];
         });
