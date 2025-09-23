@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.JQueryUI;
 
-public sealed class JQAutocompleteTests : UITestFixture
+public sealed class JQAutocompleteTests : AtataTestSuite
 {
     [Test]
     public void JQueryUI_Autocomplete() =>
