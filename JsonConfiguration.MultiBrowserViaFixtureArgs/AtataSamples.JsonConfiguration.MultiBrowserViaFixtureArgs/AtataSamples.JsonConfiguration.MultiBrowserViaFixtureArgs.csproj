@@ -8,18 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Atata" Version="3.6.0" />
-    <PackageReference Include="Atata.Configuration.Json" Version="3.0.0" />
-    <PackageReference Include="Atata.WebDriverSetup" Version="3.5.0" />
+    <PackageReference Include="Atata" Version="4.0.0-beta.7" />
+    <PackageReference Include="Atata.NLog" Version="4.0.0-beta.3" />
+    <PackageReference Include="Atata.NUnit" Version="4.0.0-beta.4" />
+    <PackageReference Include="Atata.WebDriverSetup" Version="4.0.0-beta.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="NLog" Version="6.0.4" />
     <PackageReference Include="NUnit" Version="4.4.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="5.1.0" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <None Include="Atata.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
