@@ -1,4 +1,4 @@
-# [Atata Samples](https://github.com/atata-framework/atata-samples) / Fixture Reusing Driver
+﻿# [Atata Samples](https://github.com/atata-framework/atata-samples) / Fixture Reusing Driver
 
 [![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://github.com/atata-framework/atata-samples/raw/main/_archives/FixtureReusingDriver.zip)
 
@@ -8,70 +8,28 @@ Demonstrates how to configure Atata to reuse the same driver instance by the tes
 
 ## Implementation
 
-### UITestFixture
-
-The base `UITestFixture` class should have additional functionality to preserve and reuse driver.
+In order to reuse the session by the tests in a fixture, `[StartSessionAndShare(typeof(...))]` is needed.
+`[Parallelizable(ParallelScope.Self)]` is an NUnit-specific attribute, which is optional.
 
 ```cs
 namespace AtataSamples.FixtureReusingDriver;
 
-public abstract class UITestFixture
+//// 👇 Specifies that tests of this suite should not run in parallel with each other,
+//// because they share the same WebDriverSession instance.
+[Parallelizable(ParallelScope.Self)]
+//// 👇 Starts a single WebDriverSession for suite and shares it with tests.
+[StartSessionAndShare(typeof(WebDriverSession))]
+public sealed class PlanTests : AtataTestSuite
 {
-    protected virtual bool ReuseDriver => false;
-
-    protected IWebDriver PreservedDriver { get; private set; }
+    private PlansPage _page = null!;
 
     [OneTimeSetUp]
-    public void SetUpFixture()
-    {
-        if (ReuseDriver)
-            PreservedDriver = AtataContext.GlobalConfiguration.BuildingContext.DriverFactoryToUse.Create();
-    }
-
-    [SetUp]
-    public void SetUp()
-    {
-        AtataContextBuilder contextBuilder = AtataContext.Configure();
-
-        if (ReuseDriver && PreservedDriver is not null)
-            contextBuilder
-                .UseDriver(PreservedDriver)
-                .UseDisposeDriver(false);
-
-        contextBuilder.Build();
-    }
-
-    [TearDown]
-    public void TearDown() =>
-        AtataContext.Current?.Dispose();
-
-    [OneTimeTearDown]
-    public void TearDownFixture()
-    {
-        if (PreservedDriver is not null)
-        {
-            PreservedDriver.Dispose();
-            PreservedDriver = null;
-        }
-    }
-}
-```
-
-Driver reusing functionality is optional here and is disabled by default.
-`ReuseDriver` property is responsible for enabling/disabling this functionality.
-
-### Test Fixture
-
-```cs
-namespace AtataSamples.FixtureReusingDriver;
-
-public sealed class PlanTests : UITestFixture
-{
-    protected override bool ReuseDriver => true;
+    public void SetUpSuite() =>
+        _page = Go.To<PlansPage>();
 
     [Test]
     public void Plans_HasCorrectHeader() =>
-        Go.To<PlansPage>()
+        _page
             .AggregateAssert(x => x
                 .PageTitle.Should.StartWith("Plans")
                 .Header.Should.Be("Plans")
@@ -81,11 +39,19 @@ public sealed class PlanTests : UITestFixture
     [TestCase("Plus")]
     [TestCase("Premium")]
     public void Plans_Has(string planTitle) =>
-        Go.To<PlansPage>()
+        _page
             .PlanItems[x => x.Title == planTitle].Should.BeVisible();
 }
 ```
 
-Note the line `protected override bool ReuseDriver => true;` which is required to enable driver reusing functionality.
+If all the tests are executed on the same page and the page is not changing,
+then it is possible to navigate to that page only once in the `[OneTimeSetUp]` method
+of the suite, like here:
 
-The code of tests is just regular, nothing special is needed here.
+```cs
+private PlansPage _page = null!;
+
+[OneTimeSetUp]
+public void SetUpSuite() =>
+    _page = Go.To<PlansPage>();
+```
