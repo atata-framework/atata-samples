@@ -61,9 +61,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 
 - **JSON Configuration: Multi-Browser via Fixture Arguments** - [`/JsonConfiguration.MultiBrowserViaFixtureArgs`](../../tree/main/JsonConfiguration.MultiBrowserViaFixtureArgs)
   | [download](../../raw/main/_archives/JsonConfiguration.MultiBrowserViaFixtureArgs.zip).
-- **JSON Configuration: Multi-Environment** - [`/JsonConfiguration.MultiEnvironment`](../../tree/main/JsonConfiguration.MultiEnvironment)
-  | [download](../../raw/main/_archives/JsonConfiguration.MultiEnvironment.zip).
-  Demonstrates the way to support multiple environments using JSON configuration files.
+- **Configuration: Multi-environment via .runsettings files** - [`/Configuration.MultiEnvironmentViaRunSettings`](../../tree/main/Configuration.MultiEnvironmentViaRunSettings)
+  | [download](../../raw/main/_archives/Configuration.MultiEnvironmentViaRunSettings.zip).
+  Demonstrates the way to support multiple environments using .runsettings files.
 - **JSON Extended Configuration** - [`/JsonExtendedConfiguration`](../../tree/main/JsonExtendedConfiguration)
   | [download](../../raw/main/_archives/JsonExtendedConfiguration.zip).
   Demonstrates the way to implement complex configuration for different environments using
