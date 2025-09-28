@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.JsonConfiguration.MultiEnvironment", "AtataSamples.JsonConfiguration.MultiEnvironment\AtataSamples.JsonConfiguration.MultiEnvironment.csproj", "{9509C8F8-E9FA-492E-8E92-4E1964947FA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.Configuration.MultiEnvironmentViaRunSettings", "AtataSamples.Configuration.MultiEnvironmentViaRunSettings\AtataSamples.Configuration.MultiEnvironmentViaRunSettings.csproj", "{9509C8F8-E9FA-492E-8E92-4E1964947FA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,3 +1,3 @@
 ﻿global using Atata;
-global using Atata.Configuration.Json;
+global using Atata.NUnit;
 global using NUnit.Framework;

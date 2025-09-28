@@ -1,14 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
-  <TestRunParameters>
-    <Parameter name="TestEnvironment" value="env" />
-    <Parameter name="DriverAlias" value="chrome-headless" />
-  </TestRunParameters>
   <RunConfiguration>
     <EnvironmentVariables>
-	  <BaseUrl>https://demo.atata.io/?env=STAGING</BaseUrl>
+      <BaseUrl>https://demo.atata.io/?env=STAGING</BaseUrl>
       <AccountEmail>staging.user@mail.com</AccountEmail>
       <AccountPassword>stagingpass</AccountPassword>
+      <WebDriverAlias>chrome-headless</WebDriverAlias>
     </EnvironmentVariables>
   </RunConfiguration>
 </RunSettings>

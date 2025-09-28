@@ -1,4 +1,4 @@
-﻿namespace AtataSamples.JsonConfiguration.MultiEnvironment;
+﻿namespace AtataSamples.Configuration.MultiEnvironmentViaRunSettings;
 
 using _ = HomePage;
 
