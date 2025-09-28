@@ -76,6 +76,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.DevExtreme", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.Reqnroll", "Reqnroll\AtataSamples.Reqnroll\AtataSamples.Reqnroll.csproj", "{1D5A320D-2C6A-6622-DDFE-E20E4A22A044}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtataSamples.Configuration.MultiEnvViaRunSettingsAndJson", "Configuration.MultiEnvViaRunSettingsAndJson\AtataSamples.Configuration.MultiEnvViaRunSettingsAndJson\AtataSamples.Configuration.MultiEnvViaRunSettingsAndJson.csproj", "{ADF799E3-FC86-3621-EDAD-8E13C6A16EE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -206,6 +208,10 @@ Global
 		{1D5A320D-2C6A-6622-DDFE-E20E4A22A044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D5A320D-2C6A-6622-DDFE-E20E4A22A044}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D5A320D-2C6A-6622-DDFE-E20E4A22A044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF799E3-FC86-3621-EDAD-8E13C6A16EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF799E3-FC86-3621-EDAD-8E13C6A16EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF799E3-FC86-3621-EDAD-8E13C6A16EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF799E3-FC86-3621-EDAD-8E13C6A16EE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

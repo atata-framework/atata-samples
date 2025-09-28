@@ -62,6 +62,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Configuration: Multi-environment via .runsettings files** - [`/Configuration.MultiEnvironmentViaRunSettings`](../../tree/main/Configuration.MultiEnvironmentViaRunSettings)
   | [download](../../raw/main/_archives/Configuration.MultiEnvironmentViaRunSettings.zip).
   Demonstrates the way to support multiple environments using .runsettings files.
+- **Configuration: Multi-environment via .runsettings and .json files** - [`/Configuration.MultiEnvViaRunSettingsAndJson`](../../tree/main/Configuration.MultiEnvViaRunSettingsAndJson)
+  | [download](../../raw/main/_archives/Configuration.MultiEnvViaRunSettingsAndJson.zip).
+  Demonstrates the way to support multiple environments using .runsettings and .json files.
 - **JSON Extended Configuration** - [`/JsonExtendedConfiguration`](../../tree/main/JsonExtendedConfiguration)
   | [download](../../raw/main/_archives/JsonExtendedConfiguration.zip).
   Demonstrates the way to implement complex configuration for different environments using

@@ -1,0 +1,5 @@
+{
+  "baseUrl": "https://demo.atata.io/?env=QA",
+  "accountEmail": "qa.user@mail.com",
+  "accountPassword": "qapass"
+}
