@@ -59,8 +59,6 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 
 ### Configuration
 
-- **JSON Configuration: Multi-Browser via Fixture Arguments** - [`/JsonConfiguration.MultiBrowserViaFixtureArgs`](../../tree/main/JsonConfiguration.MultiBrowserViaFixtureArgs)
-  | [download](../../raw/main/_archives/JsonConfiguration.MultiBrowserViaFixtureArgs.zip).
 - **Configuration: Multi-environment via .runsettings files** - [`/Configuration.MultiEnvironmentViaRunSettings`](../../tree/main/Configuration.MultiEnvironmentViaRunSettings)
   | [download](../../raw/main/_archives/Configuration.MultiEnvironmentViaRunSettings.zip).
   Demonstrates the way to support multiple environments using .runsettings files.

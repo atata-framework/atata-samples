@@ -38,8 +38,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.Performance.Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.TableWithRowSpannedCells", "TableWithRowSpannedCells\AtataSamples.TableWithRowSpannedCells\AtataSamples.TableWithRowSpannedCells.csproj", "{0BBFDE9A-5075-4EA4-941B-8A8663621FFA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArgs", "JsonConfiguration.MultiBrowserViaFixtureArgs\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArgs\AtataSamples.JsonConfiguration.MultiBrowserViaFixtureArgs.csproj", "{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.SpecFlow", "SpecFlow\AtataSamples.SpecFlow\AtataSamples.SpecFlow.csproj", "{1C4E1D11-ADE1-44F5-B163-6377C5CF80C4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.ParallelTestsReusingDrivers", "ParallelTestsReusingDrivers\AtataSamples.ParallelTestsReusingDrivers\AtataSamples.ParallelTestsReusingDrivers.csproj", "{108B7094-646A-4149-B278-5177CEFE7F0C}"
@@ -132,10 +130,6 @@ Global
 		{0BBFDE9A-5075-4EA4-941B-8A8663621FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BBFDE9A-5075-4EA4-941B-8A8663621FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BBFDE9A-5075-4EA4-941B-8A8663621FFA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6E411D5-3D0D-4EC6-8D06-382B6E1769E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C4E1D11-ADE1-44F5-B163-6377C5CF80C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1C4E1D11-ADE1-44F5-B163-6377C5CF80C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C4E1D11-ADE1-44F5-B163-6377C5CF80C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
