@@ -1,4 +1,4 @@
-﻿namespace AtataSamples.Configuration.MultiEnvironmentViaRunSettings;
+﻿namespace AtataSamples.Configuration.MultiEnvViaRunSettings;
 
 public sealed class SignInTests : TestSuite
 {

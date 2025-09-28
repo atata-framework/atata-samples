@@ -28,7 +28,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.ConfirmationPo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.CsvDataSource", "CsvDataSource\AtataSamples.CsvDataSource\AtataSamples.CsvDataSource.csproj", "{817CD90A-097D-4A03-9BF7-15FE26A41C8C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.Configuration.MultiEnvironmentViaRunSettings", "Configuration.MultiEnvironmentViaRunSettings\AtataSamples.Configuration.MultiEnvironmentViaRunSettings\AtataSamples.Configuration.MultiEnvironmentViaRunSettings.csproj", "{9509C8F8-E9FA-492E-8E92-4E1964947FA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.Configuration.MultiEnvViaRunSettings", "Configuration.MultiEnvViaRunSettings\AtataSamples.Configuration.MultiEnvViaRunSettings\AtataSamples.Configuration.MultiEnvViaRunSettings.csproj", "{9509C8F8-E9FA-492E-8E92-4E1964947FA9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MSTest", "MSTest\AtataSamples.MSTest\AtataSamples.MSTest.csproj", "{D35613E8-170A-4C6E-9369-87A3996B53B5}"
 EndProject

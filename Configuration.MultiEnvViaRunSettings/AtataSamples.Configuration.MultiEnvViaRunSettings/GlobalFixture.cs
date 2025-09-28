@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace AtataSamples.Configuration.MultiEnvironmentViaRunSettings;
+namespace AtataSamples.Configuration.MultiEnvViaRunSettings;
 
 public sealed class GlobalFixture : AtataGlobalFixture
 {
