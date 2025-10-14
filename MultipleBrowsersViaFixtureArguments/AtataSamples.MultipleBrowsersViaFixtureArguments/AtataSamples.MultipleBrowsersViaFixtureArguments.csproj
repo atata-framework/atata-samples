@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Atata" Version="4.0.0-beta.7" />
+    <PackageReference Include="Atata" Version="4.0.0-beta.8" />
     <PackageReference Include="Atata.NLog" Version="4.0.0-beta.3" />
     <PackageReference Include="Atata.NUnit" Version="4.0.0-beta.4" />
     <PackageReference Include="Atata.WebDriverSetup" Version="4.0.0-beta.2" />
