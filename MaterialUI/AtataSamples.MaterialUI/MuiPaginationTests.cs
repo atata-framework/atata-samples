@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.MaterialUI;
 
-public sealed class MuiPaginationTests : UITestFixture
+public sealed class MuiPaginationTests : AtataTestSuite
 {
     [Test]
     public void ClickNext() =>
