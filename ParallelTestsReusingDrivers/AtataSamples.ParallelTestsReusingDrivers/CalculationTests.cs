@@ -1,9 +1,7 @@
 ﻿namespace AtataSamples.ParallelTestsReusingDrivers;
 
-public sealed class CalculationTests : UITestFixture
+public sealed class CalculationTests : AtataTestSuite
 {
-    protected override DriverPoolUsage DriverPoolUsage => DriverPoolUsage.Global;
-
     [TestCase(1, 1, ExpectedResult = 2)]
     [TestCase(5, -5, ExpectedResult = 0)]
     [TestCase(100, 100, ExpectedResult = 200)]

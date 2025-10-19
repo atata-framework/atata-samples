@@ -1,14 +1,21 @@
 ﻿namespace AtataSamples.ParallelTestsReusingDrivers;
 
-public sealed class PlanTests : UITestFixture
+//// 👇 Specifies that tests of this suite should not run in parallel with each other,
+//// because they share the same WebDriverSession instance.
+[Parallelizable(ParallelScope.Self)]
+//// 👇 Starts a single WebDriverSession for suite and shares it with tests.
+[TakeSessionFromPoolAndShare(typeof(WebDriverSession))]
+public sealed class PlanTests : AtataTestSuite
 {
-    protected override DriverPoolUsage DriverPoolUsage =>
-        DriverPoolUsage.Global;
+    private PlansPage _page = null!;
+
+    [OneTimeSetUp]
+    public void SetUpSuite() =>
+        _page = Go.To<PlansPage>();
 
     [TestCase("Basic")]
     [TestCase("Plus")]
     [TestCase("Premium")]
     public void Plans_Has(string title) =>
-        Go.To<PlansPage>()
-            .PlanItems[x => x.Title == title].Should.BeVisible();
+        _page.PlanItems[x => x.Title == title].Should.BeVisible();
 }

@@ -1,4 +1,3 @@
-﻿global using System.Collections.Concurrent;
-global using Atata;
+﻿global using Atata;
+global using Atata.NUnit;
 global using NUnit.Framework;
-global using OpenQA.Selenium;
