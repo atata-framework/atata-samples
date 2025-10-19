@@ -122,7 +122,7 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   Demonstrates the creation of Atata custom controls using Ext JS components as examples.
 - **Multiple Browsers in Test** - [`/MultipleBrowsersInTest`](../../tree/main/MultipleBrowsersInTest)
   | [download](../../raw/main/_archives/MultipleBrowsersInTest.zip).
-  Demonstrates the usage of multiple browsers in a single test.
+  Demonstrates a usage of multiple browsers in a single test.
 - **Download File** - [`/DownloadFile`](../../tree/main/DownloadFile)
   | [download](../../raw/main/_archives/DownloadFile.zip).
   Demonstrates how to configure downloads directory of Chrome and verify that file is downloaded.
