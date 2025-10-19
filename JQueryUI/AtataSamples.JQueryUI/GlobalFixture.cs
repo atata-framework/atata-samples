@@ -12,5 +12,5 @@ public sealed class GlobalFixture : AtataGlobalFixture
             .UseBaseUrl("https://jqueryui.com/"));
 
     protected override void ConfigureGlobalAtataContext(AtataContextBuilder builder) =>
-        builder.EventSubscriptions.Add(SetUpWebDriversForUseEventHandler.Instance);
+        builder.SetUpWebDriversForUse();
 }

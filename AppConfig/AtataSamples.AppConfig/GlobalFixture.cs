@@ -12,5 +12,5 @@ public sealed class GlobalFixture : AtataGlobalFixture
             .UseBaseUrl(Config.BaseUrl));
 
     protected override void ConfigureGlobalAtataContext(AtataContextBuilder builder) =>
-        builder.EventSubscriptions.Add(SetUpWebDriversForUseEventHandler.Instance);
+        builder.SetUpWebDriversForUse();
 }

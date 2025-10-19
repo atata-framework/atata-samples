@@ -12,5 +12,5 @@ public sealed class GlobalFixture : AtataGlobalFixture
             .UseBaseUrl("https://js.devexpress.com/React/Demos/WidgetsGallery/Demo/"));
 
     protected override void ConfigureGlobalAtataContext(AtataContextBuilder builder) =>
-        builder.EventSubscriptions.Add(SetUpWebDriversForUseEventHandler.Instance);
+        builder.SetUpWebDriversForUse();
 }

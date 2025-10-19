@@ -6,8 +6,17 @@ public sealed class GlobalFixture : AtataGlobalFixture
 {
     private GlobalConfig? _config;
 
-    protected override void ConfigureAtataContextGlobalProperties(AtataContextGlobalProperties globalProperties) =>
-        LoadConfiguration();
+    protected override void OnBeforeGlobalSetup()
+    {
+        string environmentName = TestContext.Parameters.Get("TestEnvironment", defaultValue: "local");
+
+        var configuration = new ConfigurationBuilder()
+            .AddJsonFile($"config.{environmentName}.json")
+            .AddEnvironmentVariables()
+            .Build();
+
+        _config = configuration.Get<GlobalConfig>();
+    }
 
     protected override void ConfigureAtataContextBaseConfiguration(AtataContextBuilder builder)
     {
@@ -34,18 +43,6 @@ public sealed class GlobalFixture : AtataGlobalFixture
     {
         builder.UseState(_config);
 
-        builder.EventSubscriptions.Add(SetUpWebDriversForUseEventHandler.Instance);
-    }
-
-    private void LoadConfiguration()
-    {
-        string environmentName = TestContext.Parameters.Get("TestEnvironment", defaultValue: "local");
-
-        var configuration = new ConfigurationBuilder()
-            .AddJsonFile($"config.{environmentName}.json")
-            .AddEnvironmentVariables()
-            .Build();
-
-        _config = configuration.Get<GlobalConfig>();
+        builder.SetUpWebDriversForUse();
     }
 }
