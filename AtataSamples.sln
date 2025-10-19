@@ -50,7 +50,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.JQueryUI", "JQ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.ExtentReports", "ExtentReports\AtataSamples.ExtentReports\AtataSamples.ExtentReports.csproj", "{39BCF494-B0B7-4849-8FBF-7A3310046C57}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MultipleBrowsersInTest", "MultipleBrowsersInTest\AtataSamples.MultipleBrowsersInTest\AtataSamples.MultipleBrowsersInTest.csproj", "{0FF33EF7-4ECD-430B-8CA4-A25AE25A3F3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MultipleWebDriverSessionsInTest", "MultipleWebDriverSessionsInTest\AtataSamples.MultipleWebDriverSessionsInTest\AtataSamples.MultipleWebDriverSessionsInTest.csproj", "{0FF33EF7-4ECD-430B-8CA4-A25AE25A3F3A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.FixtureReusingDriver", "FixtureReusingDriver\AtataSamples.FixtureReusingDriver\AtataSamples.FixtureReusingDriver.csproj", "{2BF60EDA-115A-4218-8854-31319352A5D9}"
 EndProject

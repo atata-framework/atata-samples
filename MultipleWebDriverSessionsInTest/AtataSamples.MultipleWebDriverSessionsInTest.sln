@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MultipleBrowsersInTest", "AtataSamples.MultipleBrowsersInTest\AtataSamples.MultipleBrowsersInTest.csproj", "{6C461E36-EF44-4679-900C-7341AEBD18A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MultipleWebDriverSessionsInTest", "AtataSamples.MultipleWebDriverSessionsInTest\AtataSamples.MultipleWebDriverSessionsInTest.csproj", "{6C461E36-EF44-4679-900C-7341AEBD18A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

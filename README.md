@@ -120,9 +120,9 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/main/_archives/HeadlessEdge.zip).
   Configures Atata to use headless Edge browser based on Chromium.
   Demonstrates the creation of Atata custom controls using Ext JS components as examples.
-- **Multiple Browsers in Test** - [`/MultipleBrowsersInTest`](../../tree/main/MultipleBrowsersInTest)
-  | [download](../../raw/main/_archives/MultipleBrowsersInTest.zip).
-  Demonstrates a usage of multiple browsers in a single test.
+- **Multiple `WebDriverSession`s in Test** - [`/MultipleWebDriverSessionsInTest`](../../tree/main/MultipleWebDriverSessionsInTest)
+  | [download](../../raw/main/_archives/MultipleWebDriverSessionsInTest.zip).
+  Demonstrates a usage of multiple `WebDriverSession`s in a test.
 - **Download File** - [`/DownloadFile`](../../tree/main/DownloadFile)
   | [download](../../raw/main/_archives/DownloadFile.zip).
   Demonstrates how to configure downloads directory of Chrome and verify that file is downloaded.
