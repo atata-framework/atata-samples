@@ -1,4 +1,4 @@
-﻿@ReusesFeatureDriver
+﻿@UsesSingleWebSession
 Feature: Common
 
 Scenario: Navigation to Calculations page

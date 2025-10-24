@@ -3,60 +3,52 @@
 [Binding]
 public sealed class GlobalHooks
 {
-    private const string ReusesFeatureDriverTag = "ReusesFeatureDriver";
-
-    private readonly IReqnrollOutputHelper _outputHelper;
-
-    public GlobalHooks(IReqnrollOutputHelper outputHelper) =>
-        _outputHelper = outputHelper;
-
-    [BeforeTestRun]
-    public static void SetUpTestRun()
-    {
-        AtataContext.GlobalConfiguration
-            .UseChrome()
-                .WithArguments("start-maximized", "disable-search-engine-choice-screen")
-            .UseBaseUrl("https://demo.atata.io/")
-            .UseCulture("en-US")
-            .UseSpecFlowNUnitFeatures();
-
-        AtataContext.GlobalConfiguration.AutoSetUpDriverToUse();
-    }
+    private const string UsesSingleWebSessionTag = "UsesSingleWebSession";
 
     [BeforeFeature]
-    public static void SetUpFeature(FeatureContext featureContext)
-    {
-        AtataContext featureAtataContext = AtataContext.Configure()
-            .UseDriverInitializationStage(AtataContextDriverInitializationStage.OnDemand)
-            .Build();
-
-        featureContext.Set(featureAtataContext);
-    }
+    public static void SetUpFeature(FeatureContext featureContext) =>
+        ReqnrollAtataContextSetup.SetUpFeature(featureContext, ConfigureFeatureAtataContext);
 
     [AfterFeature]
-    public static void TearDownFeature(FeatureContext featureContext)
-    {
-        if (featureContext.TryGetValue(out AtataContext featureAtataContext))
-            featureAtataContext.Dispose();
-    }
+    public static void TearDownFeature(FeatureContext featureContext) =>
+        ReqnrollAtataContextSetup.TearDownFeature(featureContext);
 
     [BeforeScenario]
-    public void SetUpScenario(FeatureContext featureContext, ScenarioContext scenarioContext)
-    {
-        var scenarioAtataContextBuilder = AtataContext.Configure()
-            .EventSubscriptions.Add<ArtifactAddedEvent>(eventData => _outputHelper.AddAttachment(eventData.AbsoluteFilePath))
-            .LogConsumers.Add(new TextOutputLogConsumer(_outputHelper.WriteLine));
-
-        if (scenarioContext.ScenarioInfo.CombinedTags.Contains(ReusesFeatureDriverTag))
-            scenarioAtataContextBuilder
-                .UseDriver(() => featureContext.Get<AtataContext>().Driver)
-                .UseDisposeDriver(false);
-
-        AtataContext scenarioAtataContext = scenarioAtataContextBuilder.Build();
-        scenarioContext.Set(scenarioAtataContext);
-    }
+    [SuppressMessage("Performance", "CA1822:Mark members as static")]
+    public void SetUpScenario(FeatureContext featureContext, ScenarioContext scenarioContext) =>
+        ReqnrollAtataContextSetup.SetUpScenario(featureContext, scenarioContext, ConfigureScenarioAtataContext);
 
     [AfterScenario]
-    public static void TearDownScenario() =>
-        AtataContext.Current?.Dispose();
+    [SuppressMessage("Performance", "CA1822:Mark members as static")]
+    public void TearDownScenario(ScenarioContext scenarioContext) =>
+        ReqnrollAtataContextSetup.TearDownScenario(scenarioContext);
+
+    private static void ConfigureFeatureAtataContext(
+        AtataContextBuilder builder,
+        FeatureContext featureContext)
+    {
+        if (featureContext.FeatureInfo.Tags.Contains(UsesSingleWebSessionTag))
+        {
+            builder.Sessions.ConfigureWebDriver(x => x
+                .UseStart(true)
+                .UseAsShared());
+        }
+
+        // TODO: Add extra configuration for feature AtataContext, or remove the comment.
+    }
+
+    private static void ConfigureScenarioAtataContext(
+        AtataContextBuilder builder,
+        FeatureContext featureContext,
+        ScenarioContext scenarioContext)
+    {
+        if (scenarioContext.ScenarioInfo.CombinedTags.Contains(UsesSingleWebSessionTag))
+        {
+            builder.Sessions.ConfigureWebDriver(x => x
+                .UseStart(false));
+            builder.Sessions.Borrow<WebDriverSession>();
+        }
+
+        // TODO: Add extra configuration for scenario AtataContext, or remove the comment.
+    }
 }
