@@ -9,18 +9,18 @@ public class SLCombobox<T, TOwner> : EditableField<T, TOwner>
 
     protected override T GetValue()
     {
-        string valueAsString = TagName == "input"
-            ? DomProperties.Value
+        string? valueAsString = TagName == "input"
+            ? DomProperties.Value.Value
             : Content;
 
-        return ConvertStringToValueUsingGetFormat(valueAsString);
+        return ConvertStringToValueUsingGetFormat(valueAsString)!;
     }
 
     protected override void SetValue(T value)
     {
         Click();
 
-        string valueAsString = ConvertValueToStringUsingSetFormat(value);
+        string valueAsString = ConvertValueToStringUsingSetFormat(value) ?? string.Empty;
         DropDownList.Items[x => x == valueAsString].Click();
     }
 
