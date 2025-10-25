@@ -1,15 +1,7 @@
 ﻿namespace SampleApp.UITests;
 
-public abstract class UITestFixture
+public abstract class TestSuite : AtataTestSuite
 {
-    [SetUp]
-    public void SetUp() =>
-        AtataContext.Configure().Build();
-
-    [TearDown]
-    public void TearDown() =>
-        AtataContext.Current?.Dispose();
-
     protected static UsersPage Login() =>
         Go.To<SignInPage>()
             .Email.Set("admin@mail.com")

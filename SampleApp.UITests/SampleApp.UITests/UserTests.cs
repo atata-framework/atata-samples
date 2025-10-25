@@ -1,6 +1,6 @@
 ﻿namespace SampleApp.UITests;
 
-public sealed class UserTests : UITestFixture
+public sealed class UserTests : TestSuite
 {
     [Test]
     public void Create() =>
