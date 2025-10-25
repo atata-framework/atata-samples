@@ -19,7 +19,7 @@ public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentSc
             if (searchOptions.IsSafely)
                 return ComponentScopeFindResult.Missing;
             else
-                throw ElementExceptionFactory.CreateForNotFound(options.GetTermsAsString(), searchContext: scope);
+                throw ElementNotFoundException.Create(options.GetTermsAsString(), searchContext: scope);
         }
 
         var xPathOptions = options.Clone();
@@ -32,7 +32,7 @@ public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentSc
     protected virtual string? BuildXPath(ISearchContext scope, ComponentScopeFindOptions options)
     {
         List<ColumnInfo> columns = TableColumnsInfoCache.GetOrAdd(
-            options.Metadata.ParentComponentType,
+            options.Metadata.ParentComponentType!,
             _ => GetColumnInfoItems((IWebElement)scope));
 
         ColumnInfo? column = columns

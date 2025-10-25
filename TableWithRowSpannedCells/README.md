@@ -22,8 +22,6 @@ But able to find only by indices, check Approach #3 to find cells by column head
 *TableUsingXPathPage.cs*
 
 ```cs
-using Atata;
-
 namespace AtataSamples.TableWithRowSpannedCells;
 
 using _ = TableUsingXPathPage;
@@ -77,8 +75,6 @@ Extraction gives better usability of XPath search.
 
 *FindByRowSpannedCellIndexAttribute.cs*
 ```cs
-using Atata;
-
 namespace AtataSamples.TableWithRowSpannedCells;
 
 public sealed class FindByRowSpannedCellIndexAttribute : FindByXPathAttribute
@@ -91,8 +87,6 @@ public sealed class FindByRowSpannedCellIndexAttribute : FindByXPathAttribute
 
 *FindByNonRowSpannedCellIndexAttribute.cs*
 ```cs
-using Atata;
-
 namespace AtataSamples.TableWithRowSpannedCells;
 
 public sealed class FindByNonRowSpannedCellIndexAttribute : FindByXPathAttribute
@@ -108,8 +102,6 @@ public sealed class FindByNonRowSpannedCellIndexAttribute : FindByXPathAttribute
 *TableUsingCustomFindAttributesPage.cs*
 
 ```cs
-using Atata;
-
 namespace AtataSamples.TableWithRowSpannedCells;
 
 using _ = TableUsingCustomFindAttributesPage;
@@ -156,17 +148,9 @@ By using custom strategy it is possible to configure finding of elements in any 
 *FindByColumnHeaderInTableWithRowSpannedCellsStrategy.cs*
 
 ```cs
-using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using Atata;
-using OpenQA.Selenium;
-
 namespace AtataSamples.TableWithRowSpannedCells;
 
-public sealed class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeFindStrategy
+public class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComponentScopeFindStrategy
 {
     protected static ConcurrentDictionary<Type, List<ColumnInfo>> TableColumnsInfoCache { get; } = [];
 
@@ -178,7 +162,7 @@ public sealed class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComp
 
     public ComponentScopeFindResult Find(ISearchContext scope, ComponentScopeFindOptions options, SearchOptions searchOptions)
     {
-        string xPath = BuildXPath(scope, options);
+        string? xPath = BuildXPath(scope, options);
 
         if (xPath is null)
         {
@@ -186,22 +170,24 @@ public sealed class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComp
                 return ComponentScopeFindResult.Missing;
             else
                 throw ElementExceptionFactory.CreateForNotFound(options.GetTermsAsString(), searchContext: scope);
+                throw ElementNotFoundException.Create(options.GetTermsAsString(), searchContext: scope);
         }
 
         var xPathOptions = options.Clone();
         xPathOptions.Index = 0;
-        xPathOptions.Terms = new[] { xPath };
+        xPathOptions.Terms = [xPath];
 
         return new SubsequentComponentScopeFindResult(scope, new FindByXPathStrategy(), xPathOptions);
     }
 
-    protected virtual string BuildXPath(ISearchContext scope, ComponentScopeFindOptions options)
+    protected virtual string? BuildXPath(ISearchContext scope, ComponentScopeFindOptions options)
     {
         List<ColumnInfo> columns = TableColumnsInfoCache.GetOrAdd(
             options.Metadata.ParentComponentType,
+            options.Metadata.ParentComponentType!,
             _ => GetColumnInfoItems((IWebElement)scope));
 
-        ColumnInfo column = columns
+        ColumnInfo? column = columns
             .Where(x => options.Match.IsMatch(x.HeaderName, options.Terms))
             .ElementAtOrDefault(options.Index ?? 0);
 
@@ -229,16 +215,16 @@ public sealed class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComp
         var headers = GetHeaderCells(row);
         var cells = GetCellsOfRowWithSpannedCells(row);
 
-        return headers.Select((header, index) =>
+        return [.. headers.Select((header, index) =>
         {
-            string cellRowSpanValue = cells.ElementAtOrDefault(index)?.GetAttribute("rowspan")?.Trim();
+            string? cellRowSpanValue = cells.ElementAtOrDefault(index)?.GetAttribute("rowspan")?.Trim();
 
             return new ColumnInfo
             {
                 HeaderName = header.Text,
                 HasRowSpan = !string.IsNullOrEmpty(cellRowSpanValue) && cellRowSpanValue != "1"
             };
-        }).ToList();
+        })];
     }
 
     private ReadOnlyCollection<IWebElement> GetHeaderCells(IWebElement row) =>
@@ -249,7 +235,7 @@ public sealed class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComp
         ReadOnlyCollection<IWebElement> cells = row.GetAll(
             By.XPath($"../{RowXPath}[{RowWithSpannedCellsXPathCondition}][1]/td").AtOnce().OfAnyVisibility());
 
-        return cells.Any()
+        return cells.Count != 0
             ? cells
             : row.GetAll(By.XPath("./td").AtOnce().OfAnyVisibility());
     }
@@ -268,8 +254,6 @@ public sealed class FindByColumnHeaderInTableWithRowSpannedCellsStrategy : IComp
 *TableUsingCustomFindStrategyPage.cs*
 
 ```cs
-using Atata;
-
 namespace AtataSamples.TableWithRowSpannedCells;
 
 using _ = TableUsingCustomFindStrategyPage;
@@ -324,15 +308,15 @@ Go.To<TableUsingXPathPage>()
 
     .Users.Rows[0].ExpertiseLevel.Should.Be("Architect")
     .Users.Rows[1].ExpertiseLevel.Should.Be("Architect")
-    .Users.Rows[2].ExpertiseLevel.Should.BeNull()
+    .Users.Rows[2].ExpertiseLevel.Should.BeEmpty()
 
     .Users.Rows[0].Client.Should.Be("SomeSoft")
     .Users.Rows[1].Client.Should.Be("Unassigned")
-    .Users.Rows[2].Client.Should.BeNull()
+    .Users.Rows[2].Client.Should.BeEmpty()
 
     .Users.Rows[0].Project.Should.Be("BioFruit")
     .Users.Rows[1].Project.Should.Be("Unassigned")
-    .Users.Rows[2].Project.Should.BeNull()
+    .Users.Rows[2].Project.Should.BeEmpty()
 
     .Users.Rows.SelectData(x => x.DirectProjectCost).Should.EqualSequence(1693.42m, 564.47m, 2257.89m)
 
