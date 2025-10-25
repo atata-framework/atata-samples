@@ -7,10 +7,7 @@ public sealed class ValidationMessageList<TOwner> : AssociatedControlList<Valida
     {
         var validationMessageDefinition = UIComponentResolver.GetControlDefinition(typeof(ValidationMessage<TOwner>));
 
-        PlainScopeLocator scopeLocator = new(By.XPath("ancestor::" + validationMessageDefinition.ScopeXPath))
-        {
-            SearchContext = control.Scope
-        };
+        PlainScopeLocator scopeLocator = new(control, By.XPath("ancestor::" + validationMessageDefinition.ScopeXPath));
 
         return Component.Controls.Create<ValidationMessage<TOwner>>(control.ComponentName, scopeLocator);
     }

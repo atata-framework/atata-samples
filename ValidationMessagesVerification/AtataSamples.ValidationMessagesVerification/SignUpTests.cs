@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.ValidationMessagesVerification;
 
-public sealed class SignUpTests : UITestFixture
+public sealed class SignUpTests : AtataTestSuite
 {
     [Test]
     public void Validation_Required() =>
