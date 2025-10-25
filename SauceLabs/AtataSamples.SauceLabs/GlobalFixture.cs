@@ -1,21 +1,17 @@
-﻿using NUnit.Framework.Interfaces;
-using OpenQA.Selenium.Chrome;
+﻿using OpenQA.Selenium.Chrome;
 
 namespace AtataSamples.SauceLabs;
 
-[SetUpFixture]
-public sealed class SetUpFixture
+public sealed class GlobalFixture : AtataGlobalFixture
 {
-    [OneTimeSetUp]
-    public void GlobalSetUp() =>
-        AtataContext.GlobalConfiguration
-            .UseRemoteDriver()
+    protected override void ConfigureAtataContextBaseConfiguration(AtataContextBuilder builder) =>
+        builder.Sessions.AddWebDriver(x => x
+            .UseStartScopes(AtataContextScopes.Test)
+            .UseRemoteDriver(x => x
                 .WithRemoteAddress("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub")
-                .WithOptions(CreateSauceLabsDriverOptions)
+                .WithOptions(CreateSauceLabsDriverOptions))
             .UseBaseUrl("https://atata.io/")
-            .UseCulture("en-US")
-            .UseAllNUnitFeatures()
-            .EventSubscriptions.Add<AtataContextDeInitEvent>(OnAtataContextDeInit);
+            .EventSubscriptions.Add<AtataContextDeInitStartedEvent>(OnAtataContextDeInit));
 
     private static DriverOptions CreateSauceLabsDriverOptions()
     {
@@ -29,8 +25,8 @@ public sealed class SetUpFixture
         {
             ["username"] = GetRequiredEnvironmentVariable("SAUCE_USERNAME"),
             ["accessKey"] = GetRequiredEnvironmentVariable("SAUCE_ACCESS_KEY"),
-            ["build"] = $"AtataSamples.SauceLabs / {AtataContext.GlobalProperties.BuildStart:yyyyMMddTHHmmss}",
-            ["name"] = AtataContext.Current.Test.FullName
+            ["build"] = $"AtataSamples.SauceLabs / {AtataContext.GlobalProperties.RunStart:yyyyMMddTHHmmss}",
+            ["name"] = AtataContext.ResolveCurrent().Test.FullName!
         };
 
         browserOptions.AddAdditionalOption("sauce:options", sauceOptions);
@@ -42,13 +38,13 @@ public sealed class SetUpFixture
         Environment.GetEnvironmentVariable(variableName)
             ?? throw new InvalidOperationException($"'{variableName}' environment variable is not found.");
 
-    private static void OnAtataContextDeInit(AtataContextDeInitEvent eventData)
+    private static void OnAtataContextDeInit(AtataContextDeInitStartedEvent eventData)
     {
-        if (eventData.Context.HasDriver)
+        if (eventData.Context.Sessions.TryGet<WebDriverSession>(out var webDriverSession))
         {
-            var isPassed = TestContext.CurrentContext.Result.Outcome.Status is not TestStatus.Warning or TestStatus.Failed;
+            var isPassed = eventData.Context.TestResultStatus == TestResultStatus.Passed;
 
-            eventData.Context.Driver.AsScriptExecutor().ExecuteScript(
+            webDriverSession.Driver.AsScriptExecutor().ExecuteScript(
                 $"sauce:job-result={(isPassed ? "passed" : "failed")}");
         }
     }
