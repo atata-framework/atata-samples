@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.SauceLabs;
 
-public sealed class SampleTests
+public sealed class SampleTests : AtataTestSuite
 {
     [Test]
     [Explicit("Before running the test, set SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables.")]
