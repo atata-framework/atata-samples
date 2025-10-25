@@ -7,7 +7,7 @@
 /// <typeparam name="TPage">The type of the page.</typeparam>
 [TestFixture(typeof(PlansPage))]
 [TestFixture(typeof(ProductsPage))]
-public sealed class SignInNavigationTests<TPage> : UITestFixture
+public sealed class SignInNavigationTests<TPage> : AtataTestSuite
     where TPage : AppPage<TPage>
 {
     [Test]
