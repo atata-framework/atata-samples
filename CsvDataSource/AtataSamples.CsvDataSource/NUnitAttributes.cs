@@ -1,2 +1,2 @@
-﻿[assembly: Parallelizable(ParallelScope.Children)]
-[assembly: SetCulture("en-US")]
+﻿[assembly: SetCulture("en-US")]
+[assembly: Parallelizable(ParallelScope.Fixtures)]
