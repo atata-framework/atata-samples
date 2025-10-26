@@ -6,4 +6,5 @@ Used in **[Multi-Browser Configuration via .runsettings files](https://atata.io/
 
 Demonstrates how to configure multi-browser tests application using `.runsettings` files.
 
-*[Download sources](https://github.com/atata-framework/atata-samples/raw/main/_archives/MultipleBrowsersViaRunSettings.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
+*[Download sources](https://github.com/atata-framework/atata-samples/raw/main/_archives/MultipleBrowsersViaRunSettings.zip),
+run tests, check results and experiment with [Atata Framework](https://atata.io).*
