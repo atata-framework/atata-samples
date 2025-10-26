@@ -2,6 +2,10 @@
 <RunSettings>
   <TestRunParameters>
     <Parameter name="TestEnvironment" value="local" />
-    <Parameter name="DriverAlias" value="chrome" />
   </TestRunParameters>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <WebDriverAlias>chrome-headless</WebDriverAlias>
+    </EnvironmentVariables>
+  </RunConfiguration>
 </RunSettings>
