@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.NUnit.BasicTestProject;
 
-public sealed class SampleTests : UITestFixture
+public sealed class SampleTests : AtataTestSuite
 {
     [Test]
     public void SampleTest() =>
