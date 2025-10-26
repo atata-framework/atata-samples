@@ -1,6 +1,6 @@
 ﻿namespace AtataSamples.Performance.ControlList;
 
-public sealed class TableListTests : UITestFixture
+public sealed class TableListTests : AtataTestSuite
 {
     [Test]
     public void VerifyNoItemWithId_Fast() =>
@@ -8,19 +8,19 @@ public sealed class TableListTests : UITestFixture
             .Items.Ids.Should.Not.Contain(999);
 
     [Test]
-    [Explicit("Runs slowly about 30 seconds.")]
+    [Explicit("Runs slowly about 10 seconds.")]
     public void VerifyNoItemWithId_Classic() =>
         Go.To<TableListPage>()
             .Items.Rows.Should.Not.Contain(x => x.Id == 999);
 
     [Test]
-    [Explicit("Runs slowly about 30 seconds.")]
+    [Explicit("Runs slowly about 10 seconds.")]
     public void VerifyNoItemWithId_Alternative_Exist() =>
         Go.To<TableListPage>()
             .Items.Rows[x => x.Id == 999].Should.Not.BePresent();
 
     [Test]
-    [Explicit("Runs slowly about 30 seconds.")]
+    [Explicit("Runs slowly about 10 seconds.")]
     public void VerifyNoItemWithId_Alternative_SelectData() =>
         Go.To<TableListPage>()
             .Items.Rows.SelectData(x => x.Id).Should.Not.Contain(999);
@@ -36,7 +36,7 @@ public sealed class TableListTests : UITestFixture
             .Items.Names.Should.Contain("Item 250");
 
     [Test]
-    [Explicit("Runs slowly about 20 seconds.")]
+    [Explicit("Runs slowly about 6 seconds.")]
     public void VerifyItemWithName_Classic() =>
         Go.To<TableListPage>()
             .Items.Rows.Should.Contain(x => x.Name == "Item 250");
@@ -47,7 +47,7 @@ public sealed class TableListTests : UITestFixture
             .Items.FindRowById(250).Name.Should.Be("Item 250");
 
     [Test]
-    [Explicit("Runs slowly about 20 seconds.")]
+    [Explicit("Runs slowly about 6 seconds.")]
     public void VerifyItemNameById_Classic() =>
         Go.To<TableListPage>()
             .Items.Rows[x => x.Id == 250].Name.Should.Be("Item 250");
