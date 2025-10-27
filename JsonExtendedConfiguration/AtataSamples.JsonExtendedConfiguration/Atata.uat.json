@@ -1,5 +1,0 @@
-{
-  "baseUrl": "https://atata.io/",
-  "username": "{env:TestUsername}",
-  "password": "{env:TestPassword}"
-}

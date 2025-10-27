@@ -1,16 +1,17 @@
 ﻿namespace AtataSamples.JsonExtendedConfiguration;
 
-public sealed class SampleTests : UITestFixture
+public sealed class SampleTests : AtataTestSuite
 {
     [Test]
     public void SampleTest()
     {
-        var username = AtataConfig.Current.Username;
-        var password = AtataConfig.Current.Password;
-        AtataContext.Current.Log.Info($"Username: {username}; Password: {password}");
+        var config = Context.State.Get<GlobalConfig>();
+        var username = config.Username;
+        var password = config.Password;
+        Context.Log.Info($"Username: {username}; Password: {password}");
 
-        string atataVariableValue = (string)AtataContext.Current.Variables["key"];
-        AtataContext.Current.Log.Info($"key: {atataVariableValue}");
+        string atataVariableValue = (string)Context.Variables["key"]!;
+        Context.Log.Info($"key: {atataVariableValue}");
 
         Go.To<OrdinaryPage>()
             .PageTitle.Should.Contain("Atata");

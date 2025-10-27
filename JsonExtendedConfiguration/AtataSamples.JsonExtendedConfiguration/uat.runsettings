@@ -4,4 +4,10 @@
     <Parameter name="TestEnvironment" value="uat" />
     <Parameter name="DriverAlias" value="chrome-headless" />
   </TestRunParameters>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <Username>uatuser</Username>
+      <!-- Password is not set here, supposed to be set in system/user environment variables. -->
+    </EnvironmentVariables>
+  </RunConfiguration>
 </RunSettings>

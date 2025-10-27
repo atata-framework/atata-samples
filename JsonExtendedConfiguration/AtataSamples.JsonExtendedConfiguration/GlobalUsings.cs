@@ -1,4 +1,3 @@
-﻿global using System.Diagnostics.CodeAnalysis;
-global using Atata;
-global using Atata.Configuration.Json;
+﻿global using Atata;
+global using Atata.NUnit;
 global using NUnit.Framework;
