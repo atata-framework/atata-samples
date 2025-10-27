@@ -1,5 +1,6 @@
-﻿namespace AtataSamples.ParallelTestsReusingDrivers;
+﻿namespace AtataSamples.SessionPool;
 
+// Each test will take a session from pool automatically.
 public sealed class CalculationTests : AtataTestSuite
 {
     [TestCase(1, 1, ExpectedResult = 2)]

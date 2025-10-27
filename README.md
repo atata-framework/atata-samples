@@ -60,10 +60,10 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Session Sharing** - [`/SessionSharing`](../../tree/main/SessionSharing)
   | [download](../../raw/main/_archives/SessionSharing.zip).
   Demonstrates how to configure Atata to reuse the same session instance by tests in a test suite.
-- **Parallel Tests Reusing Drivers** - [`/ParallelTestsReusingDrivers`](../../tree/main/ParallelTestsReusingDrivers)
-  | [download](../../raw/main/_archives/ParallelTestsReusingDrivers.zip).
-  Configures Atata to use a pool of drivers for tests execution.
-  After the test finishes, the driver is not closed and can be reused by one of the next tests.
+- **Session Pool** - [`/SessionPool`](../../tree/main/SessionPool)
+  | [download](../../raw/main/_archives/SessionPool.zip).
+  Configures Atata to use a pool of sessions for tests execution.
+  After test finishes, a session is returned to pool and can be reused by one of the next tests.
 - **Multiple `WebDriverSession`s in Test** - [`/MultipleWebDriverSessionsInTest`](../../tree/main/MultipleWebDriverSessionsInTest)
   | [download](../../raw/main/_archives/MultipleWebDriverSessionsInTest.zip).
   Demonstrates a usage of multiple `WebDriverSession`s in a test.

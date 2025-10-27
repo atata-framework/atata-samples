@@ -1,4 +1,4 @@
-﻿namespace AtataSamples.ParallelTestsReusingDrivers;
+﻿namespace AtataSamples.SessionPool;
 
 public sealed class GlobalFixture : AtataGlobalFixture
 {

@@ -1,4 +1,4 @@
-﻿namespace AtataSamples.ParallelTestsReusingDrivers;
+﻿namespace AtataSamples.SessionPool;
 
 //// 👇 Specifies that tests of this suite should not run in parallel with each other,
 //// because they share the same WebDriverSession instance.

@@ -1,4 +1,4 @@
-﻿namespace AtataSamples.ParallelTestsReusingDrivers;
+﻿namespace AtataSamples.SessionPool;
 
 using _ = PlansPage;
 
