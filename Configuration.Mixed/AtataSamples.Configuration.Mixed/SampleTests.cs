@@ -1,4 +1,4 @@
-﻿namespace AtataSamples.JsonExtendedConfiguration;
+﻿namespace AtataSamples.Configuration.Mixed;
 
 public sealed class SampleTests : AtataTestSuite
 {

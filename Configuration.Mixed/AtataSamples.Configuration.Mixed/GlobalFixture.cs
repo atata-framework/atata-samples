@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace AtataSamples.JsonExtendedConfiguration;
+namespace AtataSamples.Configuration.Mixed;
 
 public sealed class GlobalFixture : AtataGlobalFixture
 {

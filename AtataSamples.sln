@@ -62,7 +62,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.MaterialUI", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.SalesforceLightning", "SalesforceLightning\AtataSamples.SalesforceLightning\AtataSamples.SalesforceLightning.csproj", "{EA3945C9-3674-4D15-9366-7EC1D50911C1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.JsonExtendedConfiguration", "JsonExtendedConfiguration\AtataSamples.JsonExtendedConfiguration\AtataSamples.JsonExtendedConfiguration.csproj", "{7E7CAFC2-8AEE-4509-B8FC-041D56548368}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.Configuration.Mixed", "Configuration.Mixed\AtataSamples.Configuration.Mixed\AtataSamples.Configuration.Mixed.csproj", "{7E7CAFC2-8AEE-4509-B8FC-041D56548368}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtataSamples.NUnit.BasicTestProject", "NUnit.BasicTestProject\AtataSamples.NUnit.BasicTestProject\AtataSamples.NUnit.BasicTestProject.csproj", "{1C3E24EB-8055-4973-A013-D42F73D8C146}"
 EndProject
