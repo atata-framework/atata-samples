@@ -1,10 +1,8 @@
-﻿# [Atata Samples](https://github.com/atata-framework/atata-samples) / Fixture Reusing Driver
+﻿# [Atata Samples](https://github.com/atata-framework/atata-samples) / Session Sharing
 
-[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://github.com/atata-framework/atata-samples/raw/main/_archives/FixtureReusingDriver.zip)
+[![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://github.com/atata-framework/atata-samples/raw/main/_archives/SessionSharing.zip)
 
-Demonstrates how to configure Atata to reuse the same driver instance by the tests in a fixture.
-
-*[Download sources](https://github.com/atata-framework/atata-samples/raw/main/_archives/FixtureReusingDriver.zip), run tests, check results and experiment with [Atata Framework](https://atata.io).*
+Demonstrates how to configure Atata to reuse the same session instance by tests in a test suite.
 
 ## Implementation
 
@@ -12,7 +10,7 @@ In order to reuse the session by the tests in a fixture, `[StartSessionAndShare(
 `[Parallelizable(ParallelScope.Self)]` is an NUnit-specific attribute, which is optional.
 
 ```cs
-namespace AtataSamples.FixtureReusingDriver;
+namespace AtataSamples.SessionSharing;
 
 //// 👇 Specifies that tests of this suite should not run in parallel with each other,
 //// because they share the same WebDriverSession instance.
@@ -55,3 +53,6 @@ private PlansPage _page = null!;
 public void SetUpSuite() =>
     _page = Go.To<PlansPage>();
 ```
+
+*[Download sources](https://github.com/atata-framework/atata-samples/raw/main/_archives/SessionSharing.zip),
+run tests, check results and experiment with [Atata Framework](https://atata.io).*

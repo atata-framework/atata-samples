@@ -1,4 +1,4 @@
-﻿namespace AtataSamples.FixtureReusingDriver;
+﻿namespace AtataSamples.SessionSharing;
 
 public sealed class GlobalFixture : AtataGlobalFixture
 {

@@ -1,4 +1,4 @@
-﻿namespace AtataSamples.FixtureReusingDriver;
+﻿namespace AtataSamples.SessionSharing;
 
 using _ = PlansPage;
 

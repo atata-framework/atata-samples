@@ -55,6 +55,19 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Using Reqnroll** - [`/Reqnroll`](../../tree/main/Reqnroll)
   | [download](../../raw/main/_archives/Reqnroll.zip).
 
+### Sessions
+
+- **Session Sharing** - [`/SessionSharing`](../../tree/main/SessionSharing)
+  | [download](../../raw/main/_archives/SessionSharing.zip).
+  Demonstrates how to configure Atata to reuse the same session instance by tests in a test suite.
+- **Parallel Tests Reusing Drivers** - [`/ParallelTestsReusingDrivers`](../../tree/main/ParallelTestsReusingDrivers)
+  | [download](../../raw/main/_archives/ParallelTestsReusingDrivers.zip).
+  Configures Atata to use a pool of drivers for tests execution.
+  After the test finishes, the driver is not closed and can be reused by one of the next tests.
+- **Multiple `WebDriverSession`s in Test** - [`/MultipleWebDriverSessionsInTest`](../../tree/main/MultipleWebDriverSessionsInTest)
+  | [download](../../raw/main/_archives/MultipleWebDriverSessionsInTest.zip).
+  Demonstrates a usage of multiple `WebDriverSession`s in a test.
+
 ### Configuration
 
 - **Configuration: Multi-environment via .runsettings files** - [`/Configuration.MultiEnvViaRunSettings`](../../tree/main/Configuration.MultiEnvViaRunSettings)
@@ -107,20 +120,10 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Performance Practices for ControlList** - [`/Performance.ControlList`](../../tree/main/Performance.ControlList)
   | [download](../../raw/main/_archives/Performance.ControlList.zip).
   Demonstrates the performance practices to enumerate a big list of controls (500 `<tr>` elements).
-- **Fixture Reusing Driver** - [`/FixtureReusingDriver`](../../tree/main/FixtureReusingDriver)
-  | [download](../../raw/main/_archives/FixtureReusingDriver.zip).
-  Demonstrates how to configure Atata to reuse the same driver instance by the tests in a fixture.
-- **Parallel Tests Reusing Drivers** - [`/ParallelTestsReusingDrivers`](../../tree/main/ParallelTestsReusingDrivers)
-  | [download](../../raw/main/_archives/ParallelTestsReusingDrivers.zip).
-  Configures Atata to use a pool of drivers for tests execution.
-  After the test finishes, the driver is not closed and can be reused by one of the next tests.
 - **Using Headless Edge** - [`/HeadlessEdge`](../../tree/main/HeadlessEdge)
   | [download](../../raw/main/_archives/HeadlessEdge.zip).
   Configures Atata to use headless Edge browser based on Chromium.
   Demonstrates the creation of Atata custom controls using Ext JS components as examples.
-- **Multiple `WebDriverSession`s in Test** - [`/MultipleWebDriverSessionsInTest`](../../tree/main/MultipleWebDriverSessionsInTest)
-  | [download](../../raw/main/_archives/MultipleWebDriverSessionsInTest.zip).
-  Demonstrates a usage of multiple `WebDriverSession`s in a test.
 - **Download File** - [`/DownloadFile`](../../tree/main/DownloadFile)
   | [download](../../raw/main/_archives/DownloadFile.zip).
   Demonstrates how to configure downloads directory of Chrome and verify that file is downloaded.
