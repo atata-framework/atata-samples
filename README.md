@@ -64,6 +64,10 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/main/_archives/SessionPool.zip).
   Configures Atata to use a pool of sessions for tests execution.
   After test finishes, a session is returned to pool and can be reused by one of the next tests.
+- **Authorization Role-Based Session Pools** - [`/AuthorizationRoleBasedSessionPools`](../../tree/main/AuthorizationRoleBasedSessionPools)
+  | [download](../../raw/main/_archives/AuthorizationRoleBasedSessionPools.zip).
+  Configures Atata to use a pool of authorization role-based web sessions.
+  Has ability to specify the required user-role session for each test method or test suite.
 - **Multiple `WebDriverSession`s in Test** - [`/MultipleWebDriverSessionsInTest`](../../tree/main/MultipleWebDriverSessionsInTest)
   | [download](../../raw/main/_archives/MultipleWebDriverSessionsInTest.zip).
   Demonstrates a usage of multiple `WebDriverSession`s in a test.
