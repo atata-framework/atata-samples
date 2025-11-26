@@ -13,6 +13,7 @@ public sealed class UserEditWindow : BSModal<_>
     [Term("Save", "Create")]
     public Button<UsersPage, _> Save { get; private set; }
 
+    [TypesTextUsingScript(TargetType = typeof(EditableTextField<,>))]
     public sealed class GeneralTabPane : BSTabPane<_>
     {
         public TextInput<_> FirstName { get; private set; }

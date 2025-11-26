@@ -9,6 +9,7 @@ public sealed class NewUserWindow : BSModal<_>
 
     public Button<UsersPage, _> Create { get; private set; }
 
+    [TypesTextUsingScript(TargetType = typeof(EditableTextField<,>))]
     public sealed class GeneralTabPane : BSTabPane<_>
     {
         public TextInput<_> FirstName { get; private set; }
