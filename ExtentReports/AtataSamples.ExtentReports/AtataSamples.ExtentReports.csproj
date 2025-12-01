@@ -16,7 +16,7 @@
     <PackageReference Include="Atata.WebDriverSetup" Version="3.6.0" />
     <PackageReference Include="ExtentReports" Version="5.0.4" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
-    <PackageReference Include="NLog" Version="6.0.5" />
+    <PackageReference Include="NLog" Version="6.0.6" />
     <PackageReference Include="NUnit" Version="4.4.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="5.2.0" />
     <!-- Directly referencing System.Security.Permissions" 8.0.0,
