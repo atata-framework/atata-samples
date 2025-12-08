@@ -132,7 +132,7 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/main/_archives/DownloadFile.zip).
   Demonstrates how to configure downloads directory of Chrome and verify that file is downloaded.
 
-You are also able to clone the whole repository and open `AtataSamples.sln`,
+You are also able to clone the whole repository and open `AtataSamples.slnx`,
 which contains all sample projects.
 
 ## License
