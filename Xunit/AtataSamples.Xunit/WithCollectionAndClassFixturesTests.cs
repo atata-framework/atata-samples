@@ -11,5 +11,5 @@ public sealed class WithCollectionAndClassFixturesTests :
         Context.Variables.ToSubject("variables")
             .AggregateAssert(x => x
                 .ValueOf(x => x[nameof(SomeCollectionFixture)]).Should.Be(true)
-                .ValueOf(x => x[nameof(SomeClassFixture<WithCollectionAndClassFixturesTests>)]).Should.Be(true));
+                .ValueOf(x => x[nameof(SomeClassFixture<>)]).Should.Be(true));
 }

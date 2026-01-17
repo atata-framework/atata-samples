@@ -11,7 +11,7 @@ public sealed class WithClassFixtureTests :
     public void Context_Variables() =>
         Context.Variables.ToSutSubject()
             .AggregateAssert(x => x
-                .ValueOf(x => x[nameof(SomeClassFixture<WithClassFixtureTests>)]).Should.Be(true)
+                .ValueOf(x => x[nameof(SomeClassFixture<>)]).Should.Be(true)
                 .ValueOf(x => x["class-attribute-variable"]).Should.Be(true)
                 .ValueOf(x => x["method-attribute-variable"]).Should.Be(true));
 }
