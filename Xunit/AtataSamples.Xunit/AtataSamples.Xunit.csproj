@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Atata" Version="4.0.0-beta.11" />
+    <PackageReference Include="Atata" Version="4.0.0-beta.12" />
     <PackageReference Include="Atata.WebDriverSetup" Version="4.0.0-beta.4" />
     <PackageReference Include="Atata.Xunit.v3" Version="4.0.0-beta.6" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
