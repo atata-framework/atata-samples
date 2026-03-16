@@ -16,7 +16,7 @@
     <PackageReference Include="Atata.Bootstrap" Version="4.0.0-beta.6" />
     <PackageReference Include="Atata.NUnit" Version="4.0.0-beta.9" />
     <PackageReference Include="Atata.WebDriverSetup" Version="4.0.0-beta.5" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.3.0" />
     <PackageReference Include="NUnit" Version="4.5.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="6.1.0" />
   </ItemGroup>
