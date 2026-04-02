@@ -84,8 +84,6 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
   | [download](../../raw/main/_archives/Configuration.Mixed.zip).
   Demonstrates how to implement complex configuration for different environments using
   .runsettings files, NUnit parameters, environment variables, `Microsoft.Extensions.Configuration` and user secrets.
-- **App.Config Configuration** - [`/AppConfig`](../../tree/main/AppConfig)
-  | [download](../../raw/main/_archives/AppConfig.zip).
 
 ### Cloud platform configuration
 

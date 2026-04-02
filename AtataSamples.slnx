@@ -8,7 +8,6 @@
     <File Path="en-US_User.dic" />
     <File Path="README.md" />
   </Folder>
-  <Project Path="AppConfig/AtataSamples.AppConfig/AtataSamples.AppConfig.csproj" />
   <Project Path="AuthorizationRoleBasedSessionPools/AtataSamples.AuthorizationRoleBasedSessionPools/AtataSamples.AuthorizationRoleBasedSessionPools.csproj" />
   <Project Path="Configuration.Mixed/AtataSamples.Configuration.Mixed/AtataSamples.Configuration.Mixed.csproj" />
   <Project Path="Configuration.MultiEnvViaRunSettings/AtataSamples.Configuration.MultiEnvViaRunSettings/AtataSamples.Configuration.MultiEnvViaRunSettings.csproj" />
