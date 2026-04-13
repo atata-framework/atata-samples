@@ -8,10 +8,10 @@ public sealed class GlobalFixture : AtataGlobalFixture
 
     protected override void OnBeforeGlobalSetup()
     {
-        string environmentName = TestContext.Parameters.Get("TestEnvironment", defaultValue: "local");
+        string testEnvironment = Environment.GetEnvironmentVariable("TestEnvironment") ?? "local";
 
         var configuration = new ConfigurationBuilder()
-            .AddJsonFile($"config.{environmentName}.json")
+            .AddJsonFile($"config.{testEnvironment}.json")
             .AddEnvironmentVariables()
             .Build();
 
