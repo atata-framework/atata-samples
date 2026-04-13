@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
-  <TestRunParameters>
-    <Parameter name="DriverAlias" value="chrome" />
-  </TestRunParameters>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <WebDriverAlias>chrome</WebDriverAlias>
+    </EnvironmentVariables>
+  </RunConfiguration>
 </RunSettings>

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
-  <TestRunParameters>
-    <Parameter name="DriverAlias" value="firefox" />
-  </TestRunParameters>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <WebDriverAlias>firefox</WebDriverAlias>
+    </EnvironmentVariables>
+  </RunConfiguration>
 </RunSettings>

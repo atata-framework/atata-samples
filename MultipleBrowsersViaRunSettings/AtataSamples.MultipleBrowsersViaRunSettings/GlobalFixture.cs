@@ -4,7 +4,7 @@ public sealed class GlobalFixture : AtataGlobalFixture
 {
     protected override void ConfigureAtataContextBaseConfiguration(AtataContextBuilder builder)
     {
-        string driverAlias = TestContext.Parameters.Get("DriverAlias", WebDriverAliases.Chrome);
+        string webDriverAlias = Environment.GetEnvironmentVariable("WebDriverAlias") ?? WebDriverAliases.Chrome;
 
         builder.Sessions.AddWebDriver(x => x
             .UseStartScopes(AtataContextScopes.Test)
@@ -20,7 +20,7 @@ public sealed class GlobalFixture : AtataGlobalFixture
                     "disable-search-engine-choice-screen")
                 .WithArtifactsAsDownloadDirectory())
             .ConfigureFirefox()
-            .UseDriver(driverAlias)
+            .UseDriver(webDriverAlias)
             .UseBaseUrl("https://demo.atata.io/"));
     }
 
