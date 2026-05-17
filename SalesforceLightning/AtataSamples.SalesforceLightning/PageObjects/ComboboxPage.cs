@@ -2,7 +2,7 @@
 
 using _ = ComboboxPage;
 
-[Url("lightning:combobox/example")]
+[Url("lightning-combobox.html?type=Example")]
 public sealed class ComboboxPage : Page<_>
 {
     public enum Progress
@@ -23,6 +23,17 @@ public sealed class ComboboxPage : Page<_>
     [FindById("onetrust-accept-btn-handler")]
     public Button<_> AcceptAllCookies { get; private set; }
 
-    protected override void OnInitCompleted() =>
+    protected override void OnInitCompleted()
+    {
         AcceptAllCookies.Click();
+
+        // Currently doesn't work. Before switching to iframe, there are few shadow DOM layers to go through.
+        SwitchToFirstFrame();
+    }
+
+    private void SwitchToFirstFrame()
+    {
+        var frame = Controls.Create<Frame<_>>("Test", new FindByClassAttribute("playground-container"));
+        Driver.SwitchTo().Frame(frame.Scope);
+    }
 }

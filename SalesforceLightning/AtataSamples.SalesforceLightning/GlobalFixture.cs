@@ -9,7 +9,7 @@ public sealed class GlobalFixture : AtataGlobalFixture
                 .WithArguments(
                     "start-maximized",
                     "disable-search-engine-choice-screen"))
-            .UseBaseUrl("https://developer.salesforce.com/docs/component-library/bundle/"));
+            .UseBaseUrl("https://developer.salesforce.com/docs/platform/lightning-component-reference/guide/"));
 
     protected override void ConfigureGlobalAtataContext(AtataContextBuilder builder) =>
         builder.SetUpWebDriversForUse();
