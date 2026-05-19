@@ -4,7 +4,7 @@
 public static class GlobalFixture
 {
     [AssemblyInitialize]
-    public static void GlobalSetUp(TestContext testContext)
+    public static void SetUpAssembly(TestContext testContext)
     {
         ConfigureAtataContextBaseConfiguration(AtataContext.BaseConfiguration);
 
