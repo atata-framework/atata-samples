@@ -1,4 +1,4 @@
-# [Atata Samples](https://github.com/atata-framework/atata-samples) / Basic web UI test project
+# [Atata Samples](https://github.com/atata-framework/atata-samples) / Basic Web UI Test Project
 
 [![Download sources](https://img.shields.io/badge/Download-sources-brightgreen.svg)](https://github.com/atata-framework/atata-samples/raw/main/_archives/SampleApp.UITests.zip)
 

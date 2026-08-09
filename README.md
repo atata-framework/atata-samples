@@ -12,33 +12,35 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 
 ### From [Atata Tutorials](https://atata.io/tutorials/)
 
-- **Workflow Test** - [`/SampleApp.UITests`](../../tree/main/SampleApp.UITests)
+- **Basic Web UI Test Project** - [`/SampleApp.UITests`](../../tree/main/SampleApp.UITests)
   | [download](../../raw/main/_archives/SampleApp.UITests.zip).
-  Used in **[Atata - C# Web Test Automation Framework](https://www.codeproject.com/Articles/1158365/Atata-New-Test-Automation-Framework)** introduction article.
+  Used in **[Basic web UI test project](https://atata.io/tutorials/basic-web-ui-test-project/)** tutorial.
+  Demonstrates the simple workflow automated UI test.
+  The test creates a user record and verifies that this record is created with an appropriate data.
 - **Verification of Page** - [`/PageVerification`](../../tree/main/PageVerification)
   | [download](../../raw/main/_archives/PageVerification.zip).
-  Used in **[Verification of Page](https://atata.io/tutorials/verification-of-page/)** tutorial.
+  Used in **[Verification of page](https://atata.io/tutorials/verification-of-page/)** tutorial.
   Demonstrates how to verify web page data using different approaches of Atata Framework.
 - **Verification of Validation Messages** - [`/ValidationMessagesVerification`](../../tree/main/ValidationMessagesVerification)
   | [download](../../raw/main/_archives/ValidationMessagesVerification.zip).
-  Used in **[Verification of Validation Messages](https://atata.io/tutorials/verification-of-validation-messages/)** tutorial.
+  Used in **[Verification of validation messages](https://atata.io/tutorials/verification-of-validation-messages/)** tutorial.
   Demonstrates how to verify validation messages on web pages.
 - **Handle Confirmation Popups** - [`/ConfirmationPopups`](../../tree/main/ConfirmationPopups)
   | [download](../../raw/main/_archives/ConfirmationPopups.zip).
-  Used in **[Handle Confirmation Popups](https://atata.io/tutorials/handle-confirmation-popups/)** tutorial.
+  Used in **[Handle confirmation popups](https://atata.io/tutorials/handle-confirmation-popups/)** tutorial.
   Demonstrates how to handle different confirmation popups using Atata Framework.
 - **Multi-Browser Configuration via .runsettings files** - [`/MultipleBrowsersViaRunSettings`](../../tree/main/MultipleBrowsersViaRunSettings)
   | [download](../../raw/main/_archives/MultipleBrowsersViaRunSettings.zip).
   Demonstrates how to configure multi-browser tests application using `.runsettings` files.
-  Used in **[Multi-Browser Configuration via .runsettings files](https://atata.io/tutorials/multi-browser-configuration-via-runsettings-files/)** tutorial.
+  Used in **[Multi-browser configuration via .runsettings files](https://atata.io/tutorials/multi-browser-configuration-via-runsettings-files/)** tutorial.
 - **Multi-Browser Configuration via Fixture Arguments** - [`/MultipleBrowsersViaFixtureArguments`](../../tree/main/MultipleBrowsersViaFixtureArguments)
   | [download](../../raw/main/_archives/MultipleBrowsersViaFixtureArguments.zip).
   Demonstrates how to configure multi-browser tests application using NUnit fixture arguments.
-  Used in **[Multi-Browser Configuration via Fixture Arguments](https://atata.io/tutorials/multi-browser-configuration-via-fixture-arguments/)** tutorial.
+  Used in **[Multi-browser configuration via fixture arguments](https://atata.io/tutorials/multi-browser-configuration-via-fixture-arguments/)** tutorial.
 - **Extent Reports** - [`/ExtentReports`](../../tree/main/ExtentReports)
   | [download](../../raw/main/_archives/ExtentReports.zip).
-  Used in **[Reporting to Extent Reports](https://atata.io/tutorials/reporting-to-extentreports/)** tutorial.
-  Demonstrates the Atata reporting to [Extent Reports](https://extentreports.com/).
+  Used in **[Reporting to ExtentReports](https://atata.io/tutorials/reporting-to-extentreports/)** tutorial.
+  Demonstrates the Atata reporting to [ExtentReports](https://extentreports.com/).
 
 ### Test frameworks
 
