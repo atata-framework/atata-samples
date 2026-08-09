@@ -57,6 +57,12 @@ Automated UI test sample projects based on **[Atata Framework](https://atata.io)
 - **Using Reqnroll** - [`/Reqnroll`](../../tree/main/Reqnroll)
   | [download](../../raw/main/_archives/Reqnroll.zip).
 
+### ASP.NET Core
+
+- **ASP.NET Core UI tests** - [`/AspNetCore.UITests`](../../tree/main/AspNetCore.UITests)
+  | [download](../../raw/main/_archives/AspNetCore.UITests.zip).
+  Demonstrates a usage of Atata.AspNetCore.v10 package to run ASP.NET Core web application during UI tests run.
+
 ### Sessions
 
 - **Session Sharing** - [`/SessionSharing`](../../tree/main/SessionSharing)

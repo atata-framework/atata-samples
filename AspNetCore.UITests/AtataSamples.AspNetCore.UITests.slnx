@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AtataSamples.AspNetCore.UITests/AtataSamples.AspNetCore.UITests.csproj" />
+  <Project Path="AtataSamples.AspNetCore.WebApp/AtataSamples.AspNetCore.WebApp.csproj" Id="b7db8d45-c1fe-43d7-87a8-20cdeec2cf42" />
+</Solution>
