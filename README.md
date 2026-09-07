@@ -149,7 +149,8 @@ which contains all sample projects.
 
 ## Contact author
 
-Contact me if you need a help in test automation using Atata Framework, or if you are looking for a quality test automation implementation for your project.
+Contact me, Yevhenii Shunevych, if you need help with test automation using the Atata Framework.
+You can [hire me for test automation development or consulting](https://atata.io/consulting/) if you are looking for a high-quality, maintainable automation solution for your project.
 
 - LinkedIn: https://www.linkedin.com/in/yevgeniy-shunevych
 - Email: yevgeniy.shunevych@gmail.com
