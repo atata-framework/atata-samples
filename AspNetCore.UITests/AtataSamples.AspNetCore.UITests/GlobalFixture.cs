@@ -8,11 +8,8 @@ public sealed class GlobalFixture : AtataGlobalFixture
     {
         builder.Sessions.AddWebDriver(x => x
             .UseStartScopes(AtataContextScopes.Test)
-
-            // TODO: Uncomment after Atata package upgrade and remove the below UseBaseUrl line.
-            // .AddDependentConfiguration<WebApplicationSession>((x, other) =>
-            //     x.UseBaseUrl(other.Uri))
-            .UseBaseUrl($"http://localhost:{WebApplicationKestrelPort}")
+            .AddDependentConfiguration<WebApplicationSession>((x, other) => x
+                .UseBaseUrl(other.Uri))
             .UseChrome(x => x
                 .WithArguments(
                     "headless=new",
