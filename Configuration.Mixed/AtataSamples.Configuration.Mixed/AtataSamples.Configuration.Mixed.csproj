@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Atata" Version="4.0.0" />
+    <PackageReference Include="Atata" Version="4.0.1" />
     <PackageReference Include="Atata.NUnit" Version="4.0.0" />
     <PackageReference Include="Atata.WebDriverSetup" Version="4.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.12" />
